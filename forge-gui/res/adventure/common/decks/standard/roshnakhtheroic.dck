@@ -1,22 +1,13 @@
 [metadata]
-Name=roshnakht_heroic
+Name=roshnakhtheroic
 [Main]
-4 Akroan Crusader|UMA|1
-2 Bravado|USG|1
-4 Brute Strength|GN2|1
-4 Castle Embereth|NCC|1
-1 Den of the Bugbear|AFR|1
-4 Dragon Mantle|CMR|1
-4 Expedite|OGW|1
-1 Kher Keep|TSR|1
-2 Madcap Skills|MB1|1
-2 Mob Mentality|VIS|1
-16 Mountain|DMU|4
-4 Raze the Effigy|MID|1
-4 Rosnakht, Heir of Rohgahh|DMC|1
-2 Shock|DDN|1
-2 Sticky Fingers|SNC|1
-2 Unleash Fury|M21|1
-2 Wild Magic Surge|CLB|1
-[Sideboard]
-[Schemes]
+23 Mountain|LEB|3
+4 Earthquake|4ED|1
+4 Goblin Cadets|USG|1
+4 Lightning Elemental|TMP|1
+4 Mogg Fanatic|TMP|1
+4 Phyrexian Colossus|USG|1
+4 Reckless Charge|ODY|1
+4 Shivan Dragon|BTD|1
+4 Shock|BTD|1
+4 Urza's Engine|ALL|1

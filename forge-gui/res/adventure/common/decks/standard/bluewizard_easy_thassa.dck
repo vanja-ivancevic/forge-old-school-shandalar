@@ -1,33 +1,14 @@
 [metadata]
-Name=Thassa's Rising Tide 1
-Title=Thassa, God of the Sea
-Difficulty=easy
-Description=Mono-blue Quest for Ula's Temple theme deck
-Icon=Thassa 1.jpg
-Deck Type=constructed
+Name=bluewizard_easy_thassa
 [Main]
-2 Apprentice Wizard
-1 Breaching Leviathan
-1 Deep-Sea Kraken
-3 Dissolve
-2 Foresee
-4 Halimar Depths
-14 Island
-3 Kraken Hatchling
-1 Kraken of the Straits
-2 Levitation
-3 Merfolk Wayfinder
-2 Octoprophet
-3 Perilous Voyage
-2 Quest for Ula's Temple
-1 Scourge of Fleets
-2 Serpent of the Endless Sea
-1 Slinn Voda, the Rising Deep
-2 Spreading Seas
-1 Stormtide Leviathan
-1 Thassa, Deep-Dwelling
-1 Thassa, God of the Sea
-1 Tromokratis
-1 Whelming Wave
-2 Wormhole Serpent
-4 Zhalfirin Void
+2 Old Man of the Sea|ARN|1
+2 Sea Serpent|4ED|1
+23 Island|ODY|3
+4 Azure Drake|BRB|1
+4 Dreamwinder|ODY|1
+4 Faerie Squadron|INV|1
+4 Mahamoti Djinn|7ED|1
+4 Merfolk Looter|7ED|1
+4 Phantom Whelp|ODY|1
+4 Sea Snidd|PLS|1
+4 Tidal Wave|MIR|1

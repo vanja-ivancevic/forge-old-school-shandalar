@@ -147,9 +147,9 @@ public class GameFormat implements Comparable<GameFormat> {
         }
 
         if (!this.getAllowedSetCodes().isEmpty()) {
-            p = p.and(printed ?
-                    PaperCardPredicates.printedInSets(this.getAllowedSetCodes(), printed) :
-                    StaticData.instance().getCommonCards().wasPrintedInSets(this.getAllowedSetCodes()));
+            // Always check if the card NAME was printed in allowed sets, regardless of the specific printing
+            // This allows reprints from allowed sets to appear in shops/rewards even if newer sets are restricted.
+            p = p.and(StaticData.instance().getCommonCards().wasPrintedInSets(this.getAllowedSetCodes()));
         }
         if (!this.getAllowedRarities().isEmpty()) {
             List<Predicate<? super PaperCard>> crp = Lists.newArrayList();

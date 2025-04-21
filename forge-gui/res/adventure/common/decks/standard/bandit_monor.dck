@@ -1,28 +1,17 @@
 [metadata]
 Name=Carnage 2
-[main]
-23 Mountain
-4 Grand Melee
-1 Bedlam
-4 Circle of Flame
-4 Fire at Will
-1 Ashen Monstrosity
-1 Avatar of Slaughter
-4 Battle-Mad Ronin
-1 Berserkers of Blood Ridge
-1 Bloodcrazed Neonate
-1 Bloodrock Cyclops
-1 Craven Giant
-1 Crazed Goblin
-1 Flameborn Hellion
-1 Galvanic Juggernaut
-1 Goblin Brigand
-1 Juggernaut
-2 Kuldotha Ringleader
-1 Orgg
-1 Reckless Brute
-1 Slumbering Dragon
-1 Tattermunge Maniac
-1 Thran War Machine
-1 Ulamog's Crusher
-1 Utvara Scalper
+[Main]
+1 Swamp|TMP|2
+11 Mountain|TMP|2
+2 Ashen Ghoul|ICE|1
+2 Mogg Raider|TMP|1
+4 Goblin Brigand|SCG|1
+4 Goblin Burrows|ONS|1
+4 Goblin Cadets|USG|1
+4 Goblin King|3ED|1
+4 Goblin Matron|USG|1
+4 Mogg Fanatic|TMP|1
+4 Mogg Flunkies|STH|1
+4 Mogg Hollows|TMP|1
+4 Mogg Maniac|STH|1
+4 Sulfurous Springs|ICE|1

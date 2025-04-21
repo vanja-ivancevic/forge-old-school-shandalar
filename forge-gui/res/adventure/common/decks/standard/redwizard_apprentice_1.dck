@@ -1,17 +1,16 @@
 [metadata]
-Name=Adventure - Apprentice Red 3
+Name=redwizard_apprentice_1
 [Main]
-2 All Is Dust|ROE|1
-4 Belligerent Guest|VOW|2
-2 Bottle Gnomes|JVC|1
-4 Bronze Sable|THS|1
-4 Filigree Familiar|KLR|1
-4 Living Lightning|2X2|1
-4 Lotus Field|M20|1
-20 Mountain|M20|1
-4 Scoria Elemental|SOM|1
-4 Strike It Rich|MH2|1
-4 Tectonic Reformation|C20|1
-4 Underworld Breach|THB|2
-[Sideboard]
-[Schemes]
+10 Mountain|4ED|3
+11 Island|4ED|3
+4 Apprentice Wizard|DRK|1
+4 Fireball|4ED|1
+4 Incinerate|5ED|1
+4 Lightning Bolt|4ED|1
+4 Opt|INV|1
+4 Prodigal Sorcerer|5ED|1
+4 Pyrostatic Pillar|SCG|1
+4 Shatter|4ED|1
+4 Shivan Reef|APC|1
+4 Wizard Mentor|USG|1
+4 Zuran Orb|ICE|1

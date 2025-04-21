@@ -836,7 +836,9 @@ public class CardUtil {
     }
 
     public static Collection<PaperCard> getFullCardPool(boolean allCardVariants) {
-        return allCardVariants ? FModel.getMagicDb().getCommonCards().getAllCards() : FModel.getMagicDb().getCommonCards().getUniqueCardsNoAlt();
+        // Always return all cards initially; filtering by edition happens later.
+        // The allCardVariants flag might be used elsewhere, but for initial pool generation, we need all printings.
+        return FModel.getMagicDb().getCommonCards().getAllCards();
     }
 }
 

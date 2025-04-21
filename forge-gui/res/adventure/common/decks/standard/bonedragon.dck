@@ -1,33 +1,16 @@
 [metadata]
 Name=bonedragon
 [Main]
-1 Ancient Brass Dragon|CLB|1
-1 Black Dragon|AFR|1
-1 Bladewing the Risen|MB1|1
-1 Bladewing, Deathless Tyrant|DMC|1
-1 Bone Dragon|M19|1
-1 Boneyard Parley|C19|1
-2 Boneyard Scourge|C17|1
-3 Canyon Slough|AKH|1
-3 Charcoal Diamond|CLB|1
-1 Crux of Fate|C17|1
-4 Darigaaz's Whelp|YDMU|1
-4 Dragonskull Summit|E01|1
-1 Ebon Dragon|DRB|1
-3 Ebondeath, Dracolich|AFR|1
-2 Foul-Tongue Invocation|IMA|1
-4 Gate of the Black Dragon|HBG|1
-3 Kokusho, the Evening Star|IMA|1
-2 Millikin|MH2|1
-1 Mountain|CLB|1
-2 Mountain|CLB|4
-2 Palace Siege|C17|1
-4 Power Word Kill|AFR|1
-1 Skithiryx, the Blight Dragon|SOM|1
-3 Swamp|CLB|1
-1 Swamp|CLB|2
-2 Swamp|CLB|3
-4 Swamp|CLB|4
-2 Urza's Incubator|DMR|1
-[Sideboard]
-[Schemes]
+16 Mountain|LEB|3
+2 Fireblast|F01|1
+4 Carrion Feeder|SCG|1
+4 Dragon Whelp|LEB|1
+4 Incinerate|ICE|1
+4 Lightning Bolt|JGP|1
+4 Rathi Dragon|TMP|1
+4 Shivan Dragon|3ED|1
+4 Sulfurous Springs|ICE|1
+4 Swamp|LEB|3
+4 Unholy Strength|LEB|1
+4 Volcanic Dragon|S99|1
+4 Zombie Infestation|ODY|1

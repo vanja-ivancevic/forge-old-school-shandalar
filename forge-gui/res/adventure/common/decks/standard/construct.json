@@ -3,7 +3,7 @@
   "template":
   {
    "count":80,
-   "colors":[],
+   "colors":["Black","Green"],
    "tribe":"Construct",    
    "tribeCards":0.8,
    "rares":0.1

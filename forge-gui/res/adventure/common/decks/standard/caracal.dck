@@ -1,16 +1,15 @@
 [metadata]
 Name=caracal
 [Main]
-4 Cosmic Rebirth|MAT|1
-12 Forest|30A|2
-4 Hungry Lynx|C17|1
-4 Lynx|PO2|1
-4 Mesa Lynx|J22|1
-12 Plains|30A|2
-4 Pouncing Lynx|J22|1
-4 Prowling Caracal|M20|1
-4 Regal Caracal|AKH|1
-4 Steppe Lynx|J22|1
-4 Trained Caracal|J22|1
-[Sideboard]
-[Schemes]
+1 Island|TMP|2
+15 Forest|TMP|2
+4 City of Brass|ARN|1
+4 Hunting Cheetah|PTK|1
+4 Lure|3ED|1
+4 Lynx|S99|1
+4 Overrun|TMP|1
+4 Rogue Elephant|WTH|1
+4 Saber Ants|MMQ|1
+4 Stampede|5ED|1
+4 Worldly Counsel|INV|1
+4 Yavimaya Coast|APC|1

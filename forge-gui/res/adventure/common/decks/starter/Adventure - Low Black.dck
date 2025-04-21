@@ -1,25 +1,22 @@
 [metadata]
-Name=Adventure - Low Black
+Name=Adventure - Low Black - Deadly Instinct
 [Avatar]
 
 [Main]
-1 Animate Dead|MB1|1
-1 Archfiend of Depravity|E01|1
-1 Banewhip Punisher|HOU|1
-2 Cartouche of Ambition|AKR|1
-2 Chainer's Edict|HA3|1
-1 Clattering Augur|MH2|1
-1 Dance of the Dead|ME2|1
-1 Deadly Dispute|AFR|1
-2 Doom Blade|STA|1
-1 Draugr Recruiter|KHM|1
-2 Ecstatic Awakener|MID|1
-1 Indulgent Tormentor|IMA|1
-1 Reassembling Skeleton|AFC|1
-2 Sanitarium Skeleton|CMR|1
-2 Soldevi Adnate|ALL|1
-1 Stab Wound|JMP|1
-18 Swamp|GK1|2
+1 Dakmor Lancer|S99|1
+2 Dakmor Scorpion|S99|1
+2 Feral Shadow|S99|1
+2 Gravedigger|S99|1
+2 Hollow Dogs|S99|1
+2 Ravenous Rats|S99|1
+2 Serpent Warrior|S99|1
+1 Ancient Craving|S99|1
+2 Chorus of Woe|S99|1
+1 Dakmor Plague|S99|1
+3 Hand of Death|S99|1
+2 Mind Rot|S99|1
+1 Soul Feast|S99|1
+17 Swamp|S99|1
 [Sideboard]
 
 [Planes]

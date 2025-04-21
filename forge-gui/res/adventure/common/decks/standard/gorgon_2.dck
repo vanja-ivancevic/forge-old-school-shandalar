@@ -1,48 +1,24 @@
 [metadata]
 Name=gorgon_2
 [Main]
-1 Archetype of Finality|BNG|1
-3 Aspect of Gorgon|JOU|1
-1 Deadeye Tracker|XLN|1
-1 Desperate Castaways|XLN|1
-1 Dinosaur Hunter|RIX|1
-1 Dire Fleet Poisoner|RIX|1
-1 Fell Flagship|XLN|1
-2 Forest|GRN|1
-1 Forest|RIX|1
-1 Forest|THS|3
-2 Forest|XLN|3
-1 Forest|XLN|4
-2 Foul Orchard|RIX|1
-3 Gaze of the Gorgon|RAV|1
-1 Golden Demise|RIX|1
-1 Golgari Guildgate|DGM|1
-1 Golgari Guildgate|GRN|1
-1 Golgari Guildgate|GRN|2
-1 Golgari Guildgate|RTR|1
-1 Grasping Scoundrel|RIX|1
-1 Keepsake Gorgon|THS|1
-2 Kitesail Freebooter|XLN|1
-1 Korozda Gorgon|DGM|1
-1 Loathsome Curator|MH2|1
-1 Pharika's Spawn|THB|1
-1 Pirate's Cutlass|XLN|1
-4 Pitiless Gorgon|GRN|1
-1 Reaper of the Wilds|THS|1
-2 Swamp|GRN|1
-1 Swamp|RIX|1
-2 Swamp|THS|3
-3 Swamp|XLN|1
-1 Swamp|XLN|2
-1 Swamp|XLN|4
-1 Temple of Malady|JOU|1
-1 Unknown Shores|XLN|1
-1 Visara the Dreadful|EMA|1
-1 Vraska's Contempt|XLN|1
-3 Vraska's Finisher|WAR|1
-1 Vraska's Scorn|RIX|1
-1 Vraska, Scheming Gorgon|RIX|1
-1 Wanted Scoundrels|XLN|1
-1 Xathrid Gorgon|M13|1
-[Sideboard]
-[Schemes]
+1 Blastoderm|NEM|1
+1 Fireblast|F01|1
+1 Flametongue Kavu|PLS|1
+1 Nantuko Vigilante|LGN|1
+1 Ravenous Baloth|ONS|1
+2 Assault // Battery|INV|1
+2 Draco|PLS|1
+2 Llanowar Elves|2ED|1
+2 Scroll Rack|TMP|1
+2 Sylvan Library|4BB|1
+3 Burning Wish|JUD|1
+3 Erratic Explosion|ONS|1
+3 River Boa|6ED|1
+3 Treetop Village|ULG|1
+4 Call of the Herd|ODY|1
+4 Karplusan Forest|5ED|1
+4 Lightning Bolt|2ED|1
+4 Wooded Foothills|ONS|1
+4 Worldly Tutor|6ED|1
+5 Mountain|ONS|3
+8 Forest|ONS|3

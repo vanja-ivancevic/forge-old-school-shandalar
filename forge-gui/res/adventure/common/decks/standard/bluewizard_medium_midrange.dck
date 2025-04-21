@@ -1,20 +1,17 @@
 [metadata]
 Name=Tinkerbell 2
-[main]
-2 Curiosity
-4 Faerie Conclave
-4 Faerie Miscreant
-2 Faerie Swarm
-2 Faerie Trickery
-4 Favorable Winds
-2 Glen Elendra Liege
-2 Gravitational Shift
-20 Island
-2 Mistbind Clique
-2 Oona, Queen of the Fae
-2 Robe of Mirrors
-4 Scion of Oona
-4 Spellstutter Sprite
-2 Vapor Snag
-2 Void Snare
-[sideboard]
+[Main]
+2 Curiosity|EXO|1
+2 Foil|PCY|1
+2 Mana Leak|BRB|1
+2 Sigil of Sleep|UDS|1
+24 Island|MMQ|3
+3 Daze|NEM|1
+3 Skyshroud Condor|TMP|1
+3 Spiketail Hatchling|PCY|1
+3 Sunken City|4BB|1
+3 Unstable Mutation|3ED|1
+3 Winter Orb|2ED|1
+4 Cloud Sprite|MMQ|1
+4 Counterspell|2ED|1
+4 Gush|MMQ|1

@@ -1,22 +1,15 @@
 [metadata]
 Name=illusion
 [Main]
-3 Chart a Course|XLN|1
-1 Ephemeron|VMA|1
-23 Island|KLD|3
-4 Krovikan Mist|CSP|1
-2 Labyrinth Guardian|MB1|1
-4 Lord of the Unreal|M12|1
-2 Minn, Wily Illusionist|AFC|1
-1 Mordenkainen|AFR|1
-2 Oneirophage|MH1|1
-4 Phantasmal Bear|A25|1
-2 Phantasmal Dragon|DDM|1
-2 Phantasmal Dreadmaw|MH2|1
-4 Phantasmal Image|AFC|1
-1 Phantom Beast|M11|1
-2 Phantom Steed|AFC|1
-2 Phantom Warrior|DPA|1
-1 Toothy, Imaginary Friend|BBD|1
-[Sideboard]
-[Schemes]
+1 Plains|MIR|2
+18 Island|MIR|2
+4 Adarkar Wastes|ICE|1
+4 Ancestral Memories|MIR|1
+4 Counterspell|BRB|1
+4 Dream Halls|STH|1
+4 Gilded Light|SCG|1
+4 Hydroblast|ICE|1
+4 Mana Leak|PAL02|1
+4 Mystical Tutor|MIR|1
+4 Phantom Monster|3ED|1
+4 Tidal Wave|MIR|1

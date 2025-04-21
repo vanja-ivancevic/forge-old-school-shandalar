@@ -1,21 +1,14 @@
 [metadata]
 Name=scarab
 [Main]
-2 Blightbeetle|M20|1
-2 Canoptek Scarab Swarm|40K|1
-4 Dune Beetle|MB1|1
-2 Midnight Banshee|MM2|1
-4 Mortician Beetle|MM3|1
-2 Necroskitter|MM2|1
-4 Nest of Scarabs|AKH|1
-2 Plague Beetle|10E|1
-4 Scavenging Scarab|DST|1
-3 Swamp|AKH|1
-3 Swamp|AKH|2
-8 Swamp|AKH|3
-10 Swamp|AKH|4
-4 Terror|TD0|1
-4 Torment of Scarabs|HOU|1
-2 Virus Beetle|NEO|1
-[Sideboard]
-[Schemes]
+14 Swamp|4ED|2
+2 Plains|4ED|2
+4 Black Ward|4ED|1
+4 Caves of Koilos|APC|1
+4 Dark Ritual|MMQ|1
+4 Deathgrip|4ED|1
+4 Drain Life|4ED|1
+4 Giant Cockroach|ULG|1
+4 Plague Beetle|7ED|1
+4 Raise Dead|4ED|1
+4 Terror|4ED|1

@@ -1,23 +1,13 @@
 [metadata]
 Name=White Knight 2
-[main]
-3 Veteran Cavalier
-3 Kabira Vindicator
-4 Lionheart Maverick
-2 Knight of Cliffhaven
-2 Knight Errant
-2 Benalish Cavalry
-2 Accorder Paladin
-1 Hero of Bladehold
-1 Knight Exemplar
-2 Leonin Skyhunter
-1 Mirran Crusader
-2 Student of Warfare
-2 White Knight
-2 Caravan Escort
-2 Oust
-2 Saltblast
-2 Path of Peace
-1 War Falcon
-24 Plains|MBS
-[sideboard]
+[Main]
+19 Plains|ONS|3
+2 Knight Errant|POR|1
+3 Holy Day|LEG|1
+3 Piety Charm|ONS|1
+3 Serra's Blessing|6ED|1
+4 Aven Cloudchaser|ODY|1
+4 Exalted Angel|ONS|1
+4 Gallantry|TMP|1
+4 Path of Peace|USG|1
+4 White Knight|LEB|1

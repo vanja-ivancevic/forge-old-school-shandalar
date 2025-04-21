@@ -3,7 +3,7 @@
   "template":
   {
    "count":80,
-   "colors":["Red"],
+   "colors":["Red","Black"],
    "tribe":"Devil",    
    "tribeCards":1.0,
    "rares":0.1

@@ -1,28 +1,20 @@
 [metadata]
 Name=Kojak 3
-[main]
-21 Island|M10
-1 Mox Sapphire
-1 Sapphire Medallion
-1 Ancestral Recall
-1 Time Walk
-2 Boomerang
-2 Eye of Nowhere
-4 Counterspell
-1 Tidings
-2 Concentrate
-1 Kami of the Crescent Moon
-1 Thalakos Seer
-4 Briarberry Cohort
-2 Deepchannel Mentor
-3 Faerie Swarm
-3 Inundate
-1 Merrow Levitator
-1 Sunken City
-2 Flow of Ideas
-1 Arcanis the Omnipotent
-2 Sphinx of Magosi
-1 Spire Golem
-1 Dungeon Geists
-1 Master of Waves
-[sideboard]
+[Main]
+2 Swords to Plowshares|2ED|1
+3 Faerie Conclave|ULG|1
+3 Mother of Runes|ULG|1
+3 Skycloud Expanse|ODY|1
+3 Wasteland|MPR|1
+4 Adarkar Wastes|5ED|1
+4 Flooded Strand|ONS|1
+4 Mana Leak|BRB|1
+4 Meddling Mage|PLS|1
+4 Memory Lapse|5ED|1
+4 Portent|5ED|1
+4 Predict|ODY|1
+4 Rishadan Airship|MMQ|1
+4 Sunscape Familiar|PLS|1
+4 Tundra|LEA|1
+5 Plains|5ED|2
+8 Island|5ED|2

@@ -1,26 +1,31 @@
 [metadata]
-Name=Adventure - Low Golgari
+Name=Adventure - Low Golgari - Portal Deck 2
 [Avatar]
 
 [Main]
-1 Aspect of Lamprey|THB|1
-2 Elvish Vanguard|EMA|1
-1 Fell Specter|M19|1
-7 Forest|GK1|1
-4 Foul Orchard|M19|1
-1 Ghost-Lit Stalker|DDD|1
-2 Golgari Locket|GRN|1
-2 Headless Specter|MH1|1
-2 Hideous End|MB1|1
-2 Ivy Lane Denizen|GTC|1
-1 Liliana's Caress|M11|1
-2 Mind Drain|ZNR|1
-1 Nath of the Gilt-Leaf|C16|1
-1 Nullmage Shepherd|KHC|1
-1 Poison-Tip Archer|M19|1
-1 Raiders' Wake|XLN|1
-7 Swamp|GK1|2
-2 Winnower Patrol|MOR|1
+1 Craven Knight|POR|1
+1 Feral Shadow|POR|1
+1 Gravedigger|POR|1
+1 Muck Rats|POR|1
+1 Skeletal Crocodile|POR|1
+1 Coral Eel|POR|1
+1 Ingenious Thief|POR|1
+1 Snapping Drake|POR|1
+1 Storm Crow|POR|1
+1 Elite Cat Warrior|POR|1
+1 Panther Warriors|POR|1
+1 Rowan Treefolk|POR|1
+1 Hand of Death|POR|1
+1 Mind Rot|POR|1
+1 Vampiric Touch|POR|1
+1 Cloak of Feathers|POR|1
+1 Command of Unsummoning|POR|1
+1 Time Ebb|POR|1
+1 Touch of Brilliance|POR|1
+1 Monstrous Growth|POR|1
+6 Swamp|POR|1
+6 Island|POR|1
+3 Forest|POR|1
 [Sideboard]
 
 [Planes]

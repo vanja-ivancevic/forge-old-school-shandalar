@@ -1,15 +1,14 @@
 [metadata]
 Name=geonid
 [Main]
-4 Deathbonnet Sprout|MID|1
-25 Forest|PC2|3
-4 Fungal Bloom|ME2|1
-4 Mold Adder|M10|1
-4 Myconid Spore Tender|CLB|1
-4 Sporesower Thallid|TSR|1
-4 Thallid|MMA|1
-4 Thelon of Havenwood|TSR|1
-4 Tukatongue Thallid|PC2|1
-4 Utopia Mycon|TSR|1
-[Sideboard]
-[Schemes]
+25 Forest|TMP|3
+4 Elvish Farmer|FEM|1
+4 Feral Thallid|FEM|1
+4 Night Soil|FEM|1
+4 Spore Cloud|FEM|1
+4 Spore Flower|FEM|1
+4 Sporogenesis|USG|1
+4 Thallid Devourer|FEM|1
+4 Thallid|FEM|1
+4 Thelonite Druid|FEM|1
+4 Thelonite Monk|FEM|1

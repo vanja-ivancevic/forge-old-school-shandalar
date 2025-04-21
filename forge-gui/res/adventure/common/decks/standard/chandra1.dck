@@ -1,23 +1,15 @@
 [metadata]
-Name=AI Chandra 1
+Name=chandra1
 [Main]
-2 Chandra Ablaze|ZEN|1
-2 Chandra's Embercat|M20|1
-2 Chandra's Fury|ORI|1
-2 Chandra's Ignition|ORI|1
-2 Chandra's Incinerator|M21|1
-2 Chandra's Outburst|DOM|1
-2 Chandra's Pyreling|M21|1
-2 Chandra's Regulator|M20|1
-2 Chandra's Spitfire|J22|1
-2 Chandra's Triumph|WAR|1
-2 Chandra, Awakened Inferno|M20|1
-2 Chandra, Pyromaster|AKR|1
-2 Chandra, Torch of Defiance|KLD|1
-4 Geistflame Reservoir|MID|1
-2 Light Up the Stage|RNA|1
-2 Lightning Strike|M19|1
-22 Mountain|SOM|1
-2 Shock|M19|1
-2 Skewer the Critics|RNA|1
-[Sideboard]
+2 Mogg Flunkies|STH|1
+2 Orcish Artillery|5ED|1
+2 Shivan Dragon|4ED|1
+2 Wheel of Fortune|3ED|1
+23 Mountain|USG|3
+4 Fireblast|VIS|1
+4 Goblin Cadets|USG|1
+4 Incinerate|MIR|1
+4 Jackal Pup|TMP|1
+4 Lightning Bolt|4ED|1
+4 Mogg Fanatic|TMP|1
+4 Shock|7ED|1

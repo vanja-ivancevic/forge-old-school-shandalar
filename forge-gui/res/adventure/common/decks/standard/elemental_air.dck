@@ -1,22 +1,17 @@
 [metadata]
 Name=elemental_air
 [Main]
-2 Air Elemental|W17|1
-2 Air Servant|MM2|1
-1 Air-Cult Elemental|AFR|1
-1 Brine Elemental|JVC|1
-2 Cavalier of Gales|M20|1
-2 Cloud Elemental|10E|1
-3 Cloudkin Seer|M20|1
-3 Clutch of Currents|MB1|1
-2 Frost Walker|F15|1
-24 Island|M20|1
-3 Mu Yanling, Sky Dancer|M20|1
-1 Roil Elemental|ZEN|1
-3 Scatter to the Winds|BFZ|1
-2 Subtlety|MH2|1
-4 Unsummon|30A|1
-2 Void Stalker|M13|1
-3 Wind Zendikon|WWK|1
-[Sideboard]
-[Schemes]
+2 Azure Drake|CHR|1
+2 Dream Halls|STH|1
+2 Hydroblast|5ED|1
+2 Mystical Tutor|MIR|1
+2 Serrated Arrows|HML|1
+26 Island|TMP|1
+4 Air Elemental|S99|1
+4 Cloud Spirit|STH|1
+4 Control Magic|2ED|1
+4 Counterspell|TMP|1
+4 Flying Men|ARN|1
+4 Phantom Monster|4ED|1
+4 Wall of Air|5ED|1
+4 Wind Drake|TMP|1

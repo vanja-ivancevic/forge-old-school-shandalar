@@ -97,9 +97,11 @@ public class RewardData implements Serializable {
         RewardData legals = configData.legalCards;
 
         if(legals==null)
-            allCards = CardUtil.getFullCardPool(false); // we need unique cards only here, so that a unique card can be chosen before a set variant is determined
+            // Load all printings so subsequent filtering can correctly handle reprints in restricted formats
+            allCards = CardUtil.getFullCardPool(true);
         else
-            allCards = IterableUtil.filter(CardUtil.getFullCardPool(false), new CardUtil.CardPredicate(legals, true));
+            // Load all printings so subsequent filtering can correctly handle reprints in restricted formats
+            allCards = IterableUtil.filter(CardUtil.getFullCardPool(true), new CardUtil.CardPredicate(legals, true));
         //Filter out specific cards.
         allCards = IterableUtil.filter(allCards, input -> {
             if(input == null)

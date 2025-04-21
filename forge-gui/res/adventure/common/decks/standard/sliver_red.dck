@@ -1,24 +1,21 @@
 [metadata]
-Name=Sliver_Red
+Name=sliver_red
 [Main]
-4 Acidic Sliver|TPR|1
-4 Badlands|30A|1
-4 Bayou|30A|1
-2 Fungus Sliver|TSP|1
-4 Leeching Sliver|J21|1
-4 Manaweft Sliver|M14|1
-1 Mountain|M15|1
-1 Mountain|M15|2
-1 Mountain|M15|3
-1 Mountain|M15|4
-2 Predatory Sliver|M14|1
-4 Sedge Sliver|TSR|1
-4 Sliver Hive|J21|1
-4 Spiteful Sliver|J21|1
-4 Striking Sliver|J21|1
-2 Swamp|M15|4
-4 Syphon Sliver|SLD|1
-2 Taiga|30A|1
-4 Thorncaster Sliver|SLD|1
-4 Venom Sliver|M15|1
-[Sideboard]
+1 Llanowar Wastes|APC|1
+2 Anger|JUD|1
+2 Island|MMQ|3
+2 Shivan Dragon|4ED|1
+2 Sulfurous Springs|ICE|1
+3 Plains|MMQ|3
+3 Swamp|MMQ|3
+4 Acidic Sliver|STH|1
+4 Crystalline Sliver|F03|1
+4 Forest|MMQ|3
+4 Heart Sliver|TMP|1
+4 Hunter Sliver|LGN|1
+4 Karplusan Forest|ICE|1
+4 Metallic Sliver|TMP|1
+4 Muscle Sliver|TMP|1
+4 Sliver Queen|STH|1
+4 Spined Sliver|STH|1
+9 Mountain|MMQ|3

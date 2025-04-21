@@ -1,27 +1,16 @@
 [metadata]
-Name=Radagast 2
-Title=Radagast
-Difficulty=medium
-Description=Mono G Muraganda Petroglyphs deck with vanilla creatures and a few tokens
-Icon=Radagast.jpg
-Deck Type=constructed
-[main]
-23 Forest|M11
-4 Muraganda Petroglyphs
-2 Hornet Sting
-2 Hurricane
-1 Needle Storm
-1 Momentous Fall
-4 Elvish Warrior
-4 Leatherback Baloth
-3 Gnarled Mass
-3 Trained Armodon
-3 Call of the Herd
-1 Beacon of Creation
-3 Imperiosaur
-2 Bestial Menace
-1 Beast Attack
-1 Moss Monster
-1 Silverback Ape
-1 Craw Wurm
-[sideboard]
+Name=greenwizard_easy_vanilla
+[Main]
+30 Forest|ODY|3
+4 Druid's Call|ODY|1
+4 Fertile Ground|BRB|1
+4 Giant Growth|4ED|1
+4 Llanowar Elves|4ED|1
+4 Multani, Maro-Sorcerer|ULG|1
+4 Nantuko Disciple|ODY|1
+4 Quirion Elves|BTD|1
+4 Seton's Scout|TOR|1
+4 Squirrel Mob|ODY|1
+4 Tranquil Grove|WTH|1
+4 Weatherseed Treefolk|ULG|1
+4 Wild Might|PCY|1

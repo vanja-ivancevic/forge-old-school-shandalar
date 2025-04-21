@@ -1,15 +1,16 @@
 [metadata]
 Name=bat
 [Main]
-4 Basilica Screecher|GTC|1
-4 Blight Keeper|J22|1
-4 Blighted Bat|AKH|1
-4 Bloodhunter Bat|JMP|1
-4 Dirge Bat|IKO|1
-4 Duskhunter Bat|MM2|1
-4 Murder|M13|1
-4 Sinister Strength|PLS|1
-6 Swamp|J22|1
-8 Swamp|J22|2
-10 Swamp|J22|3
-4 Unholy Strength|30A|1
+1 Forest|3ED|3
+20 Swamp|3ED|3
+4 Black Knight|4ED|1
+4 Dark Ritual|TMP|1
+4 Demonic Consultation|ICE|1
+4 Hymn to Tourach|FEM|1
+4 Ichorid|TOR|1
+4 Llanowar Dead|APC|1
+4 Llanowar Wastes|APC|1
+4 Mesmeric Fiend|TOR|1
+4 Phyrexian Arena|APC|1
+4 Phyrexian Scuta|PLS|1
+4 Unholy Strength|4ED|1

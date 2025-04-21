@@ -1,26 +1,18 @@
 [metadata]
-Name=Demonic Pact 2
+Name=blackwizard_medium_demonicpact
 [Main]
-2 Abhorrent Overlord
-2 Abyssal Persecutor
-1 Beacon of Unrest
-3 Blood Speaker
-2 Breeding Pit
-3 Dark Ritual
-1 Demon of Catastrophes
-2 Demonic Torment
-2 Desecration Demon
-2 Drain Life
-2 Grave Pact
-2 Liege of the Pit
-2 Lord of the Pit
-2 Master of the Feast
-2 Memorial to Folly
-3 Sign in Blood
-2 Skirsdag High Priest
-2 Spawn of Mayhem
-16 Swamp
-2 Tendrils of Corruption
-1 Varragoth, Bloodsky Sire
-1 Volrath's Stronghold
-3 Witch's Cottage
+1 Cabal Coffers|TOR|1
+16 Swamp|2ED|3
+2 Chainer's Edict|TOR|1
+2 Demonic Tutor|2ED|1
+2 Drain Life|2ED|1
+2 Funeral Charm|VIS|1
+2 Mutilate|TOR|1
+2 Nevinyrral's Disk|2ED|1
+3 Phyrexian Arena|APC|1
+3 Spinning Darkness|WTH|1
+4 Addle|INV|1
+4 Corrupt|7ED|1
+4 Dark Ritual|2ED|1
+4 Duress|7ED|1
+4 Mishra's Factory|4BB|1

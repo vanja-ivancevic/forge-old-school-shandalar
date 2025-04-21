@@ -3,7 +3,7 @@
   "template":
   {
    "count":60,
-   "colors":["Blue"],
+   "colors":["Blue","Green"],
    "tribe":"Turtle",        
    "tribeCards":0.5,
    "tribeSynergyCards":0.2,

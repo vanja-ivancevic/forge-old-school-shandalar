@@ -1,26 +1,16 @@
 [metadata]
-Name=Spirit_Dark
+Name=dark_spirit
 [Main]
-4 Accursed Spirit|MB1|1
-2 Consume Spirit|10E|1
-2 Crypt Ghast|C14|1
-2 Darkling Stalker|TMP|1
-2 Devouring Greed|CHK|1
-1 Divinity of Pride|EVE|1
-2 Enemy of the Guildpact|DIS|1
-1 Iname, Death Aspect|CHK|1
-1 Junji, the Midnight Sky|NEO|3
-1 Kyoki, Sanity's Eclipse|BOK|1
-2 Lingering Tormentor|EVE|1
-2 Midnight Banshee|SHM|1
-1 Pontiff of Blight|CLB|1
-4 Rend Flesh|CHK|1
-4 Restless Apparition|EVE|1
-2 Revenant|STH|1
-11 Swamp|CHK|1
-5 Swamp|CHK|3
-7 Swamp|CHK|4
-4 Tormented Soul|PW11|1
-4 Will-o'-the-Wisp|4ED|1
-2 Yargle, Glutton of Urborg|J22|1
-[Sideboard]
+2 Lord of the Undead|PLS|1
+2 Phyrexian Ghoul|BRB|1
+2 Urborg Skeleton|INV|1
+2 Vampiric Tutor|6ED|1
+2 Withered Wretch|F03|1
+2 Yawgmoth's Will|USG|1
+23 Swamp|LEA|1
+4 Animate Dead|LEA|1
+4 Black Knight|LEA|1
+4 Dark Ritual|LEA|1
+4 Fallen Angel|7ED|1
+4 Raise Dead|LEA|1
+4 Spirit of the Night|MIR|1

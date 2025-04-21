@@ -1,21 +1,15 @@
 [metadata]
-Name=AI 22 Gruul Stompy
+Name=challenger_22_gruul_stompy
 [Main]
-4 Abrade|SCD|1
-4 Briarbridge Tracker|MID|1
-10 Forest|MID|3
-1 Goldspan Dragon|KHM|1
-2 Halana and Alena, Partners|VOW|1
-4 Jaspera Sentinel|KHM|1
-2 Lair of the Hydra|AFR|1
-1 Light Up the Night|MID|1
-4 Magda, Brazen Outlaw|KHM|1
-8 Mountain|MID|3
-4 Ranger Class|AFR|1
-4 Rockfall Vale|MID|1
-4 Snakeskin Veil|KHM|1
-1 Thundering Rebuke|ZNR|1
-2 Tovolar's Huntmaster|MID|1
-1 Tovolar, Dire Overlord|MID|1
-2 Twinshot Sniper|NEO|1
-2 Ulvenwald Oddity|VOW|1
+10 Forest|ODY|3
+4 Call of the Herd|ODY|1
+4 Elvish Berserker|EXO|1
+4 Firebolt|ODY|1
+4 Giant Growth|7ED|1
+4 Kamahl, Pit Fighter|ODY|1
+4 Karplusan Forest|ICE|1
+4 Keldon Vandals|UDS|1
+4 Lightning Bolt|JGP|1
+4 Llanowar Elves|4ED|1
+4 Rofellos, Llanowar Emissary|UDS|1
+9 Mountain|ODY|3

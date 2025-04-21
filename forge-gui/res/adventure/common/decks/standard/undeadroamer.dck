@@ -1,37 +1,13 @@
 [metadata]
 Name=The Zombie 2
-Title=The Zombie
-Difficulty=medium
-Description=UB Zombie deck with Call to the Kindred
-Icon=The Zombie.jpg
-Deck Type=constructed
-[main]
-10 Island
-10 Swamp
-3 Tainted Isle
-4 Darkslick Shores
-4 Drowned Catacomb
-1 Urborg, Tomb of Yawgmoth
-4 Armored Skaab
-2 Army of the Damned
-1 Ashen Ghoul
-4 Call to the Kindred
-2 Cemetery Reaper
-1 Corpse Connoisseur
-1 Death Baron
-4 Diregraf Captain
-2 Endless Ranks of the Dead
-4 Forbidden Alchemy
-4 Geralf's Mindcrusher
-1 Grixis Slavedriver
-4 Havengul Runebinder
-1 Lim-Dul the Necromancer
-3 Lord of the Undead
-1 Mikaeus, the Unhallowed
-2 Relentless Skaabs
-1 Scrapskin Drake
-4 Screeching Skaab
-1 Skaab Ruinator
-4 Unbreathing Horde
-2 Zombie Master
-[sideboard]
+[Main]
+23 Swamp|USG|1
+4 Dark Ritual|USG|1
+4 Duress|USG|1
+4 Hymn to Tourach|FEM|1
+4 Icy Manipulator|ICE|1
+4 Lord of the Undead|PLS|1
+4 Phyrexian Arena|APC|1
+4 Phyrexian Negator|UDS|1
+4 Plague Beetle|ULG|1
+4 Zombie Master|2ED|1

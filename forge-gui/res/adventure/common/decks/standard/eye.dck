@@ -1,15 +1,22 @@
 [metadata]
-Name=murder
+Name=eye
 [Main]
-4 Concealing Curtains|VOW|1
-4 Evil Eye of Orms-by-Gore|DMR|1
-4 Evil Eye of Urborg|TSP|1
-4 Eye of Vecna|AFR|1
-4 Eyes of the Beholder|AFR|1
-4 Eyetwitch|STX|1
-4 Faceless Agent|J21|1
-4 Hive of the Eye Tyrant|AFR|1
-4 Murder|CLB|1
-5 Swamp|STX|1
-15 Swamp|STX|2
-4 Tragic Slip|MB1|1
+16 Swamp|ICE|3
+2 Brainstorm|ICE|1
+2 Demonic Consultation|ICE|1
+2 Diabolic Tutor|ODY|1
+2 Fact or Fiction|INV|1
+2 Intuition|TMP|1
+2 Mystical Tutor|MIR|1
+2 Necropotence|DKM|1
+2 Phyrexian Arena|APC|1
+2 Sengir Vampire|2ED|1
+2 Unholy Strength|5ED|1
+3 Dark Ritual|DKM|1
+3 Duress|USG|1
+3 Hymn to Tourach|FEM|1
+3 Insight|TMP|1
+3 Phyrexian Negator|UDS|1
+3 Withered Wretch|LGN|1
+4 Island|ICE|3
+4 Underground River|ICE|1

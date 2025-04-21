@@ -1,29 +1,19 @@
 [metadata]
 Name=Diablo 3
-[main]
-4 Badlands
-4 Bloodstained Mire
-3 Blackcleave Cliffs
-2 Mountain
-4 Swamp
-1 Urborg, Tomb of Yawgmoth
-1 Keldon Megaliths
-1 Fire Diamond
-1 Charcoal Diamond
-3 Simian Spirit Guide
-4 Rakdos Cackler
-1 Tormented Soul
-4 Bump in the Night
-4 Executioner's Capsule
-4 Seal of Fire
-4 Blood Scrivener
-4 Gobhobbler Rats
-1 Drekavac
-2 Avaricious Dragon
-1 Jagged Poppet
-1 Avatar of Discord
-1 Kolaghan's Command
-1 Dark Suspicions
-2 Grafted Skullcap
-2 Bottled Cloister
-[sideboard]
+[Main]
+10 Swamp|INV|1
+4 Blazing Specter|INV|1
+4 Darigaaz's Caldera|PLS|1
+4 Ghitu Fire|INV|1
+4 Nightscape Familiar|PLS|1
+4 Plague Spitter|INV|1
+4 Pyre Zombie|INV|1
+4 Shivan Oasis|INV|1
+4 Shivan Zombie|INV|1
+4 Sulfur Vent|INV|1
+4 Sulfurous Springs|ICE|1
+4 Terminate|PLS|1
+4 Urborg Volcano|INV|1
+4 Urza's Rage|INV|1
+4 Void|INV|1
+9 Mountain|INV|1

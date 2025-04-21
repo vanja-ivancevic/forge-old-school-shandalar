@@ -1,26 +1,31 @@
 [metadata]
-Name=Adventure - Low Boros
+Name=Adventure - Low Boros - Portal Deck 1
 [Avatar]
 
 [Main]
-1 Balefire Liege|HOP|1
-2 Battlegate Mimic|EVE|1
-1 Boros Charm|NCC|1
-2 Boros Locket|C21|1
-2 Boros Recruit|RAV|1
-2 Double Cleave|UMA|1
-1 Faith Unbroken|CMR|1
-1 Flamewright|CNS|1
-1 Highspire Mantis|KTK|1
-2 Impetuous Sunchaser|BNG|1
-1 Lightning Helix|DDH|1
-7 Mountain|GK1|2
-7 Plains|GK1|1
-2 Scourge of the Nobilis|EVE|1
-1 Spitemare|DDH|1
-1 Squee's Embrace|APC|1
-4 Stone Quarry|M19|1
-2 Temur Battle Rage|CMR|1
+1 Devoted Hero|POR|1
+1 Armored Pegasus|POR|1
+1 Regal Unicorn|POR|1
+1 Spotted Griffin|POR|1
+1 Venerable Monk|POR|1
+1 Anaconda|POR|1
+1 Gorilla Warrior|POR|1
+1 Grizzly Bears|POR|1
+1 Fire Imp|POR|1
+1 Hill Giant|POR|1
+1 Hulking Goblin|POR|1
+1 Lizard Warrior|POR|1
+1 Raging Goblin|POR|1
+1 Defiant Stand|POR|1
+1 Sacred Nectar|POR|1
+1 Warrior's Charge|POR|1
+1 Untamed Wilds|POR|1
+1 Blaze|POR|1
+1 Lava Axe|POR|1
+1 Volcanic Hammer|POR|1
+6 Plains|POR|1
+6 Mountain|POR|1
+3 Forest|POR|1
 [Sideboard]
 
 [Planes]

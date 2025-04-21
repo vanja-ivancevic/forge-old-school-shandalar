@@ -1,20 +1,14 @@
 [metadata]
 Name=The Great and Powerful Trixie 2
-[main]
-3 Arcane Denial
-2 Cancel
-3 Disdainful Stroke
-4 Donate
-1 Enlightened Tutor
-3 Essence Scatter
-4 Glacial Fortress
-4 Illusions of Grandeur
-14 Island
-3 Mana Leak
-1 Mystical Tutor
-1 Plains
-4 Sapphire Medallion
-2 Seachrome Coast
-3 Unsummon
-4 Vapor Snag
-4 Wrath of God
+[Main]
+17 Island|LEB|1
+2 Fact or Fiction|INV|1
+3 Intuition|G03|1
+4 Ancient Tomb|TMP|1
+4 Arcane Denial|ALL|1
+4 Chain of Vapor|ONS|1
+4 Donate|UDS|1
+4 Illusions of Grandeur|ICE|1
+4 Impulse|BTD|1
+4 Parallax Tide|NEM|1
+4 Stifle|SCG|1

@@ -1,37 +1,19 @@
 [metadata]
 Name=Hugo Drax 2
-Title=Hugo Drax
-Difficulty=medium
-Description=Mono B control deck
-Icon=Hugo Drax.jpg
-Deck Type=constructed
-[main]
-24 Swamp|TMP
-2 Will-o'-the-Wisp
-2 Zulaport Enforcer
-4 Basilica Screecher
-2 Fog of Gnats
-1 Withered Wretch
-1 Gatekeeper of Malakir
-1 Corrosive Mentor
-2 Soot Imp
-1 Hypnotic Specter
-1 Necroskitter
-1 Royal Assassin
-1 Vampire Nighthawk
-1 Urborg Stalker
-1 Gloomdrifter
-2 Uncle Istvan
-1 Gray Merchant of Asphodel
-2 Dash Hopes
-1 Death Stroke
-1 Scepter of Fugue
-1 Pharika's Cure
-1 Death's Duet
-1 Dead Weight
-1 Hero's Downfall
-1 Grave Peril
-1 Doom Blade
-1 Go for the Throat
-1 Victim of Night
-[sideboard]
+[Main]
+19 Swamp|USG|1
+2 Bad Moon|3ED|1
+2 Contagion|ALL|1
+2 Corrupt|USG|1
+2 Dark Ritual|LEB|1
+2 Demonic Consultation|ICE|1
+2 Diabolic Edict|TMP|1
+2 Drain Life|F02|1
+2 Phyrexian Negator|UDS|1
+2 Raise Dead|2ED|1
+2 Urborg|LEG|1
+2 Vampiric Tutor|VIS|1
+3 Hidden Horror|WTH|1
+3 Phyrexian Ghoul|BRB|1
+4 Carrion Feeder|SCG|1
+4 Withered Wretch|LGN|1
