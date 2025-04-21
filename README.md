@@ -1,100 +1,49 @@
-# ⚔️ Forge: The Magic: The Gathering Rules Engine
+# Forge: Old-School Shandalar Edition
 
-Join the **Forge community** on [Discord](https://discord.gg/HcPJNyD66a)!
+This is a fork of the official **[Forge MTG Engine](https://github.com/Card-Forge/forge)**, specifically modified to provide an "Old-School" Shandalar adventure mode experience.
 
-[![Test build](https://github.com/Card-Forge/forge/actions/workflows/test-build.yaml/badge.svg)](https://github.com/Card-Forge/forge/actions/workflows/test-build.yaml)
+This version updates Forge's Shandalar campaign to primarily use cards with the original ("old-border") frames, focusing on sets from **Alpha through Scourge (up to May 2003)**.
 
----
+## Modifications
 
-## ✨ Introduction
+This fork includes changes to:
 
-**Forge** is a dynamic and open-source **Rules Engine** tailored for **Magic: The Gathering** enthusiasts. Developed by a community of passionate programmers, Forge allows players to explore the rich universe of MTG through a flexible, engaging platform. 
+*   **Card Restrictions:** The default Shandalar format is restricted to old-border sets.
+*   **Enemy Decks:** All enemy decks have been reimagined for an authentic old-school experience. The initial decklists were developed by a complex multi-AI-agent framework and continue to be refined through playtesting. At least 30-40 decks have been manually reviewed and improved, including all boss decks.
+*   **Shop Inventories & Rewards:** Adjusted to fit the old-school theme and card pool.
+*   **Core Code Fixes:** Includes modifications to the core Forge code (`GameFormat.java` and adventure GUI code) to correctly handle reprinted cards within restricted formats, ensuring they appear in shops and rewards as intended when their original printing is allowed.
 
-**Note:** Forge operates independently and is not affiliated with Wizards of the Coast.
+## Features
 
----
+*   Authentic "golden-age" of MTG feeling with only old-border cards in Shandalar.
+*   Boosters available in shops for many old-border sets.
+*   Power 9 cards are extremely rare and only obtainable from specific encounters.
 
-## 🌟 Key Features
+## Development Status
 
-- **🌐 Cross-Platform Support:** Play on **Windows, Mac, Linux,** and **Android**.
-- **🔧 Extensible Architecture:** Built in **Java**, Forge encourages developers to contribute by adding features and cards.
-- **🎮 Versatile Gameplay:** Dive into single-player modes or challenge opponents online!
+✅ **Completed:**
 
----
+*   Global set and card restrictions for Shandalar.
+*   Enemy decks (All processed, playtest feedback welcome!)
+*   Basic rewards configuration.
+*   Shop inventories configuration.
+*   Core code fix for reprint handling in restricted formats.
+*   Drafting (Note: Jumpstart packs might still appear visually but cannot be played due to restrictions).
 
-## 🛠️ Installation Guide
+🔄 **In Progress:**
 
-### 📥 Desktop Installation
-1. **Latest Releases:** Download the latest version [here](https://github.com/Card-Forge/forge/releases/latest).
-2. **Snapshot Build:** For the latest development version, grab the `forge-gui-desktop` tarball from our [Snapshot Build](https://github.com/Card-Forge/forge/releases/tag/daily-snapshots).
-   - **Tip:** Extract to a new folder to prevent version conflicts.
-3. **User Data Management:** Previous players’ data is preserved during upgrades.
-4. **Java Requirement:** Ensure you have **Java 17 or later** installed.
+*   Special rewards adjustments.
+*   Balance adjustments based on player feedback.
 
-### 📱 Android Installation
-- Download the **APK** from the [Snapshot Build](https://github.com/Card-Forge/forge/releases/tag/daily-snapshots). On the first launch, Forge will automatically download all necessary assets.
+## Feedback and Issues
 
----
+Please report any bugs or share your feedback specific to this Old-School Shandalar fork on the issues page.
 
-## 🎮 Modes of Play
+For issues related to the core Forge engine unrelated to these modifications, please refer to the [official Forge repository issues](https://github.com/Card-Forge/forge/issues).
 
-Forge offers various exciting gameplay options:
+Happy dueling in the old-school Multiverse!
 
-### 🌍 Adventure Mode
-Embark on a thrilling single-player journey where you can:
-- Explore an overworld map.
-- Challenge diverse AI opponents.
-- Collect cards and items to boost your abilities.
-
-![Adventure Mode](https://downloads.cardforge.org/images/site/adventure-mode.png "Adventure Mode")
-
-### 🔍 Quest Modes
-Engage in focused gameplay without the overworld exploration—perfect for quick sessions!
-
-### 🤖 AI Formats
-Test your skills against AI in multiple formats:
-- **Sealed**
-- **Draft**
-- **Commander**
-- **Cube**
-
-For comprehensive gameplay instructions, visit our [Gameplay Guide](https://github.com/Card-Forge/forge/wiki/Gameplay-Guide).
+![Shandalar Gameplay](https://github.com/user-attachments/assets/7b7837fa-3fba-49d4-b8df-9b9d2b4c1c59)
 
 ---
-
-## 💬 Support & Community
-
-Need help? Join our vibrant Discord community! 
-- 📜 Read the **#rules** and explore the **FAQ**.
-- ❓ Ask your questions in the **#help** channel for assistance.
-
----
-
-## 🤝 Contributing to Forge
-
-We love community contributions! Interested in helping? Check out our [Contributing Guidelines](CONTRIBUTING.md) for details on how to get started.
-
----
-
-## ℹ️ About Forge
-
-Forge aims to deliver an immersive and customizable Magic: The Gathering experience for fans around the world. 
-
-### 📊 Repository Statistics
-
-| Metric         | Count                                                       |
-|----------------|-------------------------------------------------------------|
-| **⭐ Stars:**   | [![GitHub stars](https://img.shields.io/github/stars/Card-Forge/forge?style=flat-square)](https://github.com/Card-Forge/forge/stargazers) |
-| **🍴 Forks:**   | [![GitHub forks](https://img.shields.io/github/forks/Card-Forge/forge?style=flat-square)](https://github.com/Card-Forge/forge/network) |
-| **👥 Contributors:** | [![GitHub contributors](https://img.shields.io/github/contributors/Card-Forge/forge?style=flat-square)](https://github.com/Card-Forge/forge/graphs/contributors) |
-
----
-
-**📄 License:** [GPL-3.0](LICENSE)
-<div align="center" style="display: flex; align-items: center; justify-content: center;">
-    <div style="margin-left: auto;">
-        <a href="#top">
-            <img src="https://img.shields.io/badge/Back%20to%20Top-000000?style=for-the-badge&logo=github&logoColor=white" alt="Back to Top">
-        </a>
-    </div>
-</div>
+*This fork is based on the [official Forge repository](https://github.com/Card-Forge/forge) and maintains its [GPL-3.0 License](LICENSE).*

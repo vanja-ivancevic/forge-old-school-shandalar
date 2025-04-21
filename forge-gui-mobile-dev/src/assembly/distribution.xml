@@ -1,0 +1,49 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.1.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.1.0 http://maven.apache.org/xsd/assembly-2.1.0.xsd">
+    <id>distribution</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>true</includeBaseDirectory> <!-- Creates a root folder like OldSchoolForge-2.0.04-SNAPSHOT -->
+    <baseDirectory>OldSchoolForge-${project.version}</baseDirectory>
+
+    <fileSets>
+        <!-- Include the main JAR -->
+        <fileSet>
+            <directory>${project.build.directory}</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>${project.build.finalName}-jar-with-dependencies.jar</include>
+            </includes>
+        </fileSet>
+        <!-- Include the launchers -->
+        <fileSet>
+            <directory>${project.build.directory}</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>forge-adventure.sh</include>
+                <include>forge-adventure.command</include>
+                <include>forge-adventure.exe</include>
+            </includes>
+            <fileMode>0755</fileMode> <!-- Set execute permissions for scripts -->
+        </fileSet>
+        <!-- Include the resources -->
+        <fileSet>
+            <directory>${project.basedir}/../forge-gui/res</directory>
+            <outputDirectory>/res</outputDirectory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+        <!-- Include README and LICENSE from project root -->
+        <fileSet>
+            <directory>${project.basedir}/..</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>README.md</include>
+                <include>LICENSE</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>

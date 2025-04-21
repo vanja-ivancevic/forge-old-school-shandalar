@@ -1,6 +1,46 @@
 ## Unreleased
 ### No issue
 
+**- Full card pool for initial pool generation**
+
+ * - Allow reprints in restricted formats
+ * - Fix some tribe names
+ * - Decks all updated to use old-border only
+ * - Shops updates
+ * - Rewards updates (not complete)
+
+[71055b331c2126c](https://github.com/Card-Forge/forge/commit/71055b331c2126c) Vanja *2025-04-21 21:49:22*
+
+**Fixed bug where android boolean settings were not properly displaying their checked state (#7440)**
+
+
+[01a3b2723f38697](https://github.com/Card-Forge/forge/commit/01a3b2723f38697) matthias8422 *2025-04-21 17:53:53*
+
+**~ lf**
+
+
+[8640a2aaad52302](https://github.com/Card-Forge/forge/commit/8640a2aaad52302) Hans Mackowiak *2025-04-21 14:45:07*
+
+**Add the ability to use hyphens in Collector numbers**
+
+
+[f190e7e678ed0ea](https://github.com/Card-Forge/forge/commit/f190e7e678ed0ea) Chris H *2025-04-21 14:10:26*
+
+**Update Planeswalker Championship Promos.txt**
+
+
+[9f5e5f306846123](https://github.com/Card-Forge/forge/commit/9f5e5f306846123) Paul Hammerton *2025-04-21 14:10:26*
+
+**Update Media and Collaboration Promos.txt**
+
+
+[3db209f1281b667](https://github.com/Card-Forge/forge/commit/3db209f1281b667) Paul Hammerton *2025-04-21 14:10:26*
+
+**Remove language code if we can't find it the first request**
+
+
+[351a94281c903a3](https://github.com/Card-Forge/forge/commit/351a94281c903a3) Chris H *2025-04-21 14:10:26*
+
 **Tifa, Martial Artist**
 
 
