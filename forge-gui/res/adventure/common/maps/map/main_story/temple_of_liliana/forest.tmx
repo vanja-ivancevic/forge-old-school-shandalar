@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="272">
  <properties>
-  <property name="canFailDungeon" type="bool" value="true"/>
-  <property name="dungeonEffect" value=""/>
-  <property name="respawnEnemies" type="bool" value="true"/>
+  <property name="canFailDungeon" type="bool" value="true" />
+  <property name="dungeonEffect" value="" />
+  <property name="respawnEnemies" type="bool" value="true" />
  </properties>
- <tileset firstgid="1" source="../../../tileset/main.tsx"/>
- <tileset firstgid="10113" source="../../../tileset/buildings.tsx"/>
- <tileset firstgid="11905" source="../../../tileset/buildings-nocollide.tsx"/>
+ <tileset firstgid="1" source="../../../tileset/main.tsx" />
+ <tileset firstgid="10113" source="../../../tileset/buildings.tsx" />
+ <tileset firstgid="11905" source="../../../tileset/buildings-nocollide.tsx" />
  <layer id="1" name="Tile Layer 1" width="30" height="30">
   <data encoding="csv">
 2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,2904,
@@ -112,7 +112,7 @@
  </layer>
  <layer id="5" name="Tile Layer 4" width="30" height="30">
   <properties>
-   <property name="spriteLayer" type="bool" value="true"/>
+   <property name="spriteLayer" type="bool" value="true" />
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -182,44 +182,44 @@
 </data>
  </layer>
  <objectgroup id="2" name="Objects">
-  <object id="3" template="../../../obj/collision.tx" x="-16" y="480.75" width="512.75" height="16"/>
-  <object id="4" template="../../../obj/collision.tx" x="480.072" y="0" width="16" height="480"/>
+  <object id="3" template="../../../obj/collision.tx" x="-16" y="480.75" width="512.75" height="16" />
+  <object id="4" template="../../../obj/collision.tx" x="480.072" y="0" width="16" height="480" />
   <object id="183" template="../../../obj/portal.tx" x="80" y="480">
    <properties>
-    <property name="direction" value="up"/>
-    <property name="portalState" value="active"/>
-    <property name="teleport" value="../common/maps/map/main_story/temple_of_liliana/keep.tmx"/>
-    <property name="teleportObjectId" value="226"/>
+    <property name="direction" value="up" />
+    <property name="portalState" value="active" />
+    <property name="teleport" value="../common/maps/map/main_story/temple_of_liliana/keep.tmx" />
+    <property name="teleportObjectId" value="226" />
    </properties>
   </object>
-  <object id="185" template="../../../obj/manashards.tx" x="400" y="112"/>
-  <object id="186" template="../../../obj/gold.tx" x="448" y="112"/>
+  <object id="185" template="../../../obj/manashards.tx" x="400" y="112" />
+  <object id="186" template="../../../obj/gold.tx" x="448" y="112" />
   <object id="187" template="../../../obj/enemy.tx" x="415.742" y="152.75">
    <properties>
     <property name="defeatDialog">[
   {
-    &quot;text&quot;:&quot;The cleric drops several items and rushes toward the nearby building.&quot;,
-    &quot;loctext&quot;:&quot;&quot;,
-    &quot;action&quot;: [{&quot;deleteMapObject&quot;: 187}]
-    &quot;options&quot;:[ 
-	{ &quot;name&quot;:&quot;Look through the items&quot;,
-	  &quot;text&quot;:&quot;There isn't much of interest, but you do find a large and sturdy key.&quot;
-	  &quot;action&quot;:[{&quot;advanceMapFlag&quot;:&quot;cemeteryKey&quot;}],
-	  &quot;options&quot;:[
-		{&quot;name&quot;: &quot;Chase after the cleric&quot;,
-		 &quot;text&quot;: &quot;By the time you reach the building, it is locked up tight. The key you are holding is far too large for the slot.&quot;,
-		 &quot;options&quot;:[{&quot;name&quot;: &quot;Leave the area&quot;}]
+    "text":"The cleric drops several items and rushes toward the nearby building.",
+    "loctext":"",
+    "action": [{"deleteMapObject": 187}]
+    "options":[ 
+	{ "name":"Look through the items",
+	  "text":"There isn't much of interest, but you do find a large and sturdy key."
+	  "action":[{"advanceMapFlag":"cemeteryKey"}],
+	  "options":[
+		{"name": "Chase after the cleric",
+		 "text": "By the time you reach the building, it is locked up tight. The key you are holding is far too large for the slot.",
+		 "options":[{"name": "Leave the area"}]
 		},
-		{&quot;name&quot;: &quot;Leave the area&quot;}
+		{"name": "Leave the area"}
 		]
 	},
-	{ &quot;name&quot;:&quot;Chase after them.&quot;,
-	  &quot;text&quot;:&quot;He manages to shut the elaborate stone door before you can catch him, and you hear a series of large clicks and clacks as it locks before you can locate the actual handle.&quot;
-	  &quot;options&quot;:[
-		{&quot;name&quot;: &quot;Search the items&quot;,
-		 &quot;text&quot;: &quot;You find nothing of value except for a large metal key. Rushing back over to the door, you quickly find that the key is much larger than the keyhole for this door.&quot;,
-		 &quot;action&quot;:[{&quot;advanceMapFlag&quot;:&quot;cemeteryKey&quot;}],
-		 &quot;options&quot;:[{&quot;name&quot;: &quot;Leave the area&quot;}]
+	{ "name":"Chase after them.",
+	  "text":"He manages to shut the elaborate stone door before you can catch him, and you hear a series of large clicks and clacks as it locks before you can locate the actual handle."
+	  "options":[
+		{"name": "Search the items",
+		 "text": "You find nothing of value except for a large metal key. Rushing back over to the door, you quickly find that the key is much larger than the keyhole for this door.",
+		 "action":[{"advanceMapFlag":"cemeteryKey"}],
+		 "options":[{"name": "Leave the area"}]
 		}
 		]
 
@@ -227,49 +227,49 @@
 	]
   }
 ]</property>
-    <property name="enemy" value="Orzhov Cleric"/>
+    <property name="enemy" value="Orzhov Cleric" />
    </properties>
   </object>
   <object id="188" template="../../../obj/enemy.tx" x="319.182" y="352.227">
    <properties>
-    <property name="enemy" value="Black Sliver"/>
-    <property name="pursueRange" type="int" value="75"/>
-    <property name="speed" type="float" value="42"/>
-    <property name="threatRange" type="float" value="50"/>
-    <property name="waypoints" value="250,251,252,wait5,254,252,wait5,251"/>
+    <property name="enemy" value="Black Sliver" />
+    <property name="pursueRange" type="int" value="75" />
+    <property name="speed" type="float" value="42" />
+    <property name="threatRange" type="float" value="50" />
+    <property name="waypoints" value="250,251,252,wait5,254,252,wait5,251" />
    </properties>
   </object>
   <object id="198" template="../../../obj/enemy.tx" x="383.5" y="391.667">
    <properties>
-    <property name="enemy" value="Golgari Treefolk"/>
-    <property name="pursueRange" type="int" value="200"/>
-    <property name="speed" type="float" value="12"/>
-    <property name="threatRange" type="float" value="60"/>
+    <property name="enemy" value="Golgari Treefolk" />
+    <property name="pursueRange" type="int" value="200" />
+    <property name="speed" type="float" value="12" />
+    <property name="threatRange" type="float" value="60" />
    </properties>
   </object>
-  <object id="225" template="../../../obj/collision.tx" x="-16" y="-16.6667" width="512" height="16"/>
-  <object id="226" template="../../../obj/collision.tx" x="-16" y="0" width="16" height="480"/>
+  <object id="225" template="../../../obj/collision.tx" x="-16" y="-16.6667" width="512" height="16" />
+  <object id="226" template="../../../obj/collision.tx" x="-16" y="0" width="16" height="480" />
   <object id="227" template="../../../obj/treasure.tx" x="208.75" y="239.25">
    <properties>
     <property name="reward">[{
-  &quot;type&quot;: &quot;randomCard&quot;,
-  &quot;count&quot;: 2,
-  &quot;colors&quot;: [ &quot;colorID&quot; ]
+  "type": "randomCard",
+  "count": 2,
+  "colors": [ "colorID" ]
 },{
-  &quot;type&quot;: &quot;randomCard&quot;,
-  &quot;count&quot;: 1,
-  &quot;probability&quot;: 0.5,
-  &quot;rarity&quot;: [ &quot;rare&quot; ],
-  &quot;colors&quot;: [ &quot;colorID&quot; ]
+  "type": "randomCard",
+  "count": 1,
+  "probability": 0.5,
+  "rarity": [ "rare" ],
+  "colors": [ "colorID" ]
 },{
-  &quot;type&quot;: &quot;randomCard&quot;,
-  &quot;count&quot;: 3,
-  &quot;addMaxCount&quot;: 2
+  "type": "randomCard",
+  "count": 3,
+  "addMaxCount": 2
 },{
-  &quot;type&quot;: &quot;item&quot;,
-  &quot;probability&quot;: 0.005,
-  &quot;count&quot;: 1,
-  &quot;itemName&quot;: &quot;Demonic Contract&quot;
+  "type": "item",
+  "probability": 0.005,
+  "count": 1,
+  "itemName": "Demonic Contract"
 }]</property>
    </properties>
   </object>
@@ -277,192 +277,192 @@
    <properties>
     <property name="reward">[
   {
-    &quot;type&quot;: &quot;gold&quot;,
-    &quot;count&quot;: 160,
-    &quot;addMaxCount&quot;: 40
+    "type": "gold",
+    "count": 160,
+    "addMaxCount": 40
  }
 ]</property>
    </properties>
   </object>
-  <object id="229" template="../../../obj/gold.tx" x="448" y="320"/>
+  <object id="229" template="../../../obj/gold.tx" x="448" y="320" />
   <object id="230" template="../../../obj/treasure.tx" x="14.75" y="275.25">
    <properties>
     <property name="reward">[{
-  &quot;type&quot;: &quot;randomCard&quot;,
-  &quot;count&quot;: 2,
-  &quot;colors&quot;: [ &quot;colorID&quot; ]
+  "type": "randomCard",
+  "count": 2,
+  "colors": [ "colorID" ]
 },{
-  &quot;type&quot;: &quot;randomCard&quot;,
-  &quot;count&quot;: 1,
-  &quot;probability&quot;: 0.5,
-  &quot;rarity&quot;: [ &quot;rare&quot; ],
-  &quot;colors&quot;: [ &quot;colorID&quot; ]
+  "type": "randomCard",
+  "count": 1,
+  "probability": 0.5,
+  "rarity": [ "rare" ],
+  "colors": [ "colorID" ]
 },{
-  &quot;type&quot;: &quot;randomCard&quot;,
-  &quot;count&quot;: 3,
-  &quot;addMaxCount&quot;: 2
+  "type": "randomCard",
+  "count": 3,
+  "addMaxCount": 2
 },{
-  &quot;type&quot;: &quot;item&quot;,
-  &quot;probability&quot;: 0.005,
-  &quot;count&quot;: 1,
-  &quot;itemName&quot;: &quot;Demonic Contract&quot;
+  "type": "item",
+  "probability": 0.005,
+  "count": 1,
+  "itemName": "Demonic Contract"
 }]</property>
    </properties>
   </object>
   <object id="231" template="../../../obj/enemy.tx" x="241.485" y="127.606">
    <properties>
-    <property name="enemy" value="Golgari Treefolk"/>
-    <property name="pursueRange" type="int" value="200"/>
-    <property name="speed" type="float" value="12"/>
-    <property name="threatRange" type="float" value="50"/>
+    <property name="enemy" value="Golgari Treefolk" />
+    <property name="pursueRange" type="int" value="200" />
+    <property name="speed" type="float" value="12" />
+    <property name="threatRange" type="float" value="50" />
    </properties>
   </object>
   <object id="232" template="../../../obj/enemy.tx" x="314.333" y="127.333">
    <properties>
-    <property name="enemy" value="Golgari Elf"/>
-    <property name="pursueRange" type="int" value="75"/>
-    <property name="threatRange" type="float" value="50"/>
-    <property name="waypoints" value="267,265,266,255,254,255,266,265,wait15"/>
+    <property name="enemy" value="Golgari Elf" />
+    <property name="pursueRange" type="int" value="75" />
+    <property name="threatRange" type="float" value="50" />
+    <property name="waypoints" value="267,265,266,255,254,255,266,265,wait15" />
    </properties>
   </object>
   <object id="233" template="../../../obj/treasure.tx" x="443.667" y="32.6364">
    <properties>
     <property name="reward">[{
-  &quot;type&quot;: &quot;randomCard&quot;,
-  &quot;count&quot;: 2,
-  &quot;colors&quot;: [ &quot;colorID&quot; ]
+  "type": "randomCard",
+  "count": 2,
+  "colors": [ "colorID" ]
 },{
-  &quot;type&quot;: &quot;randomCard&quot;,
-  &quot;count&quot;: 1,
-  &quot;probability&quot;: 0.5,
-  &quot;rarity&quot;: [ &quot;rare&quot; ],
-  &quot;colors&quot;: [ &quot;colorID&quot; ]
+  "type": "randomCard",
+  "count": 1,
+  "probability": 0.5,
+  "rarity": [ "rare" ],
+  "colors": [ "colorID" ]
 },{
-  &quot;type&quot;: &quot;randomCard&quot;,
-  &quot;count&quot;: 3,
-  &quot;addMaxCount&quot;: 2
+  "type": "randomCard",
+  "count": 3,
+  "addMaxCount": 2
 },{
-  &quot;type&quot;: &quot;item&quot;,
-  &quot;probability&quot;: 0.005,
-  &quot;count&quot;: 1,
-  &quot;itemName&quot;: &quot;Demonic Contract&quot;
+  "type": "item",
+  "probability": 0.005,
+  "count": 1,
+  "itemName": "Demonic Contract"
 }]</property>
    </properties>
   </object>
   <object id="234" template="../../../obj/enemy.tx" x="373.125" y="46.375">
    <properties>
-    <property name="enemy" value="Golgari Elf"/>
+    <property name="enemy" value="Golgari Elf" />
    </properties>
   </object>
   <object id="235" template="../../../obj/enemy.tx" x="176" y="319.5">
    <properties>
-    <property name="enemy" value="Liliana's Herbalist"/>
-    <property name="pursueRange" type="int" value="75"/>
-    <property name="threatRange" type="int" value="50"/>
-    <property name="waypoints" value="252,253,wait5,252,254,255,266,wait5,255,254"/>
+    <property name="enemy" value="Liliana's Herbalist" />
+    <property name="pursueRange" type="int" value="75" />
+    <property name="threatRange" type="int" value="50" />
+    <property name="waypoints" value="252,253,wait5,252,254,255,266,wait5,255,254" />
    </properties>
   </object>
   <object id="236" template="../../../obj/enemy.tx" x="307" y="287.333">
    <properties>
-    <property name="enemy" value="Golgari Elf"/>
+    <property name="enemy" value="Golgari Elf" />
    </properties>
   </object>
   <object id="237" template="../../../obj/enemy.tx" x="128" y="80">
    <properties>
-    <property name="enemy" value="Golgari Elf"/>
-    <property name="pursueRange" type="int" value="75"/>
-    <property name="threatRange" type="float" value="30"/>
-    <property name="waypoints" value="264,263,262,261,260,261,262,263"/>
+    <property name="enemy" value="Golgari Elf" />
+    <property name="pursueRange" type="int" value="75" />
+    <property name="threatRange" type="float" value="30" />
+    <property name="waypoints" value="264,263,262,261,260,261,262,263" />
    </properties>
   </object>
   <object id="238" template="../../../obj/enemy.tx" x="16.375" y="239.25">
    <properties>
-    <property name="enemy" value="Liliana's Herbalist"/>
+    <property name="enemy" value="Liliana's Herbalist" />
    </properties>
   </object>
   <object id="239" template="../../../obj/enemy.tx" x="112.042" y="56.6667">
    <properties>
-    <property name="enemy" value="Liliana's Herbalist"/>
-    <property name="threatRange" type="float" value="0"/>
+    <property name="enemy" value="Liliana's Herbalist" />
+    <property name="threatRange" type="float" value="0" />
    </properties>
   </object>
   <object id="240" template="../../../obj/entry_down.tx" x="71.75" y="16.5" width="103" height="16">
    <properties>
-    <property name="teleport" value="../common/maps/map/main_story/temple_of_liliana/graveyard.tmx"/>
-    <property name="teleportObjectId" value="183"/>
+    <property name="teleport" value="../common/maps/map/main_story/temple_of_liliana/graveyard.tmx" />
+    <property name="teleportObjectId" value="183" />
    </properties>
   </object>
   <object id="241" template="../../../obj/enemy.tx" x="96" y="351">
    <properties>
-    <property name="enemy" value="Golgari Treefolk"/>
-    <property name="pursueRange" type="int" value="200"/>
-    <property name="speed" type="float" value="12"/>
-    <property name="threatRange" type="float" value="60"/>
+    <property name="enemy" value="Golgari Treefolk" />
+    <property name="pursueRange" type="int" value="200" />
+    <property name="speed" type="float" value="12" />
+    <property name="threatRange" type="float" value="60" />
    </properties>
   </object>
   <object id="242" template="../../../obj/enemy.tx" x="432" y="240">
    <properties>
-    <property name="enemy" value="Orzhov Cleric"/>
-    <property name="pursueRange" type="int" value="75"/>
-    <property name="threatRange" type="float" value="50"/>
-    <property name="waypoints" value="246,wait10,247,248,249,250,251,wait10,250,249,248,247"/>
+    <property name="enemy" value="Orzhov Cleric" />
+    <property name="pursueRange" type="int" value="75" />
+    <property name="threatRange" type="float" value="50" />
+    <property name="waypoints" value="246,wait10,247,248,249,250,251,wait10,250,249,248,247" />
    </properties>
   </object>
   <object id="243" template="../../../obj/enemy.tx" x="374" y="464">
    <properties>
-    <property name="enemy" value="Liliana's Herbalist"/>
+    <property name="enemy" value="Liliana's Herbalist" />
    </properties>
   </object>
-  <object id="244" template="../../../obj/manashards.tx" x="416" y="464"/>
-  <object id="245" template="../../../obj/gold.tx" x="400" y="464"/>
-  <object id="265" template="../../../obj/waypoint.tx" x="304" y="208"/>
-  <object id="266" template="../../../obj/waypoint.tx" x="240" y="208"/>
-  <object id="267" template="../../../obj/waypoint.tx" x="304" y="64"/>
+  <object id="244" template="../../../obj/manashards.tx" x="416" y="464" />
+  <object id="245" template="../../../obj/gold.tx" x="400" y="464" />
+  <object id="265" template="../../../obj/waypoint.tx" x="304" y="208" />
+  <object id="266" template="../../../obj/waypoint.tx" x="240" y="208" />
+  <object id="267" template="../../../obj/waypoint.tx" x="304" y="64" />
   <object id="268" template="../../../obj/enemy.tx" x="208" y="288">
    <properties>
-    <property name="enemy" value="Black Sliver"/>
-    <property name="pursueRange" type="int" value="75"/>
-    <property name="spawn.Easy" type="bool" value="false"/>
-    <property name="spawn.Normal" type="bool" value="true"/>
-    <property name="speed" type="float" value="42"/>
-    <property name="threatRange" type="float" value="50"/>
-    <property name="waypoints" value="254,258,257,256,259,260,259,256,257,258"/>
+    <property name="enemy" value="Black Sliver" />
+    <property name="pursueRange" type="int" value="75" />
+    <property name="spawn.Easy" type="bool" value="false" />
+    <property name="spawn.Normal" type="bool" value="true" />
+    <property name="speed" type="float" value="42" />
+    <property name="threatRange" type="float" value="50" />
+    <property name="waypoints" value="254,258,257,256,259,260,259,256,257,258" />
    </properties>
   </object>
   <object id="270" template="../../../obj/gate.tx" x="112" y="48">
    <properties>
     <property name="dialog">[
   {
-    &quot;name&quot;:&quot;&quot;,
-    &quot;condition&quot;: [ {&quot;checkMapFlag&quot;:&quot;cemeteryKey&quot;, &quot;not&quot;:true} ],
-    &quot;text&quot;:&quot;A large gate stands between you and the area to the north. Above the gate is an inscription that reads \&quot;DONT DEAD OPEN INSIDE\&quot;.&quot;,
-    &quot;loctext&quot;:&quot;&quot;,
-    &quot;options&quot;:
+    "name":"",
+    "condition": [ {"checkMapFlag":"cemeteryKey", "not":true} ],
+    "text":"A large gate stands between you and the area to the north. Above the gate is an inscription that reads \"DONT DEAD OPEN INSIDE\".",
+    "loctext":"",
+    "options":
 	[ 
-	{ &quot;name&quot;:&quot;Open the gate&quot;,
-	  &quot;condition&quot;: [{&quot;checkMapFlag&quot;:&quot;cemeteryKey&quot;, &quot;not&quot;:true}],
-	  &quot;text&quot;: &quot;The gate is closed with a large and elaborate lock.&quot;,
-	  &quot;options&quot;: [{ &quot;name&quot;:&quot;Walk away in search of a key.&quot; }]
+	{ "name":"Open the gate",
+	  "condition": [{"checkMapFlag":"cemeteryKey", "not":true}],
+	  "text": "The gate is closed with a large and elaborate lock.",
+	  "options": [{ "name":"Walk away in search of a key." }]
 	}, 
 	{ 
-	  &quot;name&quot;:&quot;Walk away.&quot; 
+	  "name":"Walk away." 
 	} 
 	]
   },
 {
-    &quot;name&quot;:&quot;&quot;,
-    &quot;condition&quot;: [{&quot;checkMapFlag&quot;:&quot;cemeteryKey&quot;}],
-    &quot;text&quot;:&quot;A large gate stands between you and the area to the north. Above the gate is an inscription that reads \&quot;DONT DEAD OPEN INSIDE\&quot;.&quot;,
-    &quot;loctext&quot;:&quot;&quot;,
-    &quot;options&quot;:
+    "name":"",
+    "condition": [{"checkMapFlag":"cemeteryKey"}],
+    "text":"A large gate stands between you and the area to the north. Above the gate is an inscription that reads \"DONT DEAD OPEN INSIDE\".",
+    "loctext":"",
+    "options":
 	[ 
-	{ &quot;name&quot;:&quot;Open the gate&quot;,
-              &quot;action&quot;: [{&quot;deleteMapObject&quot;:270}],
-	   &quot;text&quot;: &quot;With a screeching sound that could wake the dead, the gate swings open. You are now free to pass.&quot;,
-	  &quot;options&quot;:[{&quot;name&quot;:&quot;(continue)&quot;}]
+	{ "name":"Open the gate",
+              "action": [{"deleteMapObject":270}],
+	   "text": "With a screeching sound that could wake the dead, the gate swings open. You are now free to pass.",
+	  "options":[{"name":"(continue)"}]
 	 },
 	{ 
-	  &quot;name&quot;:&quot;Walk away.&quot; 
+	  "name":"Walk away." 
 	} 
 	]
   }
@@ -471,24 +471,24 @@
   </object>
  </objectgroup>
  <objectgroup id="7" name="Waypoints">
-  <object id="246" template="../../../obj/waypoint.tx" x="432" y="192"/>
-  <object id="247" template="../../../obj/waypoint.tx" x="432" y="256"/>
-  <object id="248" template="../../../obj/waypoint.tx" x="368" y="256"/>
-  <object id="249" template="../../../obj/waypoint.tx" x="368" y="336"/>
-  <object id="250" template="../../../obj/waypoint.tx" x="320" y="336"/>
-  <object id="251" template="../../../obj/waypoint.tx" x="320" y="400"/>
-  <object id="252" template="../../../obj/waypoint.tx" x="176" y="400"/>
-  <object id="253" template="../../../obj/waypoint.tx" x="80" y="400"/>
-  <object id="254" template="../../../obj/waypoint.tx" x="176" y="288"/>
-  <object id="255" template="../../../obj/waypoint.tx" x="176" y="208"/>
-  <object id="256" template="../../../obj/waypoint.tx" x="80" y="304"/>
-  <object id="257" template="../../../obj/waypoint.tx" x="110" y="304"/>
-  <object id="258" template="../../../obj/waypoint.tx" x="118" y="288"/>
-  <object id="259" template="../../../obj/waypoint.tx" x="80" y="239"/>
-  <object id="260" template="../../../obj/waypoint.tx" x="48" y="237"/>
-  <object id="261" template="../../../obj/waypoint.tx" x="48" y="144"/>
-  <object id="262" template="../../../obj/waypoint.tx" x="128" y="144"/>
-  <object id="263" template="../../../obj/waypoint.tx" x="128" y="80"/>
-  <object id="264" template="../../../obj/waypoint.tx" x="32" y="80"/>
+  <object id="246" template="../../../obj/waypoint.tx" x="432" y="192" />
+  <object id="247" template="../../../obj/waypoint.tx" x="432" y="256" />
+  <object id="248" template="../../../obj/waypoint.tx" x="368" y="256" />
+  <object id="249" template="../../../obj/waypoint.tx" x="368" y="336" />
+  <object id="250" template="../../../obj/waypoint.tx" x="320" y="336" />
+  <object id="251" template="../../../obj/waypoint.tx" x="320" y="400" />
+  <object id="252" template="../../../obj/waypoint.tx" x="176" y="400" />
+  <object id="253" template="../../../obj/waypoint.tx" x="80" y="400" />
+  <object id="254" template="../../../obj/waypoint.tx" x="176" y="288" />
+  <object id="255" template="../../../obj/waypoint.tx" x="176" y="208" />
+  <object id="256" template="../../../obj/waypoint.tx" x="80" y="304" />
+  <object id="257" template="../../../obj/waypoint.tx" x="110" y="304" />
+  <object id="258" template="../../../obj/waypoint.tx" x="118" y="288" />
+  <object id="259" template="../../../obj/waypoint.tx" x="80" y="239" />
+  <object id="260" template="../../../obj/waypoint.tx" x="48" y="237" />
+  <object id="261" template="../../../obj/waypoint.tx" x="48" y="144" />
+  <object id="262" template="../../../obj/waypoint.tx" x="128" y="144" />
+  <object id="263" template="../../../obj/waypoint.tx" x="128" y="80" />
+  <object id="264" template="../../../obj/waypoint.tx" x="32" y="80" />
  </objectgroup>
 </map>

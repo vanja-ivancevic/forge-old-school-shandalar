@@ -4786,25 +4786,29 @@
 					},
 					{
 						"count": 1,
+						"cardName": "Oath of Chandra"
+					},
+					{
+						"count": 1,
 						"cardName": "Cursed Scroll"
 					},
 					{
 						"count": 1,
-						"cardName": "Mirari"
+						"cardName": "Necropotence"
 					},
 					{
 						"count": 1,
-						"cardName": "Hammer of Bogardan"
-					},
-					{
-						"count": 1,
-						"cardName": "Fork"
+						"cardName": "Yawgmoth's Bargain"
 					}
 				]
 			},
 			{
 				"count": 1,
-				"cardName": "Wheel of Fortune"
+				"cardName": "Hammer of Bogardan
+			},
+			{
+				"count": 1,
+				"cardName": "Fork""
 			},
 			{
 				"type": "deckCard",
@@ -18371,6 +18375,10 @@
 					},
 					{
 						"count": 1,
+						"cardName": "Oath of Liliana"
+					},
+					{
+						"count": 1,
 						"cardName": "Phyrexian Tower"
 					},
 					{
@@ -18379,17 +18387,17 @@
 					},
 					{
 						"count": 1,
-						"cardName": "Vampiric Tutor"
-					},
-					{
-						"count": 1,
-						"cardName": "Demonic Tutor"
+						"cardName": "Yawgmoth's Bargain"
 					}
 				]
 			},
 			{
 				"count": 1,
-				"cardName": "Yawgmoth's Bargain"
+				"cardName": "Vampiric Tutor
+			},
+			{
+				"count": 1,
+				"cardName": "Demonic Tutor""
 			},
 			{
 				"type": "deckCard",
@@ -20583,7 +20591,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Wheel of Fortune"
+				"cardName": "Yawgmoth's Bargain"
 			},
 			{
 				"type": "card",
@@ -26579,7 +26587,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Wheel of Fortune"
+				"cardName": "Yawgmoth's Bargain"
 			},
 			{
 				"type": "item",
