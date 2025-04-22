@@ -1,3 +1,31 @@
+## Unreleased
+### No issue
+
+**readme**
+
+
+[2dc46b4217073b4](https://github.com/Card-Forge/forge/commit/2dc46b4217073b4) Vanja *2025-04-22 12:03:31*
+
+
+## v0.2
+### No issue
+
+**readme**
+
+
+[d25e867c1491126](https://github.com/Card-Forge/forge/commit/d25e867c1491126) Vanja *2025-04-22 11:17:35*
+
+**items & rewards**
+
+
+[8c4682a80fd3a6b](https://github.com/Card-Forge/forge/commit/8c4682a80fd3a6b) Vanja *2025-04-22 11:14:14*
+
+**Fix: Handle spaces in paths in .command and .sh launch scripts**
+
+
+[9c3b5f09cb5632d](https://github.com/Card-Forge/forge/commit/9c3b5f09cb5632d) Vanja *2025-04-22 11:13:34*
+
+
 ## v2.0.04
 ### No issue
 

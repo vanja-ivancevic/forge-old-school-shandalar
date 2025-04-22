@@ -2488,7 +2488,7 @@
 		"description":"Pack To Basics",
 		"spriteAtlas":"maps/tileset/buildings.atlas",
 		"sprite": "BoosterShop",
-		"rewards": [ { "type": "cardPackShop", "count": 8 } ]
+		"rewards": [ { "type": "cardPackShop", "count": 8, "startDate": 1996, "endDate": 2003 } ]
 	  },
 	  { 
 		"name": "WhiteBoosterPackShop",
@@ -2496,7 +2496,7 @@
 		"spriteAtlas":"maps/tileset/buildings.atlas",
 		"overlaySprite": "Overlay4White",
 		"sprite": "BoosterShop",
-		"rewards": [ { "type": "cardPackShop", "count": 8 } ]
+		"rewards": [ { "type": "cardPackShop", "count": 8, "startDate": 1996, "endDate": 2003 } ]
 	
 	  },
 	  {
@@ -2505,7 +2505,7 @@
 		"spriteAtlas":"maps/tileset/buildings.atlas",
 		"overlaySprite": "Overlay4Blue",
 		"sprite": "BoosterShop",
-		"rewards": [ { "type": "cardPackShop", "count": 8 } ]
+		"rewards": [ { "type": "cardPackShop", "count": 8, "startDate": 1996, "endDate": 2003 } ]
 	  },
 	  {
 		"name": "BlackBoosterPackShop",
@@ -2513,7 +2513,7 @@
 		"spriteAtlas":"maps/tileset/buildings.atlas",
 		"overlaySprite": "Overlay4Black",
 		"sprite": "BoosterShop",
-		"rewards": [ { "type": "cardPackShop", "count": 8 } ]
+		"rewards": [ { "type": "cardPackShop", "count": 8, "startDate": 1996, "endDate": 2003 } ]
 	  },
 	  {
 		"name": "RedBoosterPackShop",
@@ -2521,7 +2521,7 @@
 		"spriteAtlas":"maps/tileset/buildings.atlas",
 		"overlaySprite": "Overlay4Red",
 		"sprite": "BoosterShop",
-		"rewards": [ { "type": "cardPackShop", "count": 8 } ]
+		"rewards": [ { "type": "cardPackShop", "count": 8, "startDate": 1996, "endDate": 2003 } ]
 	  },
 	  {
 		"name": "GreenBoosterPackShop",
@@ -2529,7 +2529,7 @@
 		"spriteAtlas":"maps/tileset/buildings.atlas",
 		"overlaySprite": "Overlay4Green",
 		"sprite": "BoosterShop",
-		"rewards": [ { "type": "cardPackShop", "count": 8 } ]
+		"rewards": [ { "type": "cardPackShop", "count": 8, "startDate": 1996, "endDate": 2003 } ]
 	  },
 	  {
 		"name": "ColorlessBoosterPackShop",
@@ -2537,14 +2537,14 @@
 		"spriteAtlas":"maps/tileset/buildings.atlas",
 		"overlaySprite": "Overlay4Colorless",
 		"sprite": "BoosterShop",
-		"rewards": [ { "type": "cardPackShop", "count": 8 } ]
+		"rewards": [ { "type": "cardPackShop", "count": 8, "startDate": 1996, "endDate": 2003 } ]
 	  },
 	  { 
 		"name": "AlphaBoosterPackShop",
-		"description":"Ancient Archives (93-95)",
+		"description":"Ancient Archives (94-95)",
 		"spriteAtlas":"maps/tileset/buildings.atlas",
 		"sprite": "BoosterShop",
-		"rewards": [ { "type": "cardPackShop", "count": 8, "startDate": 1993, "endDate": 1995 } ]
+		"rewards": [ { "type": "cardPackShop", "count": 8, "startDate": 1994, "endDate": 1995 } ]
 	  },
 	  {
 		"name": "BetaBoosterPackShop",

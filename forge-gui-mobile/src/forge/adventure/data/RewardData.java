@@ -239,13 +239,6 @@ public class RewardData implements Serializable {
                         for (String restricted : configData.restrictedEditions) {
                             allEditions.removeIf(q -> q.getCode().equals(restricted));
                         }
-                        for(String restrictedCard: configData.restrictedCards)
-                        {
-                            allEditions.removeIf(
-                                    cardEdition -> cardEdition.getAllCardsInSet().stream().anyMatch(
-                                            o -> o.name.equals(restrictedCard))
-                            );
-                        }
 
                         endDate = endDate == 0 ? 9999 : endDate;
                         allEditions.removeIf(q -> q.getDate().getYear()+1900 < startDate || q.getDate().getYear()+1900 > endDate);
