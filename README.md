@@ -25,14 +25,14 @@ This fork includes changes to:
 
 *   Global set and card restrictions for Shandalar.
 *   Enemy decks (All processed, playtest feedback welcome!)
-*   Basic rewards configuration.
-*   Shop inventories configuration.
+*   Basic (mostly) random rewards re-configuration
+*   Shop inventories re-configuration
 *   Core code fix for reprint handling in restricted formats.
 *   Drafting (Note: Jumpstart packs might still appear visually but cannot be played due to restrictions).
+*   Items
 
 🔄 **In Progress:**
 
-*   Special rewards adjustments.
 *   Balance adjustments based on player feedback.
 
 ## Feedback and Issues
