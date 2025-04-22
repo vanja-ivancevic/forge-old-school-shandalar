@@ -30,10 +30,12 @@ This fork includes changes to:
 *   Core code fix for reprint handling in restricted formats.
 *   Drafting (Note: Jumpstart packs might still appear visually but cannot be played due to restrictions).
 *   Items
+*   Starter Decks (real precon's from mirage/tempest/urza's/portal/s99)
 
 🔄 **In Progress:**
 
 *   Balance adjustments based on player feedback.
+*   "Standard" start currently does NOT work. Please select "Constructed" or "Pile"
 
 ## Feedback and Issues
 
