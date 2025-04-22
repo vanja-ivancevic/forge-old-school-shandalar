@@ -1,5 +1,10 @@
-## Unreleased
+## v2.0.04
 ### No issue
+
+**readme**
+
+
+[2b6de1d942b6df7](https://github.com/Card-Forge/forge/commit/2b6de1d942b6df7) Vanja *2025-04-21 22:32:38*
 
 **- Full card pool for initial pool generation**
 
