@@ -1,5 +1,10 @@
-## Unreleased
+## v0.31
 ### No issue
+
+**Revert items.json to upstream version for v0.31 release prep**
+
+
+[fdaf4d30955c16c](https://github.com/Card-Forge/forge/commit/fdaf4d30955c16c) Vanja *2025-04-23 02:06:54*
 
 **items backup**
 
@@ -41,58 +46,6 @@
 
 
 [c533bee4b394ef9](https://github.com/Card-Forge/forge/commit/c533bee4b394ef9) Pedro Durán *2025-04-22 08:20:14*
-
-
-## v2.0.05
-### No issue
-
-**fixed shops**
-
-
-[6173dc00b069a9c](https://github.com/Card-Forge/forge/commit/6173dc00b069a9c) Vanja *2025-04-22 12:48:56*
-
-**readme**
-
-
-[2dc46b4217073b4](https://github.com/Card-Forge/forge/commit/2dc46b4217073b4) Vanja *2025-04-22 12:03:31*
-
-
-## v0.2
-### No issue
-
-**readme**
-
-
-[d25e867c1491126](https://github.com/Card-Forge/forge/commit/d25e867c1491126) Vanja *2025-04-22 11:17:35*
-
-**items & rewards**
-
-
-[8c4682a80fd3a6b](https://github.com/Card-Forge/forge/commit/8c4682a80fd3a6b) Vanja *2025-04-22 11:14:14*
-
-**Fix: Handle spaces in paths in .command and .sh launch scripts**
-
-
-[9c3b5f09cb5632d](https://github.com/Card-Forge/forge/commit/9c3b5f09cb5632d) Vanja *2025-04-22 11:13:34*
-
-
-## v2.0.04
-### No issue
-
-**readme**
-
-
-[2b6de1d942b6df7](https://github.com/Card-Forge/forge/commit/2b6de1d942b6df7) Vanja *2025-04-21 22:32:38*
-
-**- Full card pool for initial pool generation**
-
- * - Allow reprints in restricted formats
- * - Fix some tribe names
- * - Decks all updated to use old-border only
- * - Shops updates
- * - Rewards updates (not complete)
-
-[71055b331c2126c](https://github.com/Card-Forge/forge/commit/71055b331c2126c) Vanja *2025-04-21 21:49:22*
 
 **Fixed bug where android boolean settings were not properly displaying their checked state (#7440)**
 
@@ -2431,6 +2384,58 @@
 
 
 [40882c20d686a15](https://github.com/Card-Forge/forge/commit/40882c20d686a15) Chris H *2025-02-21 01:13:04*
+
+
+## v2.0.05
+### No issue
+
+**fixed shops**
+
+
+[6173dc00b069a9c](https://github.com/Card-Forge/forge/commit/6173dc00b069a9c) Vanja *2025-04-22 12:48:56*
+
+**readme**
+
+
+[2dc46b4217073b4](https://github.com/Card-Forge/forge/commit/2dc46b4217073b4) Vanja *2025-04-22 12:03:31*
+
+
+## v0.2
+### No issue
+
+**readme**
+
+
+[d25e867c1491126](https://github.com/Card-Forge/forge/commit/d25e867c1491126) Vanja *2025-04-22 11:17:35*
+
+**items & rewards**
+
+
+[8c4682a80fd3a6b](https://github.com/Card-Forge/forge/commit/8c4682a80fd3a6b) Vanja *2025-04-22 11:14:14*
+
+**Fix: Handle spaces in paths in .command and .sh launch scripts**
+
+
+[9c3b5f09cb5632d](https://github.com/Card-Forge/forge/commit/9c3b5f09cb5632d) Vanja *2025-04-22 11:13:34*
+
+
+## v2.0.04
+### No issue
+
+**readme**
+
+
+[2b6de1d942b6df7](https://github.com/Card-Forge/forge/commit/2b6de1d942b6df7) Vanja *2025-04-21 22:32:38*
+
+**- Full card pool for initial pool generation**
+
+ * - Allow reprints in restricted formats
+ * - Fix some tribe names
+ * - Decks all updated to use old-border only
+ * - Shops updates
+ * - Rewards updates (not complete)
+
+[71055b331c2126c](https://github.com/Card-Forge/forge/commit/71055b331c2126c) Vanja *2025-04-21 21:49:22*
 
 
 ## daily-snapshots

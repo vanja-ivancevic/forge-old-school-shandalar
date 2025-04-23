@@ -554,11 +554,11 @@
 	  "rewards": [ 
 		{ "type": "item","count":1, "itemName": "White rune"  },
 		{ "type": "item","count":1, "itemName": "White Staff"  },
-		{ "type": "item","count":1, "itemName": "Haunted Crossroads"  },
-		{ "type": "item","count":1, "itemName": "Millstone"  },
-		{ "type": "item","count":1, "itemName": "Scryb Sprites"  },
-		{ "type": "item","count":1, "itemName": "Ivory Cup"  },
-		{ "type": "item","count":1, "itemName": "War Barge"  },
+		{ "type": "item","count":1, "itemName": "Cursed Treasure"  },
+		{ "type": "item","count":1, "itemName": "Farmer's Tools"  },
+		{ "type": "item","count":1, "itemName": "Piper's Charm"  },
+		{ "type": "item","count":1, "itemName": "Sleep Wand"  },
+		{ "type": "item","count":1, "itemName": "Hill Giant Club"  },
 		{ "type": "life","count":1    }
 		
 		]
@@ -570,11 +570,11 @@
 	  "rewards": [ 
 		{ "type": "item","count":1, "itemName": "Red rune"  },
 		{ "type": "item","count":1, "itemName": "Red Staff"  },
-		{ "type": "item","count":1, "itemName": "Haunted Crossroads"  },
-		{ "type": "item","count":1, "itemName": "Millstone"  },
-		{ "type": "item","count":1, "itemName": "Scryb Sprites"  },
-		{ "type": "item","count":1, "itemName": "Ivory Cup"  },
-		{ "type": "item","count":1, "itemName": "War Barge"  },
+		{ "type": "item","count":1, "itemName": "Cursed Treasure"  },
+		{ "type": "item","count":1, "itemName": "Farmer's Tools"  },
+		{ "type": "item","count":1, "itemName": "Piper's Charm"  },
+		{ "type": "item","count":1, "itemName": "Sleep Wand"  },
+		{ "type": "item","count":1, "itemName": "Hill Giant Club"  },
 		{ "type": "life","count":1    }
 		]
 	
@@ -585,11 +585,11 @@
 	  "rewards": [ 
 		{ "type": "item","count":1, "itemName": "Blue rune"  },
 		{ "type": "item","count":1, "itemName": "Blue Staff"  },
-		{ "type": "item","count":1, "itemName": "Haunted Crossroads"  },
-		{ "type": "item","count":1, "itemName": "Millstone"  },
-		{ "type": "item","count":1, "itemName": "Scryb Sprites"  },
-		{ "type": "item","count":1, "itemName": "Ivory Cup"  },
-		{ "type": "item","count":1, "itemName": "War Barge"  },
+		{ "type": "item","count":1, "itemName": "Cursed Treasure"  },
+		{ "type": "item","count":1, "itemName": "Farmer's Tools"  },
+		{ "type": "item","count":1, "itemName": "Piper's Charm"  },
+		{ "type": "item","count":1, "itemName": "Sleep Wand"  },
+		{ "type": "item","count":1, "itemName": "Hill Giant Club"  },
 		{ "type": "life","count":1    }
 		
 		]
@@ -602,11 +602,11 @@
 	  "rewards": [ 
 		{ "type": "item","count":1, "itemName": "Black rune"  },
 		{ "type": "item","count":1, "itemName": "Black Staff"  },
-		{ "type": "item","count":1, "itemName": "Haunted Crossroads"  },
-		{ "type": "item","count":1, "itemName": "Millstone"  },
-		{ "type": "item","count":1, "itemName": "Scryb Sprites"  },
-		{ "type": "item","count":1, "itemName": "Ivory Cup"  },
-		{ "type": "item","count":1, "itemName": "War Barge"  },
+		{ "type": "item","count":1, "itemName": "Cursed Treasure"  },
+		{ "type": "item","count":1, "itemName": "Farmer's Tools"  },
+		{ "type": "item","count":1, "itemName": "Piper's Charm"  },
+		{ "type": "item","count":1, "itemName": "Sleep Wand"  },
+		{ "type": "item","count":1, "itemName": "Hill Giant Club"  },
 		{ "type": "life","count":1    }
 		
 		]
@@ -619,11 +619,11 @@
 	  "rewards": [ 
 		{ "type": "item","count":1, "itemName": "Green rune"  },
 		{ "type": "item","count":1, "itemName": "Green Staff"  },
-		{ "type": "item","count":1, "itemName": "Haunted Crossroads"  },
-		{ "type": "item","count":1, "itemName": "Millstone"  },
-		{ "type": "item","count":1, "itemName": "Scryb Sprites"  },
-		{ "type": "item","count":1, "itemName": "Ivory Cup"  },
-		{ "type": "item","count":1, "itemName": "War Barge"  },
+		{ "type": "item","count":1, "itemName": "Cursed Treasure"  },
+		{ "type": "item","count":1, "itemName": "Farmer's Tools"  },
+		{ "type": "item","count":1, "itemName": "Piper's Charm"  },
+		{ "type": "item","count":1, "itemName": "Sleep Wand"  },
+		{ "type": "item","count":1, "itemName": "Hill Giant Club"  },
 		{ "type": "life","count":1   }
 		
 		]
@@ -635,7 +635,7 @@
 	"sprite":"ArtifactShop", 
 	  "rewards": [ 
 		{ "type": "item","count":1, "itemName": "Steel Boots"  },
-		{ "type": "item","count":1, "itemName": "Thunder Wall"  },
+		{ "type": "item","count":1, "itemName": "Steel Shield"  },
 		{ "type": "item","count":1, "itemName": "Steel Armor"  },
 		{ "type": "item","count":1, "itemName": "Iron Boots"  },
 		{ "type": "item","count":1, "itemName": "Iron Shield"  },

@@ -12154,7 +12154,7 @@
 				"type": "item",
 				"probability": 1,
 				"count": 1,
-				"itemName": "Garruk's Mighty Axe"
+				"itemName": "Hidden Ancients"
 			},
 			{
 				"type": "shards",
@@ -16880,7 +16880,7 @@
 				"type": "item",
 				"probability": 1,
 				"count": 1,
-				"itemName": "Jace's Signature Hoodie"
+				"itemName": "Robe of Mirrors"
 			},
 			{
 				"type": "shards",
@@ -20601,7 +20601,7 @@
 				"type": "item",
 				"probability": 1,
 				"count": 1,
-				"itemName": "Nahiri's Armory"
+				"itemName": "Dwarven Hold"
 			},
 			{
 				"type": "shards",
@@ -24077,7 +24077,7 @@
 				"type": "item",
 				"probability": 1,
 				"count": 1,
-				"itemName": "Giant Scythe"
+				"itemName": "Dark Sphere"
 			},
 			{
 				"type": "shards",
@@ -24788,13 +24788,13 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Flooded Strand"
+				"cardName": "Bloodstained Mire"
 			},
 			{
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Flooded Strand"
+				"cardName": "Bloodstained Mire"
 			},
 			{
 				"type": "card",
@@ -24806,7 +24806,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Flooded Strand"
+				"cardName": "Wooded Foothills"
 			},
 			{
 				"type": "item",
@@ -25244,7 +25244,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Flooded Strand"
+				"cardName": "Bloodstained Mire"
 			},
 			{
 				"type": "card",
@@ -25256,7 +25256,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Flooded Strand"
+				"cardName": "Bloodstained Mire"
 			},
 			{
 				"type": "card",
@@ -25268,7 +25268,7 @@
 				"type": "item",
 				"probability": 1,
 				"count": 1,
-				"itemName": "Slobad's Iron Boots"
+				"itemName": "Land's Edge"
 			},
 			{
 				"type": "shards",
@@ -26487,7 +26487,7 @@
 				"type": "item",
 				"probability": 1,
 				"count": 1,
-				"itemName": "The Underworld Cookbook"
+				"itemName": "Cursed Rack"
 			},
 			{
 				"type": "shards",
@@ -26549,7 +26549,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Flooded Strand"
+				"cardName": "Wooded Foothills"
 			},
 			{
 				"type": "card",
@@ -26561,13 +26561,13 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Flooded Strand"
+				"cardName": "Wooded Foothills"
 			},
 			{
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Flooded Strand"
+				"cardName": "Windswept Heath"
 			},
 			{
 				"type": "card",
@@ -26585,9 +26585,9 @@
 				"type": "item",
 				"probability": 1,
 				"count": 1,
-				"itemName": "Tibalt's Bag of Tricks",
+				"itemName": "Goblin Tinkerer",
 				"itemNames": [
-					"Tibalt's Bag of Tricks"
+					"Goblin Tinkerer"
 				]
 			},
 			{
@@ -28632,7 +28632,7 @@
 				"type": "card",
 				"probability": 1,
 				"count": 1,
-				"cardName": "Flooded Strand"
+				"cardName": "Windswept Heath"
 			},
 			{
 				"type": "card",
@@ -28644,7 +28644,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Flooded Strand"
+				"cardName": "Windswept Heath"
 			},
 			{
 				"type": "card",
@@ -28674,7 +28674,7 @@
 				"type": "item",
 				"probability": 1,
 				"count": 1,
-				"itemName": "Xira's Fancy Hat"
+				"itemName": "Crown of the Ages"
 			},
 			{
 				"type": "shards",
@@ -28844,7 +28844,7 @@
 				"type": "item",
 				"probability": 1,
 				"count": 1,
-				"itemName": "Zedruu's Lantern"
+				"itemName": "Crystal Rod"
 			},
 			{
 				"type": "shards",

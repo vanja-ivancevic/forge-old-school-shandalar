@@ -162,25 +162,25 @@
     "questItem": true
   },
   {
-    "name": "Chandra's Tome",
+    "name": "Jayemdae Tome",
     "description": "Draft a Chandra themed card that can be cast with mana of any color.",
     "equipmentSlot": "Left",
     "iconName": "ChandrasTome",
     "effect": {
-      "startBattleWithCardInCommandZone": [
-        "Chandra's Tome"
+      "startBattleWithCard": [
+        "Jayemdae Tome"
       ]
     }
   },
   {
 
-    "name": "Phoenix Charm",
+    "name": "Ring of Renewal",
     "description": "Draft a Phoenix card, or conjure one to be cast with mana of any color.",
     "equipmentSlot": "Neck",
     "iconName": "PhoenixCharm",
     "effect": {
-      "startBattleWithCardInCommandZone": [
-        "Phoenix Charm"
+      "startBattleWithCard": [
+        "Ring of Renewal"
       ]
     }
   },
@@ -190,13 +190,13 @@
     "iconName": "r"
   },
   {
-    "name": "Phoenix",
-    "description": "Draft a Phoenix card, or conjure one to be cast with mana of any color.",
+    "name": "Mogg Fanatic",
+    "description": "Starts the battle with a Mogg Fanatic.",
     "equipmentSlot": "Neck",
     "iconName": "PhoenixCharm",
     "effect": {
-      "startBattleWithCardInCommandZone": [
-        "Phoenix Charm"
+      "startBattleWithCard": [
+        "Mogg Fanatic"
       ]
     }
   },
@@ -206,68 +206,68 @@
     "iconName": "b"
   },
   {
-    "name": "Demonic Contract",
+    "name": "Bottle of Suleiman",
     "description": "Sign away your soul to know what the future holds",
     "equipmentSlot": "Right",
     "iconName": "DemonicContract",
     "effect": {
-      "startBattleWithCardInCommandZone": [
-        "Demonic Contract"
+      "startBattleWithCard": [
+        "Bottle of Suleiman"
       ]
     }
   },
   {
-    "name": "Piper's Charm",
+    "name": "Scryb Sprites",
     "equipmentSlot": "Neck",
     "iconName": "PipersCharm",
     "cost": 1500,
     "effect": {
-      "startBattleWithCardInCommandZone": [
-        "Piper's Charm"
+      "startBattleWithCard": [
+        "Scryb Sprites"
       ]
     }
   },
   {
-    "name": "Sleep Wand",
+    "name": "Ivory Cup",
     "equipmentSlot": "Left",
     "cost": 1500,
     "iconName": "SleepWand",
     "effect": {
-      "startBattleWithCardInCommandZone": [
-        "Sleep Wand"
+      "startBattleWithCard": [
+        "Ivory Cup"
       ]
     }
   },
   {
-    "name": "Hill Giant Club",
+    "name": "War Barge",
     "equipmentSlot": "Right",
     "cost": 2500,
     "iconName": "HillGiantClub",
     "effect": {
-      "startBattleWithCardInCommandZone": [
-        "Hill Giant Club"
+      "startBattleWithCard": [
+        "War Barge"
       ]
     }
   },
   {
-    "name": "Cursed Treasure",
+    "name": "Haunted Crossroads",
     "equipmentSlot": "Right",
     "iconName": "CursedTreasure",
     "cost": 6000,
     "effect": {
-      "startBattleWithCardInCommandZone": [
-        "Cursed Treasure"
+      "startBattleWithCard": [
+        "Haunted Crossroads"
       ]
     }
   },
   {
-    "name": "Farmer's Tools",
+    "name": "Millstone",
     "equipmentSlot": "Left",
     "iconName": "FarmersTools",
     "cost": 6000,
     "effect": {
-      "startBattleWithCardInCommandZone": [
-        "Farmer's Tools"
+      "startBattleWithCard": [
+        "Millstone"
       ]
     }
   },
@@ -342,13 +342,13 @@
     }
   },
   {
-    "name": "Battle Standard",
+    "name": "Mons's Goblin Raiders",
     "equipmentSlot": "Left",
     "iconName": "BattleStandard",
     "effect": {
       "lifeModifier": -1,
       "startBattleWithCard": [
-        "r_1_1_goblin"
+        "Mons's Goblin Raiders"
       ]
     }
   },
@@ -458,13 +458,13 @@
     }
   },
   {
-    "name": "Bronze Sword",
+    "name": "Dwarven Warriors",
     "equipmentSlot": "Left",
     "iconName": "BronzeSword",
     "cost": 2500,
     "effect": {
       "startBattleWithCard": [
-        "Bronze Sword"
+        "Dwarven Warriors"
       ]
     }
   },
@@ -496,13 +496,13 @@
     }
   },
   {
-    "name": "Steel Sword",
+    "name": "Bonesplitter",
     "equipmentSlot": "Left",
     "iconName": "SteelSword",
     "cost": 4500,
     "effect": {
       "startBattleWithCard": [
-        "Greatsword"
+        "Bonesplitter"
       ]
     }
   },
@@ -517,13 +517,13 @@
     }
   },
   {
-    "name": "Steel Shield",
+    "name": "Thunder Wall",
     "equipmentSlot": "Right",
     "iconName": "SteelShield",
     "cost": 6500,
     "effect": {
       "startBattleWithCard": [
-        "w_0_3_wall_defender"
+        "Thunder Wall"
       ]
     }
   },
@@ -554,24 +554,24 @@
     }
   },
   {
-    "name": "Jungle Shield",
+    "name": "Living Armor",
     "equipmentSlot": "Right",
     "iconName": "JungleShield",
     "cost": 4500,
     "effect": {
       "startBattleWithCard": [
-        "g_0_1_plant"
+        "Living Armor"
       ]
   }
   },
   {
-   "name": "Sorin's Amulet",
+   "name": "Soul Warden",
     "equipmentSlot": "Neck",
     "iconName": "SorinAmulet",
     "effect": {
       "lifeModifier": 2,
-      "startBattleWithCardInCommandZone": [
-        "Sorin's Amulet"
+      "startBattleWithCard": [
+        "Soul Warden"
       ]
   }
   },
@@ -619,14 +619,12 @@
     }
   },
   {
-    "name": "Cursed Ring",
+    "name": "Goblin Balloon Brigade",
     "equipmentSlot": "Right",
     "iconName": "CursedRing",
     "effect": {
       "startBattleWithCard": [
-        "c_0_1_a_goblin_construct_noblock_ping",
-        "c_0_1_a_goblin_construct_noblock_ping",
-        "c_0_1_a_goblin_construct_noblock_ping"
+        "Goblin Balloon Brigade"
       ]
     }
   },
@@ -641,13 +639,13 @@
     }
   },
   {
-    "name": "Mithril Shield",
+    "name": "Wall of Wood",
     "equipmentSlot": "Right",
     "iconName": "MithrilShield",
     "cost": 6500,
     "effect": {
       "startBattleWithCard": [
-        "c_0_4_a_wall_defender"
+        "Wall of Wood"
       ]
     }
 
@@ -662,57 +660,57 @@
     }
   },
   {
-    "name": "Presence of the Hydra",
+    "name": "Serpent Generator",
     "equipmentSlot": "Left",
     "iconName": "PresenceoftheHydra",
     "effect": {
       "lifeModifier": 2,
-      "startBattleWithCardInCommandZone": [
-        "Presence of the Hydra"
+      "startBattleWithCard": [
+        "Serpent Generator"
       ]
     }
   },
   {
-    "name": "Death Ring",
+    "name": "Skull of Orm",
     "equipmentSlot": "Right",
     "iconName": "DeathRing",
     "cost": 3500,
     "effect": {
-      "startBattleWithCardInCommandZone": [
-        "Death Ring"
+      "startBattleWithCard": [
+        "Skull of Orm"
       ]
     }
   },
   {
-    "name": "Flame Sword",
+    "name": "Dwarven Blastminer",
     "equipmentSlot": "Left",
     "cost": 6000,
     "iconName": "FlameSword",
     "effect": {
-      "startBattleWithCardInCommandZone": [
-        "Flame Sword"
+      "startBattleWithCard": [
+        "Dwarven Blastminer"
       ]
     }
   },
   {
-    "name": "Mirror Shield",
+    "name": "Wall of Spears",
     "equipmentSlot": "Right",
     "cost": 2500,
     "iconName": "MirrorShield",
     "effect": {
       "startBattleWithCard": [
-        "Mirror Shield"
+        "Wall of Spears"
       ]
     }
   },
   {
-    "name": "Dungeon Map",
+    "name": "Library of Leng",
     "equipmentSlot": "Right",
     "iconName": "DungeonMap",
     "cost": 12000,
     "effect": {
       "startBattleWithCard": [
-        "Dungeon Map"
+        "Library of Leng"
       ]
     }
   },
@@ -797,15 +795,15 @@
     }
   },
   {
-    "name": "Dark Shield",
+    "name": "Wall of Shadows",
     "equipmentSlot": "Right",
     "iconName": "DarkShield",
     "cost": 2500,
     "effect": {
       "startBattleWithCard": [
-        "Barrier of Bones"
+        "Wall of Shadows"
       ],
-      "lifeModifier": -3
+      "lifeModifier": -1
     }
   },
   {
@@ -817,104 +815,104 @@
       "startBattleWithCard": [
         "Skeletal Snake"
       ],
-      "lifeModifier": -2
+      "lifeModifier": -1
     }
   },
   {
-    "name": "Blood Vial",
+    "name": "Carrion Feeder",
     "equipmentSlot": "Right",
     "iconName": "Blood",
     "cost": 1000,
     "effect": {
       "startBattleWithCard": [
-        "c_a_blood_draw"
+        "Carrion Feeder"
       ]
     }
   },
   {
-    "name": "Charm",
+    "name": "Mind Stone",
     "equipmentSlot": "Right",
     "iconName": "Clue",
     "cost": 3000,
     "effect": {
       "startBattleWithCard": [
-        "c_a_clue_draw"
+        "Mind Stone"
       ]
     }
   },
   {
-    "name": "Snack",
+    "name": "Serenity",
     "equipmentSlot": "Right",
     "iconName": "Cheese",
     "cost": 1000,
     "effect": {
       "startBattleWithCard": [
-        "c_a_food_sac"
+        "Serenity"
       ]
     }
   },
   {
-    "name": "Change",
+    "name": "Howling Mine",
     "equipmentSlot": "Right",
     "iconName": "GoldStack",
     "cost": 5000,
     "effect": {
       "startBattleWithCard": [
-        "c_a_gold_draw"
+        "Howling Mine"
       ]
     }
   },
   {
-    "name": "Treasure",
+    "name": "Treasure Trove",
     "equipmentSlot": "Right",
     "iconName": "Treasure",
     "cost": 5000,
     "effect": {
       "startBattleWithCard": [
-        "c_a_treasure_sac"
+        "Treasure Trove"
       ]
     }
   },
   {
-    "name": "Magic Shard",
+    "name": "Mystic Remora",
     "equipmentSlot": "Right",
     "iconName": "Shard",
     "cost": 3500,
     "effect": {
       "startBattleWithCard": [
-        "c_e_shard_draw"
+        "Mystic Remora"
       ]
     }
   },
   {
-    "name": "Mad Staff",
+    "name": "Rod of Ruin",
     "equipmentSlot": "Left",
     "iconName": "MadStaff",
     "effect": {
       "startBattleWithCard": [
-        "Power Struggle"
+        "Rod of Ruin"
       ]
     }
   },
   {
-    "name": "Dark Amulet",
+    "name": "Soldevi Digger",
     "equipmentSlot": "Neck",
     "cost": 3000,
     "iconName": "DarkAmulet",
     "effect": {
       "startBattleWithCard": [
-        "Necropolis of Azar"
+        "Soldevi Digger"
       ]
     }
   },
   {
-    "name": "Pandora's Box",
+    "name": "Barbed Sextant",
     "equipmentSlot": "Right",
     "iconName": "PandorasBox",
     "cost": 1500,
     "effect": {
       "startBattleWithCard": [
-        "Pandora's Box"
+        "Barbed Sextant"
       ]
     }
   },
@@ -951,24 +949,24 @@
     }
   },
   {
-    "name": "Ring of Three Wishes",
+    "name": "Planar Portal",
     "equipmentSlot": "Right",
     "iconName": "RingofThreeWishes",
     "cost": 2500,
     "effect": {
       "startBattleWithCard": [
-        "Ring of Three Wishes"
+        "Planar Portal"
       ]
     }
   },
   {
-    "name": "The Blackstaff of Waterdeep",
+    "name": "Iron Star",
     "equipmentSlot": "Left",
     "iconName": "TheBlackstaffofWaterdeep",
     "cost": 3500,
     "effect": {
       "startBattleWithCard": [
-        "The Blackstaff of Waterdeep"
+        "Iron Star"
       ]
     }
   },
@@ -1006,20 +1004,10 @@
     }
   },
   {
-    "name": "Relic Amulet",
+    "name": "Amulet of Kroog",
     "equipmentSlot": "Neck",
     "iconName": "RelicAmulet",
     "cost": 2500,
-    "effect": {
-      "startBattleWithCard": [
-        "Relic Amulet"
-      ]
-    }
-  },
-  {
-    "name": "Amulet of Kroog",
-    "equipmentSlot": "Neck",
-    "iconName": "AmuletofKroog",
     "effect": {
       "startBattleWithCard": [
         "Amulet of Kroog"
@@ -1038,13 +1026,13 @@
     }
   },
   {
-    "name": "Veilstone Amulet",
+    "name": "Jade Monolith",
     "equipmentSlot": "Neck",
     "iconName": "VeilstoneAmulet",
     "cost": 5000,
     "effect": {
       "startBattleWithCard": [
-        "Veilstone Amulet"
+        "Jade Monolith"
       ]
     }
   },
@@ -1072,12 +1060,12 @@
     }
   },
   {
-    "name": "Nine-Ringed Bo",
+    "name": "Tormod's Crypt",
     "equipmentSlot": "Left",
     "iconName": "Nine-RingedBo",
     "effect": {
       "startBattleWithCard": [
-        "Nine-Ringed Bo"
+        "Tormod's Crypt"
       ]
     }
   },
@@ -1092,13 +1080,13 @@
     }
   },
   {
-    "name": "Prism Ring",
+    "name": "Mana Prism",
     "equipmentSlot": "Right",
     "iconName": "PrismRing",
     "cost": 2000,
     "effect": {
       "startBattleWithCard": [
-        "Prism Ring"
+        "Mana Prism"
       ]
     }
   },
@@ -1113,13 +1101,13 @@
     }
   },
   {
-    "name": "Kite Shield",
+    "name": "Serrated Arrows",
     "equipmentSlot": "Right",
     "iconName": "KiteShield",
     "cost": 1500,
     "effect": {
       "startBattleWithCard": [
-        "Kite Shield"
+        "Serrated Arrows"
       ]
     }
   },
@@ -1145,7 +1133,7 @@
     "iconName": "RelicAmulet"
   },
   {
-    "name": "Lightbringers Boots",
+    "name": "Ivory Tower",
     "equipmentSlot": "Boots",
     "cost": 8000,
     "effect": {
@@ -1153,7 +1141,7 @@
         "lifeModifier": 5
       },
       "startBattleWithCard": [
-        "Ajani's Mantra"
+        "Ivory Tower"
       ]
     },
     "description": "Brings life to both friend and foe",
@@ -1320,113 +1308,110 @@
     "cost": 5000
   },
   {
-    "name": "Slimefoot's Slimy Staff",
+    "name": "Staff of the Ages",
     "equipmentSlot": "Left",
     "iconName": "GreenStaff",
     "effect": {
       "lifeModifier": 2,
-      "startBattleWithCardInCommandZone": [
-        "Slimefoot's Slimy Staff"
+      "startBattleWithCard": [
+        "Staff of the Ages"
       ]
     }
   },
   {
-    "name": "Kiora's Bident",
+    "name": "Jester's Cap",
     "equipmentSlot": "Left",
     "iconName": "SleepWand",
     "effect": {
       "lifeModifier": -1,
       "startBattleWithCard": [
-        "Kraken Hatchling"
-      ],
-      "startBattleWithCardInCommandZone": [
-        "Kiora's Bident"
+        "Jester's Cap"
       ]
     }
   },
   {
-    "name": "Slime-Covered Boots",
+    "name": "Gaea's Touch",
     "equipmentSlot": "Boots",
     "iconName": "SteelBoots",
     "effect": {
       "lifeModifier": -1,
       "moveSpeed": 1.20,
       "startBattleWithCard": [
-        "Ooze Flux"
+        "Gaea's Touch"
       ]
     }
   },
   {
-    "name": "Amulet of the Deceiver",
+    "name": "Helm of Obedience",
     "equipmentSlot": "Head",
     "iconName": "MoxJet",
     "effect": {
       "lifeModifier": -1,
       "moveSpeed": 1.20,
       "startBattleWithCard": [
-        "Bloodsprout Talisman"
+        "Snake Basket"
       ],
       "opponent": {
         "startBattleWithCard": [
-          "Illusory Demon"
+          "Helm of Obedience"
         ]
       }
     }
   },
   {
-    "name": "Jace's Signature Hoodie",
+    "name": "Robe of Mirrors",
     "equipmentSlot": "Body",
     "iconName": "BlueRobes",
     "effect": {
       "lifeModifier": -1,
       "cardRewardBonus": 1,
-      "startBattleWithCardInCommandZone": [
-        "Jace's Signature Hoodie"
+      "startBattleWithCard": [
+        "Robe of Mirrors"
       ]
     }
   },
   {
-    "name": "Teferi's Staff",
+    "name": "Teferi's Puzzle Box",
     "equipmentSlot": "Left",
     "iconName": "MadStaff",
     "effect": {
       "lifeModifier": 1,
       "cardRewardBonus": 1,
-      "startBattleWithCardInCommandZone": [
-        "Teferi's Staff"
+      "startBattleWithCard": [
+        "Teferi's Puzzle Box"
       ]
     }
   },
   {
-    "name": "Garruk's Mighty Axe",
+    "name": "Hidden Ancients",
     "equipmentSlot": "Left",
     "iconName": "GarrukAxe",
     "effect": {
       "lifeModifier": 3,
-      "startBattleWithCardInCommandZone": [
-        "Garruk's Mighty Axe"
+      "startBattleWithCard": [
+        "Hidden Ancients"
       ]
     }
   },
   {
-    "name": "Nahiri's Armory",
+    "name": "Dwarven Hold",
     "equipmentSlot": "Right",
     "iconName": "Armory",
     "effect": {
       "lifeModifier": 3,
-      "startBattleWithCardInCommandZone": [
-        "Nahiri's Armory"
+      "startBattleWithCard": [
+        "Dwarven Hold"
       ]
     }
   },
   {
-    "name": "Giant Scythe",
+    "name": "Dark Sphere",
     "equipmentSlot": "Left",
     "iconName": "Scythe",
     "effect": {
       "lifeModifier": 1,
-      "startBattleWithCardInCommandZone": [
-        "Giant Scythe"
+      "startBattleWithCard": [
+        "Dark Sphere"
       ]
     }
   },
@@ -1442,34 +1427,34 @@
     }
   },
   {
-    "name": "Tibalt's Bag of Tricks",
+    "name": "Goblin Tinkerer",
     "equipmentSlot": "Left",
     "iconName": "BurningBook",
     "effect": {
       "lifeModifier": 1,
-      "startBattleWithCardInCommandZone": [
-        "Tibalt's Bag of Tricks"
+      "startBattleWithCard": [
+        "Goblin Tinkerer"
       ]
     }
   },
   {
-    "name": "Xira's Fancy Hat",
+    "name": "Crown of the Ages",
     "equipmentSlot": "Neck",
     "iconName": "BrownHat",
     "effect": {
       "lifeModifier": 2,
       "startBattleWithCard": [
-        "Xira's Hive"
+        "Crown of the Ages"
       ]
     }
   },
   {
-    "name": "The Underworld Cookbook",
+    "name": "Cursed Rack",
     "equipmentSlot": "Left",
     "iconName": "UnderworldCookbook",
     "effect": {
       "startBattleWithCard": [
-        "The Underworld Cookbook"
+        "Cursed Rack"
       ]
     }
   },
@@ -1479,19 +1464,19 @@
     "iconName": "Conjurer's Mantle",
     "effect": {
       "lifeModifier": 1,
-      "startBattleWithCardInCommandZone": [
+      "startBattleWithCard": [
         "Mantle of Ancient Lore"
       ]
     }
   },
   {
-    "name": "Zedruu's Lantern",
+    "name": "Crystal Rod",
     "equipmentSlot": "Left",
     "iconName": "ZedruuLantern",
     "effect": {
       "lifeModifier": 1,
-      "startBattleWithCardInCommandZone": [
-        "Zedruu's Lantern"
+      "startBattleWithCard": [
+        "Crystal Rod"
       ]
     }
   },
@@ -1501,42 +1486,42 @@
     "iconName": "FrogSkin",
     "effect": {
       "lifeModifier": 3,
-      "startBattleWithCardInCommandZone": [
+      "startBattleWithCard": [
         "Grolnok's Skin"
       ]
     }
   },
   {
-    "name": "Slobad's Iron Boots",
+    "name": "Land's Edge",
     "equipmentSlot": "Boots",
     "iconName": "MetallicBoots",
     "effect": {
       "lifeModifier": 1,
       "moveSpeed": 1.35,
-      "startBattleWithCardInCommandZone": [
-        "Slobad's Iron Boots"
+      "startBattleWithCard": [
+        "Land's Edge"
       ]
     }
   },
   {
-    "name": "Hallowed Sigil",
+    "name": "Serra's Blessing",
     "description": "Turn a creature hexproof until end of turn.",
     "equipmentSlot": "Neck",
     "iconName": "HallowedSigil",
     "effect": {
       "startBattleWithCard": [
-        "Hallowed Sigil"
+        "Serra's Blessing"
       ]
     }
   },
   {
-    "name": "Unhallowed Sigil",
+    "name": "Cursed Totem",
     "description": "Devour the life of an enemy creature, killing it.",
     "equipmentSlot": "Right",
     "iconName": "UnhallowedSigil",
     "effect": {
       "startBattleWithCard": [
-        "Sigil of Torment"
+        "Cursed Totem"
       ]
     }
   },
