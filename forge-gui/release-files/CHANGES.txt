@@ -1,6 +1,56 @@
 ## Unreleased
 ### No issue
 
+**items backup**
+
+
+[d8a03165d4de00d](https://github.com/Card-Forge/forge/commit/d8a03165d4de00d) Vanja *2025-04-23 01:49:05*
+
+**items_tempfix**
+
+
+[152900b6cb8b629](https://github.com/Card-Forge/forge/commit/152900b6cb8b629) Vanja *2025-04-23 01:48:58*
+
+**testing**
+
+
+[2eb040e1dea3993](https://github.com/Card-Forge/forge/commit/2eb040e1dea3993) Vanja *2025-04-23 01:32:06*
+
+**Merge remote-tracking branch 'upstream/master'**
+
+
+[a2bbec1ef06eecd](https://github.com/Card-Forge/forge/commit/a2bbec1ef06eecd) Vanja *2025-04-22 21:29:42*
+
+**Merge pull request #7442 from paulsnoops/cmdr-bnr-22-apr-25**
+
+ * Commander Banned and Restricted Announcement for April 22, 2025
+
+[9308dac2576039f](https://github.com/Card-Forge/forge/commit/9308dac2576039f) Paul Hammerton *2025-04-22 19:34:36*
+
+**Commander Banned and Restricted Announcement for April 22, 2025**
+
+
+[f5fa87410bc1467](https://github.com/Card-Forge/forge/commit/f5fa87410bc1467) Paul Hammerton *2025-04-22 19:29:07*
+
+**Cleanup: Optional wheel update**
+
+
+[c3167a99287b902](https://github.com/Card-Forge/forge/commit/c3167a99287b902) Renato Filipe Vidal Santos *2025-04-22 08:41:29*
+
+**Update card translations (#7126)**
+
+
+[c533bee4b394ef9](https://github.com/Card-Forge/forge/commit/c533bee4b394ef9) Pedro Durán *2025-04-22 08:20:14*
+
+
+## v2.0.05
+### No issue
+
+**fixed shops**
+
+
+[6173dc00b069a9c](https://github.com/Card-Forge/forge/commit/6173dc00b069a9c) Vanja *2025-04-22 12:48:56*
+
 **readme**
 
 
