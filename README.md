@@ -19,6 +19,12 @@ This fork includes changes to:
 *   Boosters available in shops for many old-border sets.
 *   Power 9 cards are extremely rare and only obtainable from specific encounters.
 
+## How to Play
+
+1.  Go to the **[Releases page](https://github.com/vanja-ivancevic/forge-old-school-shandalar/releases)** on the right-hand side of the GitHub repository.
+2.  Download the latest `.zip` file listed under "Releases".
+3.  Unzip the downloaded file to a location of your choice.
+4.  Launch the game using the executable appropriate for your operating system (e.g., `.exe` for Windows, `.sh` for Linux, `.command` for macOS).
 ## Development Status
 
 ✅ **Completed:**
