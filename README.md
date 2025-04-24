@@ -1,6 +1,6 @@
-# Forge: Old-School Shandalar Edition
+# Forge: Shandalar - "The First 10 Years" Edition
 
-This is a fork of the official **[Forge MTG Engine](https://github.com/Card-Forge/forge)**, specifically modified to provide an "Old-School" Shandalar adventure mode experience.
+This is a fork of the official **[Forge MTG Engine](https://github.com/Card-Forge/forge)** adventure mode, crafted to recreate a nostalgic "Old-School" Shandalar adventure mode experience, focusing on the golden age of Magic: The Gathering between 1993-2003.
 
 This version updates Forge's Shandalar campaign to primarily use cards with the original ("old-border") frames, focusing on sets from **Alpha through Scourge (up to May 2003)**.
 
@@ -30,7 +30,7 @@ This fork includes changes to:
 *   Core code fix for reprint handling in restricted formats.
 *   Drafting (Note: Jumpstart packs might still appear visually but cannot be played due to restrictions).
 *   Items
-*   Starter Decks (real precon's from mirage/tempest/urza's/portal/s99)
+*   Starter Decks (real precon's from 7th edition)
 
 🔄 **In Progress:**
 
@@ -43,7 +43,7 @@ Please report any bugs or share your feedback specific to this Old-School Shanda
 
 For issues related to the core Forge engine unrelated to these modifications, please refer to the [official Forge repository issues](https://github.com/Card-Forge/forge/issues).
 
-Happy dueling in the old-school Multiverse!
+Happy dueling!
 
 ![Shandalar Gameplay](https://github.com/user-attachments/assets/7b7837fa-3fba-49d4-b8df-9b9d2b4c1c59)
 
