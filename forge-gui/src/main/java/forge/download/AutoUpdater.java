@@ -87,54 +87,7 @@ public class AutoUpdater {
         return false;
         // END: Force disable auto-updater
 
-        /* Original logic below is now unreachable due to the return statement above */
-        /*
-        if (buildVersion.contains("GIT")) {
-            //return false;
-        }
-
-        if (isLoading) {
-        */
-            // TODO This doesn't work yet, because FSkin isn't loaded at the time.
-            return false;
-        } else if (updateChannel.equals("none")) {
-            String message = localizer.getMessage("lblYouHaventSetUpdateChannel");
-            List<String> options = ImmutableList.of(localizer.getMessageorUseDefault("lblCancel", "Cancel"), localizer.getMessageorUseDefault("lblRelease", "Release"), localizer.getMessageorUseDefault("lblSnapshot", "Snapshot"));
-            int option = SOptionPane.showOptionDialog(message, localizer.getMessage("lblManualCheck"), null, options, 0);
-            if (option < 1) {
-                return false;
-            }
-            updateChannel = options.get(option);
-        }
-
-        // Determine version source based on channel
-        if (updateChannel.equalsIgnoreCase("mod_release")) {
-            // Version and package URL will be fetched directly from GitHub API later
-            versionUrlString = null; // Not used for mod_release
-        } else if (buildVersion.contains("SNAPSHOT")) {
-            if (!updateChannel.equalsIgnoreCase(localizer.getMessageorUseDefault("lblSnapshot", "Snapshot"))) {
-                System.out.println("Snapshot build versions must use snapshot update channel to work");
-                return false;
-            }
-            versionUrlString = GITHUB_SNAPSHOT_URL + "version.txt";
-        } else { // Default to release channel behavior
-            if (!updateChannel.equalsIgnoreCase(localizer.getMessageorUseDefault("lblRelease", "Release"))) {
-                 // Allow release channel check even if not explicitly selected, maybe remove this check?
-                 // System.out.println("Release build versions must use release update channel to work");
-                 // return false;
-            }
-             // Use official release URL if channel is 'release' or unrecognized (besides mod_release/snapshot)
-            versionUrlString = RELEASE_URL + "forge/forge-gui-desktop/version.txt";
-        }
-
-
-        // Check the internet connection
-        if (!testNetConnection()) {
-            return false;
-        }
-
-        // Download appropriate version file
-        return compareBuildWithLatestChannelVersion();
+        // Removed unreachable original code block to prevent compilation errors.
     }
 
     private boolean testNetConnection() {
