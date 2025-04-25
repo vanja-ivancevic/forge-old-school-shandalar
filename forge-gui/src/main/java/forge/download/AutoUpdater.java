@@ -82,11 +82,19 @@ public class AutoUpdater {
     }
 
     private boolean verifyUpdateable() {
+        // START: Force disable auto-updater
+        System.out.println("DEBUG: Auto-updater explicitly disabled in code. Skipping check.");
+        return false;
+        // END: Force disable auto-updater
+
+        /* Original logic below is now unreachable due to the return statement above */
+        /*
         if (buildVersion.contains("GIT")) {
             //return false;
         }
 
         if (isLoading) {
+        */
             // TODO This doesn't work yet, because FSkin isn't loaded at the time.
             return false;
         } else if (updateChannel.equals("none")) {
