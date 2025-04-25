@@ -51,7 +51,6 @@ For issues related to the core Forge engine unrelated to these modifications, pl
 
 Happy dueling!
 
-![Shandalar Gameplay](https://github.com/user-attachments/assets/7b7837fa-3fba-49d4-b8df-9b9d2b4c1c59)
 
 ---
 *This fork is based on the [official Forge repository](https://github.com/Card-Forge/forge) and maintains its [GPL-3.0 License](LICENSE).*
