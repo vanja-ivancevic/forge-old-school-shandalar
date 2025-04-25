@@ -1,3 +1,21 @@
+## Unreleased
+### No issue
+
+**autoupdater**
+
+
+[bfdb5dd7d2fcc52](https://github.com/Card-Forge/forge/commit/bfdb5dd7d2fcc52) Vanja *2025-04-25 14:04:37*
+
+
+## v0.34.1
+### No issue
+
+**Fix: Auto-updater version comparison for mod releases**
+
+
+[d0d2628a520f399](https://github.com/Card-Forge/forge/commit/d0d2628a520f399) Vanja *2025-04-25 13:46:56*
+
+
 ## v0.34
 ### No issue
 
