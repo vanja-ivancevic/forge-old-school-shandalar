@@ -170,8 +170,10 @@ public class AutoUpdater {
             System.out.println("Current build version: " + buildVersion);
             System.out.println("Latest available version (" + updateChannel + "): " + version);
 
-            if (buildVersion.equals(version)) {
-                System.out.println("Build version matches latest available version.");
+            // Strip leading 'v' from fetched version (tag name) for comparison
+            String comparableVersion = version.startsWith("v") ? version.substring(1) : version;
+            if (buildVersion.equals(comparableVersion)) {
+                System.out.println("Build version (" + buildVersion + ") matches latest available version (" + version + ").");
                 return false;
             }
         }
