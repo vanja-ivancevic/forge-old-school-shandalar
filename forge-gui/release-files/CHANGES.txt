@@ -1,5 +1,24 @@
-## Unreleased
+## v0.34.3
 ### No issue
+
+**Fix: Disable auto-updater**
+
+
+[a535eab5599c446](https://github.com/Card-Forge/forge/commit/a535eab5599c446) Vanja *2025-04-25 14:46:18*
+
+**autoupdate**
+
+
+[25a084091debcb5](https://github.com/Card-Forge/forge/commit/25a084091debcb5) Vanja *2025-04-25 14:33:21*
+
+
+## v0.34.2
+### No issue
+
+**title bg**
+
+
+[48288eefba960b4](https://github.com/Card-Forge/forge/commit/48288eefba960b4) Vanja *2025-04-25 14:10:02*
 
 **autoupdater**
 
