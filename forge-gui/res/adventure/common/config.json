@@ -608,18 +608,18 @@
       "sellFactor": 0.6,  
       "shardSellRatio": 0.95,
       "starterDecks": {
-        "W":"decks/starter/white_e.json",
-        "B":"decks/starter/black_e.json",
-        "U":"decks/starter/blue_e.json",
-        "R":"decks/starter/red_e.json",
-        "G":"decks/starter/green_e.json"
+        "W":"decks/starter/MMQ - White.dck",
+        "B":"decks/starter/MIR - Black.dck",
+        "U":"decks/starter/MMQ - BlueWhite.dck",
+        "R":"decks/starter/MIR - BlueRed.dck",
+        "G":"decks/starter/MIR - GreenWhite - Jungle_Jam.dck"
       },
       "constructedStarterDecks": {
-        "W":"decks/starter/Sleeper.dck",
-        "U":"decks/starter/Deep_Freeze.dck",
-        "B":"decks/starter/Night_Terrors.dck",
-        "R":"decks/starter/The_Flames_of_Rath.dck",
-        "G":"decks/starter/The_Swarm.dck"
+        "W":"decks/starter/MIR - RedWhite.dck",
+        "U":"decks/starter/TMP - BlueWhite.dck",
+        "B":"decks/starter/USG - BlackWhite.dck",
+        "R":"decks/starter/MMQ - RedBlack - Disrupter.dck",
+        "G":"decks/starter/TMP - GreenWhite.dck"
       },
       "pileDecks": {
         "W":"decks/starter/pile_white_e.json",
@@ -646,18 +646,18 @@
       "sellFactor": 0.5,      
       "shardSellRatio": 0.8,
       "starterDecks": {
-        "W":"decks/starter/white_n.json",
-        "B":"decks/starter/black_n.json",
-        "U":"decks/starter/blue_n.json",
-        "R":"decks/starter/red_n.json",
-        "G":"decks/starter/green_n.json"
+        "W":"decks/starter/USG - White.dck",
+        "B":"decks/starter/TMP - BlueBlack.dck",
+        "U":"decks/starter/USG - BlueBlack.dck",
+        "R":"decks/starter/TMP - RedWhite.dck",
+        "G":"decks/starter/USG GreenRed.dck"
       },
       "constructedStarterDecks": {
-        "W":"decks/starter/Armada.dck",
-        "U":"decks/starter/Bomber.dck",
-        "B":"decks/starter/Decay.dck",
-        "R":"decks/starter/Infestation.dck",
-        "G":"decks/starter/Way_Wild.dck"
+        "W":"decks/starter/USG - BlackWhite.dck",
+        "U":"decks/starter/TMP - BlueWhite.dck",
+        "B":"decks/starter/MMQ - RedBlack - Disrupter.dck",
+        "R":"decks/starter/MIR - RedWhite.dck",
+        "G":"decks/starter/MMQ - GreenRed.dck"
       },
       "pileDecks": {
         "W":"decks/starter/pile_white_n.json",
@@ -682,18 +682,18 @@
       "sellFactor": 0.25,
       "shardSellRatio": 0.6,
       "starterDecks": {
-        "W":"decks/starter/white_h.json",
-        "B":"decks/starter/black_h.json",
-        "U":"decks/starter/blue_h.json",
-        "R":"decks/starter/red_h.json",
-        "G":"decks/starter/green_h.json"
+        "W":"decks/starter/7ED - White.dck",
+        "B":"decks/starter/7ED - Black.dck",
+        "U":"decks/starter/7ED - Blue.dck",
+        "R":"decks/starter/7ED - Red.dck",
+        "G":"decks/starter/7ED - Green.dck"
       },
       "constructedStarterDecks": {
-        "W":"decks/starter/Rebels_Call.dck",
-        "U":"decks/starter/Tidal_Mastery.dck",
-        "B":"decks/starter/The_Plague.dck",
-        "R":"decks/starter/Disrupter.dck",
-        "G":"decks/starter/Deepwood_Menace.dck"
+        "W":"decks/starter/Portal Second Age - White.dck",
+        "U":"decks/starter/Portal Second Age - Blue.dck",
+        "B":"decks/starter/Portal Second Age - Black.dck",
+        "R":"decks/starter/Portal Second Age - Red.dck",
+        "G":"decks/starter/Portal Second Age - Green.dck"
       },
       "pileDecks": {
         "W":"decks/starter/pile_white_h.json",
@@ -715,18 +715,18 @@
       "sellFactor": 0.05,
       "shardSellRatio": 0.3,
       "starterDecks": {
-        "W":"decks/starter/white_h.json",
-        "B":"decks/starter/black_h.json",
-        "U":"decks/starter/blue_h.json",
-        "R":"decks/starter/red_h.json",
-        "G":"decks/starter/green_h.json"
+        "W":"decks/starter/Starter 1999 - White.dck",
+        "B":"decks/starter/Starter 1999 - Black.dck",
+        "U":"decks/starter/Starter 1999 - Blue.dck",
+        "R":"decks/starter/Starter 1999 - Red.dck",
+        "G":"decks/starter/Starter 1999 - Green.dck"
       },
       "constructedStarterDecks": {
-        "W":"decks/starter/Ride_Like_the_Wind.dck",
-        "U":"decks/starter/Tombstone.dck",
-        "B":"decks/starter/The_Slivers.dck",
-        "R":"decks/starter/Burning_Sky.dck",
-        "G":"decks/starter/Jungle_Jam.dck"
+        "W":"decks/starter/Portal - Boros.dck",
+        "U":"decks/starter/Portal - Dimir.dck",
+        "B":"decks/starter/6ED - GreenBlack.dck",
+        "R":"decks/starter/6ED - BlueRed.dck",
+        "G":"decks/starter/6ED - GreenBlack.dck"
       },
       "pileDecks": {
         "W":"decks/starter/pile_white_h.json",
@@ -738,25 +738,9 @@
     }
   ],
   "starterEditions": [
-	"MIR",
-	"TMP",
-	"USG",
-	"MMQ",
-	"S99",
-	"POR",
-	"PO2",
-	"6ED",
-	"7ED"
+	"***"
   ],
   "starterEditionNames": [
-	"Mirage",
-	"Tempest",
-	"Urza's Saga",
-	"Mercadian Masques",
-	"Starter 1999",
-	"Portal",
-	"Portal Second Age",
-	"6th Edition",
-	"7th Edition"
+	"Old Border"
 	]
 }
