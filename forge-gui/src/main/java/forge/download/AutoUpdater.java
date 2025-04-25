@@ -144,11 +144,18 @@ public class AutoUpdater {
     private boolean compareBuildWithLatestChannelVersion() {
         try {
             if (updateChannel.equalsIgnoreCase("mod_release")) {
+                System.out.println("DEBUG: Attempting to retrieve mod version from GitHub...");
                 if (!retrieveModVersionFromGitHub()) {
+                    System.err.println("DEBUG: retrieveModVersionFromGitHub() returned false. Update check failed.");
+                    // Explicitly show an error here? Or let it potentially fall back?
+                    // For now, let's prevent fallback to avoid confusion.
+                     SOptionPane.showErrorDialog("Failed to retrieve update information from the mod repository.", "Update Check Error");
                     return false; // Failed to get version from GitHub
                 }
+                 System.out.println("DEBUG: retrieveModVersionFromGitHub() succeeded.");
                 // Version and packageUrl should now be set by retrieveModVersionFromGitHub
             } else {
+                 System.out.println("DEBUG: Handling non-mod_release channel: " + updateChannel);
                 // Handle snapshot and official release channels
                 retrieveVersion(); // Sets version and packageUrl for snapshot/release
                 if (buildVersion.contains("SNAPSHOT")) {
@@ -160,6 +167,14 @@ public class AutoUpdater {
                     return BuildInfo.verifyTimestamp(snapsTimestamp);
                 }
             }
+
+            // Add logging before comparison
+            System.out.println("DEBUG: Before comparison:");
+            System.out.println("DEBUG:   updateChannel = " + updateChannel);
+            System.out.println("DEBUG:   this.version (fetched) = " + this.version);
+            System.out.println("DEBUG:   this.packageUrl = " + this.packageUrl);
+            System.out.println("DEBUG:   buildVersion (local) = " + buildVersion);
+
 
             // Common version comparison logic (for mod_release and non-snapshot official release)
             if (StringUtils.isEmpty(version) ) {
@@ -315,8 +330,17 @@ public class AutoUpdater {
             return downloadFromBrowser();
         }
         String logs = snapsBuildDate.isEmpty() ? "" : cf.get();
-        String v = snapsBuildDate.isEmpty() ? version : version + TextUtil.enclosedParen(snapsBuildDate);
-        String b = buildDate.isEmpty() ? buildVersion : buildVersion + TextUtil.enclosedParen(buildDate);
+        // Use the potentially modified 'version' and 'buildVersion' for display
+        String v = snapsBuildDate.isEmpty() ? version : version + TextUtil.enclosedParen(snapsBuildDate); // 'version' should hold the fetched version (e.g., v0.34.1 or 2.0.03 if failed)
+        String b = buildDate.isEmpty() ? buildVersion : buildVersion + TextUtil.enclosedParen(buildDate); // 'buildVersion' is the local version (e.g., 0.34.1)
+
+        // Add logging just before showing the dialog
+        System.out.println("DEBUG: Showing update dialog:");
+        System.out.println("DEBUG:   Available Version (v) = " + v);
+        System.out.println("DEBUG:   Current Version (b) = " + b);
+        System.out.println("DEBUG:   Message Key = lblNewVersionForgeAvailableUpdateConfirm");
+
+
         String message = localizer.getMessage("lblNewVersionForgeAvailableUpdateConfirm", v, b) + logs;
         final List<String> options = ImmutableList.of(localizer.getMessage("lblUpdateNow"), localizer.getMessage("lblUpdateLater"));
         if (SOptionPane.showOptionDialog(message, localizer.getMessage("lblNewVersionAvailable"), null, options, 0) == 0) {

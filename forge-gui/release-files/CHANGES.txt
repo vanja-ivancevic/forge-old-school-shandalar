@@ -1,5 +1,20 @@
-## Unreleased
+## v0.34
 ### No issue
+
+**Prepare release v0.34**
+
+
+[d430dff6b781647](https://github.com/Card-Forge/forge/commit/d430dff6b781647) Vanja *2025-04-25 13:14:28*
+
+**Starter decks final update and fix, background art and splash screen**
+
+
+[ac8178470ac79e8](https://github.com/Card-Forge/forge/commit/ac8178470ac79e8) Vanja *2025-04-25 12:59:38*
+
+**Feat: Add dynamic mod version display from Git tag**
+
+
+[06d3b6e9db8c20b](https://github.com/Card-Forge/forge/commit/06d3b6e9db8c20b) Vanja *2025-04-25 07:55:14*
 
 **auto**
 
