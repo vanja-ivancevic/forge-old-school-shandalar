@@ -1,3 +1,67 @@
+## v0.33
+### No issue
+
+**Merge remote-tracking branch 'upstream/master'**
+
+
+[f94d5ec245f7eff](https://github.com/Card-Forge/forge/commit/f94d5ec245f7eff) Vanja *2025-04-25 03:13:55*
+
+**readme, autoupdater, decks, restrictions**
+
+
+[ee8532b31cf9bdf](https://github.com/Card-Forge/forge/commit/ee8532b31cf9bdf) Vanja *2025-04-25 03:12:20*
+
+**readme**
+
+
+[c38eee1ec3371a8](https://github.com/Card-Forge/forge/commit/c38eee1ec3371a8) Vanja *2025-04-24 01:09:17*
+
+**readme**
+
+
+[f514b6bc13d3e11](https://github.com/Card-Forge/forge/commit/f514b6bc13d3e11) Vanja *2025-04-24 00:39:28*
+
+**Fixing Ravenous Harpy, Reaper of Flight Moonsilver (#7447)**
+
+
+[40eb8de90c70bf2](https://github.com/Card-Forge/forge/commit/40eb8de90c70bf2) Renato Filipe Vidal Santos *2025-04-23 19:07:00*
+
+**Added support for amount in give card command.**
+
+ * Added &#x27;give print&#x27; command.
+
+[bc9df8872fe139f](https://github.com/Card-Forge/forge/commit/bc9df8872fe139f) Jetz *2025-04-23 16:48:03*
+
+**Put back blank collector number suffix.**
+
+
+[8f60973d95ab255](https://github.com/Card-Forge/forge/commit/8f60973d95ab255) Jetz *2025-04-23 16:48:03*
+
+**Cleanup: "During your turn" Oracle update, living metal  (#7446)**
+
+
+[1071089879c20bd](https://github.com/Card-Forge/forge/commit/1071089879c20bd) Renato Filipe Vidal Santos *2025-04-23 14:39:30*
+
+**Cleanup: NumAtt$ & NumDef$, new cards**
+
+
+[28ae7fa729a8c2e](https://github.com/Card-Forge/forge/commit/28ae7fa729a8c2e) Renato Filipe Vidal Santos *2025-04-23 09:01:27*
+
+**CardEdition: add TokenInSet**
+
+
+[e9c5bc46aea0955](https://github.com/Card-Forge/forge/commit/e9c5bc46aea0955) Hans Mackowiak *2025-04-22 23:51:52*
+
+
+## v0.32
+### No issue
+
+**items_big_update**
+
+
+[749acc0fadb52aa](https://github.com/Card-Forge/forge/commit/749acc0fadb52aa) Vanja *2025-04-23 07:59:55*
+
+
 ## v0.31
 ### No issue
 

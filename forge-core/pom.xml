@@ -41,4 +41,65 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering> <!-- Enable filtering for this directory -->
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.6.0</version>
+                <executions>
+                    <execution>
+                        <id>parse-git-tag</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <phase>validate</phase> <!-- Run early -->
+                        <configuration>
+                            <executable>git</executable>
+                            <!-- Use project.basedir for core module, but git needs to run in root -->
+                            <workingDirectory>${project.basedir}/..</workingDirectory>
+                            <arguments>
+                                <argument>describe</argument>
+                                <argument>--tags</argument>
+                                <argument>--abbrev=0</argument> <!-- Get latest tag -->
+                            </arguments>
+                            <outputProperty>mod.tag.version.raw</outputProperty>
+                            <failOnError>false</failOnError> <!-- Don't fail if no tags -->
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>set-git-tag-property</id>
+                        <goals>
+                            <goal>regex-property</goal>
+                        </goals>
+                        <configuration>
+                            <name>mod.tag.version</name>
+                            <value>${mod.tag.version.raw}</value>
+                            <regex>^v?(.*)</regex> <!-- Remove optional leading 'v' -->
+                            <replacement>$1</replacement>
+                            <failIfNoMatch>false</failIfNoMatch>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Ensure resources plugin is configured if not inherited -->
+            <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-resources-plugin</artifactId>
+                 <version>3.3.1</version>
+                 <configuration>
+                     <encoding>UTF-8</encoding>
+                     <!-- Delimiter configuration might be needed if using non-standard delimiters -->
+                     <useDefaultDelimiters>true</useDefaultDelimiters>
+                 </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

@@ -205,11 +205,19 @@ public class AutoUpdater {
             if (conn.getResponseCode() != 200) {
                 System.err.println("Failed : HTTP error code : " + conn.getResponseCode() + " " + conn.getResponseMessage());
                 // Consider showing an error to the user here
+                System.err.println("Failed : HTTP error code : " + conn.getResponseCode() + " " + conn.getResponseMessage());
+                conn.disconnect(); // Disconnect even on error
+                // Consider showing an error to the user here
                 return false;
             }
+            conn.disconnect(); // Disconnect after checking response code
 
-            String jsonResponse = FileUtil.readStreamToString(conn.getInputStream());
-            conn.disconnect();
+            // Use the existing FileUtil method to read directly from the URL
+            String jsonResponse = FileUtil.readFileToString(url);
+            if (jsonResponse == null || jsonResponse.isEmpty()) {
+                 System.err.println("Failed to read response content from GitHub API URL.");
+                 return false;
+            }
 
             // Basic JSON parsing (replace with a proper library like Gson/Jackson for robustness)
             Pattern tagPattern = Pattern.compile("\"tag_name\"\\s*:\\s*\"([^\"]+)\"");

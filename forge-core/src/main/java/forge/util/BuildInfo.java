@@ -26,12 +26,14 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Properties;
 
 /**
  * Provides access to information about the current version and build ID.
  */
 public class BuildInfo {
     private static Date timestamp = null;
+    private static String modVersion = null; // Cache the loaded version
 
     // disable instantiation
     private BuildInfo() {
@@ -48,6 +50,41 @@ public class BuildInfo {
             return "GIT";
         }
         return version;
+    }
+
+    /**
+     * Get the specific version of the Old-School Shandalar mod from properties.
+     *
+     * @return a String representing the mod version, or "UNKNOWN" if not found/loaded.
+     */
+    public static String getModVersionString() {
+        if (modVersion == null) {
+            loadModProperties();
+        }
+        return modVersion != null ? modVersion : "UNKNOWN";
+    }
+
+    private static synchronized void loadModProperties() {
+        if (modVersion != null) return; // Already loaded
+
+        Properties props = new Properties();
+        try (InputStream input = BuildInfo.class.getResourceAsStream("/mod.properties")) {
+            if (input == null) {
+                System.err.println("BuildInfo: Unable to find mod.properties file.");
+                modVersion = "ERROR"; // Indicate loading failure
+                return;
+            }
+            props.load(input);
+            modVersion = props.getProperty("mod.version", "UNKNOWN");
+            // Handle case where property might still be the placeholder if filtering failed
+            if (modVersion.contains("${")) {
+                System.err.println("BuildInfo: mod.version property was not filtered by Maven.");
+                modVersion = "FILTER_FAIL";
+            }
+        } catch (IOException ex) {
+            System.err.println("BuildInfo: Error loading mod.properties file: " + ex.getMessage());
+            modVersion = "IO_ERROR"; // Indicate loading failure
+        }
     }
 
     public static boolean isDevelopmentVersion() {
