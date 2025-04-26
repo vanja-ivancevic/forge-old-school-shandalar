@@ -26,7 +26,7 @@
         <configSourceDirectory>src/main/config</configSourceDirectory>
         <maven.compiler.release>17</maven.compiler.release>
         <!-- version code - maj.min.rev ie 2.0.00 -->
-        <versionCode>0.34.4</versionCode>
+        <versionCode>0.34.5</versionCode>
         <!-- set snapshotName to blank for release -->
         <snapshotName></snapshotName>
         <!-- revision will be the global version string -->
@@ -88,6 +88,20 @@
             <url>file:///${project.build.directory}/tmp</url>
         </snapshotRepository>
     </distributionManagement>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jcenter</id>
+            <name>JCenter</name>
+            <url>https://jcenter.bintray.com/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
     <build>
 

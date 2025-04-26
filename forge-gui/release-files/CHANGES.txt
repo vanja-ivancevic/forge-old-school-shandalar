@@ -1,3 +1,31 @@
+## Unreleased
+### No issue
+
+**buttons fix**
+
+
+[d7ac50638dd6e4c](https://github.com/Card-Forge/forge/commit/d7ac50638dd6e4c) Vanja *2025-04-26 05:34:56*
+
+**update for bg images and buttons**
+
+
+[fb3ac87f8c4a4d6](https://github.com/Card-Forge/forge/commit/fb3ac87f8c4a4d6) Vanja *2025-04-26 05:00:45*
+
+**updated some bg images**
+
+
+[270431494e9c49c](https://github.com/Card-Forge/forge/commit/270431494e9c49c) Vanja *2025-04-25 15:10:51*
+
+
+## v0.34.4
+### No issue
+
+**Fix: Disable AssetsDownloader update check**
+
+
+[eed74edb95b2665](https://github.com/Card-Forge/forge/commit/eed74edb95b2665) Vanja *2025-04-25 15:05:55*
+
+
 ## v0.34.3
 ### No issue
 
