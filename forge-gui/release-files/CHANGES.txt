@@ -1,15 +1,10 @@
-## Unreleased
+## v0.34.5
 ### No issue
 
-**buttons fix**
+**Prepare release v0.34.5 (history rewritten to remove secret)**
 
 
-[d7ac50638dd6e4c](https://github.com/Card-Forge/forge/commit/d7ac50638dd6e4c) Vanja *2025-04-26 05:34:56*
-
-**update for bg images and buttons**
-
-
-[fb3ac87f8c4a4d6](https://github.com/Card-Forge/forge/commit/fb3ac87f8c4a4d6) Vanja *2025-04-26 05:00:45*
+[e9ff2a6f2c59d2a](https://github.com/Card-Forge/forge/commit/e9ff2a6f2c59d2a) Vanja *2025-04-26 05:54:33*
 
 **updated some bg images**
 

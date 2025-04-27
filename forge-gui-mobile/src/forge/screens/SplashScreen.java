@@ -1,5 +1,6 @@
 package forge.screens;
 
+import com.badlogic.gdx.Gdx; // Added
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -13,6 +14,8 @@ import forge.assets.FSkinColor;
 import forge.assets.FSkinFont;
 import forge.assets.FSkinImage;
 import forge.assets.FSkinTexture;
+import forge.download.UpdateCheckerService; // Added
+import forge.download.UpdateInfo; // Added
 import forge.toolbox.FButton;
 import forge.toolbox.FContainer;
 import forge.toolbox.FProgressBar;
@@ -25,10 +28,18 @@ public class SplashScreen extends FContainer {
     private boolean preparedForDialogs, showModeSelector, init, animateLogo, hideBG, hideBtn, startClassic, clear;
     private FButton btnAdventure, btnHome;
     private BGAnimation bgAnimation;
+    private UpdateCheckerService updateCheckerService; // Added
+    private UpdateInfo updateInfo = null; // Added
 
     public SplashScreen() {
         progressBar = getProgressBar();
         bgAnimation = getBgAnimation();
+        // Start update check
+        updateCheckerService = new UpdateCheckerService();
+        // Explicitly type the lambda parameter to potentially resolve compiler issue
+        updateCheckerService.checkUpdateAsync().thenAcceptAsync((UpdateInfo info) -> {
+            updateInfo = info;
+        }, Gdx.app::postRunnable); // Use Gdx.app::postRunnable to run on the main thread
     }
 
     public BGAnimation getBgAnimation() {
@@ -381,7 +392,28 @@ public class SplashScreen extends FContainer {
         progressBar.setBounds(x + padding, y, w - 2 * padding, pbHeight);
         g.draw(progressBar);
 
-        String version = "v." + Forge.getDeviceAdapter().getVersionString();
-        g.drawText(version, disclaimerFont, FProgressBar.SEL_FORE_COLOR, x, getHeight() - disclaimerHeight, w, disclaimerHeight, false, Align.center, true);
+        // Construct version string with update status
+        String versionString = "v." + Forge.getDeviceAdapter().getVersionString();
+        Color versionColor = FProgressBar.SEL_FORE_COLOR; // Default color
+
+        if (updateInfo != null) {
+            if (!updateInfo.checkSuccessful()) {
+                versionString += " (Update check failed)";
+                // Keep default color or change to indicate failure? Default for now.
+            } else if (updateInfo.isUpdateAvailable()) {
+                versionString += " (Update available: " + updateInfo.latestVersion() + "!)";
+                versionColor = Color.YELLOW; // Use yellow for update available
+            } else {
+                // Add the requested text for the up-to-date case
+                versionString += ", you have the latest version.";
+            }
+        } else {
+            // Optional: Add "(Checking for updates...)" while updateInfo is null
+            // versionString += " (Checking...)";
+        }
+
+        // Draw version string in bottom-left corner, moved up slightly
+        float versionPadding = 5f; // Small padding from the edge
+        g.drawText(versionString, disclaimerFont, versionColor, versionPadding, getHeight() - disclaimerHeight, w, disclaimerHeight, false, Align.left, false); // Adjust y-coord and set centerVertically=false
     }
 }
