@@ -1,14 +1,6 @@
-A	MODDING_GUIDE.md
-M	README.md
-A	RELEASE_PROCESS.md
 M	forge-game/src/main/java/forge/game/GameFormat.java
-M	forge-gui-mobile-dev/pom.xml
-A	forge-gui-mobile-dev/src/assembly/distribution.xml
-M	forge-gui-mobile-dev/src/main/config/forge-adventure.command
-M	forge-gui-mobile-dev/src/main/config/forge-adventure.sh
 M	forge-gui-mobile/src/forge/adventure/data/RewardData.java
 M	forge-gui-mobile/src/forge/adventure/util/CardUtil.java
-M	forge-gui/release-files/CHANGES.txt
 M	forge-gui/res/adventure/Shandalar/world/shops.json
 M	forge-gui/res/adventure/common/config.json
 M	forge-gui/res/adventure/common/decks/boss/akroma.dck
@@ -788,4 +780,3 @@ M	forge-gui/res/adventure/common/world/items.json
 A	forge-gui/res/adventure/common/world/validcards.json
 M	forge-gui/res/blockdata/blocks.txt
 M	forge-gui/res/blockdata/starters.txt
-A	modify_tmx_rewards.py

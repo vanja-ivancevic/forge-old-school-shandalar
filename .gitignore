@@ -89,3 +89,4 @@ forge-gui/tools/PerSetTrackingResults
 /forge-gui/res/adventure/*.tiled-session
 integration_guide.md
 java_changes_report.md
+MOD_CHANGED_FILES.txt
