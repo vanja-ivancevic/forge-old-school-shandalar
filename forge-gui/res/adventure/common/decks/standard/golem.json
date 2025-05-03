@@ -3,7 +3,7 @@
   "template":
   {
    "count":80,
-   "colors":["Black","Green","White"],
+   "colors":["Black","Green","White","Blue","Red"],
    "tribe":"Golem",    
    "tribeCards":0.8,
    "rares":0.1

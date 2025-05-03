@@ -3,7 +3,7 @@
   "template":
   {
    "count":60,
-   "colors":["White","Black"],
+   "colors":["White","Blue","Green"],
    "tribe":"Human",
    "rares":0.5
   }

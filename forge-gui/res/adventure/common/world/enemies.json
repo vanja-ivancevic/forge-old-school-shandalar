@@ -1995,9 +1995,6 @@
 					"uncommon",
 					"rare"
 				],
-				"subTypes": [
-					"Equipment"
-				],
 				"cardTypes": [
 					"Artifact"
 				]
@@ -2016,7 +2013,6 @@
 				"subTypes": [
 					"Knight"
 				],
-				"cardText": "Equipment"
 			},
 			{
 				"type": "item",
@@ -18145,9 +18141,6 @@
 				"probability": 1,
 				"count": 1,
 				"addMaxCount": 3,
-				"subTypes": [
-					"Equipment"
-				],
 				"cardTypes": [
 					"Artifact"
 				]
