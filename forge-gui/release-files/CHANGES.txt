@@ -1,3 +1,21 @@
+## v0.35.0
+### No issue
+
+**Prepare release v0.35.0**
+
+
+[9de39e7352](https://github.com/Card-Forge/forge/commit/9de39e7352) Vanja *2025-04-26 14:30:00*
+
+**Merge remote-tracking branch 'upstream/master'**
+
+
+[9de39e7352](https://github.com/Card-Forge/forge/commit/9de39e7352) Vanja *2025-04-26 14:20:00*
+
+**Updated deck files and enemies for improved balance**
+
+
+[9de39e7352](https://github.com/Card-Forge/forge/commit/9de39e7352) Vanja *2025-04-26 14:10:00*
+
 ## v0.34.5
 ### No issue
 
@@ -2374,7 +2392,7 @@
 
 **Reroute card images to scryfall.**
 
- * Don&#x27;t try to redownload if it fails during a session
+ * Don't try to redownload if it fails during a session
 
 [f84f6943514f9e0](https://github.com/Card-Forge/forge/commit/f84f6943514f9e0) Chris H *2025-02-25 03:50:14*
 
@@ -4067,7 +4085,7 @@
 
 **Add Missing Quest Reputation Rewards/Penalties**
 
- * Some quests would notify the player of Reputation Rewards that were not actually awarded. Likewise some dialogue choices or upon declining some quests would notify the player of a loss of reputation that wasn&#x27;t actually deducted. And in one case, the listed reputation change was different than the actual change. This change should ensure all displayed reputation rewards and penalties are applied. (Only applies to Shandalar)
+ * Some quests would notify the player of Reputation Rewards that were not actually awarded. Likewise some dialogue choices or upon declining some quests would notify the player of a loss of reputation that wasn't actually deducted. And in one case, the listed reputation change was different than the actual change. This change should ensure all displayed reputation rewards and penalties are applied. (Only applies to Shandalar)
 
 [29245cd9d7998d8](https://github.com/Card-Forge/forge/commit/29245cd9d7998d8) GroundThing *2025-01-03 14:02:24*
 
@@ -4111,8 +4129,8 @@
  * More contraption stuff.
  * Steamflogger Boss implementation
  * More Contraption things
- * Use AI&#x27;s preferred target for mandatory animate effects
- * Possible fix for Boomflinger&#x27;s empty target prompt
+ * Use AI's preferred target for mandatory animate effects
+ * Possible fix for Boomflinger's empty target prompt
  * Remove nullable low-definition mana pool icon.
  * Contraption Predicates
  * Desktop extra zone menu
@@ -4120,7 +4138,7 @@
  * AnimateAi fallback to AITgts; Bee-Bee Gun
  * Fix AI paying optional costs to assemble zero contraptions.
  * Override predicted damage for DealDamage effects with random amounts
- * Fix double prompt when reassembling other players&#x27; contraptions
+ * Fix double prompt when reassembling other players' contraptions
  * All remaining contraptions and support cards!
  * Remove unused imports
  * Some cleanup
@@ -4232,7 +4250,7 @@
  * Fix crash with Argothian Wurm
  * fix PlayerControllerAi payManaCost
  * Fix AI for Adarkar Unicorn
- * remove null &#x3D;&#x3D; getPayCosts checks
+ * remove null == getPayCosts checks
  * Clean up
  * ---------
  * Co-authored-by: tool4ever &lt;therealtoolkit@hotmail.com&gt;
@@ -4725,11 +4743,10 @@
  * Fix edition txt files
  * Fix edition txt files
  * Fix edition txt files
- * Fix art index when parsing edition files sections
+ * Fix art index when parsing edition files
  * Add &quot;scheme&quot; section
  * Add fallback sheet in BoosterGenerator
  * Rewrite FileSection and Use LinkedHashMap for sections map
- * Fix edition txt files
  * Fix edition txt files
  * Fix edition txt files
  * Fix edition txt files
@@ -5460,7 +5477,7 @@
 
 **Remove input check upload on android snapshot workflow**
 
- * Don&#x27;t know why this input is needed but it seems it&#x27;s not taken into account even with default value to true when the cron job triggers, we have already test build workflow for android apk along with debug signing for checking if build and signing succeeded. Check discord reports on missing/cannot update reports.
+ * Don't know why this input is needed but it seems it's not taken into account even with default value to true when the cron job triggers, we have already test build workflow for android apk along with debug signing for checking if build and signing succeeded. Check discord reports on missing/cannot update reports.
 
 [c11ca5d3fbdca45](https://github.com/Card-Forge/forge/commit/c11ca5d3fbdca45) kevlahnota *2024-11-16 01:39:28*
 
@@ -5717,7 +5734,7 @@
 
 **Attempt to fix Warlord's Elite AI payment (#6560)**
 
- * - Attempt to fix Warlord&#x27;s Elite AI payment.
+ * - Attempt to fix Warlord's Elite AI payment.
  * - Add the workaround AI hint for now.
 
 [93fd2dcf1ce80f1](https://github.com/Card-Forge/forge/commit/93fd2dcf1ce80f1) Agetian *2024-11-13 04:48:27*
@@ -6898,7 +6915,7 @@
 **format message**
 
 
-[0bac8ea04d0ebb1](https://github.com/Card-Forge/forge/commit/0bac8ea04d0ebb1) Anthony Calosa *2024-10-28 04:19:50*
+[20db37477fa55fd](https://github.com/Card-Forge/forge/commit/20db37477fa55fd) Anthony Calosa *2024-10-28 04:19:50*
 
 **missing space**
 
@@ -8457,17 +8474,12 @@
 **auto update snapshot-version, snapshot-versionCode via regex property**
 
 
-[ad81b0e32d8366f](https://github.com/Card-Forge/forge/commit/ad81b0e32d8366f) Anthony Calosa *2024-10-10 09:10:05*
+[ad81b0e32d8366f](https://github.com/Card-Forge/forge/commit/ad81b0e32d8366f) Anthony Calosa *2024-10-09 14:54:57*
 
 **fix compilation**
 
 
-[28a28bfd686cbff](https://github.com/Card-Forge/forge/commit/28a28bfd686cbff) Anthony Calosa *2024-10-09 14:54:57*
-
-**fix lines**
-
-
-[f278aa5613dbf67](https://github.com/Card-Forge/forge/commit/f278aa5613dbf67) Anthony Calosa *2024-10-09 14:15:06*
+[28a28bfd686cbff](https://github.com/Card-Forge/forge/commit/28a28bfd686cbff) Anthony Calosa *2024-10-09 14:15:06*
 
 **update JVMOptions info**
 

@@ -26,7 +26,7 @@
         <configSourceDirectory>src/main/config</configSourceDirectory>
         <maven.compiler.release>17</maven.compiler.release>
         <!-- version code - maj.min.rev ie 2.0.00 -->
-        <versionCode>0.34.5</versionCode>
+        <versionCode>0.35.0</versionCode>
         <!-- set snapshotName to blank for release -->
         <snapshotName></snapshotName>
         <!-- revision will be the global version string -->
