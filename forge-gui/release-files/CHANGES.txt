@@ -4,17 +4,272 @@
 **Prepare release v0.35.0**
 
 
-[9de39e7352](https://github.com/Card-Forge/forge/commit/9de39e7352) Vanja *2025-04-26 14:30:00*
+[787f5b235b7e0f5](https://github.com/Card-Forge/forge/commit/787f5b235b7e0f5) Vanja *2025-05-03 23:16:03*
+
+**Updated enemy decks**
+
+
+[7f982f206b19bd4](https://github.com/Card-Forge/forge/commit/7f982f206b19bd4) Vanja *2025-05-03 23:13:40*
 
 **Merge remote-tracking branch 'upstream/master'**
 
 
-[9de39e7352](https://github.com/Card-Forge/forge/commit/9de39e7352) Vanja *2025-04-26 14:20:00*
+[9de39e73523f6f7](https://github.com/Card-Forge/forge/commit/9de39e73523f6f7) Vanja *2025-05-03 23:11:57*
 
-**Updated deck files and enemies for improved balance**
+**Update tifa_martial_artist.txt (#7488)**
 
 
-[9de39e7352](https://github.com/Card-Forge/forge/commit/9de39e7352) Vanja *2025-04-26 14:10:00*
+[d3a33a0092c8a6a](https://github.com/Card-Forge/forge/commit/d3a33a0092c8a6a) Fulgur14 *2025-05-03 21:12:06*
+
+**Some fixes (#7484)**
+
+
+[2bab13247c6dd11](https://github.com/Card-Forge/forge/commit/2bab13247c6dd11) tool4ever *2025-05-03 17:31:47*
+
+**fix Card from Unknown Set calling getCardEdition**
+
+
+[da30b886c94dd19](https://github.com/Card-Forge/forge/commit/da30b886c94dd19) Hans Mackowiak *2025-05-03 14:47:39*
+
+**Add CantBlock Mode (#7452)**
+
+
+[da38641ff8b60b3](https://github.com/Card-Forge/forge/commit/da38641ff8b60b3) Hans Mackowiak *2025-05-03 13:21:08*
+
+**Scryfall randomly changed the collector numbers**
+
+
+[fcbc83c3ffa2f6e](https://github.com/Card-Forge/forge/commit/fcbc83c3ffa2f6e) Chris H *2025-05-02 20:03:25*
+
+**CardEdition: have Token look for other Sets too**
+
+
+[8706edbb0199232](https://github.com/Card-Forge/forge/commit/8706edbb0199232) Hans Mackowiak *2025-05-02 13:42:04*
+
+**~ remove last Unknown Artist**
+
+
+[4ae93980b662bce](https://github.com/Card-Forge/forge/commit/4ae93980b662bce) Hans Mackowiak *2025-05-02 13:42:04*
+
+**~ update other editions and remove wrong tokens**
+
+
+[10b96138c390a96](https://github.com/Card-Forge/forge/commit/10b96138c390a96) Hans Mackowiak *2025-05-02 13:42:04*
+
+**YTDM: 3 cards (#7448)**
+
+ * Add files via upload
+ * Update loch_larent.txt
+
+[4f5c074fe686765](https://github.com/Card-Forge/forge/commit/4f5c074fe686765) Renato Filipe Vidal Santos *2025-04-30 16:55:06*
+
+**Update Return to Ravnica.txt**
+
+
+[50ca71fc8716dc5](https://github.com/Card-Forge/forge/commit/50ca71fc8716dc5) Hans Mackowiak *2025-04-30 11:24:44*
+
+**Update Bloomburrow Commander.txt**
+
+ * Update offspring token info
+
+[84134341e3be240](https://github.com/Card-Forge/forge/commit/84134341e3be240) Hans Mackowiak *2025-04-30 07:58:39*
+
+**Update Bloomburrow.txt**
+
+ * Update offspring token info
+
+[988518284c9d346](https://github.com/Card-Forge/forge/commit/988518284c9d346) Hans Mackowiak *2025-04-30 07:52:24*
+
+**CopyPermanentEffect: simplify getting PaperCard from DefinedName**
+
+
+[1476621df189f51](https://github.com/Card-Forge/forge/commit/1476621df189f51) Hans Mackowiak *2025-04-30 05:03:26*
+
+**Update Commander Legends Battle for Baldur's Gate.txt**
+
+
+[f98aae35a5077ff](https://github.com/Card-Forge/forge/commit/f98aae35a5077ff) Hans Mackowiak *2025-04-29 13:39:37*
+
+**Update Commander Masters.txt**
+
+
+[eeafc6400ccde01](https://github.com/Card-Forge/forge/commit/eeafc6400ccde01) Hans Mackowiak *2025-04-29 13:39:37*
+
+**Update forge-gui/res/editions/Murders at Karlov Manor Commander.txt**
+
+
+[ea4d878a2dc38b4](https://github.com/Card-Forge/forge/commit/ea4d878a2dc38b4) Chris H *2025-04-29 13:39:37*
+
+**Update Murders at Karlov Manor Commander.txt**
+
+
+[cb8e13e933bbc62](https://github.com/Card-Forge/forge/commit/cb8e13e933bbc62) Hans Mackowiak *2025-04-29 13:39:37*
+
+**Update Commander Anthology.txt**
+
+
+[bec25c68f20fabd](https://github.com/Card-Forge/forge/commit/bec25c68f20fabd) Hans Mackowiak *2025-04-29 13:39:37*
+
+**Update Commander Legends.txt**
+
+
+[b1acb9f0a3eb72f](https://github.com/Card-Forge/forge/commit/b1acb9f0a3eb72f) Hans Mackowiak *2025-04-29 13:39:37*
+
+**Update Modern Horizons 2.txt**
+
+
+[89049db6a0b36fb](https://github.com/Card-Forge/forge/commit/89049db6a0b36fb) Hans Mackowiak *2025-04-29 13:39:37*
+
+**Update Commander Anthology Volume II.txt**
+
+
+[875b4557b01a819](https://github.com/Card-Forge/forge/commit/875b4557b01a819) Hans Mackowiak *2025-04-29 13:39:37*
+
+**Update Tarkir Dragonstorm Commander.txt**
+
+
+[77378855e3e9384](https://github.com/Card-Forge/forge/commit/77378855e3e9384) Hans Mackowiak *2025-04-29 13:39:37*
+
+**Edition token section fixes**
+
+
+[709582086f36c07](https://github.com/Card-Forge/forge/commit/709582086f36c07) Paul Hammerton *2025-04-29 13:39:37*
+
+**Merge pull request #7468 from paulsnoops/ytdm-formats**
+
+ * Format updates: YTDM
+
+[7eda9e204e957ec](https://github.com/Card-Forge/forge/commit/7eda9e204e957ec) Paul Hammerton *2025-04-29 10:29:43*
+
+**Merge pull request #7467 from paulsnoops/edition-updates**
+
+ * Edition updates: FIC, SLD, UNK, YTDM
+
+[cf94d96d95efb94](https://github.com/Card-Forge/forge/commit/cf94d96d95efb94) Paul Hammerton *2025-04-29 10:29:31*
+
+**FIC**
+
+
+[a78d361b2e7d28a](https://github.com/Card-Forge/forge/commit/a78d361b2e7d28a) Paul Hammerton *2025-04-29 10:23:53*
+
+**UNK**
+
+
+[d01619c09c8bafd](https://github.com/Card-Forge/forge/commit/d01619c09c8bafd) Paul Hammerton *2025-04-29 10:19:05*
+
+**Format updates: YTDM**
+
+
+[fd76098765f657f](https://github.com/Card-Forge/forge/commit/fd76098765f657f) Paul Hammerton *2025-04-29 10:13:51*
+
+**Edition updates: SLD, YTDM**
+
+
+[9fb08f16957b5d1](https://github.com/Card-Forge/forge/commit/9fb08f16957b5d1) Paul Hammerton *2025-04-29 10:09:12*
+
+**Card: add FacedownImageKey for better logic and set codes (#7459)**
+
+ * Card: add FacedownImageKey for better logic and set codes
+
+[4eef86daf1450f6](https://github.com/Card-Forge/forge/commit/4eef86daf1450f6) Hans Mackowiak *2025-04-29 05:32:51*
+
+**Added a new Couldnt connect to server error message**
+
+ * Re wrote the URL parsing logic again, but due to increased complexity put it into a utility class
+ * Fixed desktop version opening up a lobby even when it did not connect to a server
+ * Wired up the new error message to mobile, and both error messages to Desktop
+
+[d74d2da755f8bf5](https://github.com/Card-Forge/forge/commit/d74d2da755f8bf5) matthias8422 *2025-04-28 21:56:08*
+
+**Update quests.json**
+
+ * xira fix as well
+
+[f69fd12ebd09b75](https://github.com/Card-Forge/forge/commit/f69fd12ebd09b75) Simisays *2025-04-28 20:07:29*
+
+**update**
+
+
+[d41cdca1bd5e01c](https://github.com/Card-Forge/forge/commit/d41cdca1bd5e01c) Simisays *2025-04-28 20:07:29*
+
+**Fix AI targeting illegally for each player destroy targeting (#7463)**
+
+
+[acfc41346584dd6](https://github.com/Card-Forge/forge/commit/acfc41346584dd6) Chris H *2025-04-28 04:22:59*
+
+**Update LDA data for Tarkir: Dragonstorm, add puzzle PS_TDM3 (Tarkir: Dragonstorm 03) (#7461)**
+
+ * - Update LDA for Tarkir: Dragonstorm
+ * - Add puzzle PS_TDM3.
+
+[7a2ef6c9fd64208](https://github.com/Card-Forge/forge/commit/7a2ef6c9fd64208) Agetian *2025-04-28 04:16:06*
+
+**banned time vault**
+
+
+[65b29c11a26bfc5](https://github.com/Card-Forge/forge/commit/65b29c11a26bfc5) Vanja *2025-04-27 22:09:45*
+
+**Merge remote-tracking branch 'upstream/master'**
+
+
+[a0f67c5ce082a78](https://github.com/Card-Forge/forge/commit/a0f67c5ce082a78) Vanja *2025-04-27 06:31:23*
+
+**autoupdate_info**
+
+
+[2e579a987d6821d](https://github.com/Card-Forge/forge/commit/2e579a987d6821d) Vanja *2025-04-27 06:29:12*
+
+**Update font-list.txt**
+
+
+[b214b6f8bfbdb36](https://github.com/Card-Forge/forge/commit/b214b6f8bfbdb36) Chris H *2025-04-27 03:46:01*
+
+**Update fonts location**
+
+
+[4d75f7b22575dce](https://github.com/Card-Forge/forge/commit/4d75f7b22575dce) Chris H *2025-04-27 03:46:01*
+
+**Fix accidentally removed other blocks**
+
+
+[efaca50d97fa66a](https://github.com/Card-Forge/forge/commit/efaca50d97fa66a) Chris H *2025-04-27 02:40:43*
+
+**Download token images when token collector numbers are defined**
+
+
+[dd94169c9a13d41](https://github.com/Card-Forge/forge/commit/dd94169c9a13d41) Chris H *2025-04-27 02:40:43*
+
+**A-M token updates**
+
+
+[bf70d8e6f6aa10d](https://github.com/Card-Forge/forge/commit/bf70d8e6f6aa10d) Chris H *2025-04-27 02:40:43*
+
+**Fix if collector number is null**
+
+
+[b7db4b4cbc8d4c0](https://github.com/Card-Forge/forge/commit/b7db4b4cbc8d4c0) Chris H *2025-04-27 02:40:43*
+
+**Update Duskmourn House of Horror.txt**
+
+ * add artist
+
+[30ac5ae381d68e8](https://github.com/Card-Forge/forge/commit/30ac5ae381d68e8) Hans Mackowiak *2025-04-27 02:40:43*
+
+**M-Z token fixes**
+
+
+[01571131038e52d](https://github.com/Card-Forge/forge/commit/01571131038e52d) Chris H *2025-04-27 02:40:43*
+
+**MTGO Cube 2025 04 (#7449)**
+
+ * MTGO Vintage Cube 2025-04
+ * MTGO Vintage Cube 2025-04.draft
+ * MTGO Vintage Cube 2025-04.dck
+ * Update MTGO Vintage Cube 2025-04.dck
+ * Use more standard versions of cards
+
+[4c24e7248d248f5](https://github.com/Card-Forge/forge/commit/4c24e7248d248f5) Dave *2025-04-26 06:21:18*
+
 
 ## v0.34.5
 ### No issue
@@ -2392,7 +2647,7 @@
 
 **Reroute card images to scryfall.**
 
- * Don't try to redownload if it fails during a session
+ * Don&#x27;t try to redownload if it fails during a session
 
 [f84f6943514f9e0](https://github.com/Card-Forge/forge/commit/f84f6943514f9e0) Chris H *2025-02-25 03:50:14*
 
@@ -4085,7 +4340,7 @@
 
 **Add Missing Quest Reputation Rewards/Penalties**
 
- * Some quests would notify the player of Reputation Rewards that were not actually awarded. Likewise some dialogue choices or upon declining some quests would notify the player of a loss of reputation that wasn't actually deducted. And in one case, the listed reputation change was different than the actual change. This change should ensure all displayed reputation rewards and penalties are applied. (Only applies to Shandalar)
+ * Some quests would notify the player of Reputation Rewards that were not actually awarded. Likewise some dialogue choices or upon declining some quests would notify the player of a loss of reputation that wasn&#x27;t actually deducted. And in one case, the listed reputation change was different than the actual change. This change should ensure all displayed reputation rewards and penalties are applied. (Only applies to Shandalar)
 
 [29245cd9d7998d8](https://github.com/Card-Forge/forge/commit/29245cd9d7998d8) GroundThing *2025-01-03 14:02:24*
 
@@ -4129,8 +4384,8 @@
  * More contraption stuff.
  * Steamflogger Boss implementation
  * More Contraption things
- * Use AI's preferred target for mandatory animate effects
- * Possible fix for Boomflinger's empty target prompt
+ * Use AI&#x27;s preferred target for mandatory animate effects
+ * Possible fix for Boomflinger&#x27;s empty target prompt
  * Remove nullable low-definition mana pool icon.
  * Contraption Predicates
  * Desktop extra zone menu
@@ -4138,7 +4393,7 @@
  * AnimateAi fallback to AITgts; Bee-Bee Gun
  * Fix AI paying optional costs to assemble zero contraptions.
  * Override predicted damage for DealDamage effects with random amounts
- * Fix double prompt when reassembling other players' contraptions
+ * Fix double prompt when reassembling other players&#x27; contraptions
  * All remaining contraptions and support cards!
  * Remove unused imports
  * Some cleanup
@@ -4250,7 +4505,7 @@
  * Fix crash with Argothian Wurm
  * fix PlayerControllerAi payManaCost
  * Fix AI for Adarkar Unicorn
- * remove null == getPayCosts checks
+ * remove null &#x3D;&#x3D; getPayCosts checks
  * Clean up
  * ---------
  * Co-authored-by: tool4ever &lt;therealtoolkit@hotmail.com&gt;
@@ -4743,10 +4998,11 @@
  * Fix edition txt files
  * Fix edition txt files
  * Fix edition txt files
- * Fix art index when parsing edition files
+ * Fix art index when parsing edition files sections
  * Add &quot;scheme&quot; section
  * Add fallback sheet in BoosterGenerator
  * Rewrite FileSection and Use LinkedHashMap for sections map
+ * Fix edition txt files
  * Fix edition txt files
  * Fix edition txt files
  * Fix edition txt files
@@ -5477,7 +5733,7 @@
 
 **Remove input check upload on android snapshot workflow**
 
- * Don't know why this input is needed but it seems it's not taken into account even with default value to true when the cron job triggers, we have already test build workflow for android apk along with debug signing for checking if build and signing succeeded. Check discord reports on missing/cannot update reports.
+ * Don&#x27;t know why this input is needed but it seems it&#x27;s not taken into account even with default value to true when the cron job triggers, we have already test build workflow for android apk along with debug signing for checking if build and signing succeeded. Check discord reports on missing/cannot update reports.
 
 [c11ca5d3fbdca45](https://github.com/Card-Forge/forge/commit/c11ca5d3fbdca45) kevlahnota *2024-11-16 01:39:28*
 
@@ -5734,7 +5990,7 @@
 
 **Attempt to fix Warlord's Elite AI payment (#6560)**
 
- * - Attempt to fix Warlord's Elite AI payment.
+ * - Attempt to fix Warlord&#x27;s Elite AI payment.
  * - Add the workaround AI hint for now.
 
 [93fd2dcf1ce80f1](https://github.com/Card-Forge/forge/commit/93fd2dcf1ce80f1) Agetian *2024-11-13 04:48:27*
@@ -6915,7 +7171,7 @@
 **format message**
 
 
-[20db37477fa55fd](https://github.com/Card-Forge/forge/commit/20db37477fa55fd) Anthony Calosa *2024-10-28 04:19:50*
+[0bac8ea04d0ebb1](https://github.com/Card-Forge/forge/commit/0bac8ea04d0ebb1) Anthony Calosa *2024-10-28 04:19:50*
 
 **missing space**
 
@@ -8474,12 +8730,17 @@
 **auto update snapshot-version, snapshot-versionCode via regex property**
 
 
-[ad81b0e32d8366f](https://github.com/Card-Forge/forge/commit/ad81b0e32d8366f) Anthony Calosa *2024-10-09 14:54:57*
+[ad81b0e32d8366f](https://github.com/Card-Forge/forge/commit/ad81b0e32d8366f) Anthony Calosa *2024-10-10 09:10:05*
 
 **fix compilation**
 
 
-[28a28bfd686cbff](https://github.com/Card-Forge/forge/commit/28a28bfd686cbff) Anthony Calosa *2024-10-09 14:15:06*
+[28a28bfd686cbff](https://github.com/Card-Forge/forge/commit/28a28bfd686cbff) Anthony Calosa *2024-10-09 14:54:57*
+
+**fix lines**
+
+
+[f278aa5613dbf67](https://github.com/Card-Forge/forge/commit/f278aa5613dbf67) Anthony Calosa *2024-10-09 14:15:06*
 
 **update JVMOptions info**
 
