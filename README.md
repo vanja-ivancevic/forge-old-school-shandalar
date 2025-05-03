@@ -4,6 +4,8 @@ This is a fork of the official **[Forge MTG Engine](https://github.com/Card-Forg
 
 This version updates Forge's Shandalar campaign to primarily use cards with the original ("old-border") frames, focusing on sets from **Alpha through Scourge (up to May 2003)**.
 
+![Shandalar Title Image](Title_image.PNG)
+
 ## Modifications
 
 This fork includes changes to:
