@@ -6,7 +6,15 @@ import forge.card.CardEdition;
 import forge.card.CardRules;
 import forge.item.PaperToken;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Predicate;
 
 public class TokenDb implements ITokenDatabase {
@@ -55,21 +63,50 @@ public class TokenDb implements ITokenDatabase {
         }
     }
 
-    @Override
-    public PaperToken getToken(String tokenName, String edition) {
-        String fullName = String.format("%s_%s", tokenName, edition.toLowerCase());
+    private PaperToken createAndCacheToken(String tokenName, CardEdition edition) {
+        String fullName = String.format("%s_%s", tokenName, edition.getCode().toLowerCase());
+        if (tokensByName.containsKey(fullName)) {
+            return tokensByName.get(fullName);
+        }
+        CardRules rules = rulesByName.get(tokenName);
+        if (rules == null) { //Should have been caught by the initial check in getToken
+            throw new RuntimeException("Token script not found for " + tokenName + " when trying to create with edition " + edition.getCode());
+        }
+        PaperToken pt = new PaperToken(rules, edition, tokenName);
+        tokensByName.put(fullName, pt);
+        return pt;
+    }
 
-        if (!tokensByName.containsKey(fullName)) {
-            try {
-                PaperToken pt = new PaperToken(rulesByName.get(tokenName), editions.get(edition), tokenName);
-                tokensByName.put(fullName, pt);
-                return pt;
-            } catch(Exception e) {
-                throw e;
+    @Override
+    public PaperToken getToken(String tokenName, String editionHint) {
+        if (!rulesByName.containsKey(tokenName)) {
+            throw new RuntimeException("Token script not found: " + tokenName);
+        }
+
+        List<CardEdition> candidateEditions = new ArrayList<>();
+        for (CardEdition ed : this.editions) {
+            if (ed.getTokens().containsKey(tokenName)) {
+                candidateEditions.add(ed);
             }
         }
 
-        return tokensByName.get(fullName);
+        if (!candidateEditions.isEmpty()) {
+            // Sort by date, oldest first.
+            candidateEditions.sort(Comparator.comparing(CardEdition::getDate, Comparator.nullsLast(Comparator.naturalOrder())));
+            return createAndCacheToken(tokenName, candidateEditions.get(0));
+        }
+
+        // Fallback to the original hint if the token wasn't found in any set
+        // This case should ideally not be reached if token scripts are well-maintained alongside edition data.
+        if (editionHint != null) {
+            CardEdition hintEd = editions.get(editionHint.toUpperCase()); // Normalize hint for lookup
+            if (hintEd != null && hintEd.getTokens().containsKey(tokenName)) {
+                return createAndCacheToken(tokenName, hintEd);
+            }
+        }
+        
+        // If still not found, it means the token script is in rulesByName, but no edition provides it.
+        throw new RuntimeException("Token " + tokenName + " could not be resolved to a specific printing. Hinted edition: " + editionHint);
     }
 
     @Override

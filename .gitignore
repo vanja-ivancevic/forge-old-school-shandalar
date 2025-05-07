@@ -90,3 +90,6 @@ forge-gui/tools/PerSetTrackingResults
 integration_guide.md
 java_changes_report.md
 MOD_CHANGED_FILES.txt
+
+MOD_INTEGRATION_PROPOSAL.md
+MODDING_GUIDE.md
