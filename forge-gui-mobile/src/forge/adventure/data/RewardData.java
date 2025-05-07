@@ -192,12 +192,14 @@ public class RewardData implements Serializable {
                 case "randomCard":
                     if( cardName != null && !cardName.isEmpty() ) {
                         if (allCardVariants) {
-                            PaperCard card = CardUtil.getCardByName(cardName);
                             for (int i = 0; i < count + addedCount; i++) {
-                                ret.add(new Reward(CardUtil.getCardByNameAndEdition(cardName, card.getEdition()), isNoSell));
+                                // Fetch a new random printing for each card instance
+                                PaperCard chosenPrinting = CardUtil.getCardByName(cardName);
+                                ret.add(new Reward(chosenPrinting, isNoSell));
                             }
                         } else {
                             for (int i = 0; i < count + addedCount; i++) {
+                                // Fallback for when allCardVariants is false, though not expected in this mod
                                 ret.add(new Reward(StaticData.instance().getCommonCards().getCard(cardName), isNoSell));
                             }
                         }
@@ -299,28 +301,16 @@ public class RewardData implements Serializable {
     static public List<PaperCard> rewardsToCards(Iterable<Reward> dataList) {
         ArrayList<PaperCard> ret=new ArrayList<PaperCard>();
 
-        boolean allCardVariants = Config.instance().getSettingData().useAllCardVariants;
-
-        if (allCardVariants) {
-            String basicLandEdition = "";
-            for (Reward data : dataList) {
-                PaperCard card = data.getCard();
-                if (card.isVeryBasicLand()) {
-                    // ensure that all basic lands share the same edition so the deck doesn't look odd
-                    if (basicLandEdition.isEmpty()) {
-                        basicLandEdition = card.getEdition();
-                    }
-                    ret.add(CardUtil.getCardByNameAndEdition(card.getName(), basicLandEdition));
-                } else {
-                    ret.add(card);
-                }
-            }
-        } else {
-            for (Reward data : dataList) {
-                ret.add(data.getCard());
+        // Directly add the card from the reward without homogenizing basic land editions
+        for (Reward data : dataList) {
+            PaperCard card = data.getCard();
+            if (card != null) { // Ensure card exists
+                ret.add(card);
             }
         }
-        return ret;
+        // The 'else' block for !allCardVariants is removed as it's effectively covered by the simplified loop above now.
+        // If allCardVariants were false, the loop above would still just add the card from the reward.
+        return ret; // Ensure the list is returned
     }
 
 }

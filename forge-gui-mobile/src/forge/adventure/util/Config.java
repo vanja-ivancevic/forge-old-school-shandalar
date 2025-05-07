@@ -103,6 +103,8 @@ public class Config {
         if (settingsData.cardTooltipAdjLandscape == null || settingsData.cardTooltipAdjLandscape == 0f)
             settingsData.cardTooltipAdjLandscape = 1f;
 
+        // Always ensure useAllCardVariants is false to prevent post-2003 cards from appearing in mod
+        settingsData.useAllCardVariants = false;
 
         //prefix = "forge-gui/res/adventure/Shandalar/";
         prefix = getPlanePath(settingsData.plane);

@@ -1,6 +1,11 @@
 ## Unreleased
 ### No issue
 
+**shops rebalance**
+
+
+[c7566372e39eeb4](https://github.com/Card-Forge/forge/commit/c7566372e39eeb4) Vanja *2025-05-07 14:10:27*
+
 **Enhance random card selection logic to ensure equitable distribution in shops and rewards.**
 
 

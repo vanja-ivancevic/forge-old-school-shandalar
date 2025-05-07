@@ -647,82 +647,62 @@
 	{                                      
 	"name":"Swamp",    
 	"description":"The Cartographer's Guild",
-	"spriteAtlas":"maps/tileset/buildings.atlas",   
-	"sprite":"LandShop",      
-	"unlimited":true,
+	"spriteAtlas":"maps/tileset/buildings.atlas",
+	"sprite":"LandShop",
+	   "restockPrice": 1,
 	  "rewards": [
-		{
-		  "count":7,
-		  "cardName":"Swamp"
-		},
-		{
-		  "count":1,
-		  "cardName":"Snow-Covered Swamp"
-		}]
+	       { "count": 5, "cardTypes": ["Land"], "subTypes": ["Swamp"]},
+	       { "count": 1, "cardName": "Snow-Covered Swamp" },
+	       { "count": 2, "cardTypes": ["Land"], "subTypes": ["Swamp"], "rarity": ["C", "U", "R"] }
+	     ]
 	
 	},{                                      
 	"name":"Forest",
 	"description":"The Cartographer's Guild",
-	"spriteAtlas":"maps/tileset/buildings.atlas",   
-	"sprite":"LandShop",      
-	"unlimited":true,
+	"spriteAtlas":"maps/tileset/buildings.atlas",
+	"sprite":"LandShop",
+	   "restockPrice": 1,
 	  "rewards": [
-		{
-		  "count":7,
-		  "cardName":"Forest"
-		},
-		{
-		  "count":1,
-		  "cardName":"Snow-Covered Forest"
-		}]
+	       { "count": 5, "cardTypes": ["Land"], "subTypes": ["Forest"]},
+	       { "count": 1, "cardName": "Snow-Covered Forest" },
+	       { "count": 2, "cardTypes": ["Land"], "subTypes": ["Forest"], "rarity": ["C", "U", "R"] }
+	     ]
 	
 	},{                                      
 	"name":"Mountain",   
 	"description":"The Cartographer's Guild",
-	"spriteAtlas":"maps/tileset/buildings.atlas",   
-	"sprite":"LandShop",      
-	"unlimited":true,
+	"spriteAtlas":"maps/tileset/buildings.atlas",
+	"sprite":"LandShop",
+	   "restockPrice": 1,
 	  "rewards": [
-		{
-		  "count":7,
-		  "cardName":"Mountain"
-		},
-		{
-		  "count":1,
-		  "cardName":"Snow-Covered Mountain"
-		}]
+		{ "count": 5, "cardTypes": ["Land"], "subTypes": ["Mountain"]},
+	       { "count": 1, "cardName": "Snow-Covered Mountain" },
+	       { "count": 2, "cardTypes": ["Land"], "subTypes": ["Mountain"], "rarity": ["C", "U", "R"] },
+	     ]
 	
 	},{                                      
 	"name":"Island",                  
 	"description":"The Cartographer's Guild",
-	"spriteAtlas":"maps/tileset/buildings.atlas",   
-	"sprite":"LandShop",      
-	"unlimited":true,
+	"spriteAtlas":"maps/tileset/buildings.atlas",
+	"sprite":"LandShop",
+	   "restockPrice": 1,
 	  "rewards": [
-		{
-		  "count":7,
-		  "cardName":"Island"
-		},
-		{
-		  "count":1,
-		  "cardName":"Snow-Covered Island"
-		}]
+	       { "count": 5, "cardTypes": ["Land"], "subTypes": ["Island"] },
+	       { "count": 1, "cardName": "Snow-Covered Island" },
+	       { "count": 2, "cardTypes": ["Land"], "subTypes": ["Island"], "rarity": ["C", "U", "R"] }
+	     ]
 	
 	},{                                      
 	"name":"Plains",                  
 	"description":"The Cartographer's Guild",
-	"spriteAtlas":"maps/tileset/buildings.atlas",   
-	"sprite":"LandShop",      
-	"unlimited":true,
+	"spriteAtlas":"maps/tileset/buildings.atlas",
+	"sprite":"LandShop",
+	   "restockPrice": 1,
 	  "rewards": [
-		{
-		  "count":7,
-		  "cardName":"Plains"
-		},
-		{
-		  "count":1,
-		  "cardName":"Snow-Covered Plains"
-		}]
+	       { "count": 5, "cardTypes": ["Land"], "subTypes": ["Plains"] },
+	       { "count": 1, "cardName": "Snow-Covered Plains" },
+	       { "count": 2, "cardTypes": ["Land"], "subTypes": ["Plains"], "rarity": ["C", "U", "R"] }
+	     ]
 	
 	},{                                      
 	"name":"Instant",                  
