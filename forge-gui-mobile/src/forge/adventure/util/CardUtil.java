@@ -346,27 +346,61 @@ public class CardUtil {
         return result;
     }
 
-    public static List<PaperCard> generateCards(Iterable<PaperCard> cards,final RewardData data, final int count, Random r)
+    public static List<PaperCard> generateCards(Iterable<PaperCard> sourceCardPrintings, final RewardData filterData, final int count, Random randomGenerator)
     {
-        boolean allCardVariants = Config.instance().getSettingData().useAllCardVariants;
+        final List<PaperCard> resultList = new ArrayList<>();
+        
+        // Step 1: Filter all printings based on RewardData criteria
+        List<PaperCard> initialFilteredPrintings = getPredicateResult(sourceCardPrintings, filterData);
 
-        final List<PaperCard> result = new ArrayList<>();
-        List<PaperCard> pool = getPredicateResult(cards, data);
-        if (pool.size() > 0) {
-            for (int i = 0; i < count; i++) {
-                PaperCard candidate = pool.get(r.nextInt(pool.size()));
-                if (candidate != null) {
-                    if (allCardVariants) {
-                        PaperCard finalCandidate = CardUtil.getCardByName(candidate.getCardName()); // get a random set variant
-                        result.add(finalCandidate);
-                    } else {
-                        result.add(candidate);
-                    }
-                }
-            }
+        if (initialFilteredPrintings.isEmpty()) {
+            return resultList; // No printings match the filter
         }
-        return result;
+
+        // Step 2: Extract unique card names from the filtered printings
+        List<String> uniqueCardNameList = initialFilteredPrintings.stream()
+                                                                 .map(PaperCard::getName)
+                                                                 .distinct()
+                                                                 .collect(Collectors.toList());
+
+        if (uniqueCardNameList.isEmpty()) {
+            return resultList; // Should not happen if initialFilteredPrintings is not empty, but as a safeguard
+        }
+
+        // Step 3: Loop 'count' times to select cards
+        for (int i = 0; i < count; i++) {
+            if (uniqueCardNameList.isEmpty()) break; // Cannot select more unique names if list is exhausted (though we allow name repeats)
+
+            // Step 3a: Select a Unique Name randomly
+            String chosenName = uniqueCardNameList.get(randomGenerator.nextInt(uniqueCardNameList.size()));
+
+            // Step 3b: Gather all printings of chosenName that were in initialFilteredPrintings
+            List<PaperCard> candidatePrintingsForChosenName = initialFilteredPrintings.stream()
+                                                                                      .filter(pc -> pc.getName().equals(chosenName))
+                                                                                      .collect(Collectors.toList());
+            
+            // Step 3c: Handle empty candidates (should be rare if logic is correct)
+            if (candidatePrintingsForChosenName.isEmpty()) {
+                // This implies chosenName was in uniqueCardNameList, but no printings for it were found in initialFilteredPrintings.
+                // This could happen if initialFilteredPrintings was modified or if there's a logic flaw.
+                // For safety, we can try to remove the name and continue, or log an error.
+                // Removing the name to prevent infinite loops if it's consistently problematic.
+                // However, given how uniqueCardNameList is constructed, this path should ideally not be hit.
+                // A simple 'continue' might be safer if we expect this state to be possible due to other factors.
+                System.err.println("CardUtil.generateCards: No candidate printings found for chosen name '" + chosenName + "' from initial filtered list. Skipping this selection.");
+                continue;
+            }
+
+            // Step 3d: Select a Random Printing from the candidates for the chosen name
+            PaperCard finalChosenPrinting = candidatePrintingsForChosenName.get(randomGenerator.nextInt(candidatePrintingsForChosenName.size()));
+
+            // Step 3e: Add the selected printing to the result list
+            resultList.add(finalChosenPrinting);
+        }
+        
+        return resultList;
     }
+
     public static int getCardPrice(PaperCard card)
     {
         if(card==null)

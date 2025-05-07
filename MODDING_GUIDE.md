@@ -91,7 +91,19 @@ This mod primarily modifies the Shandalar adventure mode by restricting the card
 *   **Impact:** This change primarily affects the visual representation of tokens in-game, ensuring they align with the pre-2003 aesthetic of the mod. It does not change the functional characteristics of the tokens themselves (e.g., a 1/1 Saproling is still a 1/1 Saproling, regardless of which set's art is used).
 *   **Modding Implication:** When creating new cards or effects that generate tokens, be aware that the game will automatically attempt to find the oldest printing. If a specific token appearance from a newer set is desired for a particular new card (which would be unusual for this mod's theme), this core logic would need to be considered. However, for maintaining the old-school theme, this new logic is beneficial.
 
-### 8. Core Java File Modifications (from Original Mod)
+### 8. Random Card Selection (Shops, Rewards, etc.)
+
+*   **File Modified:** [`forge-gui-mobile/src/forge/adventure/util/CardUtil.java`](forge-gui-mobile/src/forge/adventure/util/CardUtil.java) (specifically the `generateCards` method).
+*   **Purpose:** To ensure fairness in random card distribution (e.g., for shop inventories, enemy drops from the general pool), the logic has been changed to prevent cards with many reprints from appearing disproportionately often.
+*   **Selection Process:**
+    1.  **Filter Printings:** The system first gathers all card *printings* that match the specified criteria (e.g., rarity, color, type, set restrictions for the mod).
+    2.  **Unique Names:** From this list of valid printings, it extracts a list of unique card *names*.
+    3.  **Select Name:** A card *name* is chosen randomly from this unique list. This ensures each distinct card has an equal chance of being initially selected, regardless of its number of printings.
+    4.  **Select Printing:** Once a name is chosen, the system identifies all printings of that specific card name that met the original filter criteria. From this subset of valid printings for the chosen name, one is selected randomly.
+*   **Impact:** This makes it less likely for heavily reprinted cards (like "Llanowar Elves" or "Wrath of God") to dominate random card generation simply because they have many versions. Each unique card that fits the criteria now has a more equitable chance of appearing. The specific artwork/printing you see for that card will be one of its valid random printings.
+*   **Modding Implication:** This change primarily affects the variety and distribution of cards appearing in shops and as random loot. It aims for a more balanced representation of the available card pool. This is distinct from the token selection logic, which specifically targets the *oldest* printing for aesthetic consistency. For general card rewards, a random valid printing of the fairly chosen card name is used.
+
+### 9. Core Java File Modifications (from Original Mod)
 
 The original "Old-School Shandalar" mod included changes to a few core Java files. While the integration proposal suggests making these conditional or data-driven, understanding their original intent is useful for modders.
 

@@ -1,3 +1,22 @@
+## Unreleased
+### No issue
+
+**Updated token selection**
+
+
+[0c7a46e6c2e9424](https://github.com/Card-Forge/forge/commit/0c7a46e6c2e9424) Vanja *2025-05-07 02:04:38*
+
+**Update RELEASE_PROCESS.md and CHANGES.txt for release v0.35.0**
+
+
+[3f94ee7dd0cb3fb](https://github.com/Card-Forge/forge/commit/3f94ee7dd0cb3fb) Vanja *2025-05-03 23:27:18*
+
+**Add title image to README.md**
+
+
+[44aa58527ba40e8](https://github.com/Card-Forge/forge/commit/44aa58527ba40e8) Vanja *2025-05-03 23:26:51*
+
+
 ## v0.35.0
 ### No issue
 
