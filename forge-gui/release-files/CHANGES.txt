@@ -1,6 +1,11 @@
 ## Unreleased
 ### No issue
 
+**Fixed card distribution logic in shops. Improved basic land shops to stock all variants and special promo variants as rares and uncommons too.**
+
+
+[eb84b87e267ad1e](https://github.com/Card-Forge/forge/commit/eb84b87e267ad1e) Vanja *2025-05-07 22:54:30*
+
 **shops rebalance**
 
 
