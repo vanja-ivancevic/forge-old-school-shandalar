@@ -1,10 +1,107 @@
 ## Unreleased
 ### No issue
 
+**Enhance random card selection logic to ensure equitable distribution in shops and rewards.**
+
+
+[dc2d03fad889413](https://github.com/Card-Forge/forge/commit/dc2d03fad889413) Vanja *2025-05-07 02:52:57*
+
+**Merge remote-tracking branch 'upstream/master'**
+
+ * # Conflicts:
+ * #	forge-gui/res/adventure/common/maps/map/grolnok/grolnok_f1.tmx
+ * #	forge-gui/res/adventure/common/maps/map/main_story_explore/bandit_cave.tmx
+
+[45e46ce1857fe49](https://github.com/Card-Forge/forge/commit/45e46ce1857fe49) Vanja *2025-05-07 02:50:36*
+
 **Updated token selection**
 
 
 [0c7a46e6c2e9424](https://github.com/Card-Forge/forge/commit/0c7a46e6c2e9424) Vanja *2025-05-07 02:04:38*
+
+**Adventure 3 small fixes (#7499)**
+
+ * Update grolnok_f1.tmx
+ * update
+
+[42f1fba7c456c6a](https://github.com/Card-Forge/forge/commit/42f1fba7c456c6a) Simisays *2025-05-06 20:42:03*
+
+**UNF: Added the 4 eternal-format-legal dice modification/reroll cards (#7489)**
+
+
+[0c6f1ff58f852f8](https://github.com/Card-Forge/forge/commit/0c6f1ff58f852f8) autumnmyst *2025-05-06 17:13:52*
+
+**Update Duskmourn House of Horror.txt**
+
+ * Moved to &quot;other&quot; section
+
+[8678b5ec5b996a5](https://github.com/Card-Forge/forge/commit/8678b5ec5b996a5) Hans Mackowiak *2025-05-06 08:35:59*
+
+**Update Commander 2013.txt**
+
+ * remove token list
+
+[71256972c4685cb](https://github.com/Card-Forge/forge/commit/71256972c4685cb) Hans Mackowiak *2025-05-05 20:32:37*
+
+**feature/Refactored-server-url-parsing-logic (#7496)**
+
+ * HostPort now properly returns -1 when no port was specified
+ * refactored the URL parsing to now attempt a DNS lookup in cases where URI parsing fails
+ * This now allows local computer names and localhost etc
+
+[a76f23fc255bd75](https://github.com/Card-Forge/forge/commit/a76f23fc255bd75) matthias8422 *2025-05-05 17:10:37*
+
+**Update Secret Lair Drop Series.txt**
+
+ * Update token collector number and artist
+
+[3c7993d64010876](https://github.com/Card-Forge/forge/commit/3c7993d64010876) Hans Mackowiak *2025-05-05 08:43:03*
+
+**Update Archenemy.txt**
+
+ * reorder card list
+
+[71d984a5ff3b52c](https://github.com/Card-Forge/forge/commit/71d984a5ff3b52c) Hans Mackowiak *2025-05-05 08:41:35*
+
+**Volrath's Curse and Lost in Thought with Modes and IgnoreEffectCost (#7492)**
+
+ * Refactor Damping Engine
+
+[be171c011aa9a5c](https://github.com/Card-Forge/forge/commit/be171c011aa9a5c) Hans Mackowiak *2025-05-04 16:55:38*
+
+**Some cleanup (#7493)**
+
+ * Some cleanup
+ * Update StaticAbilityCantAttackBlock.java
+ * Some cleanup
+ * ---------
+ * Co-authored-by: tool4EvEr &lt;tool4EvEr@&gt;
+ * Co-authored-by: Hans Mackowiak &lt;hanmac@gmx.de&gt;
+
+[becdd180f4094bd](https://github.com/Card-Forge/forge/commit/becdd180f4094bd) tool4ever *2025-05-04 16:11:00*
+
+**Update StaticAbilityCantAttackBlock.java**
+
+
+[41efdb095ae2d73](https://github.com/Card-Forge/forge/commit/41efdb095ae2d73) tool4ever *2025-05-04 12:25:24*
+
+**Update StaticAbilityCantAttackBlock.java**
+
+
+[86453a6fa73dddf](https://github.com/Card-Forge/forge/commit/86453a6fa73dddf) tool4ever *2025-05-04 12:24:22*
+
+**Update cards with Static CantAttack or CantBlock (#7435)**
+
+ * Update cards with Static CantAttack or CantBlock
+ * ---------
+ * Co-authored-by: tool4ever &lt;therealtoolkit@hotmail.com&gt;
+
+[8448a6e20e89bd8](https://github.com/Card-Forge/forge/commit/8448a6e20e89bd8) Hans Mackowiak *2025-05-04 11:14:58*
+
+**StaticAbilityMode: add Enum and allow MultiMode (#7491)**
+
+
+[194662c9c7155a5](https://github.com/Card-Forge/forge/commit/194662c9c7155a5) Hans Mackowiak *2025-05-04 08:56:27*
 
 **Update RELEASE_PROCESS.md and CHANGES.txt for release v0.35.0**
 

@@ -652,11 +652,11 @@
 	"unlimited":true,
 	  "rewards": [
 		{
-		  "count":4,
+		  "count":7,
 		  "cardName":"Swamp"
 		},
 		{
-		  "count":4,
+		  "count":1,
 		  "cardName":"Snow-Covered Swamp"
 		}]
 	
@@ -668,11 +668,11 @@
 	"unlimited":true,
 	  "rewards": [
 		{
-		  "count":4,
+		  "count":7,
 		  "cardName":"Forest"
 		},
 		{
-		  "count":4,
+		  "count":1,
 		  "cardName":"Snow-Covered Forest"
 		}]
 	
@@ -684,11 +684,11 @@
 	"unlimited":true,
 	  "rewards": [
 		{
-		  "count":4,
+		  "count":7,
 		  "cardName":"Mountain"
 		},
 		{
-		  "count":4,
+		  "count":1,
 		  "cardName":"Snow-Covered Mountain"
 		}]
 	
@@ -700,11 +700,11 @@
 	"unlimited":true,
 	  "rewards": [
 		{
-		  "count":4,
+		  "count":7,
 		  "cardName":"Island"
 		},
 		{
-		  "count":4,
+		  "count":1,
 		  "cardName":"Snow-Covered Island"
 		}]
 	
@@ -716,11 +716,11 @@
 	"unlimited":true,
 	  "rewards": [
 		{
-		  "count":4,
+		  "count":7,
 		  "cardName":"Plains"
 		},
 		{
-		  "count":4,
+		  "count":1,
 		  "cardName":"Snow-Covered Plains"
 		}]
 	
@@ -1139,15 +1139,10 @@
 	  "sprite":"NonbasicLandShop",
 	  "overlaySprite":"Overlay4Blue",
 	  "rewards": [
-		{
-		  "count":4,
-		  "cardTypes": ["Land"],
-		  "cardText": "\\Q{\\EU\\Q}\\E|blue mana"
-		},
-		{
-		  "count":4,
-		  "cardTypes": ["Land"]
-		}]
+	    { "count": 1, "cardTypes": ["Land"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Land"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Land"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Land8Blue",
 	  "description":"20,000 Leagues",
@@ -1155,11 +1150,10 @@
 	  "sprite":"NonbasicLandShop",
 	  "overlaySprite":"Overlay8Blue",
 	  "rewards": [
-		{
-		  "count":8,
-		  "cardTypes": ["Land"],
-		  "cardText": "\\Q{\\EU\\Q}\\E|blue mana"
-		}]
+	    { "count": 1, "cardTypes": ["Land"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Land"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Land"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Land4Black",
 	  "description":"Boggy Depths",
@@ -1167,15 +1161,10 @@
 	  "sprite":"NonbasicLandShop",
 	  "overlaySprite":"Overlay4Black",
 	  "rewards": [
-		{
-		  "count":4,
-		  "cardTypes": ["Land"],
-		  "cardText": "\\Q{\\EB\\Q}\\E|black mana"
-		},
-		{
-		  "count":4,
-		  "cardTypes": ["Land"]
-		}]
+	    { "count": 1, "cardTypes": ["Land"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Land"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Land"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Land8Black",
 	  "description":"Heart of Darkness",
@@ -1183,11 +1172,10 @@
 	  "sprite":"NonbasicLandShop",
 	  "overlaySprite":"Overlay8Black",
 	  "rewards": [
-		{
-		  "count":8,
-		  "cardTypes": ["Land"],
-		  "cardText": "\\Q{\\EB\\Q}\\E|black mana"
-		}]
+	    { "count": 1, "cardTypes": ["Land"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Land"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Land"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Land4Red",
 	  "description":"Mon's Warrens",
@@ -1195,15 +1183,10 @@
 	  "sprite":"NonbasicLandShop",
 	  "overlaySprite":"Overlay4Red",
 	  "rewards": [
-		{
-		  "count":4,
-		  "cardTypes": ["Land"],
-		  "cardText": "\\Q{\\ER\\Q}\\E|red mana"
-		},
-		{
-		  "count":4,
-		  "cardTypes": ["Land"]
-		}]
+	    { "count": 1, "cardTypes": ["Land"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Land"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Land"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Land8Red",
 	  "description":"Volcanic Vistas",
@@ -1211,11 +1194,10 @@
 	  "sprite":"NonbasicLandShop",
 	  "overlaySprite":"Overlay8Red",
 	  "rewards": [
-		{
-		  "count":8,
-		  "cardTypes": ["Land"],
-		  "cardText": "\\Q{\\ER\\Q}\\E|red mana"
-		}]
+	    { "count": 1, "cardTypes": ["Land"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Land"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Land"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Land4Green",
 	  "description":"Green Acres",
@@ -1223,15 +1205,10 @@
 	  "sprite":"NonbasicLandShop",
 	  "overlaySprite":"Overlay4Green",
 	  "rewards": [
-		{
-		  "count":4,
-		  "cardTypes": ["Land"],
-		  "cardText": "\\Q{\\EG\\Q}\\E|green mana"
-		},
-		{
-		  "count":4,
-		  "cardTypes": ["Land"]
-		}]
+	    { "count": 1, "cardTypes": ["Land"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Land"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Land"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Land8Green",
 	  "description":"Gaea's Gifts",
@@ -1239,11 +1216,10 @@
 	  "sprite":"NonbasicLandShop",
 	  "overlaySprite":"Overlay8Green",
 	  "rewards": [
-		{
-		  "count":8,
-		  "cardTypes": ["Land"],
-		  "cardText": "\\Q{\\EG\\Q}\\E|green mana"
-		}]
+	    { "count": 1, "cardTypes": ["Land"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Land"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Land"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Land4White",
 	  "description":"Planes & Plowshares",
@@ -1251,15 +1227,10 @@
 	  "sprite":"NonbasicLandShop",
 	  "overlaySprite":"Overlay4White",
 	  "rewards": [
-		{
-		  "count":4,
-		  "cardTypes": ["Land"],
-		  "cardText": "\\Q{\\EW\\Q}\\E|white mana"
-		},
-		{
-		  "count":4,
-		  "cardTypes": ["Land"]
-		}]
+	    { "count": 1, "cardTypes": ["Land"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Land"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Land"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Land8White",
 	  "description":"Spiritual Sanctuary",
@@ -1267,11 +1238,10 @@
 	  "sprite":"NonbasicLandShop",
 	  "overlaySprite":"Overlay8White",
 	  "rewards": [
-		{
-		  "count":8,
-		  "cardTypes": ["Land"],
-		  "cardText": "\\Q{\\EW\\Q}\\E|white mana"
-		}]
+	    { "count": 1, "cardTypes": ["Land"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Land"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Land"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Land4Colorless",
 	  "description":"The Flowering Wastes",
@@ -1279,26 +1249,10 @@
 	  "sprite":"NonbasicLandShop",
 	  "overlaySprite":"Overlay4Colorless",
 	  "rewards": [
-		{
-		  "count":4,
-		  "type":"Union",
-		  "cardUnion": [
-			{
-			  "count":1,
-			  "cardTypes": ["Land"],
-			  "cardText": "\\Q{\\EC\\Q}\\E|colorless mana"
-			},
-			{
-			  "count":1,
-			  "cardTypes": ["Land"],
-			  "cardText": "\\Q{\\E1\\Q}\\E|any color"
-			}
-		  ]
-		},
-		{
-		  "count":4,
-		  "cardTypes": ["Land"]
-		}]
+	    { "count": 1, "cardTypes": ["Land"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Land"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Land"], "rarity": ["C"] }
+	  ]
 	},{                                    
 	"name":"Green",                  
 	"description":"Abundant Growth",
@@ -1947,7 +1901,11 @@
 	  "description":"Exotic Lands",
 	  "spriteAtlas":"maps/tileset/buildings.atlas",
 	  "sprite":"NonbasicLandShop",
-	  "rewards": [ { "count":8, "cardTypes": ["Land"] } ]
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Land"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Land"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Land"], "rarity": ["C"] }
+	  ]
 	},{                                    
 	"name":"Colorless",     
 	"description":"One Size Fits All",
@@ -1959,42 +1917,66 @@
 	"description":"Antiquities",
 	"spriteAtlas":"maps/tileset/buildings.atlas",   
 	"sprite":"ArtifactShop",
-	  "rewards": [ { "count":8, "cardTypes": ["Artifact"] } ]
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},{ 
 	  "name":"Artifact4Black",
 	"description":"Antiquities",
 	"spriteAtlas":"maps/tileset/buildings.atlas",   
 	"sprite":"ArtifactShop",
 	"overlaySprite":"Overlay4Black",
-	  "rewards": [ { "count":4, "cardTypes": ["Artifact"] }, { "count":4, "cardTypes": ["Artifact"], "colors": ["black"] } ]
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},{                                    
 	"name":"Artifact4Blue",
 	"description":"Antiquities",
 	"spriteAtlas":"maps/tileset/buildings.atlas",   
 	"sprite":"ArtifactShop",
 	"overlaySprite":"Overlay4Blue",
-	  "rewards": [ { "count":4, "cardTypes": ["Artifact"] }, { "count":4, "cardTypes": ["Artifact"], "colors": ["blue"] } ]
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},{                                    
 	"name":"Artifact4Green",
 	"description":"Antiquities",
 	"spriteAtlas":"maps/tileset/buildings.atlas",   
 	"sprite":"ArtifactShop",
 	"overlaySprite":"Overlay4Green",
-	  "rewards": [ { "count":4, "cardTypes": ["Artifact"] }, { "count":4, "cardTypes": ["Artifact"], "colors": ["green"] } ]
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},{                                    
 	"name":"Artifact4Red",
 	"description":"Antiquities",
 	"spriteAtlas":"maps/tileset/buildings.atlas",   
 	"sprite":"ArtifactShop",
 	"overlaySprite":"Overlay4Red",
-	  "rewards": [ { "count":4, "cardTypes": ["Artifact"] }, { "count":4, "cardTypes": ["Artifact"], "colors": ["red"] } ]
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},{                                    
 	"name":"Artifact4White",
 	"description":"Antiquities",
 	"spriteAtlas":"maps/tileset/buildings.atlas",   
 	"sprite":"ArtifactShop",
 	"overlaySprite":"Overlay4White",
-	  "rewards": [ { "count":4, "cardTypes": ["Artifact"] }, { "count":4, "cardTypes": ["Artifact"], "colors": ["white"] } ]
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},{                                    
 	"name":"Multicolor",                  
 	"description":"The Goldsmith",
@@ -2130,77 +2112,121 @@
 	  "description":"Ashnod's Artifacts",
 	  "spriteAtlas":"maps/tileset/buildings.atlas",
 	  "sprite":"WandShop",
-	  "rewards": [ { "count":8, "cardTypes": ["Artifact"], "cardText": "\\Q{\\ET\\Q}\\E|:.*," } ] 
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},{ 
 	  "name":"Wand2Black",
 	  "description":"Vault of Whispers",
 	  "spriteAtlas":"maps/tileset/buildings.atlas",
 	  "sprite":"WandShop",
 	  "overlaySprite":"Overlay2Black",
-	  "rewards": [ { "count":6, "cardTypes": ["Artifact"], "cardText": "\\Q{\\ET\\Q}\\E|:.*," }, { "count":2, "type":"Union", "cardUnion": [ { "cardTypes": ["Artifact"], "cardText": "\\Q{\\EB\\Q}\\E|black mana" }, { "cardTypes": ["Artifact"], "cardText": "Black", "colors": ["black"] } ] } ] 
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Wand4Black",
 	  "description":"Vault of Whispers",
 	  "spriteAtlas":"maps/tileset/buildings.atlas",
 	  "sprite":"WandShop",
 	  "overlaySprite":"Overlay4Black",
-	  "rewards": [ { "count":4, "cardTypes": ["Artifact"], "cardText": "\\Q{\\ET\\Q}\\E|:.*," }, { "count":4, "type":"Union", "cardUnion": [ { "cardTypes": ["Artifact"], "cardText": "\\Q{\\EB\\Q}\\E|black mana" }, { "cardTypes": ["Artifact"], "cardText": "Black", "colors": ["black"] } ] } ]
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Wand2Blue",
 	  "description":"Seat of the Synod",
 	  "spriteAtlas":"maps/tileset/buildings.atlas",
 	  "sprite":"WandShop",
 	  "overlaySprite":"Overlay2Blue",
-	  "rewards": [ { "count":6, "cardTypes": ["Artifact"], "cardText": "\\Q{\\ET\\Q}\\E|:.*," }, { "count":2, "type":"Union", "cardUnion": [ { "cardTypes": ["Artifact"], "cardText": "\\Q{\\EU\\Q}\\E|blue mana" }, { "cardTypes": ["Artifact"], "cardText": "Blue", "colors": ["blue"] } ] } ]
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Wand4Blue",
 	  "description":"Seat of the Synod",
 	  "spriteAtlas":"maps/tileset/buildings.atlas",
 	  "sprite":"WandShop",
 	  "overlaySprite":"Overlay4Blue",
-	  "rewards": [ { "count":4, "cardTypes": ["Artifact"], "cardText": "\\Q{\\ET\\Q}\\E|:.*," }, { "count":4, "type":"Union", "cardUnion": [ { "cardTypes": ["Artifact"], "cardText": "\\Q{\\EU\\Q}\\E|blue mana" }, { "cardTypes": ["Artifact"], "cardText": "Blue", "colors": ["blue"] } ] } ]
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Wand2Green",
 	  "description":"Tree of Tales",
 	  "spriteAtlas":"maps/tileset/buildings.atlas",
 	  "sprite":"WandShop",
 	  "overlaySprite":"Overlay2Green",
-	  "rewards": [ { "count":6, "cardTypes": ["Artifact"], "cardText": "\\Q{\\ET\\Q}\\E|:.*," }, { "count":2, "type":"Union", "cardUnion": [ { "cardTypes": ["Artifact"], "cardText": "\\Q{\\EG\\Q}\\E|green mana" }, { "cardTypes": ["Artifact"], "cardText": "Green", "colors": ["green"] } ] } ]
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Wand4Green",
 	  "description":"Tree of Tales",
 	  "spriteAtlas":"maps/tileset/buildings.atlas",
 	  "sprite":"WandShop",
 	  "overlaySprite":"Overlay4Green",
-	  "rewards": [ { "count":4, "cardTypes": ["Artifact"], "cardText": "\\Q{\\ET\\Q}\\E|:.*," }, { "count":4, "type":"Union", "cardUnion": [ { "cardTypes": ["Artifact"], "cardText": "\\Q{\\EG\\Q}\\E|green mana" }, { "cardTypes": ["Artifact"], "cardText": "Green", "colors": ["green"] } ] } ]
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Wand2Red",
 	  "description":"The Great Furnace",
 	  "spriteAtlas":"maps/tileset/buildings.atlas",
 	  "sprite":"WandShop",
 	  "overlaySprite":"Overlay2Red",
-	  "rewards": [ { "count":6, "cardTypes": ["Artifact"], "cardText": "\\Q{\\ET\\Q}\\E|:.*," }, { "count":2, "type":"Union", "cardUnion": [ { "cardTypes": ["Artifact"], "cardText": "\\Q{\\ER\\Q}\\E|red mana" }, { "cardTypes": ["Artifact"], "cardText": "Red", "colors": ["red"] } ] } ]
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Wand4Red",
 	  "description":"The Great Furnace",
 	  "spriteAtlas":"maps/tileset/buildings.atlas",
 	  "sprite":"WandShop",
 	  "overlaySprite":"Overlay4Red", 
-	  "rewards": [ { "count":4, "cardTypes": ["Artifact"], "cardText": "\\Q{\\ET\\Q}\\E|:.*," }, { "count":4, "type":"Union", "cardUnion": [ { "cardTypes": ["Artifact"], "cardText": "\\Q{\\ER\\Q}\\E|red mana" }, { "cardTypes": ["Artifact"], "cardText": "Red", "colors": ["red"] } ] } ]
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Wand2White",
 	  "description":"Ancient Den",
 	  "spriteAtlas":"maps/tileset/buildings.atlas",
 	  "sprite":"WandShop",
 	  "overlaySprite":"Overlay2White",
-	  "rewards": [ { "count":6, "cardTypes": ["Artifact"], "cardText": "\\Q{\\ET\\Q}\\E|:.*," }, { "count":2, "type":"Union", "cardUnion": [ { "cardTypes": ["Artifact"], "cardText": "\\Q{\\EW\\Q}\\E|white mana" }, { "cardTypes": ["Artifact"], "cardText": "White", "colors": ["white"] } ] } ]
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},{
 	  "name":"Wand4White",
 	  "description":"Ancient Den",
 	  "spriteAtlas":"maps/tileset/buildings.atlas",
 	  "sprite":"WandShop",
 	  "overlaySprite":"Overlay4White",
-	  "rewards": [ { "count":4, "cardTypes": ["Artifact"], "cardText": "\\Q{\\ET\\Q}\\E|:.*," }, { "count":4, "type":"Union", "cardUnion": [ { "cardTypes": ["Artifact"], "cardText": "\\Q{\\EW\\Q}\\E|white mana" }, { "cardTypes": ["Artifact"], "cardText": "White", "colors": ["white"] } ] } ]
+	  "rewards": [
+	    { "count": 1, "cardTypes": ["Artifact"], "rarity": ["R"] },
+	    { "count": 3, "cardTypes": ["Artifact"], "rarity": ["U"] },
+	    { "count": 4, "cardTypes": ["Artifact"], "rarity": ["C"] }
+	  ]
 	},
 	{
 	  "name":"Bird",
