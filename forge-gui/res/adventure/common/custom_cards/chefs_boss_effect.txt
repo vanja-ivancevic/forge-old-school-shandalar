@@ -2,9 +2,9 @@ Name:Chef's Boss Effect
 ManaCost:no cost
 Colors:blue,green,white
 Types:Enchantment
-S:Mode$ Continuous | AddAbility$ FoodSac | AddType$ Food & Artifact | Affected$ Creature.!token | EffectZone$ Command | AffectedZone$ Battlefield,Hand,Graveyard,Exile,Stack,Library,Command | Description$ Nontoken creature are Food artifacts in addition to their other types and gain "{2}, {T}, Sacrifice this creature: You gain 3 life."
-SVar:FoodSac:AB$ GainLife | Cost$ 2 T Sac<1/CARDNAME/this creature> | Defined$ You | LifeAmount$ 3 | SpellDescription$ You gain 3 life.
-T:Mode$ Sacrificed | ValidCard$ Food | Origin$ Any | Destination$ Battlefield | Execute$ TrigPutCounter | TriggerZones$ Command | TriggerDescription$ Whenever a player sacrifices a Food, put a flavor counter on Chef's Boss Effect.
+S:Mode$ Continuous | AddAbility$ FoodSac | AddType$ Artifact | Affected$ Creature.!token | EffectZone$ Command | AffectedZone$ Battlefield,Hand,Graveyard,Exile,Stack,Library,Command | Description$ Nontoken creatures are Artifacts in addition to their other types and gain "{2}, {T}, Sacrifice this creature: You gain 3 life."
+SVar:FoodSac:AB$ GainLife | Cost$ 2 T Sac<1/CARDNAME/this creature> | Defined$ You | LifeAmount$ 3 | SpellDescription$ You gain 3 life. | AbilityID$ ChefSac
+T:Mode$ Sacrificed | ValidCard$ Creature.Artifact+WasSacrificedToAbility_ChefSac | Origin$ Any | Destination$ Battlefield | Execute$ TrigPutCounter | TriggerZones$ Command | TriggerDescription$ Whenever a player sacrifices a creature artifact using its granted ability, put a flavor counter on Chef's Boss Effect.
 SVar:TrigPutCounter:DB$ PutCounter | CounterType$ FLAVOR
 T:Mode$ Phase | IsPresent$ Card.Self+counters_GE1_FLAVOR | PresentZone$ Command | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | Execute$ TrigCopy | TriggerDescription$ At the beginning of your upkeep, if Cheff's Boss Effect has one or more flavor counters, create a token that's a copy of a random creature card with mana value X. Where X is the amount of flavor counters on Chef's Boss Effect. X is maxed out at 8.
 SVar:TrigCopy:DB$ CopyPermanent | NumCopies$ 1 | ValidSupportedCopy$ Creature.cmcEQX | RandomCopied$ True | RandomNum$ 1

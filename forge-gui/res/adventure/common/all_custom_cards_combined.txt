@@ -1,0 +1,731 @@
+Name:Akroma's Presence
+ManaCost:no cost
+Colors:white
+Types:Enchantment
+S:Mode$ Continuous | EffectZone$ Command | Affected$ Creature.YouCtrl | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Vigilance | Description$ Creatures you control get +1/+1 and have vigilance.
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | Execute$ TrigGainLife | TriggerDescription$ At the beginning of your upkeep, you gain 2 life.
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 2
+Oracle:Creatures you control get +1/+1 and have vigilance.\nAt the beginning of your upkeep, you gain 2 life.
+Name:Chandra's Tome
+ManaCost:no cost
+Colors:red
+Types:Artifact
+#Drafts a Chandra-related card
+A:AB$ Draft | Cost$ PayShards<2> | ActivationZone$ Command | Spellbook$ Chandra Ablaze,Chandra; Acolyte of Flame,Chandra; Awakened Inferno,Chandra; Bold Pyromancer,Chandra; Dressed to Kill,Chandra; Fire Artisan,Chandra; Fire of Kaladesh,Chandra; Flamecaller,Chandra; Flame's Catalyst,Chandra; Flame's Fury,Chandra; Heart of Fire,Chandra Nalaar,Chandra; Novice Pyromancer,Chandra; Pyrogenius,Chandra; Pyromaster,Chandra's Regulator,Chandra's Triumph,Chandra; the Firebrand,Chandra; Torch of Defiance,Oath of Chandra | Zone$ Hand | SubAbility$ Eject | SpellDescription$ Draft a card from CARDNAME's spellbook.
+A:AB$ Draft | Cost$ PayShards<3> | ActivationZone$ Command | RememberDrafted$ True | Spellbook$ Chandra Ablaze,Chandra; Acolyte of Flame,Chandra; Awakened Inferno,Chandra; Bold Pyromancer,Chandra; Dressed to Kill,Chandra; Fire Artisan,Chandra; Fire of Kaladesh,Chandra; Flamecaller,Chandra; Flame's Catalyst,Chandra; Flame's Fury,Chandra; Heart of Fire,Chandra Nalaar,Chandra; Novice Pyromancer,Chandra; Pyrogenius,Chandra; Pyromaster,Chandra's Regulator,Chandra's Triumph,Chandra; the Firebrand,Chandra; Torch of Defiance,Oath of Chandra | Zone$ Hand | SubAbility$ ModifySpell | SpellDescription$ Draft a card from CARDNAME's spellbook.
+SVar:ModifySpell:DB$ Animate | Defined$ Remembered | staticAbilities$ SpendAnyMana | Duration$ Perpetual | SubAbility$ Eject | SpellDescription$ That card perpetually gains "You may spend mana as though it were mana of any color to cast this spell."
+SVar:SpendAnyMana:Mode$ ManaConvert | EffectZone$ Stack | ValidPlayer$ You | ValidCard$ Card.Self | ValidSA$ Spell | ManaConversion$ AnyType->AnyColor | Description$ You may spend mana as though it were mana of any color to cast this spell.
+SVar:Eject:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile | SpellDescription$ Exile CARDNAME.
+S:Mode$ Continuous | Description$ CARDNAME may only be activated once.
+Oracle:{M}{M}: Draft a card from CARDNAME's spellbook. Exile CARDNAME.\n{M}{M}{M}: Draft a card from CARDNAME's spellbook. That card perpetually gains "You may spend mana as though it were mana of any color to cast this spell." Exile CARDNAME.\nCARDNAME may only be activated once.
+Name:Chef's Boss Effect
+ManaCost:no cost
+Colors:blue,green,white
+Types:Enchantment
+S:Mode$ Continuous | AddAbility$ FoodSac | AddType$ Food & Artifact | Affected$ Creature.!token | EffectZone$ Command | AffectedZone$ Battlefield,Hand,Graveyard,Exile,Stack,Library,Command | Description$ Nontoken creature are Food artifacts in addition to their other types and gain "{2}, {T}, Sacrifice this creature: You gain 3 life."
+SVar:FoodSac:AB$ GainLife | Cost$ 2 T Sac<1/CARDNAME/this creature> | Defined$ You | LifeAmount$ 3 | SpellDescription$ You gain 3 life.
+T:Mode$ Sacrificed | ValidCard$ Food | Origin$ Any | Destination$ Battlefield | Execute$ TrigPutCounter | TriggerZones$ Command | TriggerDescription$ Whenever a player sacrifices a Food, put a flavor counter on Chef's Boss Effect.
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ FLAVOR
+T:Mode$ Phase | IsPresent$ Card.Self+counters_GE1_FLAVOR | PresentZone$ Command | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | Execute$ TrigCopy | TriggerDescription$ At the beginning of your upkeep, if Cheff's Boss Effect has one or more flavor counters, create a token that's a copy of a random creature card with mana value X. Where X is the amount of flavor counters on Chef's Boss Effect. X is maxed out at 8.
+SVar:TrigCopy:DB$ CopyPermanent | NumCopies$ 1 | ValidSupportedCopy$ Creature.cmcEQX | RandomCopied$ True | RandomNum$ 1
+SVar:X:Count$CardCounters.Flavor/LimitMax.8
+Oracle: Nontoken creature are Food artifacts in addition to their other types and gain "{2}, {T}, Sacrifice this creature: You gain 3 life."\nWhenever a player sacrifices a Food, put a flavor counter on Chef's Boss Effect.\nAt the beginning of your upkeep, if Cheff's Boss Effect has one or more flavor counters, create a token that's a copy of a random creature card with mana value X. Where X is the amount of flavor counters on Chef's Boss Effect. X is maxed out at 8.
+Name:Cursed Treasure
+ManaCost:no cost
+Types:Artifact
+A:AB$ Token | Cost$ PayShards<1> | ActivationZone$ Command | TokenScript$ c_a_treasure_sac | SubAbility$ DBLoseLife | ActivationLimit$ 1 | SpellDescription$ Create a Treasure token. You lose 2 life. Exile Cursed Treasure.
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2 | Defined$ You | SubAbility$ Eject
+SVar:Eject:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Oracle:{M}: Create a Treasure token. You lose 2 life. Exile Cursed Treasure.
+Name:Death Ring
+ManaCost:no cost
+Types:Artifact
+A:AB$ RepeatEach | Cost$ PayShards<2> | ActivationZone$ Command | SorcerySpeed$ True | IsPresent$ Creature.YouCtrl | RepeatPlayers$ Player | RepeatSubAbility$ DBChooseRandom | SubAbility$ DBPutCounter | SpellDescription$ For each player, put a -1/-1 counter on a random creature with the lowest toughness that player controls. Then if your creature has power less than one, sacrifice it.
+SVar:DBChooseRandom:DB$ ChooseCard | AtRandom$ True | Choices$ Creature.leastToughnessControlledByRememberedPlayer | RevealTitle$ Randomly chosen creature: | Reveal$ True | RememberChosen$ True
+SVar:DBPutCounter:DB$ PutCounter | Defined$ Remembered | CounterType$ M1M1 | SubAbility$ ConditionalSac | StackDescription$ None | SpellDescription$ Activate only if you control a creature and only as a sorcery.
+SVar:ConditionalSac:DB$ SacrificeAll | Defined$ Remembered.powerLT1+YouCtrl | SubAbility$ DBCleanup | SpellDescription$ If your creature has power less than one, sacrifice it.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+Oracle:{M}{M}: For each player, put a -1/-1 counter on a random creature with the lowest toughness that player controls. Then if your creature has power less than one, sacrifice it. Activate only if you control a creature and only as a sorcery.
+Name:Demonic Contract
+ManaCost:no cost
+Colors:black
+Types:Artifact
+A:AB$ DigUntil | Cost$ PayShards<3> PayLife<X> | XMin$ 1 | ActivationZone$ Command | Valid$ Card.nonLand | ValidDescription$ nonland | FoundDestination$ Library | RevealedDestination$ Library | FoundLibraryPosition$ -1 | RevealedLibraryPosition$ -1 | RememberFound$ True | Shuffle$ True | SubAbility$ DBScry | SpellDescription$ Reveal cards from the top of your library until you reveal a nonland card. Note that card name. Then shuffle the revealed cards back into your library.
+SVar:DBScry:DB$ Scry | ScryNum$ X
+SVar:X:Count$xPaid
+T:Mode$ Drawn | ValidCard$ Card.nonLand+sharesNameWith Remembered+OwnedBy You | Static$ True | Execute$ ContractForfeit | TriggerDescription$ If you would draw a card with the same name as one noted with Demonic Contract, you lose the game.
+SVar:ContractForfeit:DB$ LosesGame | Defined$ You | SpellDescription$ You lose the game.
+Oracle:{M}{M}{M}, pay X life: Reveal the top card of your library until you reveal a non-land card. Note that card name, then shuffle the revealed cards back into your library. Scry X. X cannot be 0.\nWhen you draw any card with a name noted by Demonic Contract, you lose the game.
+Name:Farmer's Tools
+ManaCost:no cost
+Types:Artifact
+A:AB$ RepeatEach | Cost$ PayShards<2> | ActivationZone$ Command | RepeatSubAbility$ DBChangeZone | RepeatPlayers$ Player | SubAbility$ Eject | StartingWith$ You | SpellDescription$ Starting with you, each player may put a land card from their hand onto the battlefield. Exile Farmer's Tools.
+SVar:DBChangeZone:DB$ ChangeZone | Origin$ Hand | Destination$ Battlefield | ChangeType$ Land.RememberedPlayerCtrl | DefinedPlayer$ Player.IsRemembered | Chooser$ Player.IsRemembered | ChangeNum$ 1 | Hidden$ True
+SVar:Eject:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Oracle:{M}{M}: Starting with you, each player may put a land card from their hand onto the battlefield. Exile Farmer's Tools.
+Name:Fifth Head of the Hydra
+ManaCost:no cost
+Types:Creature Hydra
+Colors:green,blue
+PT:1/4
+K:Defender
+R:Event$ GameLoss | ActiveZones$ Battlefield | ValidPlayer$ You | Layer$ CantHappen | Description$ You can't lose the game and your opponents can't win the game.
+R:Event$ GameWin | ActiveZones$ Battlefield | ValidPlayer$ Opponent | Layer$ CantHappen | Secondary$ True | Description$ You can't lose the game and your opponents can't win the game.
+T:Mode$ Phase | Phase$ End Of Turn | ValidPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigDig | TriggerDescription$ At the beginning of each opponents end step, that player exiles the top 4 cards from their library
+SVar:TrigDig:DB$ Dig | Defined$ ActivePlayer | DigNum$ 4 | DestinationZone$ Exile | ChangeNum$ All
+R:Event$ Moved | ActiveZones$ Battlefield | Origin$ Battlefield | ValidCard$ Card.Self | ReplaceWith$ Exile | Description$ If CARDNAME would leave the battlefield, instead exile it with three time counters on it. It gains suspend.
+SVar:Exile:DB$ ChangeZone | Hidden$ True | WithCountersType$ TIME | WithCountersAmount$ 3 | Origin$ All | Destination$ Exile | Defined$ ReplacedCard | SubAbility$ GiveSuspend
+SVar:GiveSuspend:DB$ PumpAll | ValidCards$ Card.withoutSuspend+YouOwn | KW$ Suspend | PumpZone$ Exile | Duration$ Permanent
+Oracle:Defender/nYou can't lose the game and your opponents can't win the game.\nAt the beginning of each opponents end step, that player exiles 4 cards. \nIf Fifth Head of the Hydra would leave the battlefield, instead exile it with three time counters on it. It gains suspend.
+Name:Fire of Kaladesh
+ManaCost:no cost
+Colors:red
+Types:Legendary Title
+S:Mode$ Continuous | Affected$ Permanent.YouCtrl+Legendary | AddKeyword$ Ward:2 | Description$ Legendary permanents you control have ward {2}. | ActivationZone$ Command
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ ConjureMissing | ActivationZone$ Command
+#---
+SVar:ConjureMissing:    DB$ Branch | BranchConditionSVar$ GauntletCount  | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing1     | FalseSubAbility$ ConjureMissing0    | Description$ A | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing1:   DB$ Branch | BranchConditionSVar$ RegulatorCount | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing11    | FalseSubAbility$ ConjureMissing10   | Description$ B | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing10:  DB$ Branch | BranchConditionSVar$ GogglesCount   | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing101   | FalseSubAbility$ ConjureMissing100  | Description$ C | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing11:  DB$ Branch | BranchConditionSVar$ GogglesCount   | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing111   | FalseSubAbility$ ConjureMissing110  | Description$ D | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing101: DB$ Branch | BranchConditionSVar$ OathCount      | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing1011  | FalseSubAbility$ ConjureMissing1010 | Description$ E | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing100: DB$ Branch | BranchConditionSVar$ OathCount      | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing1001  | FalseSubAbility$ ConjureMissing1000 | Description$ F | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing110: DB$ Branch | BranchConditionSVar$ OathCount      | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing1101  | FalseSubAbility$ ConjureMissing1100 | Description$ G | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing111: DB$ Branch | BranchConditionSVar$ OathCount      | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing1111  | FalseSubAbility$ ConjureMissing1110 | Description$ H | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing0:   DB$ Branch | BranchConditionSVar$ RegulatorCount | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing01    | FalseSubAbility$ ConjureMissing00   | Description$ I | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing01:  DB$ Branch | BranchConditionSVar$ GogglesCount   | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing011   | FalseSubAbility$ ConjureMissing010  | Description$ J | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing010: DB$ Branch | BranchConditionSVar$ OathCount      | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing0101  | FalseSubAbility$ ConjureMissing0100 | Description$ K | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing011: DB$ Branch | BranchConditionSVar$ OathCount      | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing0111  | FalseSubAbility$ ConjureMissing0110 | Description$ L | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing00:  DB$ Branch | BranchConditionSVar$ GogglesCount   | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing001   | FalseSubAbility$ ConjureMissing000  | Description$ M | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing000: DB$ Branch | BranchConditionSVar$ OathCount      | BranchConditionSVarCompare$ EQ0 | FalseSubAbility$ ConjureMissing0001 | FalseSubAbility$ DraftSpell         | Description$ N | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing001: DB$ Branch | BranchConditionSVar$ OathCount      | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing0011  | FalseSubAbility$ ConjureMissing0010 | Description$ O | StackDescription$ Description | SpellDescription$ Description
+#---
+SVar:ConjureMissing0001: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Oath of Chandra | Zone$ Battlefield | SpellDescription$ 0001 | StackDescription$ SpellDescription
+SVar:ConjureMissing0010: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Pyromancer's Goggles | Zone$ Battlefield | SpellDescription$ 0010 | StackDescription$ SpellDescription
+SVar:ConjureMissing0011: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Oath of Chandra,Pyromancer's Goggles | Zone$ Battlefield | SpellDescription$ 0011 | StackDescription$ SpellDescription
+SVar:ConjureMissing0100: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Chandra's Regulator | Zone$ Battlefield | SpellDescription$ 0100 | StackDescription$ SpellDescription
+SVar:ConjureMissing0101: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Oath of Chandra,Chandra's Regulator | Zone$ Battlefield | SpellDescription$ 0101 | StackDescription$ SpellDescription
+SVar:ConjureMissing0110: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Pyromancer's Goggles,Chandra's Regulator | Zone$ Battlefield | SpellDescription$ 0110 | StackDescription$ SpellDescription
+SVar:ConjureMissing0111: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Pyromancer's Goggles,Oath of Chandra,Chandra's Regulator | Zone$ Battlefield | SpellDescription$ 0111 | StackDescription$ SpellDescription
+SVar:ConjureMissing1000: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Pyromancer's Gauntlet | Zone$ Battlefield | SpellDescription$ 1000 | StackDescription$ SpellDescription
+SVar:ConjureMissing1001: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Oath of Chandra,Pyromancer's Gauntlet | Zone$ Battlefield | SpellDescription$ 1001 | StackDescription$ SpellDescription
+SVar:ConjureMissing1010: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Pyromancer's Goggles,Pyromancer's Gauntlet | Zone$ Battlefield | SpellDescription$ 1010 | StackDescription$ SpellDescription
+SVar:ConjureMissing1011: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Oath of Chandra,Pyromancer's Goggles,Pyromancer's Gauntlet | Zone$ Battlefield | SpellDescription$ 1011 | StackDescription$ SpellDescription
+SVar:ConjureMissing1100: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Chandra's Regulator,Pyromancer's Gauntlet | Zone$ Battlefield | SpellDescription$ 1100 | StackDescription$ SpellDescription
+SVar:ConjureMissing1101: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Oath of Chandra,Chandra's Regulator,Pyromancer's Gauntlet | Zone$ Battlefield | SpellDescription$ 1101 | StackDescription$ SpellDescription
+SVar:ConjureMissing1110: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Pyromancer's Goggles,Chandra's Regulator,Pyromancer's Gauntlet | Zone$ Battlefield | SpellDescription$ 1110 | StackDescription$ SpellDescription
+SVar:ConjureMissing1111: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Oath of Chandra,Pyromancer's Goggles,Chandra's Regulator,Pyromancer's Gauntlet | Zone$ Battlefield | SpellDescription$ 1111 | StackDescription$ SpellDescription
+#---
+SVar:DraftSpell:DB$Draft | Spellbook$ Chandra Ablaze,Chandra; Acolyte of Flame,Chandra; Awakened Inferno,Chandra; Bold Pyromancer,Chandra; Dressed to Kill,Chandra; Fire Artisan,Chandra; Fire of Kaladesh,Chandra; Flamecaller,Chandra; Flame's Catalyst,Chandra; Flame's Fury,Chandra; Heart of Fire,Chandra Nalaar,Chandra; Novice Pyromancer,Chandra; Pyrogenius,Chandra; Pyromaster,Chandra; the Firebrand,Chandra; Torch of Defiance | ActivationZone$ Command | Zone$ Hand | SpellDescription$ Draft | StackDescription$ SpellDescription
+#---
+# Mapping items present with bit mask (partial explanation of above weird naming)
+#1000
+SVar:GauntletCount:Count$NamedYouCtrl.Pyromancer's Gauntlet
+#0100
+SVar:RegulatorCount:Count$NamedYouCtrl.Chandra's Regulator
+#0010
+SVar:GogglesCount:Count$NamedYouCtrl.Pyromancer's Goggles
+#0001
+SVar:OathCount:Count$NamedYouCtrl.Oath of Chandra
+#(1101 means only Goggles are missing, 0001 means only Oath is present) 1010
+#---
+Oracle: Legendary permanents you control have ward {2}./nAt the beginning of your upkeep, conjure onto the battlefield one of the following cards that you do not already control. Pyromancer's Gauntlet, Chandra's Regulator, Pyromancer's Goggles, or Oath of Chandra.\nIf you do not conjure a card in this way, draft a spell from CARDNAME's spellbook into your hand.
+Name:First Head of the Hydra
+ManaCost:no cost
+Types:Creature Hydra
+Colors:green,blue
+PT:1/4
+K:Defender
+R:Event$ GameLoss | ActiveZones$ Battlefield | ValidPlayer$ You | Layer$ CantHappen | Description$ You can't lose the game and your opponents can't win the game.
+R:Event$ GameWin | ActiveZones$ Battlefield | ValidPlayer$ Opponent | Layer$ CantHappen | Secondary$ True | Description$ You can't lose the game and your opponents can't win the game.
+T:Mode$ Phase | Phase$ Draw | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ At the beginning of your draw step, draw an additional card.
+SVar:TrigDraw:DB$ Draw | NumCards$ 1 | Defined$ You
+R:Event$ Moved | ActiveZones$ Battlefield | Origin$ Battlefield | ValidCard$ Card.Self | ReplaceWith$ Exile | Description$ If CARDNAME would leave the battlefield, instead exile it with three time counters on it. It gains suspend.
+SVar:Exile:DB$ ChangeZone | Hidden$ True | WithCountersType$ TIME | WithCountersAmount$ 3 | Origin$ All | Destination$ Exile | Defined$ ReplacedCard | SubAbility$ GiveSuspend
+SVar:GiveSuspend:DB$ PumpAll | ValidCards$ Card.withoutSuspend+YouOwn | KW$ Suspend | PumpZone$ Exile | Duration$ Permanent
+Oracle:Defender/nYou can't lose the game and your opponents can't win the game.\nAt the beginning of your draw step, draw an additional card. \nIf First Head of the Hydra would leave the battlefield, instead exile it with three time counters on it. It gains suspend.
+Name:Flame Sword
+ManaCost:no cost
+Types:Artifact
+A:AB$ DealDamage | ActivationLimit$ 1 | Cost$ PayShards<3> | ActivationZone$ Command | ValidTgts$ Any | NumDmg$ X | SubAbility$ Eject | SpellDescription$ CARDNAME deals 3 damage to any target, or 5 damage to target tapped creature.
+SVar:X:Count$Compare Y GE1.5.3
+SVar:Y:Targeted$Valid Creature.tapped
+SVar:Eject:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Oracle:{M}{M}{M}: Flame Sword deals 3 damage to any target, or 5 damage to target tapped creature.
+Name:Fourth Head of the Hydra
+ManaCost:no cost
+Types:Creature Hydra
+Colors:green,blue
+PT:1/4
+K:Defender
+R:Event$ GameLoss | ActiveZones$ Battlefield | ValidPlayer$ You | Layer$ CantHappen | Description$ You can't lose the game and your opponents can't win the game.
+R:Event$ GameWin | ActiveZones$ Battlefield | ValidPlayer$ Opponent | Layer$ CantHappen | Secondary$ True | Description$ You can't lose the game and your opponents can't win the game.
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDrain | TriggerDescription$ At the beginning of your upkeep, you gain 2 life and your opponents lose 2 life.
+SVar:TrigDrain:DB$ LoseLife | Defined$ Opponent | LifeAmount$ 2 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 2
+R:Event$ Moved | ActiveZones$ Battlefield | Origin$ Battlefield | ValidCard$ Card.Self | ReplaceWith$ Exile | Description$ If CARDNAME would leave the battlefield, instead exile it with three time counters on it. It gains suspend.
+SVar:Exile:DB$ ChangeZone | Hidden$ True | WithCountersType$ TIME | WithCountersAmount$ 3 | Origin$ All | Destination$ Exile | Defined$ ReplacedCard | SubAbility$ GiveSuspend
+SVar:GiveSuspend:DB$ PumpAll | ValidCards$ Card.withoutSuspend+YouOwn | KW$ Suspend | PumpZone$ Exile | Duration$ Permanent
+Oracle:Defender/nYou can't lose the game and your opponents can't win the game.\nAt the beginning of your upkeep, you gain 2 life and your opponents lose 2 life.\nIf Fourth Head of the Hydra would leave the battlefield, instead exile it with three time counters on it. It gains suspend.
+Name:Fungus of Slimefoot's Boss Effect
+ManaCost:no cost
+Colors:black,green
+Types:Enchantment
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | Execute$ TrigAnimateAll | TriggerDescription$ At the beginning of your upkeep, Saprolings you control perpetually become Forest lands in addition to their other types.
+SVar:TrigAnimateAll:DB$ AnimateAll | Duration$ Perpetual | Abilities$ ABMana | Types$ Land,Forest | SetColor$ Green | ValidCards$ Saproling.YouCtrl+nonForest
+SVar:ABMana:AB$Mana | Cost$ T | Produced$ G | SpellDescription$ Add {G}.
+T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Command | CheckSVar$ X | SVarCompare$ GE2 | Execute$ TrigConjure | TriggerDescription$ At the beginning of each end step, if two or more creatures died this turn, conjure a random Fungus onto the battlefield.
+SVar:TrigConjure:DB$ MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Cankerbloom,Corpsejack Menace,Undercellar Myconid,Utopia Mycon,Sporemound,Deathspore Thallid,Sporoloth Ancient,Thallid Shell-Dweller,Psychotrope Thallid,Sporecrown Thallid,Sporesower Thallid,Thallid | Zone$ Battlefield
+SVar:X:Count$ThisTurnEntered_Graveyard_from_Battlefield_Creature.YouCtrl
+T:Mode$ ChangesZoneAll | ValidCards$ Creature.!token+YouCtrl | Origin$ Battlefield | Destination$ Graveyard | TriggerZones$ Command | ActivationLimit$ 1 | Execute$ TrigToken | TriggerDescription$ Whenever one or more nontoken creatures you control die, create a 1/1 green Saproling creature token. This ability triggers only once each turn.
+SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ g_1_1_saproling
+Oracle:Saprolings you control are Forest lands in addition to their other types.\nAt the beginning of each end step, if two or more creatures died this turn, conjure a random Fungus onto the battlefield. \nWhenever one or more nontoken creatures you control die, create a 1/1 green Saproling creature token. This ability triggers only once each turn.
+Name:Garruk's Boss Effect Phase One
+ManaCost:no cost
+Types:Enchantment
+S:Mode$ ReduceCost | ValidCard$ Beast,Garruk | EffectZone$ Command | Type$ Spell | Activator$ You | Amount$ 1 | Description$ Beast and Garruk spells you cast cost {1} less.
+T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ Opponent | Execute$ TrigPutCounter | TriggerZones$ Command | TriggerDescription$ Whenever an opponent casts a noncreature spell, put an prey counter on CARDNAME.
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ Prey
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | IsPresent$ Card.Self+counters_GE5_PREY | PresentZone$ Command | Execute$ TrigConjure | TriggerDescription$ At the beginning of your upkeep, if there are 5 or more Prey counters on CARDNAME, conjure one of Garruk's beasts onto the battlefield under your control.
+SVar:TrigConjure:DB$ MakeCard | Conjure$ True | Zone$ Battlefield | AtRandom$ True | Spellbook$ Garruk's Companion,Garruk's Gorehorn,Garruk's Harbinger,Garruk's Horde,Garruk's Packleader,Garruk's Warsteed,Briarpack Alpha,Mist Leopard,Predatory Wurm,Primal Huntbeast
+R:Event$ GameLoss | ActiveZones$ Command | ValidPlayer$ You | ReplaceWith$ ExileSetLife | Description$ If Garruk would be defeated, instead exile CARDNAME and Garruk's life total becomes 40. Activate Phase 2.
+SVar:ExileSetLife:DB$ ChangeZone | Origin$ Command | Destination$ Exile | Defined$ Self | SubAbility$ DBSetLife
+SVar:DBSetLife:DB$ SetLife | Defined$ You | LifeAmount$ 40
+Oracle:Beast and Garruk spells you cast cost {1} less.\nWhenever an opponent casts a noncreature spell, put an prey counter on Garruk Boss Effect, Phase One.\nAt the beginning of your upkeep, if there are 5 or more Prey counters on Garuk Boss Effect, Phase One, conjure one of Garruk's beasts onto the battlefield under your control.\nIf Garruk would be defeated, instead exile Garruk Boss Effect, Phase One and Garruk's life total becomes 40. Activate Phase 2.
+Name:Garruk's Boss Effect Phase Two
+ManaCost:no cost
+Types:Enchantment
+S:Mode$ Continuous | EffectZone$ Command | Affected$ Card.Self | AffectedZone$ Command | RemoveAllAbilities$ True | IsPresent$ Card.namedGarruk's Boss Effect Phase One | PresentZone$ Command | PresentCompare$ EQ1
+S:Mode$ Continuous | EffectZone$ Command | Affected$ Forest.YouCtrl | AddType$ Swamp | Description$ Each Forest you control is a Swamp in addition to its other land types.
+S:Mode$ Continuous | Affected$ Beast.YouCtrl | AddPower$ 3 | AddToughness$ 3 | AddKeyword$ Trample & Deathtouch | Description$ Beast creatures you control get +3/+3 and have trample and deathtouch.
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | PresentZone$ Command | Execute$ TrigConjure | TriggerDescription$ At the beginning of your upkeep, conjure a card from Garruk's Phase 2 spellbook into your hand.
+SVar:TrigConjure:DB$ MakeCard | Conjure$ True | Zone$ Hand | AtRandom$ True | Spellbook$ Garruk; Apex Predator,Garruk; Cursed Huntsman,Garruk Relentless,In Garruk's Wake,Rampaging Baloths,Manglehorn,Elder Gargaroth,Gemrazer,Thragtusk,Sawtusk Demolisher,Avenger of Zendikar,Soul of the Harvest,Kogla; the Titan Ape,Terastodon,Bane of Progress
+T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ Opponent | Execute$ DBPump | TriggerZones$ Command | TriggerDescription$ Whenever an opponent casts a noncreature spell, perpetually increase the power and toughness of creatures you control and creature cards in your hand, library, and graveyard by 1.
+SVar:DBPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | PumpZone$ Battlefield,Hand,Graveyard,Library | NumAtt$ 1 | NumDef$ 1 | Duration$ Perpetual
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Command | Execute$ TrigReanimate | TriggerDescription$ At the beginning of your end step, return a random creature card from your graveyard to the battlefield. It gains "If this creature would leave the battlefield, exile it instead."
+SVar:TrigReanimate:DB$ ChangeZone | ChangeType$ Creature.YouOwn | ChangeNum$ 1 | Hidden$ True | Origin$ Graveyard | AtRandom$ True | Destination$ Battlefield | RememberChanged$ True | SubAbility$ DBAnimate
+SVar:DBAnimate:DB$ Animate | Replacements$ ReplaceDies | Defined$ Remembered | Duration$ Permanent | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:ReplaceDies:Event$ Moved | ActiveZones$ Battlefield | Origin$ Battlefield | ValidCard$ Card.Self | ReplaceWith$ Exile | Description$ If this creature would leave the battlefield, exile it instead.
+SVar:Exile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | Defined$ ReplacedCard
+Oracle:Each Forest you control is a Swamp in addition to its other land types.\nBeast creatures you control get +3/+3 and have trample and deathtouch.\nAt the beginning of your upkeep, conjure a card from Garruk's Phase 2 spellbook into your hand.\nWhenever an opponent casts a noncreature spell, perpetually increase the power and toughness of creatures you control and creature cards in your hand, library, and graveyard by 1.\nAt the beginning of your end step, return a random creature card from your graveyard to the battlefield. That creature gains "If this creature would leave the battlefield, exile it instead."
+Name:Garruk's Mighty Axe
+ManaCost:no cost
+Types:Artifact Equipment
+S:Mode$ ReduceCost | ValidCard$ Creature.powerGE4+Green,Garruk | EffectZone$ Command | Type$ Spell | Activator$ You | Amount$ 1 | Description$ Garruk and green creature spells you cast with power 4 or greater cost {1} less to cast.
+S:Mode$ Continuous | Affected$ Planeswalker.YouCtrl+Garruk | EffectZone$ Command | AddAbility$ PWWolf | Description$ Garruk planeswalkers you control have "[0]: Create a 2/2 black and green Wolf creature token with 'When this creature dies, put a loyalty counter on each Garruk you control.'"
+SVar:PWWolf:AB$ Token | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | TokenAmount$ 1 | TokenScript$ bg_2_2_wolf_garruk | TokenOwner$ You | SpellDescription$ Create a 2/2 black and green Wolf creature token with "When this creature dies, put a loyalty counter on each Garruk you control."
+A:AB$ MakeCard | Cost$ G G PayShards<2> | Conjure$ True | ActivationLimit$ 1 | Zone$ Battlefield | ActivationZone$ Command | AtRandom$ True | SubAbility$ Eject | Spellbook$ Garruk's Companion,Garruk's Gorehorn,Garruk's Harbinger,Garruk's Horde,Garruk's Packleader,Garruk's Warsteed,Briarpack Alpha,Mist Leopard,Predatory Wurm,Primal Huntbeast | SpellDescription$ Conjure one of Garruk's beasts onto the battlefield under your control. Activate this ability only once each game. Exile CARDNAME.
+SVar:Eject:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Oracle:Garruk and green creature spells you cast with power 4 or greater cost {1} less to cast.\nGarruk planeswalkers you control have "[0]: Create a 2/2 black and green Wolf creature token with 'When this creature dies, put a loyalty counter on each Garruk you control.'"\n{M}{M},{G}{G}:Conjure one of Garruk's beasts onto the battlefield under your control. Activate this ability only once each game. Exile Garruk's Mighty Axe.
+Name:Ghalta's Presence
+ManaCost:no cost
+Colors:green
+Types:Enchantment
+R:Event$ Counter | ValidCard$ Card | ValidSA$ Spell | Layer$ CantHappen | ActiveZones$ Battlefield | Description$ Spells can't be countered.
+S:Mode$ RaiseCost | ValidCard$ Card.nonCreature+nonBattle | Type$ Spell | Activator$ Opponent | EffectZone$ Command | Amount$ 2 | Description$ Noncreature, nonbattle spells your opponent cast cost {2} more to cast.
+Oracle:Spells can't be countered.\nNoncreature, nonbattle spells your opponent cast cost {2} more to cast.
+Name:Giant Scythe
+ManaCost:no cost
+Types:Artifact Equipment
+S:Mode$ Continuous | Affected$ Creature.Artifact+YouCtrl | EffectZone$ Command | AddToughness$ 2 | AddType$ Scarecrow | Description$ Artifact creatures you control get +0/+2 and are Scarecrows in addition to their other types.
+A:AB$ ChangeZone | Cost$ 3 PayShards<4> Sac<3/Scarecrow/Scarecrows> | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature.YouOwn+Artifact | TgtPrompt$ Select target artifact creature cards from your graveyard | ChangeNum$ 1 | Tapped$ True | ActivationZone$ Command | SorcerySpeed$ True | SubAbility$ ExileSelf | SpellDescription$ Return target artifact creature from your graveyard to the battlefield tapped. Activate only as a sorcery. Exile Giant Scythe.
+SVar:ExileSelf:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Oracle:Artifact creatures your control get +0/+2 and are Scarecrows in addition to their other types. \n{3}, {M}{M}{M}{M}, Sacrifice three Scarecrows: Return target artifact creature from your graveyard to the battlefield tapped. Activate only as a sorcery. Exile Giant Scythe.
+Name:Griselbrand's Presence
+ManaCost:no cost
+Colors:black
+Types:Enchantment
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | Execute$ TrigDraw | TriggerDescription$ At the beginning of your upkeep, you draw a card and each opponent loses 1 life.
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1 | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | Defined$ Opponent | LifeAmount$ 1
+Oracle:At the beginning of your upkeep, you draw a card and each opponent loses 1 life.
+Name:Grolnok's Boss Effect
+ManaCost:no cost
+Colors:black,green,blue
+Types:Enchantment
+S:Mode$ Continuous | Affected$ Enchantment.nonAura+Other,Artifact | EffectZone$ Command | SetPower$ AffectedX | SetToughness$ AffectedX | AddType$ Creature | Description$ Artifacts and enchantments are creatures in addition to their other types and has base power and base toughness each equal to its mana value.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.!token+OppCtrl | TriggerZones$ Command | Execute$ TrigDualCopy | TriggerDescription$ Whenever a nontoken creature an opponent controls enters, create a token that's a copy of that creature except it's a 1/1 green Frog.
+SVar:TrigDualCopy:DB$ CopyPermanent | Defined$ TriggeredCardLKICopy | SetPower$ 1 | SetToughness$ 1 | SetColor$ Green | SetCreatureTypes$ Frog
+SVar:AffectedX:Count$CardManaCost
+Oracle:Artifacts and enchantments are creatures in addition to their other types and has base power and base toughness each equal to its mana value.\nWhenever a nontoken creature an opponent controls enters, create a token that's a copy of that creature except it's a 1/1 green Frog.
+Name:Grolnok's Skin
+ManaCost:no cost
+Colors:black,green,blue
+Types:Enchantment
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | Execute$ TrigMill | TriggerDescription$ At the beginning of your upkeep mill two cards
+SVar:TrigMill:DB$ Mill | Defined$ You | NumCards$ 2
+A:AB$ Draft | Cost$ G U PayShards<2> | SubAbility$ DBExileSelf | ActivationZone$ Command | Spellbook$ Mystic Snake,Sporefrog,Froghemoth,Frilled Mystic,Whiptongue Frog,Excavating Anurid,Chub Toad,Satyr Wayfinder,Lotus Cobra,Endurance,Turn to Frog,Polymorphist's Jest,Mulch,Crawling Infestation,Arcane Adaption,Grolnok; the Omnivore | Zone$ Hand | SubAbility$ Eject | SpellDescription$ Draft a card from Grolnok's spellbook. Exile Grolnok's Skin.
+SVar:DBExileSelf:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Oracle:At the beginning of your upkeep mill two card\n{G}{U},{M}{M} Draft a card from Grolnok's spellbook. Exile Grolnok's Skin.
+Name:Hall of Flame
+ManaCost:0
+Colors:red
+Types:Enchantment Saga
+K:Ward:1
+K:Chapter:5:DBConjure,DBDiscount,DBConjureSpell,DBDiscount2,DBConjureSpell2
+SVar:DBConjure:DB$MakeCard | Conjure$ True | Name$ Mountain | Zone$ Battlefield
+SVar:DBDiscount:DB$ Effect | Duration$ UntilYourNextTurn | StaticAbilities$ ReduceCost | SpellDescription$ Spells you cast cost {R} less to cast until your next turn.
+SVar:DBDiscount2:DB$ Effect | Duration$ UntilYourNextTurn | StaticAbilities$ ReduceCost2 | SpellDescription$ Spells you cast cost {R} less to cast until your next turn.
+SVar:ReduceCost:Mode$ ReduceCost | Amount$ 1 | Color$ R | Type$ Spell | Description$ Spells you cast cost {R} less to cast until your next turn. | Activator$ Player.You
+SVar:ReduceCost2:Mode$ ReduceCost | Amount$ 1 | Color$ R | Type$ Spell | Description$ Spells you cast cost {R} less to cast until your next turn. | Activator$ Player.You
+SVar:DBConjureSpell:DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Chandra; Acolyte of Flame,Chandra; Dressed to Kill,Chandra; Fire Artisan,Chandra; Fire of Kaladesh,Chandra; Novice Pyromancer,Chandra; Pyromaster,Chandra's Embercat,Chandra's Firemaw,Chandra's Magmutt,Chandra's Phoenix,Chandra's Pyreling,Chandra's Spitfire,Karplusan Hound,Keral Keep Disciples,Renegade Firebrand,Oath of Chandra,Pyromancer's Gauntlet | Zone$ Battlefield
+SVar:DBConjureSpell2:DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Chandra; Acolyte of Flame,Chandra; Dressed to Kill,Chandra; Fire Artisan,Chandra; Fire of Kaladesh,Chandra; Novice Pyromancer,Chandra; Pyromaster,Chandra's Embercat,Chandra's Firemaw,Chandra's Magmutt,Chandra's Phoenix,Chandra's Pyreling,Chandra's Spitfire,Karplusan Hound,Keral Keep Disciples,Renegade Firebrand,Oath of Chandra,Pyromancer's Gauntlet | Zone$ Battlefield
+Oracle:(As this Saga enters and after your draw step, add a lore counter. Sacrifice after V.)\nI - Conjure a mountain onto the battlefield\nII - Spells you cast cost {R} less this turn.\nIII — Conjure random a spell from CARDNAME's spellbook onto the battlefield.\nV — Spells you cast cost {R} less this turn.\nV — Conjure random a spell from CARDNAME's spellbook onto the battlefield.
+Name:Hallowed Sigil
+ManaCost:no cost
+Colors:white
+Types:Enchantment
+A:AB$ Pump | Cost$ PayShards<4> T | ValidTgts$ Creature.YouCtrl | KW$ Hexproof | SubAbility$ Eject | ActivationLimit$ 1 | SpellDescription$ Target creature you control gains hexproof until end of turn. Exile Hallowed Sigil.
+SVar:Eject:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Exile
+Oracle:{M},{T}:Target creature you control gains hexproof until end of turn. Exile Hallowed Sigil.
+Name:Hill Giant Club
+ManaCost:no cost
+Types:Artifact
+A:AB$ Effect | Cost$ PayShards<2> | ActivationZone$ Command | ActivationLimit$ 1 | SubAbility$ Eject | ValidTgts$ Creature | StaticAbilities$ UnblockableLE2 | RememberObjects$ Targeted | SpellDescription$ Target creature can't be blocked by creatures with power 2 or less this turn. Exile Hill Giant Club.
+SVar:UnblockableLE2:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | ValidBlocker$ Creature.powerLE2 | Description$ {c:Targeted} can't be blocked by creatures with power 2 or less this turn.
+SVar:Eject:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Oracle:{M}{M}: Target creature can't be blocked by creatures with power 2 or less this turn. Exile Hill Giant Club.
+Name:Jace Boss Effect
+ManaCost:no cost
+Colors:blue
+Types:Enchantment
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Command | Execute$ TrigBranch | TriggerDescription$ At the beginning of your end step, if your opponent's deck contains 10 or more creature cards, conjure a duplicate of a random creature card from your or your opponent's library onto the battlefield under your control. The duplicate perpetually becomes a blue Illusion creature with base power and toughness 2/2 and has "When this creature becomes the target of a spell or ability, sacrifice it." \nOtherwise, conjure a random card from Jace's Spellbook unto the battlefield under your control.
+SVar:TrigBranch:DB$ Branch | BranchConditionSVar$ X | BranchConditionSVarCompare$GE10 | TrueSubAbility$ DBChoose | FalseSubAbility$ DBConjureSpellBook
+SVar:DBChoose:DB$ ChooseCard | Choices$ Creature | ChoiceZone$ Library | AtRandom$ True | SubAbility$ DBConjure
+SVar:DBConjure:DB$ MakeCard | Conjure$ True | DefinedName$ ChosenCard | Zone$ Battlefield | RememberMade$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Animate | Defined$ Remembered | Power$ 2 | Toughness$ 2 | Triggers$ DismissTarget | Duration$ Perpetual | SubAbility$ DBCleanup
+SVar:DismissTarget:Mode$ BecomesTarget | ValidTarget$ Card.Self | TriggerZones$ Battlefield | Execute$ DismissSac | TriggerDescription$ When this creature becomes the target of a spell or ability, sacrifice it.
+SVar:DismissSac:DB$ Sacrifice
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True | ClearRemembered$ True
+SVar:DBConjureSpellBook:DB$ MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Hedron Archive,Jace's Erasure,Oracle of the Alpha,Jace's Sanctum,Phantom Warrior,Psychic Corrosion,Unstoppable Plan,Trail of Evidence | Zone$ Battlefield
+SVar:X:Count$ValidLibrary Creature.OppOwn
+Oracle:At the beginning of your end step, if your opponent's deck contains 10 or more creature cards, conjure a duplicate of a random creature card from your or your opponent's library onto the battlefield under your control. The duplicate perpetually becomes a blue Illusion creature with base power and toughness 2/2 and has "When this creature becomes the target of a spell or ability, sacrifice it." \nOtherwise, conjure a random card from Jace's Spellbook unto the battlefield under your control.
+Name:Jace's Signature Hoodie
+ManaCost:no cost
+Colors:blue
+Types:Enchantment
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | TriggerZones$ Command | Execute$ TrigMill | TriggerDescription$ Whenever you draw a card, each opponent mills a card.
+SVar:TrigMill:DB$ Mill | Defined$ Opponent | NumCards$ 1
+A:AB$ ChooseCard | Cost$ PayShards<2> | GameActivationLimit$ 1 | ActivationZone$ Command | Choices$ Creature.OppOwn+cmcLE6 | ChoiceZone$ Library | AtRandom$ True | SubAbility$ DBConjure | StackDescription$ SpellDescription | SpellDescription$ Conjure a duplicate of a random creature card from your opponent's library with mana value 6 or less onto the battlefield under your control.
+SVar:DBConjure:DB$ MakeCard | Conjure$ True | DefinedName$ ChosenCard | Zone$ Battlefield | RememberMade$ True | SubAbility$ DBAnimate
+SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Colors$ Blue | OverwriteColors$ True | Types$ Creature,Illusion | RemoveCardTypes$ True | Power$ 2 | Toughness$ 2 | Duration$ Perpetual | SubAbility$ Eject | StackDescription$ SpellDescription | SpellDescription$ The duplicate perpetually becomes a blue Illusion creature with base power and toughness 2/2.
+SVar:Eject:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile | SpellDescription$ Exile CARDNAME. | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True | ClearRemembered$ True
+Oracle:Whenever you draw a card, each opponent mills a card.\n{M}{M}: Conjure a duplicate of a random creature card from your opponent's library with mana value 6 or less onto the battlefield under your control. The duplicate perpetually becomes a blue Illusion creature with base power and toughness 2/2. Exile Jace's Signature Hoodie.
+Name:Kiora's Bident
+ManaCost:no cost
+Types:Artifact Equipment
+S:Mode$ ReduceCost | EffectZone$ Command | ValidCard$ Crab.YouCtrl,Kraken.YouCtrl,Serpent.YouCtrl,Leviathan.YouCtrl,Octopus.YouCtrl | Type$ Spell | Activator$ You | Amount$ 1 | Description$ Kraken, Leviathan, Octopus, Crab and Serpent spells you cast cost {1} less.
+A:AB$ MakeCard | Cost$ U G PayShards<2> | Conjure$ True | ActivationLimit$ 1 | Zone$ Hand | ActivationZone$ Command | AtRandom$ True | SubAbility$ Eject | Spellbook$ Kiora; Behemoth Beckoner,Kiora; Master of the Depths,Kiora; the Crashing Wave,Kiora; the Tide's Fury | SpellDescription$ Conjure a random Kiora planeswalker card into your hand. Exile Kiora's Bident.
+SVar:Eject:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Oracle:Kraken, Leviathan, Octopus, Crab and Serpent spells you cast cost {1} less.\n {M}{M}, {U}{G}:Conjure a random Kiora planeswalker card into your hand. Exile Kiora's Bident.
+Name:Kiora's Boss Effect
+ManaCost:no cost
+Colors:green,blue
+Types:Enchantment
+S:Mode$ Continuous | Affected$ Player | AdjustLandPlays$ 1 | EffectZone$ Command | Description$ Each player may play an additional land on each of their turns.
+T:Mode$ Phase | Phase$ Draw | ValidPlayer$ Player | TriggerZones$ Command | Execute$ TrigDraw | TriggerDescription$ At the beginning of each player's draw step, that player draws an additional card.
+SVar:TrigDraw:DB$ Draw | NumCards$ 1 | Defined$ TriggeredPlayer
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | Execute$ TrigToken | TriggerDescription$ At the beginning of your upkeep, create a 1/1 blue Tentacle creature token.
+SVar:TrigToken:DB$ Token | TokenOwner$ You | TokenAmount$ 1 | TokenScript$ u_1_1_tentacle
+Oracle:At the beginning of each player's draw step, that player draws an additional card.\nEach player may play an additional land on each of their turns.\nAt the beginning of your upkeep, create a 1/1 blue Tentacle creature token.
+Name:Lathliss' Presence
+ManaCost:no cost
+Colors:red
+Types:Enchantment
+T:Mode$ ExcessDamage | ValidTarget$ Creature.OppCtrl,Planeswalker.OppCtrl | CombatDamage$ False | TriggerZones$ Command | Execute$ TrigDamage | TriggerDescription$ Whenever a creature or planeswalker an opponent controls is dealt excess noncombat damage, Lathliss' Presence deals damage equal to the excess to that permanent's controller.
+SVar:TrigDamage:DB$ DealDamage | Defined$ TriggeredTargetController | NumDmg$ X
+SVar:X:TriggerCount$DamageAmount
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | AffectedZone$ Command | AddAbility$ Pump | Description$ Creatures you control have "{R}: This creature gets +1/+0 until end of turn."
+SVar:Pump:AB$ Pump | Defined$ Self | Cost$ R | NumAtt$ +1 | SpellDescription$ CARDNAME gets +1/+0 until end of turn.
+Oracle:Whenever a creature or planeswalker an opponent controls is dealt excess noncombat damage, Lathliss' Presence deals damage equal to the excess to that permanent's controller.\nCreatures you control have "{R}: This creature gets +1/+0 until end of turn."
+Name:Lathliss' Presence (Hard Mode)
+ManaCost:no cost
+Colors:red
+Types:Enchantment
+T:Mode$ Phase | Phase$ Upkeep | TriggerZones$ Command | Execute$ TrigDamage | ValidPlayer$ You | TriggerDescription$ At the beginning of your upkeep, CARDNAME deals 1 damage to each creature and planeswalker you don't control.
+SVar:TrigDamage:DB$ DamageAll | ValidCards$ Creature.YouDontCtrl,Planeswalker.YouDontCtrl | ValidDescription$ each creature and each planeswalker | NumDmg$ 1
+S:Mode$ NoCleanupDamage | EffectZone$ Command | ValidCard$ Creature.OppCtrl,Planeswalker.OppCtrl | Description$ Damage isn't removed from creatures and planeswalkers your opponents control during cleanup steps.
+Oracle:At the beginning of your upkeep, Lathliss's Presence deals 1 damage to each creature and planeswalker you don't control\nDamage isn't removed from creatures and planeswalkers your opponents control during cleanup steps.
+Name:Lorthos' Presence
+ManaCost:no cost
+Colors:blue
+Types:Enchantment
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Permanent.nonLand+OppCtrl | TriggerZones$ Command | Execute$ TrigStunCounter | TriggerDescription$ Whenever a nonland permanent an opponent controls enters, put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)
+SVar:TrigStunCounter:DB$ PutCounter | Defined$ TriggeredCard | CounterType$ Stun | CounterNum$ 1
+Oracle:Whenever a nonland permanent an opponent controls enters, put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)
+Name:Mantle of Ancient Lore
+ManaCost:no cost
+Colors:blue,black
+Types:Artifact
+T:Mode$ ConjureAll | ValidPlayer$ You | ValidCard$ Card | TriggerZones$ Command | Execute$ TrigScry | TriggerDescription$ Whenever you conjure one or more cards, scry 1.
+SVar:TrigScry:DB$ Scry | ScryNum$ 1
+A:AB$ MakeCard | Cost$ 3 PayShards<3> | SubAbility$ Eject | IsPresent$ Card.YouCtrl | PresentZone$ Library | PresentCompare$ GE125 | Conjure$ True | Names$ Ancestral Recall,Black Lotus,Mox Emerald,Mox Jet,Mox Pearl,Mox Ruby,Mox Sapphire,Time Walk,Timetwister | Zone$ Library | ActivationZone$ Command | GameActivationLimit$ 1 | SpellDescription$ Conjure the Power Nine into your library, then shuffle. Activate this ability only if your library contains 125 or more cards and only once. Exile CARDNAME.
+SVar:Eject:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Oracle:Whenever you conjure one or more cards, scry 1.{M}{M}{M},{3}: Conjure the Power Nine into your library, then shuffle. Activate this ability only if your library contains 125 or more cards and only once.Exile Mantle of Ancient Lore.
+Name:Nahiri's Armory
+ManaCost:no cost
+Types:Artifact
+S:Mode$ ReduceCost | ValidCard$ Card | ValidSpell$ Activated.Equip | Activator$ You | Amount$ 1 | EffectZone$ Command | Description$ Equip costs you pay cost {1} less.
+T:Mode$ AttackersDeclared | ValidAttackers$ Creature.modified+YouCtrl | TriggerZones$ Command | Execute$ TrigConjure | TriggerDescription$ Whenever a modified creature you control attacks, you may pay {M}{M}, if you do conjure a random card from Nahiri's Armory's spellbook into your hand.
+SVar:TrigConjure:AB$ MakeCard | Cost$ PayShards<2> | Conjure$ True | AtRandom$ True | Zone$ Hand | Spellbook$ Stoneforge Mystic,Danitha; Benalia's Hope,Ardenn; Intrepid Archaeologist,Open the Armory,Stone Haven Outfitter,Argentum Armor,Sword of the Animist,Masterwork of Ingenuity,Kaldra Compleat,Armored Skyhunter,Lion Sash,Relic Seeker,Esper Sentinel,Forgeborn Phoenix,Foundry Beetle,Inchblade Companion,Komainu Battle Armor,Luxior; Giada's Gift,Mace of Disruption,Nettlecyst,Shadowspear,Seraphic Greatsword,Soulstealer Axe,Sword of Body and Mind,Sword of Fire and Ice,Junkyard Scrapper,Soulstealer Axe,Sword of Feast and Famine,Expedition Supplier,Foundry Beetle,Armory Automaton,Bladegraft Aspirant,Dancing Sword,Jor Kadeen; First Goldwarden,Akiri; Fearless Voyager,Acclaimed Contender,Embercleave,Puresteel Paladin,Champion of the Flame,Tiana; Ship's Caretaker,Reyav; Master Smith,Sigarda's Aid,Armored Skyhunter,Bruenor Battlehammer,Halvar; God of Battle,Wyleth; Soul of Steel,Koll; the Forgemaster,Valduk; Keeper of the Flame,Fervent Champion,Cloudsteel Kirin,Leonin Shikari,Balan; Wandering Knight,Kor Duelist,Leonin Abunas,Zamriel; Seraph of Steel,Auriok Steelshaper
+Oracle:Equip costs you pay cost {1} less.\nWhenever a modified creature you control attacks, you may pay {M}{M}, if you do conjure a random card from Nahiri's Armory's spellbook into your hand.
+Name:Nahiri Boss Effect
+ManaCost:no cost
+Types:Enchantment
+S:Mode$ ReduceCost | ValidCard$ Card | ValidSpell$ Activated.Equip | Activator$ You | Amount$ 1 | EffectZone$ Command | Description$ Equip costs you pay cost {1} less.
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | Secondary$ True | Execute$ TrigConjure | TriggerDescription$ At the beginning of your upkeep or when an equipped creature you control attacks, conjure a card from Nahiri's spellbook into your hand.
+T:Mode$ Attacks | ValidCard$ Creature.YouCtrl+equipped | TriggerZones$ Command | Execute$ TrigConjure | TriggerDescription$ At the beginning of your upkeep or when an equipped creature you control attacks, conjure a card from Nahiri's Spellbook into your hand.
+SVar:TrigConjure:DB$ MakeCard | Zone$ Hand | Conjure$ True | AtRandom$ True | Spellbook$ Stoneforge Mystic,Danitha; Benalia's Hope,Ardenn; Intrepid Archaeologist,Open the Armory,Stone Haven Outfitter,Argentum Armor,Sword of the Animist,Masterwork of Ingenuity,Kaldra Compleat,Armored Skyhunter,Lion Sash,Relic Seeker,Esper Sentinel,Forgeborn Phoenix,Foundry Beetle,Inchblade Companion,Komainu Battle Armor,Luxior; Giada's Gift,Mace of Disruption,Nettlecyst,Shadowspear,Seraphic Greatsword,Soulstealer Axe,Sword of Body and Mind,Sword of Fire and Ice,Junkyard Scrapper,Soulstealer Axe,Sword of Feast and Famine,Expedition Supplier,Foundry Beetle,Armory Automaton,Bladegraft Aspirant,Dancing Sword,Akiri; Fearless Voyager,Acclaimed Contender,Embercleave,Puresteel Paladin,Champion of the Flame,Tiana; Ship's Caretaker,Reyav; Master Smith,Sigarda's Aid,Armored Skyhunter,Bruenor Battlehammer,Halvar; God of Battle,Wyleth; Soul of Steel,Koll; the Forgemaster,Valduk; Keeper of the Flame,Fervent Champion,Cloudsteel Kirin,Leonin Shikari,Balan; Wandering Knight,Kor Duelist,Leonin Abunas,Zamriel; Seraph of Steel,Auriok Steelshaper
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Command | Execute$ TrigToken | TriggerDescription$ At the beginning of your end step, create a 1/1 white Kor Soldier creature token.
+SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ w_1_1_kor_soldier
+Oracle:Equip costs you pay cost {1} less.\nAt the beginning of your upkeep or whenever an equipped creature you control attacks, conjure a card from Nahiri's spellbook into your hand\nAt the beginning of your end step, create a 1/1 white Kor Soldier creature token.
+Name:Pack Alpha
+Colors:red
+Types:Legendary Title
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ SelectAlpha | ActivationZone$ Command | TriggerDescription$ During your upkeep, randomly select a creature with the greatest power among creatures you control. Place a +1/+1 counter on that creature. That creature gains mentor, provoke, first strike, and lifelink until end of turn.
+SVar:SelectAlpha:DB$ PutCounter | ValidTgts$ Creature.YouCtrl$GreatestPower | TargetsAtRandom$ True | CounterType$ P1P1 | CounterNum$ 1 | ActivationZone$ Command | SpellDescription$ AS | SubAbility$ BoostAlpha
+SVar:BoostAlpha:DB$ Pump | Defined$ ParentTarget | KW$ Mentor & First Strike & Lifelink & Provoke | ActivationZone$ Command
+#| SpellDescription$ Your Alpha gains First Strike, Lifelink, and Provoke until end of turn.
+Oracle:During your upkeep, randomly select a creature with the greatest power among creatures you control. Place a +1/+1 counter on that creature. That creature gains mentor, provoke, first strike, and lifelink until end of turn.
+Name:Phoenix Charm
+ManaCost:no cost
+Colors:red
+Types:Artifact
+#Conjures or Drafts a creature with Type: Phoenix
+A:AB$ Draft | Cost$ PayShards<2> | SubAbility$ Eject | Zone$ Hand | ActivationZone$ Command | SpellDescription$ Draft a spell from CARDNAME's spellbook. | Spellbook$ Akoum Firebird,Arclight Phoenix,Ashcloud Phoenix,Aurora Phoenix,Bogardan Phoenix,Chandra's Phoenix,Everquill Phoenix,Firestorm Phoenix,Firewing Phoenix,Flamewake Phoenix,Flame-Wreathed Phoenix,Forgeborn Phoenix,Immortal Phoenix,Kuldotha Phoenix,Lightning Phoenix,Magma Phoenix,Managorger Phoenix,Molten Firebird,Nemesis Phoenix,Otharri; Suns' Glory,Phoenix Chick,Phoenix of Ash,Rekindling Phoenix,Retriever Phoenix,Screeching Phoenix,Shard Phoenix,Shivan Phoenix,Skarrgan Firebird,Skyfire Phoenix,Spellpyre Phoenix,Sunstreak Phoenix,Syrix; Carrier of the Flame,Tomakul Phoenix,Warcry Phoenix,Worldheart Phoenix
+A:AB$ MakeCard | SubAbility$ ModifySpell | Cost$ PayShards<2> | Zone$ Hand | AtRandom$ True | ActivationZone$ Command | RememberMade$ True | SpellDescription$ Conjure a spell from CARDNAME's spellbook. | Spellbook$ Akoum Firebird,Arclight Phoenix,Ashcloud Phoenix,Aurora Phoenix,Bogardan Phoenix,Chandra's Phoenix,Everquill Phoenix,Firestorm Phoenix,Firewing Phoenix,Flamewake Phoenix,Flame-Wreathed Phoenix,Forgeborn Phoenix,Immortal Phoenix,Kuldotha Phoenix,Lightning Phoenix,Magma Phoenix,Managorger Phoenix,Molten Firebird,Nemesis Phoenix,Otharri; Suns' Glory,Phoenix Chick,Phoenix of Ash,Rekindling Phoenix,Retriever Phoenix,Screeching Phoenix,Shard Phoenix,Shivan Phoenix,Skarrgan Firebird,Skyfire Phoenix,Spellpyre Phoenix,Sunstreak Phoenix,Syrix; Carrier of the Flame,Tomakul Phoenix,Warcry Phoenix,Worldheart Phoenix
+SVar:ModifySpell:DB$ Animate | Defined$ Remembered | staticAbilities$ SpendAnyMana | Duration$ Perpetual | SubAbility$ Eject | StackDescription$ SpellDescription | SpellDescription$ The conjured card perpetually gains "You may spend mana as though it were mana of any color to cast this spell."
+SVar:SpendAnyMana:Mode$ ManaConvert | EffectZone$ Stack | ValidPlayer$ You | ValidCard$ Card.Self | ValidSA$ Spell | ManaConversion$ AnyType->AnyColor | Description$ You may spend mana as though it were mana of any color to cast this spell.
+SVar:Eject:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile | SpellDescription$ Exile CARDNAME.
+S:Mode$ Continuous | Description$ CARDNAME may only be activated once.
+Oracle:CARDNAME may only be activated once.\n{M}{M}: Draft a card from CARDNAME's spellbook. Exile CARDNAME.\n{M}{M}: Conjure a card from CARDNAME's spellbook into your hand. The conjured card perpetually gains "You may spend mana as though it were mana of any color to cast this spell." Exile CARDNAME.
+Name:Piper's Charm
+ManaCost:no cost
+Types:Artifact
+A:AB$ Effect | Cost$ PayShards<3> | ActivationZone$ Command | SubAbility$ Eject | ValidTgts$ Creature | StaticAbilities$ MustBlock | RememberObjects$ Targeted | StackDescription$ {c:Targeted} blocks this turn if able. | SpellDescription$ Target creature blocks this turn if able. Exile CARDNAME.
+SVar:MustBlock:Mode$ MustBlock | ValidCreature$ Card.IsRemembered | Description$ This creature blocks this turn if able.
+SVar:Eject:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Oracle:{M}{M}{M}: Target creature blocks this turn if able. Exile Piper's Charm.
+Name:Presence of the Hydra
+ManaCost:no cost
+Types:Artifact Equipment
+S:Mode$ Continuous | Affected$ Land.YouCtrl | AddAbility$ Mana | EffectZone$ Command | Description$ Lands you control have "{T}: Add one mana of any color. Spend this mana only on costs that contain {X}."
+SVar:Mana:AB$ Mana | Cost$ T | Produced$ Any | Amount$ 1 | RestrictValid$ CostContainsX | SpellDescription$ Add any mana of any color. Spend this mana only on costs that contain {X}.
+A:AB$ MakeCard | Cost$ 1 G PayShards<2> | Conjure$ True | GameActivationLimit$ 1 | SorcerySpeed$ True | Zone$ Hand | ActivationZone$ Command | AtRandom$ True | Spellbook$ Polukranos Reborn,Managorger Hydra,Apex Devastator,Kalonian Hydra,Genesis Hydra,Steelbane Hydra,Ulvenwald Hydra,Voracious Hydra,Hooded Hydra,Primordial Hydra,Rampant Rejuvenator | SpellDescription$ Conjure a random Hydra into your hand. Activate this ability only once and only as a sorcery.
+Oracle:Lands you control have "{T}: Add one mana of any color. Spend this mana only on costs that contain {X}."\n{M}{M},1 G, Conjure a random Hydra into your hand. Activate this ability only once and only as a sorcery.
+Name:Scarecrow Totem
+ManaCost:no cost
+Types:Artifact
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Command | Execute$ TrigChoose | TriggerDescription$ At the beginning of your end step, conjure a duplicate of a random creature card from your opponent's library into your hand. The duplicate perpetually becomes an artifact Scarecrow in addition to its other types and gains "You may pay {4} rather than pay this spell's mana cost."
+SVar:TrigChoose:DB$ ChooseCard | Choices$ Creature.OppCtrl | ChoiceZone$ Library | AtRandom$ True | SubAbility$ DBConjure
+SVar:DBConjure:DB$ MakeCard | Conjure$ True | DefinedName$ ChosenCard | Zone$ Hand | RememberMade$ True | SubAbility$ DBAnimate
+SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Types$ Artifact,Scarecrow | staticAbilities$ STAltCost | Duration$ Perpetual | SubAbility$ DBClearChosen
+SVar:STAltCost:Mode$ Continuous | EffectZone$ All | MayPlay$ True | MayPlayAltManaCost$ 4 | MayPlayDontGrantZonePermissions$ True | Affected$ Card.Self | AffectedZone$ Hand,Graveyard,Library,Exile,Command | Description$ You may pay {4} rather than pay this spell's mana cost.
+SVar:DBClearChosen:DB$ Cleanup | ClearChosenCard$ True | ClearRemembered$ True
+Oracle:At the beginning of your end step, conjure a duplicate of a random creature card from your opponent's library into your hand. The duplicate perpetually becomes an artifact Scarecrow in addition to its other types and gains "You may pay {4} rather than pay this spell's mana cost."
+Name:Second Head of the Hydra
+ManaCost:no cost
+Types:Creature Hydra
+Colors:green,blue
+PT:1/4
+K:Defender
+R:Event$ GameLoss | ActiveZones$ Battlefield | ValidPlayer$ You | Layer$ CantHappen | Description$ You can't lose the game and your opponents can't win the game.
+R:Event$ GameWin | ActiveZones$ Battlefield | ValidPlayer$ Opponent | Layer$ CantHappen | Secondary$ True | Description$ You can't lose the game and your opponents can't win the game.
+S:Mode$ CantBeCast | ValidCard$ Card.nonCreature | Caster$ Opponent | NumLimitEachTurn$ 1 | Description$ Your opponents can't cast more than one noncreature spell each turn.
+R:Event$ Moved | ActiveZones$ Battlefield | Origin$ Battlefield | ValidCard$ Card.Self | ReplaceWith$ Exile | Description$ If CARDNAME would leave the battlefield, instead exile it with three time counters on it. It gains suspend.
+SVar:Exile:DB$ ChangeZone | Hidden$ True | WithCountersType$ TIME | WithCountersAmount$ 3 | Origin$ All | Destination$ Exile | Defined$ ReplacedCard | SubAbility$ GiveSuspend
+SVar:GiveSuspend:DB$ PumpAll | ValidCards$ Card.withoutSuspend+YouOwn | KW$ Suspend | PumpZone$ Exile | Duration$ Permanent
+Oracle:Defender/nYou can't lose the game and your opponents can't win the game.\nYour opponents can't cast more than one noncreature spell each turn.\nIf Second Head of the Hydra would leave the battlefield, instead exile it with three time counters on it. It gains suspend.
+Name:Sigil of Torment
+ManaCost:no cost
+Colors:black
+Types:Enchantment
+A:AB$ Destroy | Cost$ 4 B T PayShards<5> | ValidTgts$ Creature | TgtPrompt$ Select target creature | ActivationLimit$ 1 | SubAbility$ DBLifeGain | SpellDescription$ Destroy target creature. You gain 3 life. Exile Sigil of Torment.
+SVar:DBLifeGain:DB$ GainLife | Defined$ You | LifeAmount$ 3 | SubAbility$ Eject
+SVar:Eject:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Exile
+Oracle:{M},{T}: Destroy target creature. You gain 3 life. Exile Sigil of Torment.
+Name:Sixth Head of the Hydra
+ManaCost:no cost
+Types:Creature Hydra
+Colors:green,blue
+PT:1/4
+K:Defender
+R:Event$ GameLoss | ActiveZones$ Battlefield | ValidPlayer$ You | Layer$ CantHappen | Description$ You can't lose the game and your opponents can't win the game.
+R:Event$ GameWin | ActiveZones$ Battlefield | ValidPlayer$ Opponent | Layer$ CantHappen | Secondary$ True | Description$ You can't lose the game and your opponents can't win the game.
+S:Mode$ AttackRestrict | MaxAttackers$ 6 | ValidDefender$ You | Description$ No more than six creatures can attack you each combat.
+R:Event$ Moved | ActiveZones$ Battlefield | Origin$ Battlefield | ValidCard$ Card.Self | ReplaceWith$ Exile | Description$ If CARDNAME would leave the battlefield, instead exile it with three time counters on it. It gains suspend.
+SVar:Exile:DB$ ChangeZone | Hidden$ True | WithCountersType$ TIME | WithCountersAmount$ 3 | Origin$ All | Destination$ Exile | Defined$ ReplacedCard | SubAbility$ GiveSuspend
+SVar:GiveSuspend:DB$ PumpAll | ValidCards$ Card.withoutSuspend+YouOwn | KW$ Suspend | PumpZone$ Exile | Duration$ Permanent
+Oracle:Defender/nYou can't lose the game and your opponents can't win the game.\nNo more than six creatures can attack you each combat.\nIf Sixth Head of the Hydra would leave the battlefield, instead exile it with three time counters on it. It gains suspend.
+Name:Sleep Wand
+ManaCost:no cost
+Types:Artifact
+A:AB$ PutCounter | Cost$ PayShards<2> | ActivationZone$ Command | ActivationLimit$ 1 | SubAbility$ Eject | ValidTgts$ Creature | CounterType$ Stun | CounterNum$ 1 | SpellDescription$ Put a stun counter on target creature. (If a permanent with a stun counter would become untapped, remove one from it instead.). Exile CARDNAME.
+SVar:Eject:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Oracle:{M}:Put a stun counter on target creature. Exile Sleep Wand.
+Name:Slime Boss Effect
+ManaCost:no cost
+Colors:black,green
+Types:Enchantment
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | Execute$ TrigPut | TriggerDescription$ At the beginning of your upkeep, put a slime counter on CARDNAME, then each opponent conjures X cards named Blasted Landscape into their library, where X is the amount of slime counters on CARDNAME.
+SVar:TrigPut:DB$ PutCounter | Defined$ Self | CounterType$ SLIME | CounterNum$ 1 | SubAbility$ DBGunk
+SVar:DBGunk:DB$ MakeCard | Defined$ Opponent | Name$ Blasted Landscape | Zone$ Library | Amount$ X | Conjure$ True
+T:Mode$ Cycled | ValidCard$ Card | Execute$ TrigGainLife | TriggerZones$ Command | TriggerDescription$ Whenever a player cycles a card, you gain 2 life.
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 2
+SVar:X:Count$CardCounters.SLIME
+Oracle:At the beginning of your upkeep, put a slime counter on Slime Boss Effect, then each opponent conjures X cards named Blasted Landscape into their library, where X is the amount of slime counters on Slime Boss Effect.\nWhenever a player cycles a card, you gain 2 life.
+Name:Slimefoot's Slimy Staff
+ManaCost:no cost
+Colors:black,green
+Types:Artifact Equipment
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Command | Execute$ TrigPutCounter | TriggerDescription$ At the beginning of your end step, put a spore counter on each fungus you control.
+SVar:TrigPutCounter:DB$ PutCounterAll | ValidCards$ Fungus.YouCtrl | CounterType$ SPORE | CounterNum$ 1
+A:AB$ MakeCard | Cost$ G PayShards<2> | Name$ Bayou | ActivationZone$ Command | Zone$ Hand | IsPresent$ Land.YouOwn | PresentZone$ Hand | PresentCompare$ EQ0 | GameActivationLimit$ 1 | SpellDescription$ Conjure a card named Bayou into your hand. Activate only if there are no land cards in your hand and only once each game.
+Oracle:At the beginning of your end step, put a spore counter on each fungus you control.\n{M}{M},{G}:Conjure a card named Bayou into your hand. Activate only if there are no land cards in your hand and only once each game.
+Name:Sliver Queen's Boss Effect
+ManaCost:no cost
+Colors:all
+Types:Enchantment
+A:AB$ Token | Cost$ 4 | TokenAmount$ 1 | TokenScript$ c_1_1_sliver | ActivationZone$ Command | TokenOwner$ You | Activator$ Player | ActivationLimit$ 1 | SpellDescription$ Create a 1/1 colorless Sliver creature token. Every player may activate this ability but only once each turn.
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | Execute$ TrigCharm | TriggerDescription$ At the beginning of your upkeep, ABILITY.
+SVar:TrigCharm:DB$ Charm | Random$ True | Choices$ DBToken,DBChoose,DBSeek
+SVar:DBToken:DB$ Token | TokenAmount$ 1 | TokenScript$ c_1_1_sliver | SpellDescription$ Create a 1/1 colorless Sliver creature token.
+SVar:DBChoose:DB$ ChooseCard | AtRandom$ True | Choices$ Creature.!token+OppCtrl | SubAbility$ DBCopy | SpellDescription$ Create a token of a random nontoken creature your opponent controls. That creature becomes a Sliver in addition to its other types.
+SVar:DBCopy:DB$ CopyPermanent | Defined$ ChosenCard | AddTypes$ Sliver | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+SVar:DBSeek:DB$ Seek | Type$ Card.Sliver | SpellDescription$ Seek a Sliver card.
+Oracle:{4}: Create a 1/1 colorless Sliver creature token. Every player may activate this ability but only once each turn. \n At the beginning of your upkeep, choose one at random\n• Create a 1/1 colorless Sliver creature token.\nCreate a token of a random nontoken creature your opponent controls. That creature becomes a Sliver in addition to its other types.\n• Seek a Sliver card.
+Name:Slobad's Boss Effect
+ManaCost:no cost
+Types:Enchantment
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+Artifact | AddToughness$ 2 | EffectZone$ Command | Description$ Artifact creatures you control get +0/+2.
+T:Mode$ DamageDoneOnce | ValidTarget$ You | TriggerZones$ Command | Execute$ TrigToken | TriggerDescription$ Whenever you are dealt damage, create X Scrap tokens, where X is the amount of damage dealt.
+SVar:TrigToken:DB$ Token | TokenAmount$ X | TokenScript$ scrap
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | IsPresent$ Permanent.namedScrap | PresentCompare$ GE5 | TriggerZones$ Command | Execute$ TrigSacrifice | TriggerDescription$ At the beginning of your end step, if you have five or more Scrap tokens, create a 0/0 colorless Construct artifact creature token with "This creature gets +1/+1 for each artifact you control." Then you sacrifice five scrap tokens.
+SVar:TrigSacrifice:DB$ Sacrifice | SacValid$ Permanent.namedScrap | Defined$ You | Amount$ 5 | RememberSacrificed$ True | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | ConditionDefined$ Remembered | ConditionPresent Card | ConditionCompare$ GE5 | TokenScript$ c_0_0_a_construct_total_artifacts | TokenOwner$ You | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | IsPresent$ Permanent.namedScrap | PresentCompare$ GE10 | TriggerZones$ Command | Execute$ TrigSacrificeAll | TriggerDescription$ At the beginning your upkeep, if you have ten or more Scrap tokens, exile all Scrap tokens and conjure a Darksteel Colossus onto the battlefield.
+SVar:TrigSacrificeAll:DB$ ChangeZoneAll | ChangeType$ Permanent.namedScrap | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBConjure
+SVar:DBConjure:DB$ MakeCard | Conjure$ True | Name$ Darksteel Colossus | Zone$ Battlefield
+SVar:X:TriggerCount$DamageAmount
+Oracle:Artifact creatures you control get +0/+2.\nWhenever you are dealt damage, create X Scrap tokens, where X is the amount of damage dealt.\nAt the beginning of your end step, if you have five or more Scrap tokens, create a 0/0 colorless Construct artifact creature token with "This creature gets +1/+1 for each artifact you control." Then you sacrifice five scrap tokens.\nAt the beginning your upkeep, if you have ten or more Scrap tokens, exile all Scrap tokens and conjure a Darksteel Colossus onto the battlefield.
+Name:Slobad's Iron Boots
+ManaCost:no cost
+Types:Artifact
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+Artifact | AddToughness$ 1 | AddPower$ 1 | EffectZone$ Command | Description$ Artifact Creatures you control get +1/+1
+T:Mode$ ChangesZone | ValidCard$ Artifact.!token+YouCtrl | ActivationLimit$ 1 | Origin$ Battlefield | Destination$ Graveyard | Execute$ TrigToken | TriggerZones$ Command | TriggerDescription$ Whenever a nontoken artifact you control is put into a graveyard from the battlefield, create a colorless artifact token named Scrap. This ability triggers only once each turn.
+SVar:TrigToken:DB$ Token | TokenScript$ scrap
+A:AB$ Token | Cost$ 4 PayShards<2> Sac<3/Artifact> | ActivationLimit$ 1 | ActivationZone$ Command | TokenScript$ c_0_0_a_construct_total_artifacts | TokenOwner$ You | SubAbility$ DBExileSelf | SpellDescription$ Create a 0/0 colorless Construct artifact creature token with "This creature gets +1/+1 for each artifact you control." Exile Slobad's Iron Boots.
+SVar:DBExileSelf:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Oracle:Artifact Creatures you control get +1/+1.\nWhenever a nontoken artifact you control is put into a graveyard from the battlefield, create a colorless artifact token named Scrap. This ability triggers only once each turn.\n{4}, {M}{M}, Sacrifice three artifacts: Create a 0/0 colorless Construct artifact creature token with "This creature gets +1/+1 for each artifact you control." Exile Slobad's Iron Boots.
+Name:Sorin's Amulet
+ManaCost:no cost
+Types:Enchantment
+A:AB$ MakeCard | Cost$ B B PayShards<4> PayLife<4> | IsPresent$ Vampire.YouCtrl | PresentZone$ Library | PresentCompare$ GE20 | ActivationZone$ Command | GameActivationLimit$ 1 | Conjure$ True | AtRandom$ True | Spellbook$ Sorin; Grim Nemesis,Sorin; Imperious Bloodlord,Sorin; Lord of Innistrad,Sorin Markov,Sorin; Solemn Visitor,Sorin the Mirthless,Sorin; Vampire Lord,Sorin; Vengeful Bloodlord,| WithCounter$ TIME | WithCounterNum$ 3 | Zone$ Exile | RememberMade$ True | SubAbility$ GiveSuspend | SpellDescription$ Conjure a Sorin planeswalker into exile with three time counters, it gains suspend. Activate this ability only if your library contains 20 or more vampires and only once each game.
+SVar:GiveSuspend:DB$ Pump | Defined$ Remembered | KW$ Suspend | PumpZone$ Exile | Duration$ Permanent | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+S:Mode$ Continuous | EffectZone$ Command | Affected$ Vampire.YouCtrl | AddPower$ 1 | AddToughness$ 1 | CheckSVar$ YourLife | SVarCompare$ LT10 | AddKeyword$ Lifelink | Description$ As long as your life total is lower than 10, Vampires you control have +1/+1  and have lifelink.
+SVar:YourLife:Count$YourLifeTotal
+Oracle:{B}{B},{M}{M}{M}{M},Pay 4 life: Conjure a Sorin planeswalker into exile with three time counters, it gains suspend. Activate this ability only if your library contains 20 or more vampires and only once each game.  \nAs long as your life total is lower than 10, Vampires you control have +1/+1 and have lifelink.
+Name:Sorin's Boss Effect
+ManaCost:no cost
+Types:Enchantment
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | CheckSVar$ YourLife | SVarCompare$ GE40 | Execute$ TrigSeek | TriggerDescription$ As long as Sorin's life total is 40 or more, Sorin seeks two nonland cards every upkeep and can't lose the game and his opponents can't win the game.
+SVar:TrigSeek:DB$ Seek | Num$ 2 | Type$ Card.nonLand
+R:Event$ GameLoss | ActiveZones$ Command | ValidPlayer$ You | Layer$ CantHappen | CheckSVar$ YourLife | SVarCompare$ GE40 | Secondary$ True | Description$ You can't lose the game and your opponents can't win the game.
+R:Event$ GameWin | ActiveZones$ Command | ValidPlayer$ Opponent | Layer$ CantHappen | Secondary$ True | EffectZone$ Command | CheckSVar$ YourLife | Secondary$ True | SVarCompare$ GE40 | Description$ You can't lose the game and your opponents can't win the game.
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | CheckSVar$ YourLifeCompare | SVarCompare$ EQ2 | Execute$ TrigConjure | TriggerDescription$ As long as Sorin's life total is between 20 and 40, at Sorin's upkeep, conjure a card from Sorin's Spellbook into exile with 2 time counters on it, it gains suspend.
+SVar:TrigConjure:DB$ MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Sorin; Grim Nemesis,Sorin; Imperious Bloodlord,Sorin; Lord of Innistrad,Sorin Markov,Sorin; Solemn Visitor,Sorin the Mirthless,Sorin; Vampire Lord,Sorin; Vengeful Bloodlord,Timothar; Baron of Bats,Olivia Voldaren,Patriarch's Bidding,Licia; Sanguine Tribune,Astarion; the Decadent,Strefan; Maurer Progenitor,Evelyn; the Covetous,Anje; Maid of Dishonor,Edgar Markov,Swords to Plowshares,Cruel Celebrant,Olivia's Wrath,Markov Baron,Champion of Dusk,Vein Ripper,Anguished Unmaking,Mortify,Void Rend,Terminate,Despark,Bedevil,Utter End,Ruinous Ultimatum,Sign in Blood,Reanimate,Victimize | Zone$ Exile | RememberMade$ True | SubAbility$ DBPutCounter
+SVar:DBPutCounter:DB$ PutCounter | Defined$ Remembered | CounterNum$ 3 | CounterType$ TIME | SubAbility$ GiveSuspend
+SVar:GiveSuspend:DB$ Pump | Defined$ Remembered | KW$ Suspend | PumpZone$ Exile | Duration$ Permanent | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+S:Mode$ Continuous | EffectZone$ Command | Affected$ Vampire.YouCtrl | AddPower$ 2 | AddToughness$ 2 | CheckSVar$ YourLife | SVarCompare$ LT20 | AddKeyword$ Lifelink | Description$ As long as Sorin's life total is lower than 20, Sorin's Vampires get +2/+2 and have lifelink.
+SVar:Y:Count$Compare YourLife GE20.1.0
+SVar:X:Count$Compare YourLife LE40.1.0
+SVar:YourLifeCompare:SVar$X/Plus.Y
+SVar:YourLife:Count$YourLifeTotal
+Oracle:As long as Sorin's life total is 40 or more, Sorin seeks two nonland cards every upkeep and can't lose the game and his opponents can't win the game. \nAs long as Sorin's life total is between 20 and 40, at Sorin's upkeep, conjure a card from Sorin's Spellbook into exile with 2 time counters on it, it gains suspend.\nAs long as Sorin's life total is lower than 20, Sorin's Vampires get +2/+2  and have lifelink.
+Name:Teferi's Boss Effect
+ManaCost:no cost
+Colors:white,blue
+Types:Enchantment
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Player | TriggerZones$ Command | Execute$ TrigPhaseOut | TriggerDescription$ At the beginning of each upkeep, target creature or artifact you don't control phases out.
+SVar:TrigPhaseOut:DB$ Phases | ValidTgts$ Creature.OppCtrl,Artifact.OppCtrl | TgtPrompt$ Select target creature or artifact an opponent controls
+S:Mode$ CastWithFlash | ValidCard$ Planeswalker.YouCtrl+Teferi | EffectZone$ Command | ValidSA$ Activated.Loyalty | Caster$ You | Description$ You may activate loyalty abilities of Teferi planeswalkers you control on any player's turn any time you could cast an instant.
+Oracle:At the beginning of each upkeep, target creature or artifact you don't control phases out. \nYou may activate loyalty abilities of Teferi planeswalkers you control on any player's turn any time you could cast an instant.
+Name:Teferi's Staff
+ManaCost:no cost
+Types:Artifact Equipment
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Command | Execute$ TrigUntap | TriggerDescription$ At the beginning of your end step, untap target artifact or land you control.
+SVar:TrigUntap:DB$ Untap | ValidTgts$ Artifact.YouCtrl,Land.YouCtrl | TgtPrompt$ Select target artifact or land you control
+A:AB$ Phases | Cost$ U W PayShards<2> | ActivationLimit$ 1 | ValidTgts$ Permanent | SubAbility$ Eject | ActivationZone$ Command | SpellDescription$ Target permanent phases out. (Treat it and anything attached to it as though they don't exist until its controllers's next turn.)
+SVar:Eject:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Oracle:At the beginning of your end step, untap target artifact or land you control.\n{M}{M}, {U}{W}: Target permanent phases out. (Treat it and anything attached to it as though they don't exist until its controllers's next turn.). Exile Teferi's Staff.
+Name:The Hydra of Shandalar
+ManaCost:no cost
+Colors:green
+Types:Enchantment
+S:Mode$ Continuous | EffectZone$ Command | Affected$ Creature.OppCtrl | AddKeyword$ Provoke | Description$ Creatures your opponents control have provoke (Whenever this creature attacks, you may have target creature defending player controls untap and block it if able.)
+T:Mode$ DamageDone | TriggerZones$ Command | ValidSource$ Creature.OppCtrl | ValidTarget$ You | CombatDamage$ True | CheckSVar$ CurrentLife | SVarCompare$ LE0 | Execute$ TrigDmg | TriggerDescription$ Whenever a creature an opponent controls deals combat damage to you while you have 0 or less life, CARDNAME deals that much damage to target Hydra you control.
+SVar:TrigDmg:DB$ DealDamage | ValidTgts$ Creature.Hydra | TgtPrompt$ Select target Hydra you control | TargetsWithDefinedController$ TriggeredTarget | NumDmg$ Y
+SVar:Y:TriggerCount$DamageAmount
+SVar:CurrentLife:Count$YourLifeTotal
+Oracle:Creatures your opponents control have provoke (Whenever this creature attacks, you may have target creature defending player controls untap and block it if able.)\nWhenever a creature an opponent controls deals combat damage to you while you have 0 or less life, CARDNAME deals that much damage to target Hydra you control.
+Name:Third Head of the Hydra
+ManaCost:no cost
+Types:Creature Hydra
+PT:1/4
+Colors:green,blue
+K:Defender
+R:Event$ GameLoss | ActiveZones$ Battlefield | ValidPlayer$ You | Layer$ CantHappen | Description$ You can't lose the game and your opponents can't win the game.
+R:Event$ GameWin | ActiveZones$ Battlefield | ValidPlayer$ Opponent | Layer$ CantHappen | Secondary$ True | Description$ You can't lose the game and your opponents can't win the game.
+K:ETBReplacement:Other:AddExtraCounter:Mandatory:Battlefield:Hydra.Other+YouCtrl
+SVar:AddExtraCounter:DB$ PutCounter | ETB$ True | Defined$ ReplacedCard | CounterType$ P1P1 | CounterNum$ 2 | SpellDescription$ Other Hydras you control enter with two extra +1/+1 counters on them.
+R:Event$ Moved | ActiveZones$ Battlefield | Origin$ Battlefield | ValidCard$ Card.Self | ReplaceWith$ Exile | Description$ If CARDNAME would leave the battlefield, instead exile it with three time counters on it. It gains suspend.
+SVar:Exile:DB$ ChangeZone | Hidden$ True | WithCountersType$ TIME | WithCountersAmount$ 3 | Origin$ All | Destination$ Exile | Defined$ ReplacedCard | SubAbility$ GiveSuspend
+SVar:GiveSuspend:DB$ PumpAll | ValidCards$ Card.withoutSuspend+YouOwn | KW$ Suspend | PumpZone$ Exile | Duration$ Permanent
+Oracle:Defender/nYou can't lose the game and your opponents can't win the game.\nOther Hydras you control enter with two extra +1/+1 counters on them. \nIf Third Head of the Hydra would leave the battlefield, instead exile it with three time counters on it. It gains suspend.
+Name:Tibalt's Boss Effect
+ManaCost:no cost
+Colors:red,black
+Types:Enchantment
+T:Mode$ LifeGained | TriggerZones$ Command | ValidPlayer$ Opponent | Execute$ TrigPutCounter | TriggerDescription$ Whenever an opponent gains life, put a flame counter on Tibalt.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ FLAME | CounterNum$ 1
+T:Mode$ Phase | Phase$ Upkeep | TriggerZones$ Command | ValidPlayer$ You | Execute$ TrigRollDice | TriggerDescription$ Roll a D20, then add the amount of flame counters on Tibalt's Boss Effect to the roll.
+SVar:TrigRollDice:DB$ RollDice | Sides$ 20 | ResultSubAbilities$ 1-5:DBConjureSmall,6-10:DBRandomLoot:,11-15:DBDamage,16:DBCast,17-18:DBWheel,19-20:DBConjureBig | SpellDescription$ Roll a D20
+SVar:DBConjureSmall:DB$ MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Chained Brute,Big Spender,Devilish Valet,Gibbering Fiend,Hobblefiend,Footlight Fiend,Forge Devil,Festival Crasher,Hulking Devil,Mayhem Devil,Spiteful Prankster,Vexing Devil,Wildfire Devils | Zone$ Battlefield | SpellDescription$ Conjure a random Devil onto the battlefield.
+SVar:DBRandomLoot:DB$ Draw | Defined$ Player | NumCards$ 3 | SubAbility$ DBDiscard3 | SpellDescription$ Each player draws three cards, then discards three cards at random.
+SVar:DBDiscard3:DB$ Discard | Defined$ Player | Mode$ Random | NumCards$ 3
+SVar:DBDamage:DB$ ChooseCard | AtRandom$ True | Choices$ Creature | SubAbility$ DBDamageBis | SpellDescription$ Tibalt deals seven damage to a creature chosen at random. Then Tibalt returns a random creature card to the battlefield.
+SVar:DBDamageBis:DB$ DealDamage | NumDmg$ 7 | Defined$ ChosenCard | SubAbility$ DBChangeZone
+SVar:DBChangeZone:DB$ ChangeZone | ChangeType$ Creature | ChangeNum$ 1 | GainControl$ True | Hidden$ True | Origin$ Graveyard | AtRandom$ True | Destination$ Battlefield | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+SVar:DBCast:DB$ Play | AnySupportedCard$ Names:Hellion Eruption,Insurrection,Warp World,Shahrazad,Possibility Storm,Scrambleverse | RandomCopied$ True | CopyCard$ True | WithoutManaCost$ True | SpellDescription$ Cast a copy of one of the following cards chosen at random—Hellion Eruption, Insurrection, Warp World, Shahrazad, Possibility Storm, Scrambleverse.
+SVar:DBWheel:DB$ Discard | Mode$ Hand | Defined$ Player | SubAbility$ DBEachDraw | SpellDescription$ Each player discards their hand, then draws seven cards.
+SVar:DBEachDraw:DB$ Draw | Defined$ Player | NumCards$ 7
+SVar:DBConjureBig:DB$ MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Harvester of Souls,Archfiend of Depravity,Bloodgift Demon,Ob Nixilis; Unshackled,Nightmare Shepherd,Archfiend of Despair,Lord of the Void,Sire of Insanity,Reaper from the Abyss,Archfiend of Spite,Abyssal Persecutor | Zone$ Battlefield | SpellDescription$ Conjure a random Demon onto the battlefield.
+SVar:X:Count$CardCounters.FLAME
+Oracle:Whenever an opponent gains life, put a flame counter on Tibalt\nAt the beginning of your upkeep roll a D20, then add the amount of flame counters on Tibalt's Boss Effect to the roll. \n1—5 | Conjure a random Devil onto the battlefield. \n6—10 | Each player draws three cards, then discards three cards at random.\n11—15 | Tibalt deals seven damage to a creature chosen at random.\n16 | Cast a copy of one of the following cards chosen at random—Hellion Eruption, Insurrection, Warp World,Shahrazad,Possibility Storm,Scrambleverse.\n17—18 | Each player discards their hand, then draws seven cards.\n19—20 | Conjure a random Demon onto the battlefield.
+Name:Tibalt's Bag of Tricks
+ManaCost:no cost
+Colors:red,black
+Types:Enchantment
+A:AB$ RollDice | Cost$ 3 PayShards<4> | Sides$ 6 | ActivationZone$ Command | ResultSubAbilities$ 1-2:DBConjureSmall,3:DBRandomLoot:,4:DBCast,5-6:DBDraft | SpellDescription$ Roll a six-sided die.
+SVar:DBConjureSmall:DB$ MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Chained Brute,Big Spender,Devilish Valet,Gibbering Fiend,Hobblefiend,Footlight Fiend,Forge Devil,Festival Crasher,Hulking Devil,Mayhem Devil,Spiteful Prankster,Vexing Devil,Wildfire Devils | Zone$ Battlefield | SpellDescription$ Conjure a random Devil onto the battlefield.
+SVar:DBRandomLoot:DB$ Draw | Defined$ Player | NumCards$ 3 | SubAbility$ DBDiscard3 | SpellDescription$ Each player draws three cards, then discards three cards at random.
+SVar:DBDiscard3:DB$ Discard | Defined$ Player | Mode$ Random | NumCards$ 3
+SVar:DBCast:DB$ Play | AnySupportedCard$ Names:Hellion Eruption,Insurrection,Warp World,Shahrazad,Possibility Storm,Scrambleverse | RandomCopied$ True | CopyCard$ True | WithoutManaCost$ True | SpellDescription$ Cast a copy of one of the following cards chosen at random—Hellion Eruption, Insurrection, Warp World,Shahrazad,Possibility Storm,Scrambleverse.
+SVar:DBDraft:DB$ Draft | Conjure$ True | Spellbook$ Tibalt; Rakish Instigator,Tibalt; the Fiend-Blooded,Tibalt; Wicked Tormentor,Valki; God of Lies,Tibalt the Chaotic,Tibalt's Rager,Tibalt's Trickery,Blightning,Browbeat,Mayhem Devil,Mahadi; Emporium Master,Charmbreaker Devils,Sin Prodder,Wildfire Devils | Zone$ Hand | SpellDescription$ Draft a card from Tibalt's Spellbook.
+Oracle:{3}, {M}{M}{M){M}, Roll a six sided die \n1—2 | Conjure a random Devil onto the battlefield. \n3 | Each player draws three cards, then discards three cards at random.\n4 | Cast a copy of one of the following cards chosen at random—Hellion Eruption, Insurrection, Warp World,Shahrazad,Possibility Storm,Scrambleverse.\n3 5-6 | Draft a card from Tibalt's Spellbook.
+Name:Power of Valyx
+ManaCost:no cost
+Colors:black
+Types:Enchantment
+K:Hexproof
+A:AB$ Destroy | Cost$ 4 B T Sac<1/Creature.YouCtrl/creature you control> | ValidTgts$ Creature | TgtPrompt$ Select target creature | SubAbility$ DBLifeGain | SpellDescription$ Destroy target creature. You gain 3 life.
+SVar:DBLifeGain:DB$ GainLife | Defined$ You | LifeAmount$ 3
+Oracle:{M},{T}, Sacrifice a creature: Destroy target creature. You gain 3 life.
+Name:Waker of the Dead
+Colors:black
+Types:Legendary Title
+R:Event$ GainLife | ActiveZones$ Command | ValidPlayer$ Player.Opponent | ReplaceWith$ LimitedGain | Description$ Opponents cannot gain life beyond their starting life total.
+SVar:LimitedGain:DB$ ReplaceEffect | VarName$ LifeGained | VarValue$ X
+SVar:X:ReplaceCount$LifeGained/LimitMax.Y
+SVar:Y:PlayerCountDefinedReplacedPlayer$StartingLife/Minus.Z
+SVar:Z:PlayerCountDefinedReplacedPlayer$LifeTotal
+#---
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ ConjureMissing | ActivationZone$ Command
+#---
+SVar:ConjureMissing:    DB$ Branch | BranchConditionSVar$ ChaliceCount     | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing1     | FalseSubAbility$ ConjureMissing0    | Description$ A |  StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing1:   DB$ Branch | BranchConditionSVar$ RestlessCount    | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing11    | FalseSubAbility$ ConjureMissing10   | Description$ B | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing10:  DB$ Branch | BranchConditionSVar$ GravesCount      | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing101   | FalseSubAbility$ ConjureMissing100  | Description$ C | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing11:  DB$ Branch | BranchConditionSVar$ GravesCount      | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing111   | FalseSubAbility$ ConjureMissing110  | Description$ D | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing101: DB$ Branch | BranchConditionSVar$ DisturbanceCount | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing1011  | FalseSubAbility$ ConjureMissing1010 | Description$ E | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing100: DB$ Branch | BranchConditionSVar$ DisturbanceCount | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing1001  | FalseSubAbility$ ConjureMissing1000 | Description$ F | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing110: DB$ Branch | BranchConditionSVar$ DisturbanceCount | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing1101  | FalseSubAbility$ ConjureMissing1100 | Description$ G | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing111: DB$ Branch | BranchConditionSVar$ DisturbanceCount | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing1111  | FalseSubAbility$ ConjureMissing1110 | Description$ H | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing0:   DB$ Branch | BranchConditionSVar$ RestlessCount    | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing01    | FalseSubAbility$ ConjureMissing00   | Description$ I | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing01:  DB$ Branch | BranchConditionSVar$ GravesCount      | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing011   | FalseSubAbility$ ConjureMissing010  | Description$ J | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing010: DB$ Branch | BranchConditionSVar$ DisturbanceCount | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing0101  | FalseSubAbility$ ConjureMissing0100 | Description$ K | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing011: DB$ Branch | BranchConditionSVar$ DisturbanceCount | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing0111  | FalseSubAbility$ ConjureMissing0110 | Description$ L | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing00:  DB$ Branch | BranchConditionSVar$ GravesCount      | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing001   | FalseSubAbility$ ConjureMissing000  | Description$ M | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing000: DB$ Branch | BranchConditionSVar$ DisturbanceCount | BranchConditionSVarCompare$ EQ0 | FalseSubAbility$ ConjureMissing0001 | FalseSubAbility$ DraftSpell         | Description$ N | StackDescription$ Description | SpellDescription$ Description
+SVar:ConjureMissing001: DB$ Branch | BranchConditionSVar$ DisturbanceCount | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing0011  | FalseSubAbility$ ConjureMissing0010 | Description$ O | StackDescription$ Description | SpellDescription$ Description
+#---
+SVar:ConjureMissing0001: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Curse of Disturbance | Zone$ Battlefield | SpellDescription$ 0001 | StackDescription$ SpellDescription
+SVar:ConjureMissing0010: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Curse of Shallow Graves | Zone$ Battlefield | SpellDescription$ 0010 | StackDescription$ SpellDescription
+SVar:ConjureMissing0011: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Curse of Disturbance,Curse of Shallow Graves | Zone$ Battlefield | SpellDescription$ 0011 | StackDescription$ SpellDescription
+SVar:ConjureMissing0100: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Curse of the Restless Dead | Zone$ Battlefield | SpellDescription$ 0100 | StackDescription$ SpellDescription
+SVar:ConjureMissing0101: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Curse of Disturbance,Curse of the Restless Dead | Zone$ Battlefield | SpellDescription$ 0101 | StackDescription$ SpellDescription
+SVar:ConjureMissing0110: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Curse of Shallow Graves,Curse of the Restless Dead | Zone$ Battlefield | SpellDescription$ 0110 | StackDescription$ SpellDescription
+SVar:ConjureMissing0111: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Curse of Shallow Graves,Curse of Disturbance,Curse of the Restless Dead | Zone$ Battlefield | SpellDescription$ 0111 | StackDescription$ SpellDescription
+SVar:ConjureMissing1000: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Chalice of Life | Zone$ Battlefield | SpellDescription$ 1000 | StackDescription$ SpellDescription
+SVar:ConjureMissing1001: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Curse of Disturbance,Chalice of Life | Zone$ Battlefield | SpellDescription$ 1001 | StackDescription$ SpellDescription
+SVar:ConjureMissing1010: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Curse of Shallow Graves,Chalice of Life | Zone$ Battlefield | SpellDescription$ 1010 | StackDescription$ SpellDescription
+SVar:ConjureMissing1011: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Curse of Disturbance,Curse of Shallow Graves,Chalice of Life | Zone$ Battlefield | SpellDescription$ 1011 | StackDescription$ SpellDescription
+SVar:ConjureMissing1100: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Curse of the Restless Dead,Chalice of Life | Zone$ Battlefield | SpellDescription$ 1100 | StackDescription$ SpellDescription
+SVar:ConjureMissing1101: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Curse of Disturbance,Curse of the Restless Dead,Chalice of Life | Zone$ Battlefield | SpellDescription$ 1101 | StackDescription$ SpellDescription
+SVar:ConjureMissing1110: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Curse of Shallow Graves,Curse of the Restless Dead,Chalice of Life | Zone$ Battlefield | SpellDescription$ 1110 | StackDescription$ SpellDescription
+SVar:ConjureMissing1111: DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Curse of Disturbance,Curse of Shallow Graves,Curse of the Restless Dead,Chalice of Life | Zone$ Battlefield | SpellDescription$ 1111 | StackDescription$ SpellDescription
+#---
+SVar:DraftSpell:DB$Draft | Spellbook$ Liliana's Caress,Phyrexian Arena,Oath of Liliana,Liliana of the Dark Realms,The Chain Veil,Liliana; Death Mage,Liliana; Death's Majesty,Liliana; Death Wielder,Liliana; Dreadhorde General,Liliana; Heretical Healer,Liliana of the Dark Realms,Liliana of the Veil,Liliana's Devotee,Liliana's Elite,Liliana's Indignation,Liliana's Influence,Liliana's Mastery,Liliana's Reaver,Liliana's Scorn,Liliana's Scrounger,Liliana's Shade,Liliana's Talent,Liliana; the Last Hope,Liliana; the Necromancer,Liliana; Untouched by Death,Liliana Vess,Liliana; Waker of the Dead
+# Mapping items present with bit mask (partial explanation of above weird naming)
+#1000
+SVar:ChaliceCount:Count$NamedYouCtrl.Chalice of Life
+#0100
+SVar:RestlessCount:Count$NamedYouCtrl.Curse of the Restless Dead
+#0010
+SVar:GravesCount:Count$NamedYouCtrl.Curse of Shallow Graves
+#0001
+SVar:DisturbanceCount:Count$NamedYouCtrl.Curse of Disturbance
+#(1101 means only Curse of Shallow Graves are missing, 0001 means only Curse of Disturbance is present)
+#---
+Oracle: Your opponents cannot gain life beyond their starting life total./nAt the beginning of your upkeep, conjure and cast without paying its mana cost one of the following cards that you do not already control: Chalice of Life, Curse of the Restless Dead, Curse of Shallow Graves, or Curse of Disturbance.\nIf you do not conjure a card in this way, draft a spell from CARDNAME's spellbook into your hand.
+Name:Xira's Boss Effect
+ManaCost:no cost
+Colors:black,green,red
+Types:Enchantment
+S:Mode$ Continuous | Affected$ Insect.YouCtrl+!token | EffectZone$ Command | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Double team | Description$ Nontoken Insects you control have +1/+1 and double team.
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | Execute$ PutCounterAll | TriggerDescription$ At the beginning of your upkeep, put an egg counter on each nontoken creature.
+SVar:PutCounterAll:DB$ PutCounterAll | ValidCards$ Creature.!token | CounterType$ EGG | CounterNum$ 1
+T:Mode$ ChangesZone | Origin$ Battlefield | TriggerZones$ Command | Destination$ Graveyard | ValidCard$ Creature.counters_GE1_EGG | Execute$ TrigDraw | TriggerDescription$ Whenever a creature with an egg counter on it dies, draw a card and create X 1/1 black Insect creature token with flying where X is the amount of egg counters on that creature.
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1 | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ b_1_1_insect_flying | TokenAmount$ X
+SVar:X:TriggeredCard$CardCounters.EGG
+Oracle:Nontoken Insects you control have +1/+1 and double team\nAt the beginning of your upkeep, put an egg counter on each nontoken creature.\nWhen a creature with an egg counter dies, draw a card and create X 1/1 black Insect creature token with flying where X is the amount of egg counters on that creature.
+Name:Xira's Hive
+ManaCost:no cost
+Colors:black,green,red
+Types:Creature Insect
+PT:0/2
+K:Defender
+K:Reach
+S:Mode$ Continuous | Affected$ Insect.YouCtrl+!token | EffectZone$ Battlefield | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Double team | Description$ Nontoken Insects you control have +1/+1 and double team.
+T:Mode$ DamageDone | ActivationLimit$ 1 | ValidSource$ Card.OppCtrl,Emblem.OppCtrl | ValidTarget$ You | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ When a source an opponent controls deals damage to you for the first time each turn, put an egg counter on CARDNAME.
+SVar:TrigCounter:DB$ PutCounter | CounterType$ EGG | CounterNum$ 1
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME dies, create X 1/1 black Insect tokens for each egg counter on CARDNAME.
+SVar:TrigToken:DB$ Token | TokenAmount$ X | TokenScript$ b_1_1_insect_flying | TokenOwner$ You
+SVar:X:TriggeredCard$CardCounters.EGG
+Oracle:Defender, reach.\nNontoken Insects you control have +1/+1 and double team.\nWhen a source an opponent controls deals damage to you for the first time each turn, put an egg counter on Xira's Hive.\n When Xira's Hive dies, create X 1/1 black Insect tokens for each egg counter on Xira's Hive.
+Name:Zedruu's Boss Effect
+ManaCost:no cost
+Colors:black,white,blue,red
+Types:Enchantment
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | Execute$ TrigConjure | TriggerDescription$ At the beginning of your end step target opponent conjures one of Zedruu's gifts onto the battlefield under their control.
+SVar:TrigConjure:DB$ MakeCard | Defined$ Opponent | Conjure$ True | AtRandom$ True | Spellbook$ Nine Lives,Akroan Horse,Steel Golem,Soulless Jailer,Silent Arbiter,Flumph,Howling Mine,Jinxed Idol,Phyrexian Vault,Plague Reaver,Abyssal Persecutor,Hunted Wumpus,Demonic Taskmaster,Grid Monitor,Master of the Feast,Font of Mythos,Statecraft,Moderation,Dark Confidant,Ensnaring Bridge,Solemnity,Blood Moon,Stony Silence,Cursed Totem,Damping Sphere,Embargo | Zone$ Battlefield | RememberMade$ True
+S:Mode$ Continuous | AddAbility$ Sac | Affected$ Permanent.IsRemembered | EffectZone$ Command | Description$ Permanents gifted by Zedruu gain: {3}, Pay 3 life, Sacrifice this card: Zedruu conjures a random Minotaur or Monk creature token under her control."
+SVar:Sac:AB$ CopyPermanent | Controller$ Opponent | Cost$ 3 T PayLife<3> Sac<1/CARDNAME/this gifted permanent> | Defined$ You | NumCopies$ 1 | ValidSupportedCopy$ Creature.Minotaur | RandomCopied$ True | RandomNum$ 1 | SpellDescription$ Zedruu conjures a random Minotaur or Monk creature token under her control.
+Oracle:At the beginning of your end step target opponent conjures one of Zedruu's gifts onto the battlefield under their control.\nPermanents gifted by Zedruu gain: {3}, Pay 3 life, Sacrifice this card: Zedruu conjures a random Minotaur or Monk creature token under her control."
+Name:Zedruu's Lantern
+ManaCost:no cost
+Types:Artifact Equipment
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | Execute$ GainLife | TriggerDescription$ At the beginning of your upkeep, you gain X life and draw X cards, where X is the number of permanents you own that your opponents control.
+SVar:GainLife:DB$ GainLife | LifeAmount$ X | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | NumCards$ X
+SVar:X:Count$Valid Permanent.YouOwn+OwnerDoesntControl
+A:AB$ MakeCard | Cost$ 3 PayShards<2> | Conjure$ True | ActivationLimit$ 1 | Zone$ Hand | ActivationZone$ Command | AtRandom$ True | SubAbility$ Eject | Spellbook$ Donate,Paradox Haze,Akroan Horse,Ghostly Prison,Howling Mine,Decanter of Endless Water,Solemn Simulacrum,Gilded Drake,Burnished Hart,Sudden Substitution | SpellDescription$ Conjure a card from Zedruu's spellbook into your hand. Activate this ability only once each game. Exile Zedruu's Lantern.
+SVar:Eject:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Oracle:At the beginning of your upkeep, you gain X life and draw X cards, where X is the number of permanents you own that your opponents control.\n{M}{M},{3} Conjure a card from Zedruu's spellbook into your hand. Activate this ability only once each game. Exile Zedruu's Lantern.

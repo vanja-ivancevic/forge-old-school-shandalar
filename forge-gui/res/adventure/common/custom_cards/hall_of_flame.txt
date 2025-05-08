@@ -1,14 +1,16 @@
 Name:Hall of Flame
 ManaCost:0
 Colors:red
-Types:Enchantment Saga
-K:Ward:1
+Types:Enchantment
+SVar:HallWardEffect:Mode$ Static | EffectZone$ Self | StaticAbilities$ TargetCostIncrease1 | Description$ Spells your opponents cast that target this permanent cost {1} more to cast.
+SVar:TargetCostIncrease1:Mode$ RaiseCost | Type$ SpellOrAbility | Activator$ Opponent | Target$ Card.Self | Amount$ 1
+S:Mode$ Continuous | Affected$ Card.Self | AddAbility$ HallWardEffect | Description$ Spells your opponents cast that target Hall of Flame cost {1} more to cast.
 K:Chapter:5:DBConjure,DBDiscount,DBConjureSpell,DBDiscount2,DBConjureSpell2
 SVar:DBConjure:DB$MakeCard | Conjure$ True | Name$ Mountain | Zone$ Battlefield
 SVar:DBDiscount:DB$ Effect | Duration$ UntilYourNextTurn | StaticAbilities$ ReduceCost | SpellDescription$ Spells you cast cost {R} less to cast until your next turn.
 SVar:DBDiscount2:DB$ Effect | Duration$ UntilYourNextTurn | StaticAbilities$ ReduceCost2 | SpellDescription$ Spells you cast cost {R} less to cast until your next turn.
 SVar:ReduceCost:Mode$ ReduceCost | Amount$ 1 | Color$ R | Type$ Spell | Description$ Spells you cast cost {R} less to cast until your next turn. | Activator$ Player.You
 SVar:ReduceCost2:Mode$ ReduceCost | Amount$ 1 | Color$ R | Type$ Spell | Description$ Spells you cast cost {R} less to cast until your next turn. | Activator$ Player.You
-SVar:DBConjureSpell:DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Chandra; Acolyte of Flame,Chandra; Dressed to Kill,Chandra; Fire Artisan,Chandra; Fire of Kaladesh,Chandra; Novice Pyromancer,Chandra; Pyromaster,Chandra's Embercat,Chandra's Firemaw,Chandra's Magmutt,Chandra's Phoenix,Chandra's Pyreling,Chandra's Spitfire,Karplusan Hound,Keral Keep Disciples,Renegade Firebrand,Oath of Chandra,Pyromancer's Gauntlet | Zone$ Battlefield
-SVar:DBConjureSpell2:DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Chandra; Acolyte of Flame,Chandra; Dressed to Kill,Chandra; Fire Artisan,Chandra; Fire of Kaladesh,Chandra; Novice Pyromancer,Chandra; Pyromaster,Chandra's Embercat,Chandra's Firemaw,Chandra's Magmutt,Chandra's Phoenix,Chandra's Pyreling,Chandra's Spitfire,Karplusan Hound,Keral Keep Disciples,Renegade Firebrand,Oath of Chandra,Pyromancer's Gauntlet | Zone$ Battlefield
-Oracle:(As this Saga enters and after your draw step, add a lore counter. Sacrifice after V.)\nI - Conjure a mountain onto the battlefield\nII - Spells you cast cost {R} less this turn.\nIII — Conjure random a spell from CARDNAME's spellbook onto the battlefield.\nV — Spells you cast cost {R} less this turn.\nV — Conjure random a spell from CARDNAME's spellbook onto the battlefield.
+SVar:DBConjureSpell:DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Ball Lightning,Flametongue Kavu,Grim Lavamancer,Jackal Pup,Mogg Fanatic,Viashino Sandstalker,Firebolt,Seal of Fire,Ghitu Slinger,Raging Goblin | Zone$ Battlefield
+SVar:DBConjureSpell2:DB$MakeCard | Conjure$ True | AtRandom$ True | Spellbook$ Ball Lightning,Flametongue Kavu,Grim Lavamancer,Jackal Pup,Mogg Fanatic,Viashino Sandstalker,Firebolt,Seal of Fire,Ghitu Slinger,Raging Goblin | Zone$ Battlefield
+Oracle:Spells your opponents cast that target Hall of Flame cost {1} more to cast.\n(As this Saga enters and after your draw step, add a lore counter. Sacrifice after V.)\nI - Conjure a mountain onto the battlefield\nII - Spells you cast cost {R} less this turn.\nIII — Conjure random a spell from CARDNAME's spellbook onto the battlefield.\nV — Spells you cast cost {R} less this turn.\nV — Conjure random a spell from CARDNAME's spellbook onto the battlefield.
