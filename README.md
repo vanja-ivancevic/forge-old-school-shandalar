@@ -1,6 +1,6 @@
 # Forge: Shandalar - "The First 10 Years" Edition
 
-This is a fork of the official **[Forge MTG Engine](https://github.com/Card-Forge/forge)** adventure mode, crafted to recreate a nostalgic "Old-School" Shandalar adventure mode experience, focusing on the golden age of Magic: The Gathering between 1993-2003.
+This is a fork of the official **[Forge TCG Engine](https://github.com/Card-Forge/forge)** adventure mode, crafted to recreate a nostalgic "Old-School" Shandalar adventure mode experience, focusing on the golden age of 1993-2003.
 
 This version updates Forge's Shandalar campaign to primarily use cards with the original ("old-border") frames, focusing on sets from **Alpha through Scourge (up to May 2003)**.
 
@@ -19,7 +19,7 @@ This fork includes changes to:
 
 ## Features
 
-*   Authentic "golden-age" of MTG feeling with only old-border cards in Shandalar.
+*   Authentic "golden-age" of TCG feeling with only old-border cards in Shandalar.
 *   Boosters available in shops for many old-border sets.
 *   Power 9 cards are extremely rare and only obtainable from specific encounters.
 
