@@ -1,6 +1,64 @@
 ## Unreleased
 ### No issue
 
+**booster pics update**
+
+
+[3f2203af365240c](https://github.com/Card-Forge/forge/commit/3f2203af365240c) Vanja *2025-05-08 05:48:25*
+
+**booster pics**
+
+
+[ce2072bc98e6663](https://github.com/Card-Forge/forge/commit/ce2072bc98e6663) Vanja *2025-05-08 05:43:38*
+
+**readme and minor shops tweak**
+
+
+[adc0da268a3e6fc](https://github.com/Card-Forge/forge/commit/adc0da268a3e6fc) Vanja *2025-05-08 05:14:52*
+
+**refactor: Remove specific TCG mentions and apply dark theme to site**
+
+
+[b0a1775449595a0](https://github.com/Card-Forge/forge/commit/b0a1775449595a0) Vanja *2025-05-08 02:23:52*
+
+**feat: Update release ZIP name and configure GitHub Pages landing page**
+
+
+[c1f17f4ad0890cf](https://github.com/Card-Forge/forge/commit/c1f17f4ad0890cf) Vanja *2025-05-08 02:19:57*
+
+
+## v0.36.1
+### No issue
+
+**Add improved Android source package with troubleshooting instructions**
+
+
+[0b5c9eff982a5d3](https://github.com/Card-Forge/forge/commit/0b5c9eff982a5d3) Vanja *2025-05-08 02:06:47*
+
+**Update README with latest release link and improve installation instructions; update Android build tools and ProGuard settings in pom.xml files.**
+
+
+[45d5e7259980de4](https://github.com/Card-Forge/forge/commit/45d5e7259980de4) Vanja *2025-05-08 01:54:19*
+
+**readme**
+
+
+[69dec4957793e19](https://github.com/Card-Forge/forge/commit/69dec4957793e19) Vanja *2025-05-08 01:30:36*
+
+**readme**
+
+
+[b2e60d40a4c01d3](https://github.com/Card-Forge/forge/commit/b2e60d40a4c01d3) Vanja *2025-05-08 01:28:18*
+
+
+## v0.36.0
+### No issue
+
+**Prepare release v0.36.0**
+
+
+[74abebb4682bc0b](https://github.com/Card-Forge/forge/commit/74abebb4682bc0b) Vanja *2025-05-07 22:58:45*
+
 **Fixed card distribution logic in shops. Improved basic land shops to stock all variants and special promo variants as rares and uncommons too.**
 
 
