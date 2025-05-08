@@ -16,8 +16,9 @@
         <cardforge.user>user</cardforge.user>
         <cardforge.pass>pass</cardforge.pass>
         <cardforge.server>ftp.cardforge.org</cardforge.server>
-        <androidBuildTools>35.0.0</androidBuildTools>
+        <androidBuildTools>35.0.1</androidBuildTools>
         <androidPlatform>35</androidPlatform>
+        <android.proguard.skip>true</android.proguard.skip>
     </properties>
 
     <parent>
@@ -278,8 +279,7 @@
                             <nativeLibrariesDirectory>${project.basedir}/libs</nativeLibrariesDirectory>
                             <extractDuplicates>true</extractDuplicates>
                             <proguard>
-                                <skip>false</skip>
-                                <config>${project.basedir}/proguard.cfg</config>
+                                <skip>true</skip>
                             </proguard>
                             <proguardProguardJarPath>${pom.basedir}/tools/proguard.jar</proguardProguardJarPath>
                             <release>true</release>

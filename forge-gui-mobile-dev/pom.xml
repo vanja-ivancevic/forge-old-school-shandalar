@@ -179,6 +179,7 @@
                             <descriptors>
                                 <descriptor>src/assembly/distribution.xml</descriptor>
                             </descriptors>
+                            <finalName>OldSchoolForge-${project.version}</finalName>
                             <appendAssemblyId>false</appendAssemblyId> <!-- Avoid adding '-distribution' to the zip filename -->
                         </configuration>
                     </execution>

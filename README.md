@@ -6,6 +6,8 @@ This version updates Forge's Shandalar campaign to primarily use cards with the 
 
 ![Shandalar Title Image](Title_image.PNG)
 
+**[➡️ TL;DR: Download Latest Release ⬅️](https://github.com/vanja-ivancevic/forge-old-school-shandalar/releases/latest)**
+
 ## Modifications
 
 This fork includes changes to:
@@ -23,8 +25,8 @@ This fork includes changes to:
 
 ## How to Play
 
-1.  Go to the **[Releases page](https://github.com/vanja-ivancevic/forge-old-school-shandalar/releases)** on the right-hand side of the GitHub repository.
-2.  Download the latest `.zip` file listed under "Releases".
+1.  Go to the **[Latest Release page](https://github.com/vanja-ivancevic/forge-old-school-shandalar/releases/latest)**.
+2.  Download the `OldSchoolForge-[version].zip` file (e.g., `OldSchoolForge-0.36.0.zip`).
 3.  Unzip the downloaded file to a location of your choice.
 4.  Launch the game using the executable appropriate for your operating system (e.g., `.exe` for Windows, `.sh` for Linux, `.command` for macOS).
 ## Development Status
