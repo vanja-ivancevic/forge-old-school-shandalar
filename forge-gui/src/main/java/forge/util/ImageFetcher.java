@@ -97,7 +97,7 @@ public abstract class ImageFetcher {
         {
             final ArrayList<String> downloadUrls = new ArrayList<>();
             final String filename = imageKey.substring(ImageKeys.BOOSTER_PREFIX.length());
-            downloadUrls.add("https://downloads.cardforge.org/images/products/boosters/"+ filename);
+            downloadUrls.add("https://raw.githubusercontent.com/vanja-ivancevic/forge-old-school-shandalar/master/booster-pics/"+ filename);
             System.out.println("Fetching from "+downloadUrls);
 
 
