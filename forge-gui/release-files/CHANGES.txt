@@ -1,3 +1,8 @@
+## v0.36.3
+### No issue
+
+Updated enemy custom cards, "startinbattle" cards like dungeon effects, and fixed some enemy decks where new variants were showing.
+
 ## Unreleased
 ### No issue
 
