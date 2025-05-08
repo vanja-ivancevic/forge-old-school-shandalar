@@ -33,7 +33,7 @@ This fork includes changes to:
 
 ✅ **Completed:**
 
-*   Global set and card restrictions for Shandalar based on the old-border era 1993-2003. If you want to further modify the sets in your game, simply add or remove restricted sets in `/res/adventure/common/config.json`.
+*   Global set and card restrictions for Shandalar based on the old-border era 1993-2003
 *   Enemy decks (All processed, playtest feedback welcome!)
 *   Basic (mostly) random rewards re-configuration
 *   Shop inventories re-configuration including revamped basic land shops

@@ -677,7 +677,7 @@
 	  "rewards": [
 		{ "count": 5, "cardTypes": ["Land"], "subTypes": ["Mountain"]},
 	       { "count": 1, "cardName": "Snow-Covered Mountain" },
-	       { "count": 2, "cardTypes": ["Land"], "subTypes": ["Mountain"], "rarity": ["C", "U", "R"] },
+	       { "count": 2, "cardTypes": ["Land"], "subTypes": ["Mountain"], "rarity": ["C", "U", "R"] }
 	     ]
 	
 	},{                                      
@@ -2220,7 +2220,20 @@
 	  "description":"High Court",
 	  "spriteAtlas":"maps/tileset/buildings.atlas",
 	  "sprite":"NobleShop",
-	  "rewards": [ { "count":8, "subTypes": ["Noble","Lord"] } ]
+	  "rewards": [
+	    {
+	      "count": 8,
+	      "type": "Union",
+	      "cardUnion": [
+	        { "subTypes": ["Lord"] },
+	        { "cardText": " Lord" },
+	        { "subTypes": ["Advisor"] },
+	        { "cardText": "Advisor" },
+	        { "subTypes": ["Cleric"] },
+	        { "cardText": "Cleric" }
+	      ]
+	    }
+	  ]
 	},
 	{
 	  "name":"Giant",
@@ -2379,7 +2392,18 @@
 	  "description":"Al's Dose of Apotheosis",
 	  "spriteAtlas":"maps/tileset/buildings.atlas",
 	  "sprite":"GodMinigodShop",
-	  "rewards": [ { "count":8, "type":"Union", "cardUnion": [ { "subTypes": ["God"] }, { "cardText": "God" } ] } ]  
+	  "rewards": [
+	    {
+	      "count": 8,
+	      "type": "Union",
+	      "cardUnion": [
+	        { "subTypes": ["Avatar"] },
+	        { "cardText": "Avatar" },
+	        { "subTypes": ["Incarnation"] },
+	        { "cardText": "Incarnation" }
+	      ]
+	    }
+	  ]
 	},
 	{
 	  "name":"Insects",
