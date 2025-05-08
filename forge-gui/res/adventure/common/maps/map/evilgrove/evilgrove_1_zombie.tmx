@@ -41,7 +41,7 @@
    <properties>
     <property name="effect">{
  "lifeModifier": 8,
- "startBattleWithCard": [ "Quest for the Gravelord" ]
+ "startBattleWithCard": [ "Carrion Feeder" ]
 }</property>
     <property name="enemy" value="Zombie Lord" />
     <property name="threatRange" type="int" value="40" />

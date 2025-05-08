@@ -83,7 +83,7 @@
   <object id="61" template="../../obj/gold.tx" x="111" y="352.667" />
   <object id="63" template="../../obj/enemy.tx" x="216.333" y="183">
    <properties>
-    <property name="effect">{ "startBattleWithCard": [ "Mask of Griselbrand"]
+    <property name="effect">{ "startBattleWithCard": [ "Sword of the Ages"]
 }</property>
     <property name="enemy" value="Archfiend" />
    </properties>

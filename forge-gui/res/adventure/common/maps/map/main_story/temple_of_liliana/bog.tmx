@@ -353,7 +353,7 @@
    <properties>
     <property name="effect">{
  "lifeModifier": 4,
- "startBattleWithCard": [ "Carrion Screecher" ]
+ "startBattleWithCard": [ "Dauthi Horror" ]
 }</property>
     <property name="enemy" value="Harpy 2" />
     <property name="threatRange" type="int" value="70" />
@@ -515,7 +515,7 @@
 ]</property>
     <property name="effect">{
  "lifeModifier": 4,
- "startBattleWithCard": [ "Staff of the Death Magus" ]
+ "startBattleWithCard": [ "Throne of Bone" ]
 }</property>
     <property name="enemy" value="Witch" />
    </properties>
@@ -570,7 +570,7 @@
    <properties>
     <property name="effect">{
  "lifeModifier": 8,
- "startBattleWithCard": [ "Vrock" ]
+ "startBattleWithCard": [ "Fallen Angel" ]
 }</property>
     <property name="enemy" value="Harpy" />
     <property name="threatRange" type="int" value="60" />

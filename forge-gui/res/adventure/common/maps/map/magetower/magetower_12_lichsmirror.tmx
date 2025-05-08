@@ -5,7 +5,7 @@
  </editorsettings>
  <properties>
   <property name="dungeonEffect">{
-  "startBattleWithCard": [ "Mirror of Life Trapping|CLB|1" ],
+  "startBattleWithCard": [ "Portcullis" ],
 }</property>
  </properties>
  <tileset firstgid="1" source="../../tileset/main.tsx" />
@@ -103,7 +103,7 @@
    <properties>
     <property name="effect">{
  "lifeModifier": 4,
- "startBattleWithCard": [ "Heirloom Mirror|MID|1" ]
+ "startBattleWithCard": [ "Millstone" ]
 }</property>
     <property name="enemy" value="Lich" />
    </properties>
@@ -112,7 +112,7 @@
    <properties>
     <property name="effect">{
  "lifeModifier": 3,
- "startBattleWithCard": [ "Cathedral Sanctifier|DDQ|1" ]
+ "startBattleWithCard": [ "Healing Salve" ]
 }</property>
     <property name="enemy" value="Aether Channeler" />
    </properties>

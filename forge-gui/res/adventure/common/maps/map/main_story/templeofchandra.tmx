@@ -3,7 +3,7 @@
  <properties>
   <property name="canFailDungeon" type="bool" value="true" />
   <property name="dungeonEffect">{
-  "startBattleWithCard": [ "Hall of Flame" ],
+  "startBattleWithCard": [ "Ancient Tomb" ],
 }</property>
   <property name="respawnEnemies" type="bool" value="true" />
  </properties>
@@ -581,7 +581,7 @@
   <object id="34" template="../../obj/enemy.tx" x="64.3333" y="830.67">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Chandra's Phoenix" ]
+ "startBattleWithCard": [ "Shard Phoenix" ]
 }</property>
     <property name="enemy" value="Phoenix" />
     <property name="ignoreDungeonEffect" type="bool" value="true" />
@@ -600,7 +600,7 @@
   <object id="35" template="../../obj/enemy.tx" x="575.667" y="879.67">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Chandra's Phoenix" ]
+ "startBattleWithCard": [ "Shard Phoenix" ]
 }</property>
     <property name="enemy" value="Phoenix" />
     <property name="reward">[
@@ -617,7 +617,7 @@
   <object id="36" template="../../obj/enemy.tx" x="112.333" y="517.67">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Keral Keep Disciples" ]
+ "startBattleWithCard": [ "Prodigal Pyromancer" ]
 }</property>
     <property name="enemy" value="Chandra's Pyromancer" />
     <property name="reward">[
@@ -633,7 +633,7 @@
   <object id="37" template="../../obj/enemy.tx" x="22.5" y="480.33">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Chandra's Phoenix" ]
+ "startBattleWithCard": [ "Shard Phoenix" ]
 }</property>
     <property name="enemy" value="Phoenix" />
     <property name="reward">[
@@ -650,7 +650,7 @@
   <object id="38" template="../../obj/enemy.tx" x="253.333" y="305">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Ring of Valkas" ]
+ "startBattleWithCard": [ "Fervor" ]
 }</property>
     <property name="enemy" value="Chandra's Pyromancer" />
     <property name="reward">[
@@ -717,7 +717,7 @@
   <object id="42" template="../../obj/enemy.tx" x="737" y="427.33">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Keral Keep Disciples" ]
+ "startBattleWithCard": [ "Prodigal Pyromancer" ]
 }</property>
     <property name="enemy" value="Chandra's Pyromancer" />
     <property name="reward">[
@@ -734,7 +734,7 @@
   <object id="43" template="../../obj/enemy.tx" x="737" y="452.33">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Keral Keep Disciples" ]
+ "startBattleWithCard": [ "Prodigal Pyromancer" ]
 }</property>
     <property name="enemy" value="Chandra's Immolator" />
     <property name="reward">[
@@ -812,7 +812,7 @@
   <object id="48" template="../../obj/enemy.tx" x="488.5" y="175.5">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Lightning Coils" ]
+ "startBattleWithCard": [ "Phyrexian Processor" ]
 }</property>
     <property name="enemy" value="Lightning Elemental" />
     <property name="reward">[
@@ -830,7 +830,7 @@
   <object id="49" template="../../obj/enemy.tx" x="509.333" y="510.83">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Circle of Flame" ]
+ "startBattleWithCard": [ "Caltrops" ]
 }</property>
     <property name="enemy" value="Chandra's Scorcher" />
     <property name="reward">[
@@ -943,7 +943,7 @@
   <object id="58" template="../../obj/enemy.tx" x="671.5" y="159">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Chandra's Phoenix" ]
+ "startBattleWithCard": [ "Shard Phoenix" ]
 }</property>
     <property name="enemy" value="Phoenix" />
     <property name="reward">[
@@ -961,7 +961,7 @@
   <object id="59" template="../../obj/enemy.tx" x="64.3334" y="299">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Staff of the Flame Magus" ]
+ "startBattleWithCard": [ "Iron Star" ]
 }</property>
     <property name="enemy" value="Chandra's Pyromancer" />
     <property name="reward">[
@@ -978,7 +978,7 @@
   <object id="60" template="../../obj/enemy.tx" x="39.5" y="131.5">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Hazoret's Monument" ]
+ "startBattleWithCard": [ "Ruby Medallion" ]
 }</property>
     <property name="enemy" value="Chandra's Acolyte" />
     <property name="reward">[
@@ -1012,7 +1012,7 @@
   <object id="62" template="../../obj/enemy.tx" x="805.939" y="158.55">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Oath of Chandra" ]
+ "startBattleWithCard": [ "Seal of Fire" ]
 }</property>
     <property name="enemy" value="Chandra's Scorcher" />
     <property name="reward">[
@@ -1029,7 +1029,7 @@
   <object id="63" template="../../obj/enemy.tx" x="557.5" y="772.83">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Chandra's Embercat" ]
+ "startBattleWithCard": [ "Skirk Prospector" ]
 }</property>
     <property name="enemy" value="Chandra's Scorcher" />
     <property name="reward">[
@@ -1047,7 +1047,7 @@
   <object id="64" template="../../obj/enemy.tx" x="231" y="874">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Lavaclaw Reaches" ]
+ "startBattleWithCard": [ "Ghitu Encampment" ]
 }</property>
     <property name="enemy" value="Volcano Elemental" />
     <property name="reward">[
@@ -1064,7 +1064,7 @@
   <object id="65" template="../../obj/enemy.tx" x="552.5" y="376">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Chandra's Phoenix" ]
+ "startBattleWithCard": [ "Shard Phoenix" ]
 }</property>
     <property name="enemy" value="Phoenix" />
     <property name="reward">[
@@ -1084,7 +1084,7 @@
   <object id="68" template="../../obj/enemy.tx" x="369.333" y="657.33">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Chandra, Fire of Kaladesh" ]
+ "startBattleWithCard": [ "Prodigal Pyromancer" ]
 }</property>
     <property name="enemy" value="Chandra's Acolyte" />
     <property name="reward">[
@@ -1165,7 +1165,7 @@
   <object id="73" template="../../obj/enemy.tx" x="575.5" y="688">
    <properties>
     <property name="effect">{
- "startBattleWithCard": [ "Chandra's Phoenix" ]
+ "startBattleWithCard": [ "Shard Phoenix" ]
 }</property>
     <property name="enemy" value="Phoenix" />
     <property name="reward">[

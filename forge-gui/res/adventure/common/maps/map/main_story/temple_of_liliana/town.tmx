@@ -1443,7 +1443,7 @@
 ]</property>
     <property name="effect">{
  "lifeModifier": 15,
- "startBattleWithCard": [ "Skeleton Key" ]
+ "startBattleWithCard": [ "Attunement" ]
 }</property>
     <property name="enemy" value="Zombie Lord" />
     <property name="fleeRange" type="float" value="125" />
@@ -1808,7 +1808,7 @@
    }
 ]
 </property>
-    <property name="effect">{ "startBattleWithCard": [ "Endless Ranks of the Dead"]
+    <property name="effect">{ "startBattleWithCard": [ "Breeding Pit"]
 }</property>
     <property name="enemy" value="Greater Zombie" />
     <property name="hidden" type="bool" value="true" />
@@ -1980,7 +1980,7 @@
    }
 ]
 </property>
-    <property name="effect">{ "startBattleWithCard": [ "Endless Ranks of the Dead"]
+    <property name="effect">{ "startBattleWithCard": [ "Breeding Pit"]
 }</property>
     <property name="enemy" value="Greater Zombie" />
     <property name="hidden" type="bool" value="true" />

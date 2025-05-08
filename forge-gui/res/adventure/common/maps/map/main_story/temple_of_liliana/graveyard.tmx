@@ -212,7 +212,7 @@
   </object>
   <object id="192" template="../../../obj/enemy.tx" x="67.5833" y="271.833" visible="1">
    <properties>
-    <property name="effect">{ "startBattleWithCard": [ "Endless Ranks of the Dead"]
+    <property name="effect">{ "startBattleWithCard": [ "Breeding Pit"]
 }</property>
     <property name="enemy" value="Greater Zombie" />
     <property name="hidden" type="bool" value="true" />
@@ -222,7 +222,7 @@
   </object>
   <object id="193" template="../../../obj/enemy.tx" x="80.3337" y="346.666" visible="1">
    <properties>
-    <property name="effect">{ "startBattleWithCard": [ "Endless Ranks of the Dead"]
+    <property name="effect">{ "startBattleWithCard": [ "Breeding Pit"]
 }</property>
     <property name="enemy" value="Greater Zombie" />
     <property name="hidden" type="bool" value="true" />
@@ -256,7 +256,7 @@
   </object>
   <object id="195" template="../../../obj/enemy.tx" x="95.9997" y="151.333" visible="1">
    <properties>
-    <property name="effect">{ "startBattleWithCard": [ "Endless Ranks of the Dead"]
+    <property name="effect">{ "startBattleWithCard": [ "Breeding Pit"]
 }</property>
     <property name="enemy" value="Greater Zombie" />
     <property name="hidden" type="bool" value="true" />
@@ -266,7 +266,7 @@
   </object>
   <object id="196" template="../../../obj/enemy.tx" x="193" y="112.5" visible="1">
    <properties>
-    <property name="effect">{ "startBattleWithCard": [ "Endless Ranks of the Dead"]
+    <property name="effect">{ "startBattleWithCard": [ "Breeding Pit"]
 }</property>
     <property name="enemy" value="Greater Zombie" />
     <property name="hidden" type="bool" value="true" />
@@ -276,7 +276,7 @@
   </object>
   <object id="197" template="../../../obj/enemy.tx" x="210.333" y="287.833" visible="1">
    <properties>
-    <property name="effect">{ "startBattleWithCard": [ "Endless Ranks of the Dead"]
+    <property name="effect">{ "startBattleWithCard": [ "Breeding Pit"]
 }</property>
     <property name="enemy" value="Greater Zombie" />
     <property name="hidden" type="bool" value="true" />
@@ -286,7 +286,7 @@
   </object>
   <object id="198" template="../../../obj/enemy.tx" x="287.167" y="176" visible="1">
    <properties>
-    <property name="effect">{ "startBattleWithCard": [ "Endless Ranks of the Dead"]
+    <property name="effect">{ "startBattleWithCard": [ "Breeding Pit"]
 }</property>
     <property name="enemy" value="Greater Zombie" />
     <property name="hidden" type="bool" value="true" />
@@ -357,7 +357,7 @@
   </object>
   <object id="247" template="../../../obj/enemy.tx" x="32" y="48" visible="1">
    <properties>
-    <property name="effect">{ "startBattleWithCard": [ "Infernal Kirin"]
+    <property name="effect">{ "startBattleWithCard": [ "Hypnotic Specter"]
 }</property>
     <property name="enemy" value="Dark Spirit" />
     <property name="flying" type="bool" value="true" />
@@ -369,7 +369,7 @@
   </object>
   <object id="248" template="../../../obj/enemy.tx" x="320" y="399.333" visible="1">
    <properties>
-    <property name="effect">{ "startBattleWithCard": [ "Infernal Kirin"]
+    <property name="effect">{ "startBattleWithCard": [ "Hypnotic Specter"]
 }</property>
     <property name="enemy" value="Dark Spirit" />
     <property name="flying" type="bool" value="true" />

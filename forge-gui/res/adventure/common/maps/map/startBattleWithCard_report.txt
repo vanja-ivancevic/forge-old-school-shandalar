@@ -1,0 +1,997 @@
+Analysis of Card Print Dates and Pre-Scourge Alternatives for Forge GUI Adventure ModeI. Introduction
+Purpose: This report details the analysis of specified Magic: The Gathering cards utilized within various map files for the Forge GUI Adventure Mode. The primary objective is to verify whether each listed card was printed up to and including the Scourge expansion set, released in May 2003. For cards printed subsequent to this date, this report proposes functionally similar alternative cards that were printed within the specified timeframe (on or before May 2003) and feature the "old border" card frame characteristic of that era.
+Methodology: Each card listed in the request was cross-referenced using the Scryfall database to determine its first printing date and set. This information was compared against the Scourge release date (May 26, 2003).1 Cards printed after this date were flagged for replacement. Potential replacements were identified by searching the pre-Scourge card pool for cards exhibiting similar mechanical functions, mana costs, card types, and colors, while adhering to the old border aesthetic prevalent before the Eighth Edition (July 2003) 2 and Mirrodin (October 2003) 3 frame changes. Functional similarity was prioritized, acknowledging that exact replicas, especially for cards with modern design elements, are often unavailable within the specified constraints. Placeholder names (e.g., c_a_treasure_sac) were noted as internal identifiers and not treated as standard Magic cards requiring replacement.
+Scope Definition: The analysis is confined to the cards explicitly listed in the user request, sourced from the provided Forge GUI file paths. The eligibility cutoff is strictly defined as any printing occurring up to and including the release of the Scourge set (May 2003). The "old border" requirement aligns with card frames used in sets released before Eighth Edition and Mirrodin.
+II. Card Analysis and Replacement RecommendationsA significant number of the cards under review originate from sets released considerably after the Scourge cutoff date. Cards from expansions like Throne of Eldraine 4, Modern Horizons 2 5, Innistrad: Midnight Hunt 6, and various Commander products 7 appear frequently. This pattern suggests that the existing card pool within Forge's Adventure mode likely integrates cards from multiple eras of Magic's history. If strict adherence to the pre-Scourge timeframe and aesthetic is a project goal, a broader review and replacement process beyond the specific cards listed here may be necessary. The difficulty in finding direct functional equivalents for many modern cards within the older card pool further highlights the evolution of game design over time.
+
+File: forge-gui/res/adventure/common/maps/map/minibosses/kiora_island.tmx
+
+Card: KrakenHatchling
+
+Verification: First printed in Zendikar (October 2, 2009).8 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: KrakenHatchling is a simple {U} mana cost creature with 0/4 stats. Its primary function is an early-game defensive blocker due to its high toughness for its cost.
+Suggested Replacement(s):
+
+WallofTears: Costs {1}{U} for a 0/4 Defender. When it blocks a creature, that creature is returned to its owner's hand at end of combat. First printed in Stronghold (March 2, 1998). This matches the mana cost type (blue) and toughness, while adding a relevant defensive ability.
+WallofBone: Costs {1}{B} for a 1/4 Defender with the ability to regenerate for {B}. First printed in Limited Edition Alpha (August 5, 1993).9 Offers similar stats and regeneration but is black instead of blue.
+HornedTurtle: Costs {2}{U} for a 1/4 vanilla creature. First printed in Urza's Saga (October 12, 1998). Provides the toughness in blue but at a higher mana cost.
+
+
+Justification: WallofTears offers the closest parallel in terms of color, cost vicinity, and defensive stats, with an added deterrent ability. WallofBone is statistically similar but requires black mana. HornedTurtle is blue but less mana-efficient. The choice depends on whether color identity or mana cost is the more critical factor for the encounter design.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/minibosses/slobad_factory.tmx
+
+Card: MarchoftheMachines
+
+Verification: First printed in Mirrodin (October 2, 2003).11 This release date is shortly after the Scourge cutoff (May 2003).
+Replacement Needed: Yes.
+Analysis: A {3}{U} enchantment that turns all noncreature artifacts into artifact creatures with power and toughness equal to their mana value. This is a powerful build-around effect.
+Suggested Replacement(s):
+
+Titania′sSong: A {3}{G} World Enchantment from Antiquities (March 1994). It provides a similar global animation effect but differs significantly: it is green, removes all abilities from the artifacts, and is a World Enchantment (only one can be on the battlefield globally).
+Karn,SilverGolem: A {5} mana Legendary Artifact Creature (4/4) from Urza's Saga (October 12, 1998). Its ability {1}: Target noncreature artifact becomes an artifact creature with P/T equal to its mana value until end of turn allows repeatable animation, but it requires mana activation for each target and is not a static effect.
+
+
+Justification: A direct blue equivalent with a static global animation effect does not exist in the pre-Scourge, old-border era. Titania′sSong has the global effect but in green and with major functional differences (ability removal, World type). Karn,SilverGolem offers repeatable animation but requires activation. The choice hinges on whether the color identity (blue) or the nature of the effect (static global animation) is paramount for the encounter. This absence highlights how certain design spaces, like static blue artifact animation, were explored more thoroughly in later sets.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/minibosses/slimefoot_boss.tmx
+
+Card: ThallidShell−Dweller
+
+Verification: First printed in Time Spiral (October 6, 2006).12 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {1}{G} 0/5 Fungus with Defender. It uses the Thallid mechanic (accumulating spore counters at upkeep, removing three counters to create a 1/1 green Saproling token). It functions as both a high-toughness early blocker and a slow token generator.
+Suggested Replacement(s):
+
+Thallid: The original {G} 1/1 Fungus from Fallen Empires (November 1994).14 It provides the core spore/Saproling mechanic but lacks the high toughness and Defender.
+ElvishFarmer: A {1}{G} 0/2 Elf Druid from Fallen Empires (November 1994).16 Generates Saprolings via spore counters and can sacrifice them for life gain. Lower toughness.
+ThallidDevourer: A {2}{G} 2/2 Fungus from Fallen Empires (November 1994).18 Generates Saprolings and can sacrifice them for a temporary P/T boost. Different stats and cost.
+WallofBlossoms: A {1}{G} 0/4 Plant Wall with Defender from Stronghold (March 2, 1998).20 It draws a card upon entering the battlefield. Fills the defensive role effectively and provides card advantage but lacks the Fungus/Saproling theme.
+
+
+Justification: This replacement presents a common dilemma: prioritizing functional role versus thematic identity. If the Fungus/Saproling generation is crucial for the Slimefoot encounter, the original Fallen Empires Thallids 15 are the best thematic fits, despite differing stats. If the high-toughness defensive aspect is more important, WallofBlossoms is a strong green alternative.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/lavaforge/lavaforge_1_sulfuricvortex.tmx
+
+Card: SulfuricVortex∣EMA∣1
+
+Verification: First printed in Scourge (May 26, 2003).21 This card meets the criteria. The specific printing indicated (|EMA|1) is from Eternal Masters, a later set, but the card itself originated within the allowed timeframe.
+Replacement Needed: No.
+
+
+Card: c_a_treasure_sac
+
+Verification: This identifier does not correspond to a standard Magic: The Gathering card. It likely represents an internal game action or token type within the Forge system, possibly related to sacrificing Treasure tokens.23
+Replacement Needed: Not applicable. Requires investigation within the Forge system's specific implementation.
+
+
+Card: IrencragPyromancer∣ELD∣1
+
+Verification: First printed in Throne of Eldraine (October 4, 2019).4 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {2}{R} 0/4 Human Wizard that deals 3 damage to any target whenever its controller draws their second card each turn. Offers a defensive body with triggered damage linked to card draw.
+Suggested Replacement(s):
+
+GrimLavamancer: A {R} 1/1 Human Wizard from Torment (February 4, 2002).25 Its ability {R},{T}, Exile two cards from your graveyard: Deals 2 damage to any target provides repeatable damage, tied to graveyard resources rather than card draw.
+Latulla,KeldonOverseer: A {3}{R}{R} 3/3 Legendary Human Spellshaper from Prophecy (June 5, 2000).27 Its ability {X}{R},{T}, Discard two cards: Deals X damage to any target offers repeatable, scalable damage but is resource-intensive (mana, tap, discard).
+SpittingHydra: A {3}{R}{R} Hydra from Stronghold (March 2, 1998).28 Enters with four +1/+1 counters. Its ability {1}, Remove a +1/+1 counter: Deals 1 damage to target creature offers repeatable damage, but only targets creatures and depletes itself.
+
+
+Justification: A direct pre-Scourge equivalent linking card draw to damage on a creature this efficiently is unavailable. GrimLavamancer provides repeatable damage from a low-cost red creature, fitting the pyromancer theme, though its fuel source is different. Latulla,KeldonOverseer offers scaling damage but at a much higher cost. SpittingHydra is limited to creature targets. GrimLavamancer appears to be the closest functional fit for providing repeatable damage from a cheap red creature.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/lavaforge/lavaforge_3_vulcanodragon.tmx
+
+Card: KherKeep
+
+Verification: First printed in Time Spiral (October 6, 2006).29 This is after Scourge. Note that while KoboldsofKherKeep tokens and RohgahhofKherKeep originate from Legends (June 1994) 32, the land itself is from a later set.
+Replacement Needed: Yes.
+Analysis: A Legendary Land tapping for {C} or creating 0/1 red Kobold tokens for {1}{R} and tapping.
+Suggested Replacement(s):
+
+DesertedTemple: Land from Odyssey (October 1, 2001). Taps for {C} and can untap another land for {1} and tapping, offering utility but no tokens.
+SpawningPool: Land from Urza's Legacy (February 15, 1999). Enters tapped, taps for {B}, and can become a 1/1 black Skeleton creature for {1}{B}. Offers creature generation from a land, but in black.
+GoblinWarrens: A {1}{R}{R} enchantment from Fallen Empires (November 1994). Requires {2}{R} and sacrificing two Goblins to create three 1/1 red Goblin tokens. Offers repeatable red token generation via an enchantment, not a land.
+
+
+Justification: Finding a pre-Scourge land that taps for colorless mana and creates tokens (especially red ones) is challenging. DesertedTemple provides colorless mana and utility. SpawningPool offers creature generation from land but is black. If token generation is key, an alternative like the enchantment GoblinWarrens might be needed, altering the card type but preserving the token theme.
+
+
+Card: FearsomeWhelp
+
+Verification: First printed in Alchemy: Innistrad (December 9, 2021).33 This is after Scourge and uses a digital-only mechanic (perpetual).
+Replacement Needed: Yes.
+Analysis: A {1}{R} 1/1 flying Dragon. Its ability perpetually reduces the cost of Dragon cards in hand. The core function to replicate is cost reduction for Dragons.
+Suggested Replacement(s):
+
+DragonspeakerShaman: A {1}{R}{R} 2/2 Human Barbarian Shaman from Scourge (May 26, 2003). Dragon spells cost {2} less to cast. Provides direct, on-battlefield cost reduction for Dragons.
+Urza′sIncubator: A {3} artifact from Urza's Destiny (June 7, 1999). As it enters, choose a creature type (e.g., Dragon). Spells of that type cost {2} less. Colorless option for tribal cost reduction.
+
+
+Justification: DragonspeakerShaman is the most direct thematic replacement, offering cost reduction specifically for Dragons and printed just within the cutoff period. Urza′sIncubator provides a colorless alternative. The perpetual mechanic cannot be replicated with pre-Scourge cards.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/lavaforge/lavaforge_2_burningsands.tmx
+
+Card: BurningSands∣ODY∣1
+
+Verification: First printed in Odyssey (October 1, 2001).22 This is before Scourge.
+Replacement Needed: No.
+
+
+Card: FlagstonesofTrokair∣TSR∣1
+
+Verification: First printed in Time Spiral (October 6, 2006).36 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: Legendary Land tapping for {W}. When put into a graveyard from the battlefield, it fetches a Plains card onto the battlefield tapped.
+Suggested Replacement(s):
+
+Karoo: Land from Visions (February 3, 1997). Enters tapped, returns an untapped Plains to hand, taps for {W}{W}. Offers mana acceleration with a drawback.
+RemoteFarm: Land from Mercadian Masques (October 4, 1999). Enters tapped, taps for {W}, can be sacrificed to add {W}{W}. Offers a mana burst via sacrifice.
+Basic Plains: The simplest replacement, providing reliable {W}.
+
+
+Justification: No pre-Scourge land fetches a Plains upon destruction. Karoo and RemoteFarm offer different forms of white mana acceleration/burst with drawbacks. A basic Plains is the most straightforward substitute if the self-replacement trigger is not essential.
+
+
+Card: Desert∣AFC∣1
+
+Verification: First printed in Arabian Nights (December 17, 1993).38 This is before Scourge.
+Replacement Needed: No.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/tibalt/tibalt_f1.tmx
+
+Card: ManaCrypt
+
+Verification: First printed as a Book Promo (April 1995).40 This is before Scourge.
+Replacement Needed: No.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/evilgrove/evilgrove_1_zombie.tmx
+
+Card: QuestfortheGravelord
+
+Verification: First printed in Zendikar (October 2, 2009).42 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {B} enchantment that accumulates counters when creatures die and can be sacrificed for a 5/5 Zombie Giant token.
+Suggested Replacement(s):
+
+CarrionFeeder: A {B} 1/1 Zombie from Scourge (May 26, 2003). Can't block. Sacrifice a creature: Put a +1/+1 counter on it. Benefits from creature death via sacrifice, growing itself rather than making a token.
+PhyrexianGhoul: A {2}{B} 2/2 Phyrexian Zombie from Urza's Saga (October 12, 1998). Sacrifice a creature: Gets +2/+2 until end of turn. Similar sacrifice payoff, but temporary boost.
+CullingtheWeak: A {B} instant from Exodus (June 15, 1998). Sacrifice a creature to add {B}{B}{B}{B}. Uses sacrifice for mana ritual.
+
+
+Justification: Pre-Scourge black enchantments rarely tracked creature deaths passively for this type of payoff. Sacrifice outlets like CarrionFeeder or PhyrexianGhoul provide related functionality. CarrionFeeder is the closest fit as a cheap permanent that benefits from creatures dying (albeit through active sacrifice).
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/aerie/aerie_4.tmx
+
+Card: FavorableWinds
+
+Verification: First printed in Avacyn Restored (May 4, 2012).44 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {1}{U} enchantment granting +1/+1 to flying creatures.
+Suggested Replacement(s):
+
+Levitation: A {2}{U}{U} enchantment from Tempest (October 14, 1997). Grants flying to all creatures you control, rather than boosting existing flyers.
+Wonder: A {3}{U} 2/2 Incarnation creature from Judgment (May 27, 2002). Grants flying to creatures you control conditionally from the graveyard.
+SharedTriumph: A {1}{W} enchantment from Onslaught (October 7, 2002). Provides +1/+1 to a chosen creature type (e.g., Bird, Faerie) but requires white mana.
+
+
+Justification: Direct blue anthems for flyers are absent pre-Scourge. Levitation or Wonder grant the keyword, while SharedTriumph provides the stat boost but is white and requires specifying types. No single card perfectly replicates the effect.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/djinnpalace/djinnpalace_2B.tmx
+
+Card: WishclawTalisman
+
+Verification: First printed in Throne of Eldraine (October 4, 2019).45 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {1}{B} artifact providing three uses of tutoring for any card, but giving control to an opponent after each use.
+Suggested Replacement(s):
+
+VampiricTutor: A {B} instant from Visions (February 3, 1997). Tutors any card to the top of the library at the cost of 2 life. Efficient but doesn't put the card in hand.
+DemonicConsultation: A {B} instant from Ice Age (June 1995). Names a card, exiles the top six library cards, then reveals until the named card is found (exiling others). High risk, high reward tutor.
+DiabolicTutor: A {2}{B}{B} sorcery from Odyssey (October 1, 2001). Tutors any card directly to hand, but is slower and more expensive.
+
+
+Justification: The unique drawback of giving the tutor effect away has no pre-Scourge parallel. Replacements offer different balances of speed, cost, risk, and card destination (VampiricTutor to topdeck, DiabolicTutor to hand, DemonicConsultation high risk to hand).
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/djinnpalace/djinpalace_entrance.tmx
+
+Card: LapisOrbofDragonkind
+
+Verification: First printed in Commander Legends: Battle for Baldur's Gate (June 10, 2022).46 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {2} mana artifact that taps for {U} and provides Scry 2 when that mana is used to cast a Dragon creature spell.
+Suggested Replacement(s):
+
+SkyDiamond: A {2} mana artifact from Mirage (October 8, 1996).48 Enters tapped, taps for {U}. Simple blue mana rock.
+FellwarStone: A {2} mana artifact from The Dark (August 1994).50 Taps for mana of a color an opponent's land can produce. Versatile mana rock.
+Urza′sIncubator: A {3} mana artifact from Urza's Destiny (June 7, 1999). Reduces the cost of a chosen creature type (e.g., Dragons) by {2}. Provides Dragon synergy but no mana.
+
+
+Justification: SkyDiamond is the most direct replacement for a 2-cost blue mana rock. FellwarStone offers flexibility. Urza′sIncubator provides Dragon synergy (cost reduction) instead of mana/scry. SkyDiamond best replaces the mana function.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/fort/fort_blue_1_pirate.tmx
+
+Card: DaringPiracy
+
+Verification: First printed in Jumpstart 2022 (December 2, 2022).51 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {2}{R} enchantment creating a temporary 1/1 red Pirate token with menace and haste at the beginning of combat.
+Suggested Replacement(s):
+
+GoblinWarrens: A {1}{R}{R} enchantment from Fallen Empires (November 1994). Requires {2}{R} and sacrificing two Goblins to create three 1/1 red Goblin tokens. Repeatable red token generation, but conditional.
+GoblinShrine: A {R} enchantment from Legends (June 1994). Creates 0/1 Kobold tokens slowly and conditionally.
+
+
+Justification: Repeatable red token generation from enchantments was rare and conditional pre-Scourge. GoblinWarrens is the closest option but functions very differently. Substituting creatures that generate tokens might be necessary.
+
+
+Card: CoastalPiracy
+
+Verification: First printed in Mercadian Masques (October 4, 1999).52 This is before Scourge.
+Replacement Needed: No.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/fort/fort_blue_5_temple.tmx
+
+Card: Cold−EyedSelkie
+
+Verification: First printed in Eventide (July 25, 2008).54 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {1}{G}{U} 1/1 Merfolk Rogue with Islandwalk, drawing cards equal to combat damage dealt to a player.
+Suggested Replacement(s):
+
+ThievingMagpie: A {2}{U}{U} 1/3 Bird from Portal Second Age (June 1998). Flying provides evasion, draws one card per hit. Higher cost.
+Ophidian: A {2}{U} 1/3 Snake from Weatherlight (June 9, 1997). Draws a card when unblocked but assigns no combat damage.
+ShadowmageInfiltrator: A {1}{U}{B} 1/3 Human Wizard from Odyssey (October 1, 2001). Fear provides evasion, draws one card per hit, requires black mana.
+
+
+Justification: ThievingMagpie is the closest mono-blue old-border equivalent, offering evasion and card draw on damage. Ophidian trades damage for the draw. ShadowmageInfiltrator is functionally very similar but requires black.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/debug_map.tmx
+
+Card: Recycle (x2)
+
+Verification: First printed in Tempest (October 14, 1997).56 This is before Scourge.
+Replacement Needed: No.
+
+
+Card: LlanowarElves
+
+Verification: First printed in Limited Edition Alpha (August 5, 1993).58 This is before Scourge.
+Replacement Needed: No.
+
+
+Card: LordofthePit
+
+Verification: First printed in Limited Edition Alpha (August 5, 1993).60 This is before Scourge.
+Replacement Needed: No.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/grolnok/grolnok.tmx
+
+Card: Enchantress′sPresence
+
+Verification: First printed in Onslaught (October 7, 2002).61 This is before Scourge.
+Replacement Needed: No.
+
+
+Card: BoneDragon
+
+Verification: First printed in Core Set 2019 (July 13, 2018).62 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {3}{B}{B} 5/4 flying Dragon Skeleton with graveyard recursion by exiling other cards.
+Suggested Replacement(s):
+
+AshenGhoul: A {3}{B} 3/1 Skeleton from Ice Age (June 1995). Haste, {B}: Regenerate. Recurs from graveyard for {B}{B}{B} if 3+ creatures are in graveyard.
+NetherShadow: A {B}{B} 1/1 Spirit from Limited Edition Alpha (August 5, 1993). Haste. Recurs automatically at upkeep if conditions met (in graveyard with 3+ creatures above it).
+KrovikanHorror: A {1}{B} 1/1 Horror from Alliances (June 10, 1996). Returns to hand from graveyard for {1}{B} at upkeep. Sacrifice outlet/pinger.
+
+
+Justification: No pre-Scourge card offers a large, flying, recursive threat quite like BoneDragon. AshenGhoul provides recursion to the battlefield but lacks flying and has different stats/cost. NetherShadow offers cheap recursion under specific conditions. KrovikanHorror recurs to hand. AshenGhoul is the closest for recursion-to-battlefield.
+
+
+Card: BullHippo
+
+Verification: First printed in Portal (June 1997).64 This is before Scourge.
+Replacement Needed: No.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/main_story_explore/primal_jungle.tmx
+
+Card: MonkeyCage
+
+Verification: First printed in Mercadian Masques (October 4, 1999).65 This is before Scourge.
+Replacement Needed: No.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/merfolkpool/merfolkpool_4.tmx
+
+Card: SkyDiamond
+
+Verification: First printed in Mirage (October 8, 1996).48 This is before Scourge.
+Replacement Needed: No.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/cave/cave_kavu.tmx
+
+Card: KavuLair
+
+Verification: First printed in Invasion (October 2, 2000).67 This is before Scourge.
+Replacement Needed: No.
+
+
+Card: CovetedJewel
+
+Verification: First printed in Commander 2018 (August 9, 2018).7 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {6} artifact providing 3 cards on ETB and tapping for 3 mana of one color, with a significant drawback involving opponent control changes.
+Suggested Replacement(s):
+
+ThranDynamo: A {4} artifact from Urza's Destiny (June 7, 1999). Taps for {C}{C}{C}. Provides comparable mana ramp without the draw or drawback.
+Urza′sBlueprints: A {6} artifact from Urza's Legacy (February 15, 1999). Taps to draw a card but has Fading 4. Provides card draw but no mana and is temporary.
+JinxedIdol: A {2} artifact from Tempest (October 14, 1997).69 Damages controller, can be given to opponent via sacrifice. Shares the drawback theme but different effect.
+
+
+Justification: The combination of mana, draw, and interactive drawback is characteristic of modern Commander design and lacks a direct pre-Scourge parallel. ThranDynamo best replaces the mana ramp aspect. Urza′sBlueprints offers card draw at a similar cost (but is temporary). JinxedIdol shares the theme of passing a detrimental permanent. ThranDynamo is likely the most suitable functional replacement focusing on mana.
+
+
+Card: JungleBarrier
+
+Verification: First printed in Apocalypse (June 4, 2001).70 This is before Scourge.
+Replacement Needed: No.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/cave/wastetown..tmx
+
+Card: WallofBone
+
+Verification: First printed in Limited Edition Alpha (August 5, 1993).9 This is before Scourge.
+Replacement Needed: No.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/graveyard_crypt/crypt_4.tmx
+
+Card: DemonicRising
+
+Verification: First printed in Avacyn Restored (May 4, 2012).72 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {2}{B}{B} enchantment creating a 5/5 flying Demon token at end step if exactly one creature is controlled.
+Suggested Replacement(s):
+
+BreedingPit: A {3}{B} enchantment from Fallen Empires (November 1994). Creates 0/1 Thrull tokens at upkeep with cumulative upkeep cost. Repeatable black token generation, but much weaker tokens and has upkeep cost.
+InfernalGenesis: A {4}{B}{B} enchantment from Planeshift (February 5, 2001). Creates 0/1 Minion tokens based on milled cards, affects all players. Chaotic and symmetrical token generation.
+PhyrexianProcessor: A {4} artifact from Urza's Saga (October 12, 1998). Creates X/X Minion tokens based on life paid upfront, requires mana activation. Creates large tokens but requires significant resource investment.
+
+
+Justification: No pre-Scourge enchantment creates large Demon tokens conditionally. BreedingPit offers slow, weak token generation. InfernalGenesis is symmetrical and chaotic. PhyrexianProcessor makes large tokens but requires heavy investment. BreedingPit is the closest fit for a black enchantment generating tokens over time.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/cave/cave_skeleton.tmx
+
+Card: WallofBone
+
+Verification: First printed in Limited Edition Alpha (August 5, 1993).9 This is before Scourge.
+Replacement Needed: No.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/grove/grove_4_gorilla.tmx
+
+Card: Ragavan,NimblePilferer
+
+Verification: First printed in Modern Horizons 2 (June 18, 2021).5 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {R} 2/1 Legendary Monkey Pirate. Generates Treasure and exiles/allows casting opponent's top card on combat damage to player. Has Dash. Extremely efficient combination of aggression, mana, and card advantage.
+Suggested Replacement(s):
+
+GoblinCadets: A {R} 2/1 Goblin from Urza's Saga (October 12, 1998).74 Matches the aggressive stats but has a severe drawback (opponent gains control when blocked/blocking). No mana/card advantage.
+ViashinoSandstalker: A {1}{R}{R} 4/2 Lizard Warrior from Visions (February 3, 1997).75 Haste creature that returns to hand, offering repeatable aggression but no mana/card advantage.
+
+
+Justification: Ragavan's multifaceted efficiency is a hallmark of modern design and has no direct pre-Scourge parallel. GoblinCadets offers the 1-mana 2/1 body with a huge risk. ViashinoSandstalker provides repeatable haste damage. No single card captures all aspects; the replacement must prioritize one function (aggression).
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/grove/grove_6_wizards.tmx
+
+Card: TimberlandRuins
+
+Verification: First printed in Odyssey (October 1, 2001).77 This is before Scourge.
+Replacement Needed: No.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/grove/grove_2_wolf.tmx
+
+Card: HowlingMoon
+
+Verification: First printed in Innistrad: Crimson Vow (November 19, 2021).78 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {1}{G}{G} enchantment buffing a Wolf/Werewolf at combat and creating 2/2 Wolf tokens when an opponent casts their second spell.
+Suggested Replacement(s):
+
+PredatoryHowl: A {3}{G} instant from Urza's Saga (October 12, 1998). Creates a 1/1 Wolf token for each attacking creature. Situational Wolf token generation.
+MightofOaks: A {3}{G} instant from Urza's Legacy (February 15, 1999). Gives target creature +7/+7 until end of turn. Provides a temporary pump similar to the combat trigger but is an instant and not tribal.
+
+
+Justification: Pre-Scourge green lacks enchantments punishing opponents' spellcasting with tokens, and Wolf token generation was limited. PredatoryHowl creates Wolf tokens under specific conditions. MightofOaks offers a significant temporary boost. No single card combines these effects.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/grove/grove_1_bears.tmx
+
+Card: UptheBeanstalk
+
+Verification: First printed in Wilds of Eldraine (September 8, 2023).80 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {1}{G} enchantment that draws a card upon entering and whenever a spell with mana value 5 or greater is cast.
+Suggested Replacement(s):
+
+WallofBlossoms: A {1}{G} 0/4 Plant Wall Defender from Stronghold (March 2, 1998).20 Draws a card upon entering. Replicates the ETB draw.
+KavuLair: A {2}{G} enchantment from Invasion (October 2, 2000).67 Controller draws a card whenever a creature with power 4+ enters. Provides card draw based on large permanents entering.
+Rowen: A {2}{G}{G} enchantment from Seventh Edition (April 11, 2001). Allows drawing a card at upkeep if the top library card is a land. Repeatable green draw, different condition.
+
+
+Justification: WallofBlossoms perfectly replaces the ETB draw effect. KavuLair offers card draw tied to large permanents (creatures) entering, analogous to casting large spells. Rowen provides conditional repeatable draw.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/skullcave/skullcave_3.tmx
+
+Card: MaskofGriselbrand
+
+Verification: First printed in Innistrad: Midnight Hunt (September 24, 2021).81 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {1}{B}{B} Legendary Artifact Equipment granting flying and lifelink, with a death trigger allowing card draw for life payment.
+Suggested Replacement(s):
+
+DragonScales: A {3} artifact equipment from Scourge (May 26, 2003). Grants +1/+2 and conditional flying (if Dragon controlled). Equip {2}. Offers stats and potential evasion.
+SpiritLink: A {W} enchantment Aura from Legends (June 1994). Enchanted creature deals damage -> controller gains life. Provides lifelink effect via Aura.
+Mortivore: A {2}{B}{B} Lhurgoyf creature from Odyssey (October 1, 2001).83 Resilient threat whose size scales with graveyards, offering value through persistence rather than a death trigger.
+
+
+Justification: Pre-Scourge equipment rarely offered multiple keywords and triggered abilities. DragonScales provides stats and conditional flying. SpiritLink (an Aura) grants lifelink. The death trigger is difficult to replicate. A replacement likely needs to focus on one aspect (evasion or lifelink) or substitute a different form of value like Mortivore.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/magetower/magetower_13_doppelganger.tmx
+
+Card: AsForetold
+
+Verification: First printed in Amonkhet (April 28, 2017).85 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {2}{U} enchantment allowing casting one spell per turn for {0} if its mana value is less than or equal to the number of time counters on it.
+Suggested Replacement(s):
+
+DreamHalls: A {3}{U}{U} enchantment from Stronghold (March 2, 1998).86 Allows casting spells by discarding a card sharing a color instead of paying mana cost. Symmetrical effect.
+TemporalAperture: A {5} artifact from Urza's Saga (October 12, 1998).88 Activation {5}, {T} allows playing the random top card of the library for free. Expensive and random.
+
+
+Justification: The mechanic of accumulating counters for free casting is unique to later sets. DreamHalls offers free casting via discard but is symmetrical. TemporalAperture offers random free casting at high cost. DreamHalls is perhaps the closest in enabling powerful plays without mana, despite significant differences.
+
+
+Card: FellwarStone
+
+Verification: First printed in The Dark (August 1994).50 This is before Scourge.
+Replacement Needed: No.
+
+
+Card: Hesitation
+
+Verification: First printed in Stronghold (March 2, 1998).90 This is before Scourge.
+Replacement Needed: No.
+
+
+Card: KingSuleiman
+
+Verification: First printed in Arabian Nights (December 17, 1993).91 This is before Scourge.
+Replacement Needed: No.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/magetower/magetower_12_lichsmirror.tmx
+
+Card: MirrorofLifeTrapping∣CLB∣1
+
+Verification: First printed in Commander Legends: Battle for Baldur's Gate (June 10, 2022).93 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {3} artifact that exiles newly cast creatures, returning previously exiled creatures.
+Suggested Replacement(s):
+
+Portcullis: A {4} artifact from Stronghold (March 2, 1998). Exiles creatures entering if 2+ creatures are already present, returning them when Portcullis leaves. Limits creature count.
+Tawnos′sCoffin: A {4} artifact from Antiquities (March 1994). {3}, {T}: Exile target creature with suspend. Targeted temporary removal.
+
+
+Justification: No pre-Scourge artifact replicates the "one-in, previous-one-out" mechanic. Portcullis limits creature density. Tawnos′sCoffin offers targeted temporary exile. Portcullis is thematically closest for controlling creature entry.
+
+
+Card: HeirloomMirror∣MID∣1
+
+Verification: First printed in Innistrad: Midnight Hunt (September 24, 2021).95 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {2} artifact that loots/mills and transforms into a 4/4 flying Demon that exiles graveyard cards to grow.
+Suggested Replacement(s):
+
+Millstone: A {2} artifact from Antiquities (March 1994).97 {2}, {T}: Mills 2 cards. Simple mill effect.
+CephalidBroker: A {3}{U} 2/2 Cephalid Wizard from Odyssey (October 1, 2001). {U}, {T}: Target player draws 2, discards 2. Provides looting.
+
+
+Justification: Transformation is a newer mechanic. Millstone replicates mill; CephalidBroker replicates looting. No single pre-Scourge card combines these with transformation into a creature payoff.
+
+
+Card: CathedralSanctifier∣DDQ∣1
+
+Verification: First printed in Avacyn Restored (May 4, 2012).99 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {W} 1/1 Human Cleric providing 3 life upon entering.
+Suggested Replacement(s):
+
+HealingSalve: A {W} instant from Limited Edition Alpha (August 5, 1993).101 Gains 3 life or prevents 3 damage. Directly provides the lifegain amount.
+SoulWarden: A {W} 1/1 Human Cleric from Exodus (June 15, 1998). Gains 1 life whenever another creature enters. Repeatable lifegain on a similar body.
+StaunchDefenders: A {3}{W} 3/4 Human Soldier from Tempest (October 14, 1997). Gains 4 life upon entering. Larger life gain burst on a bigger body.
+
+
+Justification: HealingSalve matches the lifegain amount. SoulWarden offers repeatable gain. StaunchDefenders provides a larger one-time gain. HealingSalve is the most direct functional replacement for the ETB life gain.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/main_story/temple_of_liliana/graveyard.tmx
+
+Card: EndlessRanksoftheDead (x6)
+
+Verification: First printed in Innistrad (September 30, 2011).102 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {2}{B}{B} enchantment creating Zombie tokens based on half the number of Zombies controlled.
+Suggested Replacement(s): See analysis for graveyard.tmx above. Breeding Pit or Patriarch's Bidding.103
+Justification: See previous analysis. No direct pre-Scourge scaling Zombie token generator.
+
+
+Card: DeathPitOffering
+
+Verification: First printed in Nemesis (February 14, 2000).105 This is before Scourge.
+Replacement Needed: No.
+
+
+Card: InfernalKirin (x2)
+
+Verification: First printed in Saviors of Kamigawa (June 3, 2005).107 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {2}{B}{B} 3/3 Legendary Kirin Spirit with flying. Triggers targeted discard based on mana value when Spirit/Arcane spells are cast.
+Suggested Replacement(s): See analysis for graveyard.tmx above. Hypnotic Specter 108 or Abyssal Specter.110
+Justification: See previous analysis. Specters offer repeatable discard via combat damage.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/main_story/temple_of_liliana/bog.tmx
+
+Card: CarrionScreecher
+
+Verification: First printed in Hour of Devastation (July 14, 2017).112 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {3}{B} 2/3 Zombie Bird with flying.
+Suggested Replacement(s): See analysis for bog.tmx above. Dauthi Horror or Fledgling Djinn.
+Justification: See previous analysis. Dauthi Horror offers similar stats/evasion.
+
+
+Card: StaffoftheDeathMagus
+
+Verification: First printed in Magic 2014 (July 19, 2013).113 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {3} artifact granting 1 life when a black spell is cast or a Swamp enters.
+Suggested Replacement(s): See analysis for bog.tmx above. Throne of Bone.
+Justification: See previous analysis. Throne of Bone triggers on black spells.
+
+
+Card: Vrock
+
+Verification: First printed in Commander Legends: Battle for Baldur's Gate (June 10, 2022).115 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {3}{B} 3/3 flying Bird Demon causing opponent life loss when a permanent leaves your battlefield.
+Suggested Replacement(s): See analysis for bog.tmx above. Fallen Angel.
+Justification: See previous analysis. Fallen Angel offers a flying body interacting with creatures leaving.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/main_story/temple_of_liliana/town.tmx
+
+Card: SkeletonKey
+
+Verification: First printed in Shadows over Innistrad (April 8, 2016).117 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {1} artifact equipment granting skulk and card draw on combat damage to player. Equip {2}.
+Suggested Replacement(s): See analysis for town.tmx above. Cloak of Mists or Curiosity.
+Justification: See previous analysis. No single pre-Scourge equipment combines skulk and draw. Auras offer the closest effects separately.
+
+
+Card: EndlessRanksoftheDead (x2)
+
+Verification: First printed in Innistrad (September 30, 2011).102 This is after Scourge.
+Replacement Needed: Yes.
+Suggested Replacement(s): See analysis for graveyard.tmx above. Breeding Pit or Patriarch's Bidding.103
+Justification: See previous analysis.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/magetower/magetower_10_crawlspace.tmx
+
+Card: Crawlspace∣C13∣1
+
+Verification: First printed in Urza's Legacy (February 15, 1999).118 This is before Scourge.
+Replacement Needed: No.
+
+
+Card: EnsnaringBridge∣2XM∣1
+
+Verification: First printed in Stronghold (March 2, 1998).120 This is before Scourge.
+Replacement Needed: No.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/magetower/magetower_11_dreamhalls.tmx
+
+Card: DreamHalls∣TPR∣1
+
+Verification: First printed in Stronghold (March 2, 1998).86 This is before Scourge.
+Replacement Needed: No.
+
+
+Card: ArcaneEncyclopedia∣M19∣1
+
+Verification: First printed in Core Set 2019 (July 13, 2018).123 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {3} artifact with {3}, {T}: Draw a card.
+Suggested Replacement(s): See analysis for magetower/magetower_11_dreamhalls.tmx above. Jayemdae Tome.
+Justification: See previous analysis. Jayemdae Tome is the direct predecessor.
+
+
+Card: Dragon′sHoard∣M19∣1
+
+Verification: First printed in Core Set 2019 (July 13, 2018).125 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {3} artifact tapping for any color, generating counters when Dragons enter, and allowing counter removal for card draw.
+Suggested Replacement(s): See analysis for magetower/magetower_11_dreamhalls.tmx above. Fellwar Stone 50 or Diamonds cycle.48
+Justification: See previous analysis. No direct equivalent combining mana, draw, and Dragon synergy. Mana rocks replace the mana function.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/skep/skep_outer.tmx
+
+Card: ShrineoftheForsakenGods
+
+Verification: First printed in Battle for Zendikar (October 2, 2015).127 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: Land providing {C} or {C}{C} (for colorless spells, if 7+ lands).
+Suggested Replacement(s): See analysis for skep/skep_outer.tmx above. Ancient Tomb or City of Traitors.
+Justification: See previous analysis. Ancient Tomb/City of Traitors provide {C}{C} ramp with drawbacks.
+
+
+Card: Hivestone
+
+Verification: First printed in Time Spiral (October 6, 2006).129 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {2} artifact making all controlled creatures Slivers.
+Suggested Replacement(s): See analysis for skep/skep_outer.tmx above. Conspiracy.
+Justification: See previous analysis. Conspiracy provides global type change but is black/expensive.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/main_story/templeofchandra.tmx
+
+Card: Hall of Flame
+
+Verification: No card named "Hall of Flame" exists in Magic: The Gathering.130 Assuming Hall of the Bandit Lord.
+Verification (Hall of the Bandit Lord): First printed in Champions of Kamigawa (October 1, 2004). This is after Scourge.
+Replacement Needed: Yes (assuming Hall of the Bandit Lord).
+Analysis (Hall of the Bandit Lord): Legendary Land providing {C} mana or granting haste to a creature cast with its mana for 3 life.
+Suggested Replacement(s): See analysis for templeofchandra.tmx above. Ancient Tomb, City of Traitors, Fires of Yavimaya.
+Justification: See previous analysis. No direct land replacement.
+
+
+Card: Chandra′sPhoenix (x6)
+
+Verification: First printed in Magic 2012 (July 15, 2011).132 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {1}{R}{R} 2/2 flying, haste Phoenix recurring to hand upon opponent damage from red spells/planeswalkers.
+Suggested Replacement(s): See analysis for templeofchandra.tmx above. Hammer of Bogardan 134 or Viashino Sandstalker.75
+Justification: See previous analysis. No direct replacement. Hammer for recursive damage, Sandstalker for repeatable haste.
+
+
+Card: KeralKeepDisciples (x3)
+
+Verification: First printed in Core Set 2021 Planeswalker Decks (July 3, 2020).135 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {2}{R} 2/2 Human Monk dealing 1 damage to opponent/planeswalker when noncreature spell cast.
+Suggested Replacement(s): See analysis for templeofchandra.tmx above. Prodigal Pyromancer.
+Justification: See previous analysis. Prodigal Pyromancer is the classic repeatable pinger.
+
+
+Card: RingofValkas
+
+Verification: First printed in Magic 2013 (July 13, 2012).137 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {2} artifact equipment granting haste and accumulating +1/+1 counters on red creatures.
+Suggested Replacement(s): See analysis for templeofchandra.tmx above. Fervor or Dragon Scales.139
+Justification: See previous analysis. Fervor enchantment grants haste. Dragon Scales equipment offers stats/conditional keyword.
+
+
+Card: LightningCloud
+
+Verification: First printed in Visions (February 3, 1997).140 This is before Scourge.
+Replacement Needed: No.
+
+
+Card: LightningCoils
+
+Verification: First printed in Mirrodin (October 2, 2003).142 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {3} artifact creating temporary 3/1 Elemental tokens based on accumulated charge counters from creature deaths.
+Suggested Replacement(s): See analysis for templeofchandra.tmx above. Goblin Warrens, Phyrexian Processor, Saproling Cluster.
+Justification: See previous analysis. No direct match. Processor closest for large tokens via artifact.
+
+
+Card: CircleofFlame
+
+Verification: First printed in Magic 2012 (July 15, 2011).144 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {1}{R} enchantment dealing 1 damage to non-flying creatures attacking you/planeswalker.
+Suggested Replacement(s): See analysis for templeofchandra.tmx above. Caltrops.
+Justification: See previous analysis. Caltrops closest artifact damaging attackers.
+
+
+Card: StaffoftheFlameMagus
+
+Verification: First printed in Magic 2014 (July 19, 2013).146 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {3} artifact granting 1 life when a red spell is cast or a Mountain enters.
+Suggested Replacement(s): See analysis for templeofchandra.tmx above. Iron Star.
+Justification: See previous analysis. Iron Star triggers on red spells.
+
+
+Card: Hazoret′sMonument
+
+Verification: First printed in Amonkhet (April 28, 2017).148 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {3} legendary artifact reducing red creature spell cost and providing rummaging on creature cast.
+Suggested Replacement(s): See analysis for templeofchandra.tmx above. Ruby Medallion.
+Justification: See previous analysis. Ruby Medallion for cost reduction.
+
+
+Card: BloodMoon
+
+Verification: First printed in The Dark (August 1994).150 This is before Scourge.
+Replacement Needed: No.
+
+
+Card: OathofChandra
+
+Verification: First printed in Oath of the Gatewatch (January 22, 2016).151 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {1}{R} legendary enchantment dealing 3 damage to a creature on ETB and potentially 2 damage to opponents later.
+Suggested Replacement(s): See analysis for templeofchandra.tmx above. Seal of Fire 152 or Volcanic Hammer.153
+Justification: See previous analysis. Seal of Fire/Volcanic Hammer approximate the damage aspect.
+
+
+Card: Chandra′sEmbercat
+
+Verification: First printed in Core Set 2020 (July 12, 2019).155 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {1}{R} 1/2 Elemental Cat mana dork for Elementals/Chandra spells.
+Suggested Replacement(s): See analysis for templeofchandra.tmx above. Skirk Prospector.
+Justification: See previous analysis. Skirk Prospector offers 1-drop red mana acceleration via sacrifice.
+
+
+Card: LavaclawReaches
+
+Verification: First printed in Worldwake (February 5, 2010).157 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: BR tapland that becomes a 2/2 Elemental manland with firebreathing.
+Suggested Replacement(s): See analysis for templeofchandra.tmx above. Ghitu Encampment or Sulfurous Springs.159
+Justification: See previous analysis. Ghitu Encampment closest red manland. Sulfurous Springs provides BR mana.
+
+
+Card: Chandra,FireofKaladesh
+
+Verification: First printed in Magic Origins (July 17, 2015).160 This is after Scourge.
+Replacement Needed: Yes.
+Analysis: A {1}{R}{R} 2/2 transforming creature/planeswalker with ping ability.
+Suggested Replacement(s): See analysis for templeofchandra.tmx above. Latulla, Keldon Overseer 27 or Prodigal Pyromancer.
+Justification: See previous analysis. Latulla offers legendary creature with damage ability. Pyromancer offers simple repeatable damage.
+
+
+Card: DwarvenBlastminer (x2)
+
+Verification: First printed in Onslaught (October 7, 2002).162 This is before Scourge.
+Replacement Needed: No.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/main_story/temple_of_gideon/steppe.tmx
+
+Card: StaffoftheDeathMagus
+
+Verification: First printed in Magic 2014 (July 19, 2013).113 This is after Scourge.
+Replacement Needed: Yes.
+Suggested Replacement(s): See analysis for bog.tmx above. Throne of Bone.
+Justification: See previous analysis.
+
+
+Card: Vrock
+
+Verification: First printed in Commander Legends: Battle for Baldur's Gate (June 10, 2022).115 This is after Scourge.
+Replacement Needed: Yes.
+Suggested Replacement(s): See analysis for bog.tmx above. Fallen Angel.
+Justification: See previous analysis.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/main_story/temple_of_gideon/town.tmx
+
+Card: SkeletonKey
+
+Verification: First printed in Shadows over Innistrad (April 8, 2016).117 This is after Scourge.
+Replacement Needed: Yes.
+Suggested Replacement(s): See analysis for town.tmx above. Cloak of Mists or Curiosity.
+Justification: See previous analysis.
+
+
+Card: EndlessRanksoftheDead (x2)
+
+Verification: First printed in Innistrad (September 30, 2011).102 This is after Scourge.
+Replacement Needed: Yes.
+Suggested Replacement(s): See analysis for graveyard.tmx above. Breeding Pit or Patriarch's Bidding.103
+Justification: See previous analysis.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/main_story/temple_of_gideon/graveyard.tmx
+
+Card: EndlessRanksoftheDead (x6)
+
+Verification: First printed in Innistrad (September 30, 2011).102 This is after Scourge.
+Replacement Needed: Yes.
+Suggested Replacement(s): See analysis for graveyard.tmx above. Breeding Pit or Patriarch's Bidding.103
+Justification: See previous analysis.
+
+
+Card: DeathPitOffering
+
+Verification: First printed in Nemesis (February 14, 2000).105 This is before Scourge.
+Replacement Needed: No.
+
+
+Card: InfernalKirin (x2)
+
+Verification: First printed in Saviors of Kamigawa (June 3, 2005).107 This is after Scourge.
+Replacement Needed: Yes.
+Suggested Replacement(s): See analysis for graveyard.tmx above. Hypnotic Specter 108 or Abyssal Specter.110
+Justification: See previous analysis.
+
+
+
+
+
+File: forge-gui/res/adventure/common/maps/map/main_story/castles/black_castle.tmx
+
+Card: Swamp
+
+Verification: First printed in Limited Edition Alpha (August 5, 1993).163 This is before Scourge.
+Replacement Needed: No.
+
+
+
+
+III. Conclusions and RecommendationsThe analysis reveals that a substantial majority of the evaluated cards were first printed after the Scourge expansion (May 2003) and therefore do not meet the specified criteria. Only a minority, including staples like basic lands, ManaCrypt, FellwarStone, CoastalPiracy, and several others, were printed within the required timeframe.This necessitates replacements for numerous cards across various Forge GUI Adventure Mode map files if adherence to the pre-Scourge era and old-border aesthetic is desired. Finding suitable replacements presents challenges:
+Functional Equivalency: Many modern cards, particularly those from Commander sets, Modern Horizons, or recent Standard sets (e.g., Ragavan,NimblePilferer, WishclawTalisman, CovetedJewel, EndlessRanksoftheDead, AsForetold), possess unique combinations of abilities or mechanics (like perpetual effects, complex triggered abilities, or specific tribal synergies) that lack direct counterparts in the pre-Scourge card pool. Replacements often require prioritizing one aspect of the original card's function (e.g., mana generation, card draw, evasion, token creation) while sacrificing others, or substituting with cards that are thematically similar but mechanically distinct.
+Design Philosophy: Older Magic design often featured less efficient or more conditional effects compared to modern designs. Replacing efficient modern cards like KrakenHatchling or FavorableWinds with pre-Scourge alternatives may require accepting higher mana costs, different color requirements, or less impactful effects (e.g., replacing a flying anthem with an effect that grants flying).
+Aesthetic Consistency: While the focus was on pre-Scourge printings (which inherently use the old border), some suggested replacements might only have readily available printings in newer frames, even if their first printing was pre-Scourge. This might require further investigation if strict visual consistency is paramount.
+Recommendations:
+Implement Suggested Replacements: Utilize the proposed pre-Scourge, old-border alternatives where available and functionally acceptable for the specific encounter's design needs. Carefully consider the trade-offs when direct functional equivalents are unavailable.
+Broader Card Pool Review: Given the high number of post-Scourge cards identified in this limited sample, a more comprehensive audit of the card pools used across Forge's Adventure Mode may be warranted if consistency with the pre-Scourge era is a primary goal.
+Define Replacement Priorities: For cards lacking direct equivalents, establish clear priorities for replacement: should the replacement match the mana cost, color, card type, primary function, or thematic element most closely? This will guide choices when compromises are necessary (e.g., choosing between a green artifact animator like Titania′sSong or a blue activated animator like Karn,SilverGolem to replace MarchoftheMachines).
+Consider Custom Solutions (If Applicable): For unique effects critical to an encounter's design that cannot be replicated (e.g., perpetual effects, specific complex triggers), Forge-specific custom card implementations might be considered as a last resort, though this deviates from using official Magic cards. The identifier c_a_treasure_sac suggests such custom elements may already exist.

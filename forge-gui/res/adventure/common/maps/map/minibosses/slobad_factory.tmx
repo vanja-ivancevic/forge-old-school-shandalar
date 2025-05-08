@@ -5,7 +5,7 @@
  </editorsettings>
  <properties>
   <property name="dungeonEffect">{
-  "startBattleWithCard": [ "March of the Machines" ],
+  "startBattleWithCard": [ "Karn, Silver Golem" ],
 }</property>
  </properties>
  <tileset firstgid="1" source="../../tileset/main.tsx" />

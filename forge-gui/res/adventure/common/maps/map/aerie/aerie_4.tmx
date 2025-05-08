@@ -5,7 +5,7 @@
  </editorsettings>
  <properties>
   <property name="dungeonEffect">{
-  "startBattleWithCard": [ "Favorable Winds" ],
+  "startBattleWithCard": [ "Levitation" ],
 }</property>
  </properties>
  <tileset firstgid="1" source="../../tileset/main.tsx" />

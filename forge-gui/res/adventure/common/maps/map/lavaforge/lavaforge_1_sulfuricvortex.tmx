@@ -153,7 +153,7 @@
    <properties>
     <property name="effect">{
  "lifeModifier": 4,
- "startBattleWithCard": [ "Irencrag Pyromancer|ELD|1" ]
+ "startBattleWithCard": [ "Grim Lavamancer" ]
 }</property>
     <property name="enemy" value="Mindclaw Shaman" />
    </properties>

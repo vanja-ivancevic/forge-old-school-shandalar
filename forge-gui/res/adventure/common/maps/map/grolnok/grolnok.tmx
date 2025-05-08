@@ -200,7 +200,7 @@
   </object>
   <object id="101" template="../../obj/enemy.tx" x="425" y="477.497" width="16" height="17.6724">
    <properties>
-    <property name="effect">{ "startBattleWithCard": [ "Asceticism","Grismold, the Dreadsower"]
+    <property name="effect">{ "startBattleWithCard": [ "Dense Foliage","Treatop Village"]
 }</property>
     <property name="enemy" value="Swamp Troll" />
     <property name="threatRange" type="int" value="60" />
@@ -442,7 +442,7 @@
   </object>
   <object id="197" template="../../obj/enemy.tx" x="40" y="55.1638" width="16" height="17.6724">
    <properties>
-    <property name="effect">{ "startBattleWithCard": [ "Bone Dragon"]
+    <property name="effect">{ "startBattleWithCard": [ "Ashen Ghoul"]
 }</property>
     <property name="enemy" value="Bone Dragon" />
    </properties>

@@ -145,7 +145,7 @@
    <properties>
     <property name="effect">{
  "lifeModifier": 4,
- "startBattleWithCard": [ "Flagstones of Trokair|TSR|1" ]
+ "startBattleWithCard": [ "Karoo" ]
 }</property>
     <property name="enemy" value="Axgard Dwarf" />
    </properties>

@@ -46,7 +46,7 @@
  "lifeModifier": 4,
  "startBattleWithCard": [ "Rhystic Study","Haughty Djinn" ]
  "opponent": {
-   "startBattleWithCard": [ "Wishclaw Talisman" ]
+   "startBattleWithCard": [ "Desert" ]
  }
 }</property>
     <property name="enemy" value="Mighty Djinn" />

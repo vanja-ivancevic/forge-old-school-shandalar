@@ -103,7 +103,7 @@
    <properties>
     <property name="effect">{
  "lifeModifier": 4,
- "startBattleWithCard": [ "Coveted Jewel" ]
+ "startBattleWithCard": [ "Thran Dynamo" ]
  "opponent": {
    "startBattleWithCard": [ "Jungle Barrier" ]
  }

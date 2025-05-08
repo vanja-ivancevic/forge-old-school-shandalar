@@ -116,7 +116,7 @@
   <object id="88" template="../../obj/enemy.tx" x="386.5" y="144">
    <properties>
     <property name="displayNameOverride" value="Alpha Wolf" />
-    <property name="effect">{ "startBattleWithCard": [ "Howling Moon"]
+    <property name="effect">{ "startBattleWithCard": [ "Tundra Wolves"]
 }</property>
     <property name="enemy" value="Wolf" />
     <property name="threatRange" type="int" value="50" />

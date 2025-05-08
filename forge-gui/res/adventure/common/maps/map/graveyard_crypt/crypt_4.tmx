@@ -72,7 +72,7 @@
   </object>
   <object id="65" template="../../obj/enemy.tx" x="184.25" y="217.5">
    <properties>
-    <property name="effect">{ "startBattleWithCard": [ "Demonic Rising"]
+    <property name="effect">{ "startBattleWithCard": [ "Breeding Pit"]
 }</property>
     <property name="enemy" value="Immersturm Demon" />
     <property name="threatRange" type="int" value="60" />

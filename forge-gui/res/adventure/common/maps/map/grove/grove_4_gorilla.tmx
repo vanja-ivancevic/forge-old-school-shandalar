@@ -98,7 +98,7 @@
   <object id="76" template="../../obj/waypoint.tx" x="309.074" y="284.234" />
   <object id="77" template="../../obj/enemy.tx" x="469.273" y="312.909">
    <properties>
-    <property name="effect">{ "startBattleWithCard": [ "Ragavan, Nimble Pilferer"]
+    <property name="effect">{ "startBattleWithCard": [ "Kird Ape"]
 }</property>
     <property name="enemy" value="Monkey" />
     <property name="threatRange" type="int" value="50" />

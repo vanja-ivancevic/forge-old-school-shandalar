@@ -120,7 +120,7 @@
    <properties>
     <property name="effect">{
  "lifeModifier": 4,
- "startBattleWithCard": [ "Arcane Encyclopedia|M19|1" ]
+ "startBattleWithCard": [ "Jayemdae Tome" ]
 }</property>
     <property name="enemy" value="Master Green Wizard" />
    </properties>
@@ -129,7 +129,7 @@
    <properties>
     <property name="effect">{
  "lifeModifier": 3,
- "startBattleWithCard": [ "Dragon's Hoard|M19|1" ]
+ "startBattleWithCard": [ "Fellwar Stone" ]
 }</property>
     <property name="enemy" value="Dragon" />
    </properties>

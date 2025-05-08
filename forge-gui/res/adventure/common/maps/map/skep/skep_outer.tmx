@@ -477,7 +477,7 @@
     ]
    }
 ]</property>
-    <property name="effect">{ "startBattleWithCard": [ "Shrine of the Forsaken Gods"]
+    <property name="effect">{ "startBattleWithCard": [ "Ancient Tomb"]
 }</property>
     <property name="enemy" value="Slivdrazi Experiment" />
     <property name="spawn.Easy" type="bool" value="true" />
@@ -969,7 +969,7 @@
     ]
    }
 ]</property>
-    <property name="effect">{ "startBattleWithCard": [ "Hivestone"]
+    <property name="effect">{ "startBattleWithCard": [ "Conspiracy"]
 }</property>
     <property name="enemy" value="Recruiter Sliver" />
     <property name="spawn.Easy" type="bool" value="true" />

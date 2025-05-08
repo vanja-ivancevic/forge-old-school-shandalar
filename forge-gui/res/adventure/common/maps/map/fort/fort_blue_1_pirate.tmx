@@ -5,7 +5,7 @@
  </editorsettings>
  <properties>
   <property name="dungeonEffect">{
-  "startBattleWithCard": [ "Daring Piracy" ],
+  "startBattleWithCard": [ "Goblin Warrens" ],
 }</property>
  </properties>
  <tileset firstgid="1" source="../../tileset/main.tsx" />

@@ -5,7 +5,7 @@
  </editorsettings>
  <properties>
   <property name="dungeonEffect">{
-  "startBattleWithCard": [ "Thallid Shell-Dweller" ]
+  "startBattleWithCard": [ "Thallid" ]
 }</property>
  </properties>
  <tileset firstgid="1" source="../../tileset/main.tsx" />
