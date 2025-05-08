@@ -112,7 +112,7 @@
    <properties>
     <property name="effect">{
  "lifeModifier": 3,
- "startBattleWithCard": [ "Healing Salve" ]
+ "startBattleWithCard": [ "Drudge Skeletons" ]
 }</property>
     <property name="enemy" value="Aether Channeler" />
    </properties>

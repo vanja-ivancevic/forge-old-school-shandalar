@@ -969,7 +969,7 @@
     ]
    }
 ]</property>
-    <property name="effect">{ "startBattleWithCard": [ "Conspiracy"]
+    <property name="effect">{ "startBattleWithCard": [ "Plated Sliver"]
 }</property>
     <property name="enemy" value="Recruiter Sliver" />
     <property name="spawn.Easy" type="bool" value="true" />

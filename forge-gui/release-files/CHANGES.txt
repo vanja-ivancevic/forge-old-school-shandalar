@@ -1,6 +1,26 @@
 ## Unreleased
 ### No issue
 
+**big overhaul to all boss custom cards and startinbattle cards**
+
+
+[1f0bc970224e171](https://github.com/Card-Forge/forge/commit/1f0bc970224e171) Vanja *2025-05-08 12:20:58*
+
+**quick fix**
+
+
+[498129850bb6f79](https://github.com/Card-Forge/forge/commit/498129850bb6f79) Vanja *2025-05-08 08:37:44*
+
+**Updated boss mechanics & custom cards to conform to pre-scourge era.**
+
+
+[177cd0b050efbfd](https://github.com/Card-Forge/forge/commit/177cd0b050efbfd) Vanja *2025-05-08 08:36:56*
+
+**Prepare release v0.36.1 with booster pack images**
+
+
+[aaf16ebd04b3532](https://github.com/Card-Forge/forge/commit/aaf16ebd04b3532) Vanja *2025-05-08 06:13:20*
+
 **boosters final update**
 
 
