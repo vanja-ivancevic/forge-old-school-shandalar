@@ -44,6 +44,12 @@ This fork includes changes to:
 
 *   Balance adjustments based on player feedback.
 
+🗓️ **Planned:**
+
+*   Custom maps to suit the story and characters of the early era
+*   Custom enemies
+*   Custom dungeons
+
 ## Feedback and Issues
 
 Please report any bugs or share your feedback specific to this Old-School Shandalar fork on the issues page.
