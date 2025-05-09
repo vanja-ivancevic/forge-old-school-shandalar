@@ -1,7 +1,7 @@
 Name:Nahiri's Armory
 ManaCost:no cost
 Types:Artifact
-S:Mode$ ReduceCost | Type$ Spell | ValidCard$ Aura.YouCtrl | Activator$ You | Amount$ 1 | EffectZone$ Command | Description$ Aura spells you cast cost {1} less.
-T:Mode$ AttackersDeclared | ValidAttackers$ Creature.enchanted+YouCtrl | TriggerZones$ Command | Execute$ TrigConjure | TriggerDescription$ Whenever an enchanted creature you control attacks, you may pay {M}{M}, if you do conjure a random card from Nahiri's Armory's spellbook into your hand.
+S:Mode$ ReduceCost | ValidCard$ Card | ValidSpell$ Activated.Equip | Activator$ You | Amount$ 1 | EffectZone$ Command | Description$ Equip costs you pay cost {1} less.
+T:Mode$ AttackersDeclared | ValidAttackers$ Creature.modified+YouCtrl | TriggerZones$ Command | Execute$ TrigConjure | TriggerDescription$ Whenever a modified creature you control attacks, you may pay {M}{M}, if you do conjure a random card from Nahiri's Armory's spellbook into your hand.
 SVar:TrigConjure:AB$ MakeCard | Cost$ PayShards<2> | Conjure$ True | AtRandom$ True | Zone$ Hand | Spellbook$ Armadillo Cloak,Serra's Embrace,Rancor,Ancestral Mask,Holy Strength,Unholy Strength,Swords to Plowshares,Lightning Bolt,Soltari Priest,White Knight,Order of Leitbur,Savannah Lions,Pacifism,Glorious Anthem
-Oracle:Aura spells you cast cost {1} less.\nWhenever an enchanted creature you control attacks, you may pay {M}{M}, if you do conjure a random card from Nahiri's Armory's spellbook into your hand.
+Oracle:Equip costs you pay cost {1} less.\nWhenever a modified creature you control attacks, you may pay {M}{M}, if you do conjure a random card from Nahiri's Armory's spellbook into your hand.

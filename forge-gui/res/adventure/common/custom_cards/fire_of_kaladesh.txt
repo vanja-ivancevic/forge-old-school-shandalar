@@ -1,10 +1,8 @@
 Name:Fire of Kaladesh
 ManaCost:no cost
 Colors:red
-Types:Legendary Enchantment
-SVar:LegendaryWardEffect:Mode$ Static | EffectZone$ Self | StaticAbilities$ TargetCostIncrease2 | Description$ Spells your opponents cast that target this permanent cost {2} more to cast.
-SVar:TargetCostIncrease2:Mode$ RaiseCost | Type$ SpellOrAbility | Activator$ Opponent | Target$ Card.Self | Amount$ 2
-S:Mode$ Continuous | Affected$ Permanent.YouCtrl+Legendary | AddAbility$ LegendaryWardEffect | Description$ Legendary permanents you control have "Spells your opponents cast that target this permanent cost {2} more to cast." | ActivationZone$ Command
+Types:Legendary Title
+S:Mode$ Continuous | Affected$ Permanent.YouCtrl+Legendary | AddKeyword$ Ward:2 | Description$ Legendary permanents you control have ward {2}. | ActivationZone$ Command
 T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ ConjureMissing | ActivationZone$ Command
 #---
 SVar:ConjureMissing:    DB$ Branch | BranchConditionSVar$ GauntletCount  | BranchConditionSVarCompare$ EQ0 | TrueSubAbility$ ConjureMissing1     | FalseSubAbility$ ConjureMissing0    | Description$ A | StackDescription$ Description | SpellDescription$ Description
@@ -52,4 +50,4 @@ SVar:GogglesCount:Count$NamedYouCtrl.Ankh of Mishra
 SVar:OathCount:Count$NamedYouCtrl.Seal of Fire
 #(1101 means only Goggles are missing, 0001 means only Oath is present) 1010
 #---
-Oracle: Legendary permanents you control have "Spells your opponents cast that target this permanent cost {2} more to cast."\nAt the beginning of your upkeep, conjure onto the battlefield one of the following cards that you do not already control: Gauntlet of Might, Cursed Scroll, Ankh of Mishra, or Seal of Fire.\nIf you do not conjure a card in this way, draft a spell from CARDNAME's spellbook into your hand.
+Oracle: Legendary permanents you control have ward {2}./nAt the beginning of your upkeep, conjure onto the battlefield one of the following cards that you do not already control: Gauntlet of Might, Cursed Scroll, Ankh of Mishra, or Seal of Fire.\nIf you do not conjure a card in this way, draft a spell from CARDNAME's spellbook into your hand.

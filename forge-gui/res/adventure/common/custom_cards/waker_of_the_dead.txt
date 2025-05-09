@@ -1,6 +1,6 @@
 Name:Waker of the Dead
 Colors:black
-Types:Legendary Enchantment
+Types:Legendary Title
 R:Event$ GainLife | ActiveZones$ Command | ValidPlayer$ Player.Opponent | ReplaceWith$ LimitedGain | Description$ Opponents cannot gain life beyond their starting life total.
 SVar:LimitedGain:DB$ ReplaceEffect | VarName$ LifeGained | VarValue$ X
 SVar:X:ReplaceCount$LifeGained/LimitMax.Y
@@ -51,6 +51,6 @@ SVar:TheAbyssCount:Count$NamedYouCtrl.The Abyss
 SVar:BottomlessPitCount:Count$NamedYouCtrl.Bottomless Pit
 #0001
 SVar:OppressionCount:Count$NamedYouCtrl.Oppression
-#(1101 means only Bottomless Pit is missing, 0001 means only Oppression is present)
+#(1101 means only Curse of Shallow Graves are missing, 0001 means only Curse of Disturbance is present)
 #---
 Oracle: Your opponents cannot gain life beyond their starting life total./nAt the beginning of your upkeep, conjure and cast without paying its mana cost one of the following cards that you do not already control: Pestilence, The Abyss, Bottomless Pit, or Oppression.\nIf you do not conjure a card in this way, draft a spell from CARDNAME's spellbook into your hand.
