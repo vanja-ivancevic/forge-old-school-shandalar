@@ -1,10 +1,20 @@
 ## v0.36.3
 ### No issue
 
-Updated enemy custom cards, "startinbattle" cards like dungeon effects, and fixed some enemy decks where new variants were showing.
+**Prepare release v0.36.3**
 
-## Unreleased
-### No issue
+
+[6473e091e48aed2](https://github.com/Card-Forge/forge/commit/6473e091e48aed2) Vanja *2025-05-08 13:24:36*
+
+**Fixed "FBB" to "3ED"**
+
+
+[609bace931adf03](https://github.com/Card-Forge/forge/commit/609bace931adf03) Vanja *2025-05-08 13:10:02*
+
+**Restore tibalts because revamp crashed**
+
+
+[fce163f5450a193](https://github.com/Card-Forge/forge/commit/fce163f5450a193) Vanja *2025-05-08 13:04:59*
 
 **big overhaul to all boss custom cards and startinbattle cards**
 

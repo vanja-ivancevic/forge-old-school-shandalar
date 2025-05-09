@@ -786,7 +786,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Swords to Plowshares"
+				"cardName": "Mox Pearl"
 			},
 			{
 				"type": "gold",
@@ -809,13 +809,13 @@
 				"type": "card",
 				"probability": 1,
 				"count": 1,
-				"cardName": "Karmic Guide"
+				"cardName": "Scrubland"
 			},
 			{
 				"type": "card",
 				"probability": 1,
 				"count": 1,
-				"cardName": "Akroma, Angel of Wrath"
+				"cardName": "Tundra"
 			},
 			{
 				"type": "item",
@@ -4754,9 +4754,9 @@
 		"rewards": [
 			{
 				"type": "card",
-				"probability": 1,
+				"probability": 0.5,
 				"count": 1,
-				"cardName": "Teeka's Dragon"
+				"cardName": "Mox Ruby"
 			},
 			{
 				"type": "Union",
@@ -6026,13 +6026,13 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Bottle of Suleiman"
+				"cardName": "Underground Sea"
 			},
 			{
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Anvil of Bogardan"
+				"cardName": "Badlands"
 			},
 			{
 				"type": "deckCard",
@@ -12029,9 +12029,9 @@
 		"rewards": [
 			{
 				"type": "card",
-				"probability": 1,
+				"probability": 0.5,
 				"count": 1,
-				"cardName": "Black Lotus"
+				"cardName": "Mox Emerald"
 			},
 			{
 				"type": "item",
@@ -12053,9 +12053,9 @@
 			},
 			{
 				"type": "card",
-				"probability": 0.5,
+				"probability": 1,
 				"count": 1,
-				"cardName": "Exploration"
+				"cardName": "Taiga"
 			},
 			{
 				"type": "shards",
@@ -12126,11 +12126,11 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Jayemdae Tome"
+				"cardName": "Tropical Island"
 			},
 			{
 				"type": "card",
-				"probability": 0.3,
+				"probability": 1,
 				"count": 1,
 				"cardName": "Gaea's Cradle"
 			},
@@ -12199,7 +12199,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Mox Jet"
+				"cardName": "Necropotence"
 			},
 			{
 				"type": "card",
@@ -13199,7 +13199,7 @@
 				"type": "card",
 				"probability": 1,
 				"count": 1,
-				"cardName": "Time Vault"
+				"cardName": "Mox Jet"
 			},
 			{
 				"type": "item",
@@ -13317,7 +13317,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Urza's Incubator"
+				"cardName": "Bayou"
 			},
 			{
 				"type": "card",
@@ -16840,19 +16840,19 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Deranged Hermit"
+				"cardName": "Intuition"
 			},
 			{
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Hurkyl's Recall"
+				"cardName": "Meddling Mage"
 			},
 			{
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Survival of the Fittest"
+				"cardName": "Timetwister"
 			},
 			{
 				"type": "card",
@@ -16864,7 +16864,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Counterspell"
+				"cardName": "Parallax Tide"
 			},
 			{
 				"type": "gold",
@@ -17193,7 +17193,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Aggravated Assault"
+				"cardName": "Tropical Island"
 			},
 			{
 				"type": "card",
@@ -18061,7 +18061,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Lightning Bolt"
+				"cardName": "Mox Ruby"
 			},
 			{
 				"type": "item",
@@ -18085,7 +18085,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Mox Sapphire"
+				"cardName": "Ancestral Recall"
 			},
 			{
 				"type": "life",
@@ -18692,7 +18692,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Windfall"
+				"cardName": "Underground Sea"
 			},
 			{
 				"type": "card",
@@ -20552,7 +20552,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Burgeoning"
+				"cardName": "Tundra"
 			},
 			{
 				"type": "card",
@@ -20564,7 +20564,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Impulse"
+				"cardName": "Savannah"
 			},
 			{
 				"type": "card",
@@ -21247,13 +21247,13 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Sphere of Resistance"
+				"cardName": "Bayou"
 			},
 			{
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Dark Ritual"
+				"cardName": "Scrubland"
 			},
 			{
 				"type": "card",
@@ -25225,7 +25225,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Null Rod"
+				"cardName": "Plateau"
 			},
 			{
 				"type": "card",
@@ -25243,7 +25243,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Null Rod"
+				"cardName": "Taiga"
 			},
 			{
 				"type": "card",
@@ -25306,8 +25306,26 @@
 			},
 			{
 				"type": "card",
+				"probability": 0.5,
+				"count": 1,
+				"cardName": "Badlands"
+			},
+			{
+				"type": "card",
+				"probability": 0.5,
+				"count": 1,
+				"cardName": "Scrubland"
+			},
+			{
+				"type": "card",
+				"probability": 0.5,
+				"count": 1,
+				"cardName": "Savannah"
+			},
+			{
+				"type": "card",
 				"probability": 1,
-				"count": 5,
+				"count": 3,
 				"addMaxCount": 10,
 				"subTypes": [
 					"Sliver"
@@ -26311,7 +26329,7 @@
 				"type": "card",
 				"probability": 1,
 				"count": 1,
-				"cardName": "Swords to Plowshares"
+				"cardName": "Tundra"
 			},
 			{
 				"type": "card",
@@ -26425,7 +26443,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Temporal Aperture"
+				"cardName": "Savannah"
 			},
 			{
 				"type": "deckCard",
@@ -26554,7 +26572,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Wooded Foothills"
+				"cardName": "Taiga"
 			},
 			{
 				"type": "card",
@@ -26705,7 +26723,7 @@
 				"count": 1,
 				"rarity": [
 					"uncommon",
-					"common"
+					"rare"
 				],
 				"cardTypes": [
 					"Land"
@@ -28637,7 +28655,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Windswept Heath"
+				"cardName": "Taiga"
 			},
 			{
 				"type": "card",
@@ -28649,7 +28667,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Flooded Strand"
+				"cardName": "Tropical Island"
 			},
 			{
 				"type": "card",
@@ -28813,7 +28831,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Meteor Crater"
+				"cardName": "Badlands"
 			},
 			{
 				"type": "card",
@@ -28825,7 +28843,7 @@
 				"type": "card",
 				"probability": 0.5,
 				"count": 1,
-				"cardName": "Swords to Plowshares"
+				"cardName": "Volcanic Island"
 			},
 			{
 				"type": "gold",
