@@ -1,3 +1,12 @@
+## Unreleased
+### No issue
+
+**Restricted final promo sets, improved and rebalanced boss and miniboss rewards**
+
+
+[949457dcd79e574](https://github.com/Card-Forge/forge/commit/949457dcd79e574) Vanja *2025-05-09 02:08:46*
+
+
 ## v0.36.3
 ### No issue
 
