@@ -123,11 +123,7 @@
     <property name="reward" value="[ { &quot;type&quot;: &quot;card&quot;, &quot;cardName&quot;: &quot;Coastal Drake&quot;, &quot;count&quot;: 1 } ]" />
    </properties>
   </object>
-  <object id="66" template="../../obj/scroll.tx" x="336.333" y="58.3333">
-   <properties>
-    <property name="reward" value="[ { &quot;type&quot;: &quot;card&quot;, &quot;cardName&quot;: &quot;Coveted Jewel&quot;, &quot;count&quot;: 1 } ]" />
-   </properties>
-  </object>
+
   <object id="69" template="../../obj/manashards.tx" x="350.486" y="220.639" />
   <object id="70" template="../../obj/manashards.tx" x="59.1422" y="135.158" />
   <object id="71" template="../../obj/waypoint.tx" x="272" y="208" />
