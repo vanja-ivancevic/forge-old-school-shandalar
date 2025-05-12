@@ -1,5 +1,24 @@
-## Unreleased
+## v0.37.0
 ### No issue
+
+**Prepare release v0.37.0**
+
+
+[b9ec9caee307a52](https://github.com/Card-Forge/forge/commit/b9ec9caee307a52) Vanja *2025-05-09 06:56:08*
+
+**emergency update to fix persistent crashes related to invalid custom cards**
+
+
+[3bf640880869186](https://github.com/Card-Forge/forge/commit/3bf640880869186) Vanja *2025-05-09 06:23:48*
+
+
+## v0.36.4
+### No issue
+
+**Prepare release v0.36.4**
+
+
+[f396e4249460080](https://github.com/Card-Forge/forge/commit/f396e4249460080) Vanja *2025-05-09 02:47:26*
 
 **Restricted final promo sets, improved and rebalanced boss and miniboss rewards**
 
