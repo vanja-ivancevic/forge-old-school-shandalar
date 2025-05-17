@@ -1,14 +1,9 @@
 package forge.adventure.data;
 
 import forge.adventure.util.CardUtil;
-import forge.adventure.util.Config;
 import forge.adventure.util.Current;
 import forge.deck.Deck;
-import forge.deck.DeckgenUtil;
-import forge.game.GameFormat;
-import forge.model.FModel;
 import forge.util.Aggregates;
-import forge.util.MyRandom;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -86,6 +81,9 @@ public class EnemyData implements Serializable {
     public Deck generateDeck(boolean isFantasyMode, boolean useGeneticAI) {
         boolean canUseGeneticAI = useGeneticAI && life > 16;
 
+        // LDA Deck Generation for Standard/Modern/Legacy is disabled for OldSchoolForge
+        // as DeckgenUtil.buildLDACArchetypeDeck is not verified to respect restrictedEditions.
+        /*
         if (canUseGeneticAI && Config.instance().getSettingData().generateLDADecks) {
             GameFormat fmt = FModel.getFormats().getStandard();
             int rand = MyRandom.getRandom().nextInt(100);
@@ -94,8 +92,12 @@ public class EnemyData implements Serializable {
             } else if (rand > 50) {
                 fmt = FModel.getFormats().getModern();
             }
-            return DeckgenUtil.buildLDACArchetypeDeck(fmt, true);
+            // If this block were to be re-enabled, the returned deck would need post-filtering:
+            // return filterDeckByRestrictedEditions(DeckgenUtil.buildLDACArchetypeDeck(fmt, true));
+            // For now, returning null or falling through is safer if no old-school LDA path exists.
+            // However, the original code falls through if this "if" is false, so commenting the block achieves that.
         }
+        */
 
         if (randomizeDeck) {
             return CardUtil.getDeck(Aggregates.random(deck), true, isFantasyMode, colors, life > 13, canUseGeneticAI);

@@ -40,7 +40,7 @@
   <object id="55" template="../../obj/shop.tx" x="416" y="402">
    <properties>
     <property name="commonShopList" value="Swamp"/>
-    <property name="noRestock" type="bool" value="true"/>
+    <property name="noRestock" type="bool" value="false"/>
     <property name="signYOffset" type="float" value="-2"/>
    </properties>
   </object>

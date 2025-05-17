@@ -1,3 +1,22 @@
+## v0.37.1-testbuild
+### No issue
+
+**xira fix2**
+
+
+[063958531c7d9db](https://github.com/Card-Forge/forge/commit/063958531c7d9db) Vanja *2025-05-12 04:15:49*
+
+**fix kavu cave**
+
+
+[76a750c7a975b0a](https://github.com/Card-Forge/forge/commit/76a750c7a975b0a) Vanja *2025-05-12 04:06:12*
+
+**fix xira crash**
+
+
+[56013af2d09136e](https://github.com/Card-Forge/forge/commit/56013af2d09136e) Vanja *2025-05-12 04:03:28*
+
+
 ## v0.37.0
 ### No issue
 

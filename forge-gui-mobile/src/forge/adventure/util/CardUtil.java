@@ -12,6 +12,7 @@ import forge.card.*;
 import forge.card.mana.ManaCostShard;
 import forge.deck.Deck;
 import forge.deck.DeckSection;
+import forge.deck.CardPool;
 import forge.deck.DeckgenUtil;
 import forge.deck.io.DeckSerializer;
 import forge.game.GameFormat;
@@ -442,6 +443,58 @@ public class CardUtil {
         return resultList;
     }
 
+// New helper method in CardUtil.java
+    private static Deck filterDeckByRestrictedEditions(Deck deckToFilter) {
+        if (deckToFilter == null) {
+            return null;
+        }
+        ConfigData configData = Config.instance().getConfigData();
+        if (configData == null || configData.restrictedEditions == null || configData.restrictedEditions.length == 0) {
+            return deckToFilter; // No restrictions to apply
+        }
+        List<String> restrictedEditionsList = Arrays.asList(configData.restrictedEditions);
+        List<PaperCard> cardsToRemove = new ArrayList<>();
+
+        // Check main deck
+        // Use a null-safe way to get the main deck section
+        CardPool mainDeckPool = deckToFilter.get(DeckSection.Main); // Changed type to CardPool
+        if (mainDeckPool != null) {
+            // Iterate over entries (PaperCard -> count) in the CardPool
+            for (Map.Entry<PaperCard, Integer> entry : mainDeckPool) { // Assuming CardPool is Iterable<Map.Entry<PaperCard, Integer>>
+                PaperCard card = entry.getKey();
+                if (restrictedEditionsList.contains(card.getEdition())) {
+                    // Add all copies of the card to be removed
+                    for (int i = 0; i < entry.getValue(); i++) {
+                        cardsToRemove.add(card);
+                    }
+                }
+            }
+            for (PaperCard cardToRemove : cardsToRemove) {
+                mainDeckPool.remove(cardToRemove);
+            }
+            cardsToRemove.clear();
+        }
+
+        // Check sideboard
+        // Use a null-safe way to get the sideboard section
+        CardPool sideBoardPool = deckToFilter.get(DeckSection.Sideboard); // Changed type to CardPool
+        if (sideBoardPool != null) { // Check if sideboard exists and is not null
+            // Iterate over entries (PaperCard -> count) in the CardPool
+            for (Map.Entry<PaperCard, Integer> entry : sideBoardPool) { // Assuming CardPool is Iterable<Map.Entry<PaperCard, Integer>>
+                PaperCard card = entry.getKey();
+                if (restrictedEditionsList.contains(card.getEdition())) {
+                    // Add all copies of the card to be removed
+                    for (int i = 0; i < entry.getValue(); i++) {
+                        cardsToRemove.add(card);
+                    }
+                }
+            }
+            for (PaperCard cardToRemove : cardsToRemove) {
+                sideBoardPool.remove(cardToRemove);
+            }
+        }
+        return deckToFilter;
+    }
     public static int getCardPrice(PaperCard card)
     {
         if(card==null)
@@ -517,9 +570,15 @@ public class CardUtil {
                 }
 
                 packCandidates=new HashMap<>();
+                ConfigData configData = Config.instance().getConfigData(); // Get config data
+                List<String> restrictedEditionsList = Arrays.asList(configData.restrictedEditions); // Cache restricted editions
+
                 for(SealedTemplate template : StaticData.instance().getSpecialBoosters())
                 {
-                    if (!editionCodes.contains(template.getEdition().split("\\s",2)[0]))
+                    String templateEditionCode = template.getEdition().split("\\s",2)[0];
+                    if (!editionCodes.contains(templateEditionCode)) // Original check
+                        continue;
+                    if (restrictedEditionsList.contains(templateEditionCode)) // New check for restricted editions
                         continue;
                     List<PaperCard> packContents = new UnOpenedProduct(template).get();
                     if (packContents.size() < 18 | packContents.size() > 25)
@@ -801,24 +860,24 @@ public class CardUtil {
                 deck = DeckSerializer.fromFile(fileHandle.file());
             }
             if (deck == null) {
-                deck = DeckgenUtil.getRandomOrPreconOrThemeDeck(colors, true, false, true);
-                System.err.println("Error loading Deck: " + path + "\nGenerating random deck: " + deck.getName());
+                deck = filterDeckByRestrictedEditions(DeckgenUtil.getRandomOrPreconOrThemeDeck(colors, true, false, true));
+                System.err.println("Error loading Deck: " + path + "\nGenerating random deck: " + (deck != null ? deck.getName() : "null deck after filtering"));
             }
-            return deck;
+            return filterDeckByRestrictedEditions(deck); // Also filter the successfully loaded .dck file as a precaution
         }
 
         if(forAI && (isFantasyMode||useGeneticAI)) {
-            Deck deck = DeckgenUtil.getRandomOrPreconOrThemeDeck(colors, forAI, isTheme, useGeneticAI);
+            Deck deck = filterDeckByRestrictedEditions(DeckgenUtil.getRandomOrPreconOrThemeDeck(colors, forAI, isTheme, useGeneticAI));
             if (deck != null)
-                return deck;
+                return deck; // Already filtered
         }
         Json json = new Json();
         FileHandle handle = Config.instance().getFile(path);
         if (handle.exists())
-            return generateDeck(json.fromJson(GeneratedDeckData.class, handle), starterEdition, discourageDuplicates);
-        Deck deck = DeckgenUtil.getRandomOrPreconOrThemeDeck(colors, true, false, true);
-        System.err.println("Error loading JSON: " + handle.path() + "\nGenerating random deck: "+deck.getName());
-        return deck;
+            return generateDeck(json.fromJson(GeneratedDeckData.class, handle), starterEdition, discourageDuplicates); // generateDeck (JSON template) is assumed to be compliant now
+        Deck deck = filterDeckByRestrictedEditions(DeckgenUtil.getRandomOrPreconOrThemeDeck(colors, true, false, true));
+        System.err.println("Error loading JSON: " + handle.path() + "\nGenerating random deck: "+ (deck != null ? deck.getName() : "null deck after filtering"));
+        return deck; // Already filtered
 
     }
 

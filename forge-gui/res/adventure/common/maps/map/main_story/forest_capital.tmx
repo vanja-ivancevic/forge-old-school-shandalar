@@ -49,7 +49,7 @@
   <object id="55" template="../../obj/shop.tx" x="479" y="453">
    <properties>
     <property name="commonShopList" value="Forest"/>
-    <property name="noRestock" type="bool" value="true"/>
+    <property name="noRestock" type="bool" value="false"/>
     <property name="signYOffset" type="float" value="0"/>
    </properties>
   </object>
