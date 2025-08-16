@@ -12,7 +12,7 @@ Huge thanks to **Shenshinoman** for creating the "planes" system that made this 
 
 1.  **[Download the latest Forge snapshot](https://github.com/Card-Forge/forge/releases/tag/daily-snapshots)**.
 2.  In Forge, go to **Adventure Mode > New Game > Settings**.
-3.  Select the **"Old-School Shandalar"** plane.
+3.  Select the **"Shandalar Old Border"** plane.
 4.  Restart the game and start your adventure!
 
 ![How to select the plane in Forge](settingsview.jpg)
