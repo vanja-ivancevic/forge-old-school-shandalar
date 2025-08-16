@@ -1,65 +1,20 @@
-# Forge: Shandalar - "The First 10 Years" Edition
+# Forge: Old-School Shandalar (Archived)
 
-This is a fork of the official **[Forge TCG Engine](https://github.com/Card-Forge/forge)** adventure mode, crafted to recreate a nostalgic "Old-School" Shandalar adventure mode experience, focusing on the golden age of 1993-2003.
+**This standalone mod is now deprecated and this repository will no longer be updated.**
 
-This version updates Forge's Shandalar campaign to primarily use cards with the original ("old-border") frames, focusing on sets from **Alpha through Scourge (up to May 2003)**.
+Thanks to developer Shenshinoman, who created the "planes" system, you can now play Old-Border Shandalar and other alternative adventure modes directly in the main Forge game. I will continue to update the game there.
 
-![Shandalar Title Image](Title_image.PNG)
+**➡️ Download the latest Forge snapshot to play: [https://github.com/Card-Forge/forge/releases/tag/daily-snapshots](https://github.com/Card-Forge/forge/releases/tag/daily-snapshots)**
 
-**[➡️ TL;DR: Download Latest Release ⬅️](https://github.com/vanja-ivancevic/forge-old-school-shandalar/releases/latest)**
+## How to Play in the Main Forge Game
 
-## Modifications
+To play the Old-School Shandalar adventure, simply go to **Adventure Mode > Settings** in the main Forge game, select the plane you want to play, and restart the game.
 
-This fork includes changes to:
+Here’s a screenshot of the settings:
 
-*   **Card Restrictions:** The default Shandalar format is restricted to old-border sets.
-*   **Enemy Decks:** All enemy decks have been reimagined for an authentic old-school experience. The initial decklists were developed by a complex multi-AI-agent framework and continue to be refined through playtesting. At least 30-40 decks have been manually reviewed and improved, including all boss decks.
-*   **Shop Inventories & Rewards:** Adjusted to fit the old-school theme and card pool.
-*   **Core Code Fixes:** Includes modifications to the core Forge code (`GameFormat.java` and adventure GUI code) to correctly handle reprinted cards within restricted formats, ensuring they appear in shops and rewards as intended when their original printing is allowed.
-
-## Features
-
-*   Authentic "golden-age" of TCG feeling with only old-border cards in Shandalar.
-*   Boosters available in shops for many old-border sets.
-*   Power 9 cards are extremely rare and only obtainable from specific encounters.
-
-## How to Play
-
-1.  Go to the **[Latest Release page](https://github.com/vanja-ivancevic/forge-old-school-shandalar/releases/latest)**.
-2.  Download the `OldSchoolForge-[version].zip` file (e.g., `OldSchoolForge-0.36.0.zip`).
-3.  Unzip the downloaded file to a location of your choice.
-4.  Launch the game using the executable appropriate for your operating system (e.g., `.exe` for Windows, `.sh` for Linux, `.command` for macOS).
-## Development Status
-
-✅ **Completed:**
-
-*   Global set and card restrictions for Shandalar based on the old-border era 1993-2003
-*   Enemy decks (All processed, playtest feedback welcome!)
-*   Basic (mostly) random rewards re-configuration
-*   Shop inventories re-configuration including revamped basic land shops
-*   Core code fix for reprint handling in restricted formats.
-*   Drafting (Note: Jumpstart packs might still appear visually but cannot be played due to restrictions).
-*   Items
-*   Starter Decks (real precons for each difficulty setting - try them all!)
-
-🔄 **In Progress:**
-
-*   Balance adjustments based on player feedback.
-
-🗓️ **Planned:**
-
-*   Custom maps to suit the story and characters of the early era
-*   Custom enemies
-*   Custom dungeons
-
-## Feedback and Issues
-
-Please report any bugs or share your feedback specific to this Old-School Shandalar fork on the issues page.
-
-For issues related to the core Forge engine unrelated to these modifications, please refer to the [official Forge repository issues](https://github.com/Card-Forge/forge/issues).
+![settingsview.jpg](settingsview.jpg)
 
 Happy dueling!
-
 
 ---
 *This fork is based on the [official Forge repository](https://github.com/Card-Forge/forge) and maintains its [GPL-3.0 License](LICENSE).*

@@ -1,5 +1,0 @@
-Name:Enchantment Alteration
-ManaCost:U
-Types:Instant
-SVar:AttachAILogic:MoveTgtAura | StackDescription$ SpellDescription | SpellDescription$ Attach target Aura attached to a creature or land to another permanent of that type.
-Oracle:Attach target Aura attached to a creature or land to another permanent of that type.
