@@ -1,6 +1,7 @@
-# Old-Border Shandalar for Forge (Archived)
 
 ![Shandalar Title Image](Title_image.PNG)
+
+# Old-Border Shandalar for Forge (Archived)
 
 **This repository is archived and no longer updated.**
 
@@ -18,6 +19,3 @@ Huge thanks to **Shenshinoman** for creating the "planes" system that made this 
 ![How to select the plane in Forge](settingsview.jpg)
 
 Happy dueling!
-
----
-*This work is based on the [official Forge repository](https://github.com/Card-Forge/forge) and maintains its [GPL-3.0 License](LICENSE).*
