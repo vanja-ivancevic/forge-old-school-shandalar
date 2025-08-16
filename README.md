@@ -1,8 +1,10 @@
-# Old-School Shandalar for Forge (Archived)
+# Old-Border Shandalar for Forge (Archived)
+
+![Shandalar Title Image](Title_image.PNG)
 
 **This repository is archived and no longer updated.**
 
-The "Old-School Shandalar" adventure mode has been integrated into the main Forge game and is actively maintained there.
+The "Old-Border Shandalar" adventure mode has been integrated into the main Forge game and is actively maintained there.
 
 Huge thanks to **Shenshinoman** for creating the "planes" system that made this possible!
 
