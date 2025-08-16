@@ -1,20 +1,21 @@
-# Forge: Old-School Shandalar (Archived)
+# Old-School Shandalar for Forge (Archived)
 
-**This standalone mod is now deprecated and this repository will no longer be updated.**
+**This repository is archived and no longer updated.**
 
-Thanks to developer Shenshinoman, who created the "planes" system, you can now play Old-Border Shandalar and other alternative adventure modes directly in the main Forge game. I will continue to update the game there.
+The "Old-School Shandalar" adventure mode has been integrated into the main Forge game and is actively maintained there.
 
-**➡️ Download the latest Forge snapshot to play: [https://github.com/Card-Forge/forge/releases/tag/daily-snapshots](https://github.com/Card-Forge/forge/releases/tag/daily-snapshots)**
+Huge thanks to **Shenshinoman** for creating the "planes" system that made this possible!
 
-## How to Play in the Main Forge Game
+## How to Play
 
-To play the Old-School Shandalar adventure, simply go to **Adventure Mode > Settings** in the main Forge game, select the plane you want to play, and restart the game.
+1.  **[Download the latest Forge snapshot](https://github.com/Card-Forge/forge/releases/tag/daily-snapshots)**.
+2.  In Forge, go to **Adventure Mode > New Game > Settings**.
+3.  Select the **"Old-School Shandalar"** plane.
+4.  Restart the game and start your adventure!
 
-Here’s a screenshot of the settings:
-
-![settingsview.jpg](settingsview.jpg)
+![How to select the plane in Forge](settingsview.jpg)
 
 Happy dueling!
 
 ---
-*This fork is based on the [official Forge repository](https://github.com/Card-Forge/forge) and maintains its [GPL-3.0 License](LICENSE).*
+*This work is based on the [official Forge repository](https://github.com/Card-Forge/forge) and maintains its [GPL-3.0 License](LICENSE).*
