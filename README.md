@@ -16,7 +16,9 @@ Full updates will be pushed to the [official Forge repository](https://github.co
 
 ---
 
-Huge thanks to **Shenshinoman** for creating the "planes" system that made this possible!
+Huge thanks:
+- to **Shenshinoman** for creating the "planes" system that made this possible!
+- to **VigilantSera** for redesigning all the boss and miniboss decks/battles, rewards and commander starter decks.
 
 ## How to Play
 
