@@ -1,20 +1,32 @@
 
 ![Shandalar Title Image](Title_image.PNG)
 
-# Old-Border Shandalar for Forge (Archived)
+# Old-Border Shandalar for Forge - Repository Moved
 
-**This repository is archived and no longer updated.**
+## This Repository Has Moved
 
-The "Old-Border Shandalar" adventure mode has been integrated into the main Forge game and is actively maintained there.
+**Development has moved to: [github.com/vanja-ivancevic/forge](https://github.com/vanja-ivancevic/forge)**
+
+Visit the new repository for:
+- **Latest beta snapshots** of the Old-Border Shandalar mod
+- Early access to new features and fixes
+- Issue tracking and discussions
+
+Full updates will be pushed to the [official Forge repository](https://github.com/Card-Forge/forge) after reviews.
+
+---
 
 Huge thanks to **Shenshinoman** for creating the "planes" system that made this possible!
 
 ## How to Play
 
-1.  **[Download the latest Forge snapshot](https://github.com/Card-Forge/forge/releases/tag/daily-snapshots)**.
-2.  In Forge, go to **Adventure Mode > New Game > Settings**.
-3.  Select the **"Shandalar Old Border"** plane.
-4.  Restart the game and start your adventure!
+**Note:** The beta fork does not contain built files. To use the latest beta version:
+
+1.  Download the mod files from the [new repository](https://github.com/vanja-ivancevic/forge/tree/master/forge-gui/res/adventure/Shandalar%20Old%20Border).
+2.  Manually replace your `/res/adventure/Shandalar Old Border/` folder with the downloaded files.
+3.  In Forge, go to **Adventure Mode > New Game > Settings**.
+4.  Select the **"Shandalar Old Border"** plane.
+5.  Restart the game and start your adventure!
 
 ![How to select the plane in Forge](settingsview.jpg)
 
