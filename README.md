@@ -26,7 +26,7 @@ Huge thanks:
 
 1.  Download the latest snapshot of Forge: https://github.com/Card-Forge/forge/releases/tag/daily-snapshots.
 2.  In Forge, go to **Adventure Mode > New Game > Settings**.
-3.  Make sure that "Show all card variants" is OFF (End-Feb 2026 update will revert this. If you are visiting after Feb 2026, please set it to ON)
+3.  Make sure that "Show all card variants" is ON. (If your Forge build is from before 21 Feb 2026, switch it OFF instead.)
 4.  Select the **"Shandalar Old Border"** plane.
 5.  Restart the game and start your adventure!
 
