@@ -256,3 +256,132 @@ hr {
   background: #220044;
   border: 2px outset #7744AA;
 }
+
+/* ============================================ */
+/*     ~*~ CORNER RIBBON ~*~                    */
+/* ============================================ */
+.corner-ribbon {
+  position: fixed;
+  top: 30px;
+  right: -55px;
+  z-index: 10002;
+  transform: rotate(45deg);
+  background: #CC0000;
+  background-image: linear-gradient(180deg, #DD2222 0%, #AA0000 100%);
+  border-top: 2px dashed #FF6666;
+  border-bottom: 2px dashed #FF6666;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.6);
+  padding: 6px 55px;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1.3;
+  color: #FFFFFF;
+  text-shadow: 1px 1px 0 #000;
+  pointer-events: none;
+}
+.corner-ribbon span {
+  display: block;
+  color: #FFFF00;
+  font-size: 13px;
+}
+@media (max-width: 700px) {
+  .corner-ribbon {
+    top: 22px;
+    right: -60px;
+    font-size: 10px;
+    padding: 5px 55px;
+  }
+  .corner-ribbon span {
+    font-size: 11px;
+  }
+}
+
+/* ============================================ */
+/*     ~*~ CLIPPY ~*~                           */
+/* ============================================ */
+@keyframes clippy-fade-in {
+  from { opacity: 0; transform: scale(0.8) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+#clippy-speech {
+  position: fixed;
+  bottom: 180px;
+  right: 20px;
+  z-index: 10001;
+  background: #FFFFCC;
+  border: 2px solid #000;
+  border-radius: 4px;
+  padding: 12px 14px;
+  max-width: 240px;
+  color: #000;
+  font-family: "Tahoma", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  box-shadow: 2px 2px 0px #666;
+  animation: clippy-fade-in 0.5s ease-out;
+}
+#clippy-speech::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 30px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #FFFFCC;
+}
+#clippy-speech::before {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  right: 29px;
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 11px solid #000;
+}
+#clippy-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 6px;
+}
+#clippy-buttons button {
+  font-family: "Tahoma", "Arial", sans-serif;
+  font-size: 11px;
+  padding: 3px 8px;
+  cursor: pointer;
+  border: 2px outset #ccc;
+  background: #e0e0e0;
+  color: #000;
+}
+#clippy-buttons button:active {
+  border-style: inset;
+}
+#clippy-dismiss {
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  line-height: 1;
+}
+#clippy-dismiss:hover {
+  color: #000;
+}
+@media (max-width: 700px) {
+  #clippy-speech {
+    bottom: 160px;
+    right: 10px;
+    max-width: 200px;
+    font-size: 12px;
+    padding: 10px;
+  }
+}
