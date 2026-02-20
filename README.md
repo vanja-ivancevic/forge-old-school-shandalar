@@ -24,9 +24,9 @@ Huge thanks:
 
 **Note:** The beta fork does not contain built files. To use the latest beta version:
 
-1.  Download the mod files from the [new repository](https://github.com/vanja-ivancevic/forge/tree/master/forge-gui/res/adventure/Shandalar%20Old%20Border).
-2.  Manually replace your `/res/adventure/Shandalar Old Border/` folder with the downloaded files.
-3.  In Forge, go to **Adventure Mode > New Game > Settings**.
+1.  Download the latest snapshot of Forge: https://github.com/Card-Forge/forge/releases/tag/daily-snapshots.
+2.  In Forge, go to **Adventure Mode > New Game > Settings**.
+3.  Make sure that "Show all card variants" is OFF (End-Feb 2026 update will revert this. If you are visiting after Feb 2026, please set it to ON)
 4.  Select the **"Shandalar Old Border"** plane.
 5.  Restart the game and start your adventure!
 
