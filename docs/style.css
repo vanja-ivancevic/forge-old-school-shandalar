@@ -71,7 +71,7 @@ a:active { color: #FF0000; }
 
 /* === MARQUEE STYLING === */
 marquee {
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: "Comic Sans MS", "Comic Sans", sans-serif;
   font-size: 16px;
 }
 
@@ -104,7 +104,7 @@ marquee {
 .nav-title {
   color: #FFFF00;
   font-size: 13px;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: "Comic Sans MS", "Comic Sans", sans-serif;
   text-align: center;
   letter-spacing: 1px;
   margin-bottom: 10px;
@@ -274,7 +274,7 @@ hr {
   box-shadow: 0 3px 10px rgba(0,0,0,0.6);
   padding: 6px 55px;
   text-align: center;
-  font-family: "Comic Sans MS", cursive;
+  font-family: "Comic Sans MS", "Comic Sans", sans-serif;
   font-size: 11px;
   font-weight: bold;
   line-height: 1.3;
