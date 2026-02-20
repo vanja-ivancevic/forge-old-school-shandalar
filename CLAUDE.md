@@ -22,6 +22,7 @@ docs/                    # GitHub Pages root — all site content lives here
 ├── features.html        # 10-feature grid (2-column table)
 ├── howtoplay.html       # 4-step setup guide
 ├── guide.html           # External walkthrough link + testimonials
+├── changelog.html       # Monthly changelog sourced from Forge repo commits
 ├── community.html       # Discord/Reddit/GitHub links, guestbook, credits
 ├── style.css            # Single shared stylesheet
 └── gifs/                # 19 animated GIFs (dividers, decorations, 88x31 buttons)
