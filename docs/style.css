@@ -304,7 +304,7 @@ hr {
 }
 #clippy-speech {
   position: fixed;
-  bottom: 180px;
+  bottom: 220px;
   right: 20px;
   z-index: 10001;
   background: #FFFFCC;
