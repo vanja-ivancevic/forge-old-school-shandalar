@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>~*~ Old Border Shandalar ~*~ Official Guide ~*~</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav">
+<a href="index.html">Home</a>
+<a href="features.html">Features</a>
+<a href="howtoplay.html">How to Play</a>
+<a href="guide.html">Guide</a>
+<a href="community.html">Community</a>
+</div>
+
+<table class="layout-table" cellpadding="0" cellspacing="0" border="0">
+<tr>
+
+<!-- LEFT NAV -->
+<td class="nav-sidebar">
+<div class="nav-inner">
+
+<center>
+<img src="gifs/skull3.gif" alt="*" width="30" height="33">
+<br>
+<div class="nav-title">~*~ Old Border Shandalar ~*~</div>
+</center>
+
+<a href="index.html" class="nav-link">&#9733; Home</a>
+<a href="features.html" class="nav-link">&#9876; Features</a>
+<a href="howtoplay.html" class="nav-link">&#9654; How to Play</a>
+<a href="guide.html" class="nav-link active">&#128214; Guide</a>
+<a href="community.html" class="nav-link">&#128172; Community</a>
+
+<hr class="nav-separator">
+
+<center>
+<font size="2" color="#666688">
+<br>
+<img src="gifs/wizard3.gif" alt="*~magic~*" width="80" height="57">
+<br><br>
+<img src="gifs/netscape.gif" alt="Netscape Now!" width="88" height="31">
+<br>
+<img src="gifs/besteyes.gif" alt="Best viewed with eyes" width="88" height="31">
+<br>
+<img src="gifs/java.gif" alt="Java" width="88" height="31">
+</font>
+</center>
+
+</div>
+</td>
+
+<!-- MAIN CONTENT -->
+<td class="main-content">
+<center>
+
+<img src="gifs/fire_bar.gif" alt="~*~*~*~" class="firebar" width="100%" style="max-width:664px">
+<br><br>
+
+<font size="5" color="#FFFF00" class="section-header">
+<b>&#9733; Official Walkthrough &amp; Guide &#9733;</b>
+</font>
+<br><br>
+
+<table width="90%" border="2" bordercolor="#996633" cellpadding="20" cellspacing="0" bgcolor="#1a1000" style="max-width:550px">
+<tr><td align="center">
+<img src="gifs/skull1.gif" alt="*" width="50" height="65">
+<br><br>
+<font size="3" color="#FFCC66">
+A comprehensive walkthrough and official guide has been written by
+<font color="#FFFF00"><b>VigilantSera</b></font>, the mod's co-designer.
+<br><br>
+Covers strategies, boss fight tips, item locations, and progression advice.
+<br><br>
+<font size="5">
+&#128214; <a href="https://docs.google.com/document/d/13j4pv7zNkR0VlADTEha9xvklRtwlQQaBnhemQ7zwVZQ/edit?usp=sharing" target="_blank"><b>READ THE GUIDE</b></a> &#128214;
+</font>
+</font>
+</td></tr>
+</table>
+
+<br><br>
+<img src="gifs/fire_bar.gif" alt="~*~*~*~" class="firebar" width="100%" style="max-width:664px">
+<br><br>
+
+<font size="2" color="#666688">Last updated: February 20, 2026</font>
+<br><br>
+<font size="2" color="#444466" face="Comic Sans MS, cursive">
+This mod was built with &lt;3 on the shoulders of giants (the Forge contributors) and by VigilantSera &amp; RemusLord
+</font>
+
+<br><br>
+</center>
+</td>
+
+</tr>
+</table>
+
+<script>
+// ~*~ Wizard Wand Sparkle Trail ~*~
+(function(){
+  var sparkles=[];
+  var colors=['#FFFF00','#FFD700','#FF8C00','#FF00FF','#00FFFF','#FFFFFF','#FFB6C1'];
+  var shapes=['*','+','.','\u2726','\u2727','\u2728','\u2735'];
+  document.addEventListener('mousemove',function(e){
+    var s=document.createElement('span');
+    s.textContent=shapes[Math.floor(Math.random()*shapes.length)];
+    s.style.cssText='position:fixed;pointer-events:none;z-index:9999;font-size:'+(8+Math.random()*14)+'px;color:'+colors[Math.floor(Math.random()*colors.length)]+';left:'+e.clientX+'px;top:'+e.clientY+'px;';
+    document.body.appendChild(s);
+    sparkles.push({el:s,x:e.clientX,y:e.clientY,vx:(Math.random()-0.5)*2,vy:-1-Math.random()*2,life:1});
+  });
+  setInterval(function(){
+    for(var i=sparkles.length-1;i>=0;i--){
+      var p=sparkles[i];
+      p.life-=0.03;
+      p.x+=p.vx;
+      p.y+=p.vy;
+      p.vy+=0.05;
+      p.el.style.left=p.x+'px';
+      p.el.style.top=p.y+'px';
+      p.el.style.opacity=p.life;
+      if(p.life<=0){p.el.remove();sparkles.splice(i,1);}
+    }
+  },30);
+})();
+</script>
+</body>
+</html>
