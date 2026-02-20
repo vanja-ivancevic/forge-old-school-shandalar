@@ -74,27 +74,20 @@
     var el = document.getElementById('visitor-counter');
     if (!el) return;
 
-    var script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/counterapi@2/dist/counter.min.js';
-    script.onload = function() {
-      var c = new Counter({ workspace: 'old-border-shandalar' });
+    var base = 'https://api.counterapi.dev/v1/old-border-shandalar/visits';
+    var counted = sessionStorage.getItem('obs-counted');
+    var url = counted ? base + '/' : base + '/up';
 
-      // Only increment once per session to avoid inflation on page navigation
-      var counted = sessionStorage.getItem('obs-counted');
-      var promise = counted ? c.get('visits') : c.up('visits');
-
-      promise.then(function(result) {
-        if (!counted) sessionStorage.setItem('obs-counted', '1');
-        var digits = String(result.value).padStart(6, '0').split('');
-        var spans = el.querySelectorAll('.counter-digit');
-        for (var i = 0; i < spans.length; i++) {
-          spans[i].textContent = digits[i] || '0';
-        }
-      }).catch(function() {
-        // API down — leave dashes as placeholder
-      });
-    };
-    document.head.appendChild(script);
+    fetch(url).then(function(r) { return r.json(); }).then(function(data) {
+      if (!counted) sessionStorage.setItem('obs-counted', '1');
+      var digits = String(data.count).padStart(6, '0').split('');
+      var spans = el.querySelectorAll('.counter-digit');
+      for (var i = 0; i < spans.length; i++) {
+        spans[i].textContent = digits[i] || '0';
+      }
+    }).catch(function() {
+      // API down — leave dashes as placeholder
+    });
   });
 
 })();
