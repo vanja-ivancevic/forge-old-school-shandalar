@@ -95,6 +95,10 @@ marquee {
 
 .nav-inner {
   padding: 10px 8px;
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .nav-title {
