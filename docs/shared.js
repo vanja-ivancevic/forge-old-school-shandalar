@@ -13,6 +13,15 @@
     return page === href ? ' active' : '';
   }
 
+  // === FAVICON ===
+  if (!document.querySelector('link[rel="icon"]')) {
+    var link = document.createElement('link');
+    link.rel = 'icon';
+    link.type = 'image/svg+xml';
+    link.href = 'favicon.svg';
+    document.head.appendChild(link);
+  }
+
   // === CORNER RIBBON ===
   document.write('<div class="corner-ribbon"><span>100% FREE</span>OPEN SOURCE</div>');
 
@@ -25,6 +34,7 @@
     '<a href="guide.html">Guide</a>' +
     '<a href="changelog.html">Changelog</a>' +
     '<a href="community.html">Community</a>' +
+    '<a href="modern/' + page + '" class="mobile-modern-link">&#10022; Modern</a>' +
     '</div>'
   );
 
@@ -44,6 +54,10 @@
     '<a href="guide.html" class="nav-link' + activeClass('guide.html') + '">&#128214; Guide</a>' +
     '<a href="changelog.html" class="nav-link' + activeClass('changelog.html') + '">&#128240; Changelog</a>' +
     '<a href="community.html" class="nav-link' + activeClass('community.html') + '">&#128172; Community</a>' +
+
+    '<hr class="nav-separator">' +
+
+    '<a href="modern/' + page + '" class="nav-link nav-modern-link">&#10022; Modern Site</a>' +
 
     '<hr class="nav-separator">' +
 

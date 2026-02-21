@@ -219,6 +219,31 @@ marquee {
   image-rendering: auto;
 }
 
+/* === MODERN SITE LINK === */
+.nav-modern-link {
+  font-size: 12px !important;
+  opacity: 0.65;
+  color: #aaaacc !important;
+  border: 2px outset #555577 !important;
+  background: #1a0033 !important;
+}
+.nav-modern-link:hover {
+  opacity: 1;
+  color: #00CCFF !important;
+  background: #2a0055 !important;
+}
+.mobile-modern-link {
+  font-size: 12px !important;
+  opacity: 0.65;
+  color: #aaaacc !important;
+  background: #1a0033 !important;
+  border-color: #555577 !important;
+}
+.mobile-modern-link:hover {
+  opacity: 1;
+  color: #00CCFF !important;
+}
+
 /* === HR STYLING === */
 hr {
   border: none;
