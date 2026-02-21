@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Changelog - Old Border Shandalar</title>
+<meta name="description" content="Development history and patch notes for Old Border Shandalar. Monthly updates with new content, bug fixes, and balance changes.">
+<meta property="og:title" content="Changelog - Old Border Shandalar">
+<meta property="og:description" content="Development history and patch notes for Old Border Shandalar.">
+<meta property="og:image" content="https://oldborder-shandalar.net/Title_image.jpg">
+<meta property="og:url" content="https://oldborder-shandalar.net/modern/changelog.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="canonical" href="https://oldborder-shandalar.net/modern/changelog.html">
 <link rel="stylesheet" href="modern.css">
 </head>
 
@@ -12,6 +20,10 @@
 <nav class="nav">
 <div class="nav-inner">
 <span class="nav-brand">Old Border Shandalar</span>
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
+<span></span><span></span><span></span>
+</label>
 <div class="nav-links">
 <a href="index.html">Home</a>
 <a href="features.html">Features</a>
@@ -19,40 +31,48 @@
 <a href="guide.html">Guide</a>
 <a href="changelog.html" class="active">Changelog</a>
 <a href="community.html">Community</a>
+<a href="../changelog.html" class="nav-retro">&#9876; Retro Edition</a>
 </div>
 </div>
 </nav>
 
 <div class="container">
 
-<div class="retro-banner">
-Something feels off... This page seems sterile. <a href="../changelog.html">Take me back to the real site.</a>
+<div class="section fade-in" style="text-align:center">
+<h1 class="section-title" style="font-size:36px">Changelog</h1>
+<p class="section-subtitle">Development history for Old Border Shandalar &mdash; sourced from the <a href="https://github.com/vanja-ivancevic/forge" target="_blank" rel="noopener">Forge repository</a></p>
 </div>
 
-<div class="section" style="text-align:center">
-<h1 class="section-title" style="font-size:32px">Changelog</h1>
-<p class="section-subtitle">Development history for Old Border Shandalar &mdash; sourced from the <a href="https://github.com/vanja-ivancevic/forge" target="_blank" rel="noopener">Forge repository</a></p>
+<div class="changelog-nav fade-in">
+<a href="#feb2026" class="latest">Feb 2026</a>
+<a href="#jan2026">Jan 2026</a>
+<a href="#dec2025">Dec 2025</a>
+<a href="#nov2025">Nov 2025</a>
+<a href="#oct2025">Oct 2025</a>
+<a href="#sep2025">Sep 2025</a>
+<a href="#aug2025">Aug 2025</a>
 </div>
 
 
 <!-- FEBRUARY 2026 -->
-<div class="section">
-<h2 class="section-title">February 2026 <span style="font-size:13px;color:var(--accent);font-weight:600;vertical-align:middle">NEW</span></h2>
+<details id="feb2026" class="changelog-month" open>
+<summary>February 2026 <span class="changelog-badge badge-new">New</span></summary>
+<div class="changelog-content">
 
-<h4 style="color:var(--accent);margin-bottom:8px">New Content</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
-<li><strong style="color:var(--text)">Trophy System</strong> for Dungeon Master quest &mdash; 16 unique boss trophies that drop on defeat, transforming quest stages into collectible fetch objectives</li>
-<li><strong style="color:var(--text)">Bonus starting cards</strong> system with updated color identity pack dialogue</li>
-<li><strong style="color:var(--text)">Custom battle backgrounds</strong> and updated UI art for all battle and menu scenes</li>
+<div class="changelog-section">
+<h4 class="new-content">New Content</h4>
+<ul class="changelog-list">
+<li><strong>Trophy System</strong> for Dungeon Master quest &mdash; 16 unique boss trophies that drop on defeat, transforming quest stages into collectible fetch objectives</li>
+<li><strong>Bonus starting cards</strong> system with updated color identity pack dialogue</li>
+<li><strong>Custom battle backgrounds</strong> and updated UI art for all battle and menu scenes</li>
 <li>Updated adventure background texture for the overworld</li>
 <li>New market and market portrait images</li>
 </ul>
 </div>
 
-<h4 style="color:#dc2626;margin-bottom:8px">Bug Fixes</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
+<div class="changelog-section">
+<h4 class="bug-fixes">Bug Fixes</h4>
+<ul class="changelog-list">
 <li>Fixed Colossus of Sardia not dying when killed (defeatDialog flag issue)</li>
 <li>Fixed Sliver Queen access &mdash; now requires EITHER 3 lieutenant kills OR 8 foot-soldier kills</li>
 <li>Fixed card variant resolution bypassing the allowedEditions whitelist</li>
@@ -61,16 +81,16 @@ Something feels off... This page seems sterile. <a href="../changelog.html">Take
 </ul>
 </div>
 
-<h4 style="color:var(--purple);margin-bottom:8px">Balance Changes</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
+<div class="changelog-section">
+<h4 class="balance">Balance Changes</h4>
+<ul class="changelog-list">
 <li>Nerfed Vampire's Dagger: changed from Treacherous Vampire/-5 life to Vampire Hounds/-2 life</li>
 </ul>
 </div>
 
-<h4 style="color:var(--text-muted);margin-bottom:8px">Forge Engine</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
+<div class="changelog-section">
+<h4 class="engine">Forge Engine</h4>
+<ul class="changelog-list">
 <li>Adventure save slots can now be sorted by most recently modified</li>
 <li>Audio menu with volume sliders added to Forge context menu</li>
 <li>Vertical scrollbar added to combat panel</li>
@@ -78,28 +98,31 @@ Something feels off... This page seems sterile. <a href="../changelog.html">Take
 <li>Network multiplayer optimizations (reconnect, UI, chat, version mismatch warnings)</li>
 </ul>
 </div>
-</div>
 
-<div class="separator"></div>
+</div>
+</details>
+
+<div class="separator-changelog"></div>
 
 
 <!-- JANUARY 2026 -->
-<div class="section">
-<h2 class="section-title">January 2026 <span style="font-size:13px;color:var(--accent);font-weight:600;vertical-align:middle">MASSIVE UPDATE</span></h2>
+<details id="jan2026" class="changelog-month">
+<summary>January 2026 <span class="changelog-badge badge-massive">Massive Update</span></summary>
+<div class="changelog-content">
 
-<h4 style="color:var(--accent);margin-bottom:8px">New Content</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
-<li><strong style="color:var(--text)">Dungeon Master Quest</strong> &mdash; a multi-tier quest tracking miniboss lairs: Tier I (creature lairs), Tier II (mage hideouts), Tier III (ancient masters), Bonus (Halls of Time, Ancient Diamond Mine)</li>
-<li><strong style="color:var(--text)">Windwalker's Blessing</strong> speed item (+35% movement speed, late-game reward from legendary minibosses)</li>
-<li><strong style="color:var(--text)">69 new starter decks</strong>: 21 official WotC theme decks (Exodus, Urza's Destiny, Urza's Legacy, Stronghold, Visions, Weatherlight) + 48 themed decks from Stronghold through Scourge</li>
+<div class="changelog-section">
+<h4 class="new-content">New Content</h4>
+<ul class="changelog-list">
+<li><strong>Dungeon Master Quest</strong> &mdash; a multi-tier quest tracking miniboss lairs: Tier I (creature lairs), Tier II (mage hideouts), Tier III (ancient masters), Bonus (Halls of Time, Ancient Diamond Mine)</li>
+<li><strong>Windwalker's Blessing</strong> speed item (+35% movement speed, late-game reward from legendary minibosses)</li>
+<li><strong>69 new starter decks</strong>: 21 official WotC theme decks (Exodus, Urza's Destiny, Urza's Legacy, Stronghold, Visions, Weatherlight) + 48 themed decks from Stronghold through Scourge</li>
 <li>Stronger starter decks added (4th Edition mono-color, 7th Edition dual-color)</li>
-<li><strong style="color:var(--text)">Elder Dragon Lair Caves</strong> with unique items and dungeon effects (Nicol Bolas, Chromium, Vaevictis, Palladia-Mors, Arcades)</li>
-<li><strong style="color:var(--text)">Artificer's Bazaar</strong> &mdash; 3 shops selling unique artifact equipment</li>
-<li><strong style="color:var(--text)">Ancient Diamond Mine</strong> &mdash; trade shards/gold for Beta pack boosters</li>
-<li><strong style="color:var(--text)">Dragon's Lair</strong> events for all five color biomes</li>
-<li><strong style="color:var(--text)">Sphinx's Sanctum</strong> riddles lair &mdash; 6-question trivia challenge</li>
-<li><strong style="color:var(--text)">Demon's Bargain</strong> dungeon added to black biome</li>
+<li><strong>Elder Dragon Lair Caves</strong> with unique items and dungeon effects (Nicol Bolas, Chromium, Vaevictis, Palladia-Mors, Arcades)</li>
+<li><strong>Artificer's Bazaar</strong> &mdash; 3 shops selling unique artifact equipment</li>
+<li><strong>Ancient Diamond Mine</strong> &mdash; trade shards/gold for Beta pack boosters</li>
+<li><strong>Dragon's Lair</strong> events for all five color biomes</li>
+<li><strong>Sphinx's Sanctum</strong> riddles lair &mdash; 6-question trivia challenge</li>
+<li><strong>Demon's Bargain</strong> dungeon added to black biome</li>
 <li>Alternative quest path for Skep outer map (8-sliver kill alternative)</li>
 <li>Life reward added to Sliver Queen drops</li>
 <li>Adventure world-specific battle and menu background support</li>
@@ -107,9 +130,9 @@ Something feels off... This page seems sterile. <a href="../changelog.html">Take
 </ul>
 </div>
 
-<h4 style="color:#dc2626;margin-bottom:8px">Bug Fixes</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
+<div class="changelog-section">
+<h4 class="bug-fixes">Bug Fixes</h4>
+<ul class="changelog-list">
 <li>Fixed end palace gate bug blocking players with completed chapter 1 castles</li>
 <li>Fixed Sliver Den barrier not unlocking after defeating crown slivers (wrong counter)</li>
 <li>Fixed boss spawnRate to prevent 72 bosses from spawning on the overworld</li>
@@ -125,9 +148,9 @@ Something feels off... This page seems sterile. <a href="../changelog.html">Take
 </ul>
 </div>
 
-<h4 style="color:var(--purple);margin-bottom:8px">Balance Changes</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
+<div class="changelog-section">
+<h4 class="balance">Balance Changes</h4>
+<ul class="changelog-list">
 <li>Nerfed Urza due to player feedback</li>
 <li>Reduced Ancient Silver Dragon's Dragon Blood drop rate to 30%</li>
 <li>Balanced deckCard rewards added to minibosses</li>
@@ -138,10 +161,10 @@ Something feels off... This page seems sterile. <a href="../changelog.html">Take
 </ul>
 </div>
 
-<h4 style="color:var(--text-muted);margin-bottom:8px">Forge Engine</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
-<li><strong style="color:var(--text)">Ante support</strong> added to Adventure mode (Play for Ante / Match Ante Rarity options)</li>
+<div class="changelog-section">
+<h4 class="engine">Forge Engine</h4>
+<ul class="changelog-list">
+<li><strong>Ante support</strong> added to Adventure mode (Play for Ante / Match Ante Rarity options)</li>
 <li>Edition-specific starter decks for Standard mode</li>
 <li>Chaos mode precons now filtered by allowed editions</li>
 <li>Conjured cards removed from reward pool</li>
@@ -149,33 +172,36 @@ Something feels off... This page seems sterile. <a href="../changelog.html">Take
 <li>AI profile picker per AI player</li>
 <li>AI proliferate now considers mana cost vs value</li>
 <li>Fixed AI not sacrificing to avoid lethal life loss</li>
-<li><strong style="color:var(--accent)">Forge 2.0.09 released (January 16)</strong></li>
-<li><strong style="color:var(--accent)">Forge 2.0.08 released (January 1)</strong></li>
+<li><strong>Forge 2.0.09 released (January 16)</strong></li>
+<li><strong>Forge 2.0.08 released (January 1)</strong></li>
 </ul>
 </div>
-</div>
 
-<div class="separator"></div>
+</div>
+</details>
+
+<div class="separator-changelog"></div>
 
 
 <!-- DECEMBER 2025 -->
-<div class="section">
-<h2 class="section-title">December 2025</h2>
+<details id="dec2025" class="changelog-month">
+<summary>December 2025</summary>
+<div class="changelog-content">
 
-<h4 style="color:var(--accent);margin-bottom:8px">New Content</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
-<li><strong style="color:var(--text)">60+ deck overhauls</strong> across boss, elite, miniboss, and standard enemy types</li>
+<div class="changelog-section">
+<h4 class="new-content">New Content</h4>
+<ul class="changelog-list">
+<li><strong>60+ deck overhauls</strong> across boss, elite, miniboss, and standard enemy types</li>
 <li>New decks: Minotaur elite (Anaba Warlord tribal), Crab tribal, Red wizard apprentice (4E themed)</li>
 <li>Enhanced boss encounters with improved starting battlefield setups</li>
-<li><strong style="color:var(--text)">Water of Youth</strong> equipment item (+2 life, starts with Fountain of Youth in play)</li>
+<li><strong>Water of Youth</strong> equipment item (+2 life, starts with Fountain of Youth in play)</li>
 <li>Updated castle maps with dungeon enchantments (Phyrexian Arena, Rhystic Study, Rowen, Fervor, Glorious Anthem)</li>
 </ul>
 </div>
 
-<h4 style="color:#dc2626;margin-bottom:8px">Bug Fixes</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
+<div class="changelog-section">
+<h4 class="bug-fixes">Bug Fixes</h4>
+<ul class="changelog-list">
 <li>Fixed End-Palace teleport bug</li>
 <li>Fixed old border legality issues (added explicit edition codes to item cards)</li>
 <li>Replaced Hivestone with Metallic Sliver|TMP for old border compliance</li>
@@ -188,114 +214,135 @@ Something feels off... This page seems sterile. <a href="../changelog.html">Take
 </ul>
 </div>
 
-<h4 style="color:var(--purple);margin-bottom:8px">Balance Changes</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
+<div class="changelog-section">
+<h4 class="balance">Balance Changes</h4>
+<ul class="changelog-list">
 <li>Rebalanced enemy life totals and rewards (apprentice 10&rarr;15, wizard 15&rarr;20)</li>
 <li>Removed obsolete maps (temple_of_liliana, debug_map, templeofchandra)</li>
 <li>Removed Temple of Gideon dungeon and 7 Jaya/Chandra themed enemies</li>
 </ul>
 </div>
-</div>
 
-<div class="separator"></div>
+</div>
+</details>
+
+<div class="separator-changelog"></div>
 
 
 <!-- NOVEMBER 2025 -->
-<div class="section">
-<h2 class="section-title">November 2025</h2>
+<details id="nov2025" class="changelog-month">
+<summary>November 2025</summary>
+<div class="changelog-content">
 
-<h4 style="color:var(--accent);margin-bottom:8px">New Content</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
-<li><strong style="color:var(--text)">Commander variant</strong> of Adventure Mode &mdash; play through the entire adventure with a Commander deck!</li>
+<div class="changelog-section">
+<h4 class="new-content">New Content</h4>
+<ul class="changelog-list">
+<li><strong>Commander variant</strong> of Adventure Mode &mdash; play through the entire adventure with a Commander deck!</li>
 <li>Added allowedEvents support for adventure configs</li>
 </ul>
 </div>
 
-<h4 style="color:#dc2626;margin-bottom:8px">Bug Fixes</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
+<div class="changelog-section">
+<h4 class="bug-fixes">Bug Fixes</h4>
+<ul class="changelog-list">
 <li>Adventure mode card filtering &mdash; exclude cards rebalanced for Alchemy, respect restrictedEditions</li>
 <li>Non-eligible cards removed from reward pool after matches</li>
 <li>Fixed invalid item slot (#9149)</li>
 <li>Fixed commander adventure mode crash in limited event</li>
 </ul>
 </div>
-</div>
 
-<div class="separator"></div>
+</div>
+</details>
+
+<div class="separator-changelog"></div>
 
 
 <!-- OCTOBER 2025 -->
-<div class="section">
-<h2 class="section-title">October 2025</h2>
+<details id="oct2025" class="changelog-month">
+<summary>October 2025</summary>
+<div class="changelog-content">
 
-<h4 style="color:#dc2626;margin-bottom:8px">Bug Fixes &amp; Improvements</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
+<div class="changelog-section">
+<h4 class="bug-fixes">Bug Fixes &amp; Improvements</h4>
+<ul class="changelog-list">
 <li>Adventure cleanup and code maintenance passes</li>
 <li>Fixed crash in Quest rewards screen</li>
 <li>Fixed Quest start with boosters and unsanctioned pool</li>
 <li>Disabled 4-player drafts for Quest and Adventure until UI support is ready</li>
 </ul>
 </div>
-</div>
 
-<div class="separator"></div>
+</div>
+</details>
+
+<div class="separator-changelog"></div>
 
 
 <!-- SEPTEMBER 2025 -->
-<div class="section">
-<h2 class="section-title">September 2025</h2>
+<details id="sep2025" class="changelog-month">
+<summary>September 2025</summary>
+<div class="changelog-content">
 
-<h4 style="color:var(--accent);margin-bottom:8px">New Features</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
-<li><strong style="color:var(--text)">Deck Importer</strong> support added for Adventure, Quest, and Planar Conquest modes</li>
+<div class="changelog-section">
+<h4 class="new-content">New Features</h4>
+<ul class="changelog-list">
+<li><strong>Deck Importer</strong> support added for Adventure, Quest, and Planar Conquest modes</li>
 </ul>
 </div>
 
-<h4 style="color:#dc2626;margin-bottom:8px">Bug Fixes</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
+<div class="changelog-section">
+<h4 class="bug-fixes">Bug Fixes</h4>
+<ul class="changelog-list">
 <li>Fixed incorrect conformity in adventure events</li>
 <li>Fixed crash when copying adventure decks with full slots</li>
 </ul>
 </div>
-</div>
 
-<div class="separator"></div>
+</div>
+</details>
+
+<div class="separator-changelog"></div>
 
 
 <!-- AUGUST 2025 -->
-<div class="section">
-<h2 class="section-title">August 2025</h2>
+<details id="aug2025" class="changelog-month">
+<summary>August 2025</summary>
+<div class="changelog-content">
 
-<h4 style="color:#dc2626;margin-bottom:8px">Bug Fixes</h4>
-<div class="card" style="margin-bottom:16px">
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text-muted)">
+<div class="changelog-section">
+<h4 class="bug-fixes">Bug Fixes</h4>
+<ul class="changelog-list">
 <li>Removed unsupported cards from AdventurePlayer inventory</li>
 <li>Removed custom adventure cards from rewards</li>
 <li>Fixed auto-sell not being removed from adventure collection</li>
 <li>Disabled custom cards conformity check in Adventure mode</li>
 </ul>
 </div>
+
 </div>
+</details>
 
 <div class="separator"></div>
 
-<div class="card" style="text-align:center;padding:32px">
+<div class="card fade-in" style="text-align:center;padding:32px">
 <p style="color:var(--text-muted);margin-bottom:16px">This changelog is compiled from the <a href="https://github.com/vanja-ivancevic/forge" target="_blank" rel="noopener">Forge repository</a> commit history. For the latest updates and to report bugs, visit the <a href="community.html">Community</a> page.</p>
 <a href="https://github.com/Card-Forge/forge/releases/tag/daily-snapshots" target="_blank" rel="noopener" class="btn btn-primary">Download Latest Forge</a>
 </div>
 
 <div class="footer">
 <p>Created with love by VigilantSera &amp; RemusLord, on the shoulders of giants (the Forge contributors)</p>
-<p style="margin-top:4px">Last updated: February 20, 2026</p>
+<p>Last updated: February 20, 2026</p>
 </div>
 
 </div>
+
+<script>
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+</script>
 
 </body>
 </html>

@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Guide - Old Border Shandalar</title>
+<meta name="description" content="Official walkthrough and beginner tips for Old Border Shandalar. Boss strategies, item locations, progression advice.">
+<meta property="og:title" content="Guide - Old Border Shandalar">
+<meta property="og:description" content="Official walkthrough and beginner tips for Old Border Shandalar.">
+<meta property="og:image" content="https://oldborder-shandalar.net/Title_image.jpg">
+<meta property="og:url" content="https://oldborder-shandalar.net/modern/guide.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="canonical" href="https://oldborder-shandalar.net/modern/guide.html">
 <link rel="stylesheet" href="modern.css">
 </head>
 
@@ -12,6 +20,10 @@
 <nav class="nav">
 <div class="nav-inner">
 <span class="nav-brand">Old Border Shandalar</span>
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
+<span></span><span></span><span></span>
+</label>
 <div class="nav-links">
 <a href="index.html">Home</a>
 <a href="features.html">Features</a>
@@ -19,32 +31,81 @@
 <a href="guide.html" class="active">Guide</a>
 <a href="changelog.html">Changelog</a>
 <a href="community.html">Community</a>
+<a href="../guide.html" class="nav-retro">&#9876; Retro Edition</a>
 </div>
 </div>
 </nav>
 
 <div class="container">
 
-<div class="retro-banner">
-Something feels off... This page seems sterile. <a href="../guide.html">Take me back to the real site.</a>
+<div class="section fade-in" style="text-align:center">
+<h1 class="section-title" style="font-size:36px">Walkthrough &amp; Guide</h1>
+<p class="section-subtitle">Everything you need to conquer Shandalar.</p>
 </div>
 
-<div class="section" style="text-align:center">
-<h1 class="section-title" style="font-size:32px">Official Walkthrough &amp; Guide</h1>
+<div class="card guide-box fade-in">
+<h2>Official Comprehensive Walkthrough</h2>
+<p>Written by <strong>VigilantSera</strong>, the mod's co-designer. Covers strategies, boss fight tips, item locations, progression paths, and endgame advice.</p>
+<a href="https://docs.google.com/document/d/13j4pv7zNkR0VlADTEha9xvklRtwlQQaBnhemQ7zwVZQ/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary">Read the Full Guide on Google Docs</a>
 </div>
 
-<div class="card guide-box">
-<h2>Comprehensive Walkthrough</h2>
-<p>A comprehensive walkthrough and official guide has been written by <strong>VigilantSera</strong>, the mod's co-designer. Covers strategies, boss fight tips, item locations, and progression advice.</p>
-<a href="https://docs.google.com/document/d/13j4pv7zNkR0VlADTEha9xvklRtwlQQaBnhemQ7zwVZQ/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary">Read the Guide</a>
+<div class="separator"></div>
+
+<div class="section fade-in">
+<h2 class="section-title" style="text-align:center">Quick Tips for New Players</h2>
+
+<div class="tips-grid">
+
+<div class="tip-card">
+<h4>Choose Your Color Wisely</h4>
+<p>Each color starts with a different preconstructed deck and faces different early-game enemies. Green and White are generally more forgiving for beginners.</p>
+</div>
+
+<div class="tip-card">
+<h4>Explore Every Town</h4>
+<p>Towns sell cards and offer quests. Visit shops frequently and buy cards that strengthen your deck's strategy rather than just adding powerful cards.</p>
+</div>
+
+<div class="tip-card">
+<h4>Save Before Bosses</h4>
+<p>Boss fights are significantly harder than regular encounters. Save your game before entering any dungeon or lair so you can retry with a different strategy.</p>
+</div>
+
+<div class="tip-card">
+<h4>Manage Your Deck Size</h4>
+<p>Keep your deck close to 60 cards. A bloated deck dilutes your key cards. Sell extra cards at towns for gold to buy what you actually need.</p>
+</div>
+
+<div class="tip-card">
+<h4>Items Are Powerful</h4>
+<p>Equipment items provide permanent bonuses like extra life, starting cards in play, or mana advantages. Prioritize item-granting encounters.</p>
+</div>
+
+<div class="tip-card">
+<h4>Try Commander Mode</h4>
+<p>Once you've completed a standard run, try Commander Mode for a wildly different experience. You build around a legendary creature from the old-border era.</p>
+</div>
+
+</div>
+</div>
+
+<div class="fade-in" style="text-align:center">
+<p style="color:var(--text-muted);font-size:14px">Have questions? The <a href="community.html">community</a> is always happy to help new players.</p>
 </div>
 
 <div class="footer">
 <p>Created with love by VigilantSera &amp; RemusLord, on the shoulders of giants (the Forge contributors)</p>
-<p style="margin-top:4px">Last updated: February 20, 2026</p>
+<p>Last updated: February 20, 2026</p>
 </div>
 
 </div>
+
+<script>
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+</script>
 
 </body>
 </html>

@@ -4,7 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Old Border Shandalar</title>
-<meta name="description" content="Old Border Shandalar - A complete conversion of Forge Adventure Mode using only cards from Magic: The Gathering's golden era (1993-2003)">
+<meta name="description" content="Old Border Shandalar - A complete conversion of Forge Adventure Mode using only cards from Magic: The Gathering's golden era (1993-2003). 100% free and open source.">
+<meta property="og:title" content="Old Border Shandalar">
+<meta property="og:description" content="A complete conversion of Forge Adventure Mode using only cards from Magic's golden era (1993-2003). 6,100+ cards, hand-crafted decks, redesigned bosses. Free and open source.">
+<meta property="og:image" content="https://oldborder-shandalar.net/Title_image.jpg">
+<meta property="og:url" content="https://oldborder-shandalar.net/modern/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="canonical" href="https://oldborder-shandalar.net/modern/index.html">
 <link rel="stylesheet" href="modern.css">
 </head>
 
@@ -13,6 +21,10 @@
 <nav class="nav">
 <div class="nav-inner">
 <span class="nav-brand">Old Border Shandalar</span>
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
+<span></span><span></span><span></span>
+</label>
 <div class="nav-links">
 <a href="index.html" class="active">Home</a>
 <a href="features.html">Features</a>
@@ -20,47 +32,44 @@
 <a href="guide.html">Guide</a>
 <a href="changelog.html">Changelog</a>
 <a href="community.html">Community</a>
+<a href="../index.html" class="nav-retro">&#9876; Retro Edition</a>
 </div>
 </div>
 </nav>
 
 <div class="container">
 
-<div class="retro-banner">
-Something feels off... This page seems sterile. <a href="../index.html">Take me back to the real site.</a>
-</div>
-
 <div class="hero">
+<div class="hero-overlay">
+<div class="hero-badge">100% Free &amp; Open Source</div>
 <h1>Old Border Shandalar</h1>
-<p class="subtitle">A complete conversion of Forge's Adventure Mode using only cards from Magic: The Gathering's golden era (1993-2003)</p>
-<a href="https://github.com/Card-Forge/forge/releases/tag/daily-snapshots" target="_blank" rel="noopener" class="btn btn-primary">Download Forge</a>
+<p class="subtitle">A complete conversion of Forge's Adventure Mode using only cards from Magic: The Gathering's golden era (1993&ndash;2003)</p>
+<div class="hero-actions">
+<a href="https://github.com/Card-Forge/forge/releases/tag/daily-snapshots" target="_blank" rel="noopener" class="btn btn-primary">Download from GitHub (Forge latest snapshot)</a>
+<a href="changelog.html" class="btn btn-ghost">See What's New</a>
+</div>
+</div>
 </div>
 
-<div style="text-align:center">
-<img src="../Title_image.jpg" alt="Old Border Shandalar" class="hero-img" width="500">
-</div>
-
-<div class="separator"></div>
-
-<div class="section">
-<p style="font-size:15px;color:var(--text-muted);max-width:560px;margin:0 auto;text-align:center">
+<div class="section fade-in">
+<p class="section-intro">
 Explore the world of Shandalar with over 6,000 cards spanning Alpha through Scourge,
 fight hand-crafted enemies with thematic lore-appropriate decks, collect over 150 unique items,
 and battle your way through an entirely redesigned endgame.
 </p>
-<p style="text-align:center;margin-top:16px;font-size:14px;color:var(--accent);font-weight:600">
-100% free and open source. Built into the official Forge game. No separate download needed.
+<p class="section-highlight">
+Built into the official Forge game. No separate download needed.
 </p>
 </div>
 
-<div style="text-align:center">
-<img src="../gifs/battle_scene.gif" alt="Battle scene" class="battle-img" width="500">
+<div class="fade-in" style="text-align:center">
+<img src="../gifs/battle_scene.gif" alt="Battle scene from Old Border Shandalar" class="battle-img" width="500">
 <p style="font-size:13px;color:var(--text-muted);margin-top:8px">The world of Shandalar awaits...</p>
 </div>
 
 <div class="separator"></div>
 
-<div class="section">
+<div class="section fade-in">
 <h2 class="section-title" style="text-align:center">What Adventurers Are Saying</h2>
 
 <div class="testimonial">
@@ -91,7 +100,7 @@ and battle your way through an entirely redesigned endgame.
 
 <div class="separator"></div>
 
-<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+<div class="fade-in" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
 <a href="features.html" class="btn btn-ghost">Features</a>
 <a href="howtoplay.html" class="btn btn-ghost">How to Play</a>
 <a href="guide.html" class="btn btn-ghost">Guide</a>
@@ -101,10 +110,17 @@ and battle your way through an entirely redesigned endgame.
 
 <div class="footer">
 <p>Created with love by VigilantSera &amp; RemusLord, on the shoulders of giants (the Forge contributors)</p>
-<p style="margin-top:4px">Last updated: February 20, 2026</p>
+<p>Last updated: February 20, 2026</p>
 </div>
 
 </div>
+
+<script>
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+</script>
 
 </body>
 </html>

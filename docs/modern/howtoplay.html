@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How to Play - Old Border Shandalar</title>
+<meta name="description" content="Get up and running with Old Border Shandalar in 4 easy steps. Download Forge, launch Adventure Mode, and start your journey.">
+<meta property="og:title" content="How to Play - Old Border Shandalar">
+<meta property="og:description" content="Get up and running with Old Border Shandalar in 4 easy steps.">
+<meta property="og:image" content="https://oldborder-shandalar.net/Title_image.jpg">
+<meta property="og:url" content="https://oldborder-shandalar.net/modern/howtoplay.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="canonical" href="https://oldborder-shandalar.net/modern/howtoplay.html">
 <link rel="stylesheet" href="modern.css">
 </head>
 
@@ -12,6 +20,10 @@
 <nav class="nav">
 <div class="nav-inner">
 <span class="nav-brand">Old Border Shandalar</span>
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
+<span></span><span></span><span></span>
+</label>
 <div class="nav-links">
 <a href="index.html">Home</a>
 <a href="features.html">Features</a>
@@ -19,29 +31,26 @@
 <a href="guide.html">Guide</a>
 <a href="changelog.html">Changelog</a>
 <a href="community.html">Community</a>
+<a href="../howtoplay.html" class="nav-retro">&#9876; Retro Edition</a>
 </div>
 </div>
 </nav>
 
 <div class="container">
 
-<div class="retro-banner">
-Something feels off... This page seems sterile. <a href="../howtoplay.html">Take me back to the real site.</a>
-</div>
-
-<div class="section" style="text-align:center">
-<h1 class="section-title" style="font-size:32px">How to Play</h1>
+<div class="section fade-in" style="text-align:center">
+<h1 class="section-title" style="font-size:36px">How to Play</h1>
 <p class="section-subtitle">Get up and running in 4 easy steps.</p>
 </div>
 
-<div class="card">
+<div class="card fade-in">
 <div class="steps">
 
 <div class="step">
 <div class="step-num">1</div>
 <div class="step-content">
 <h3>Download Forge</h3>
-<p>Download the latest Forge snapshot from the <a href="https://github.com/Card-Forge/forge/releases/tag/daily-snapshots" target="_blank" rel="noopener">official releases page</a>. Forge requires Java 17 or newer. Get the latest JDK from <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank">oracle.com</a>.</p>
+<p>Download the latest Forge snapshot from the <a href="https://github.com/Card-Forge/forge/releases/tag/daily-snapshots" target="_blank" rel="noopener">official releases page</a>. Forge requires Java 17 or newer. Get the latest JDK from <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noopener">oracle.com</a>.</p>
 </div>
 </div>
 
@@ -58,9 +67,9 @@ Something feels off... This page seems sterile. <a href="../howtoplay.html">Take
 <div class="step-content">
 <h3>Select Old Border Shandalar</h3>
 <p>Go to <strong>Settings</strong> and select <strong>"Shandalar Old Border"</strong> as your world.</p>
-<p style="margin-top:8px;color:#dc2626;font-weight:600;font-size:13px">Important: Make sure "Show all card variants" is switched ON. This ensures you only see old-border card art.</p>
-<p style="margin-top:4px;color:#9ca3af;font-size:12px">(If your Forge build is from before 21 Feb 2026, switch it OFF instead.)</p>
-<img src="../settingsview.jpg" alt="Settings view" class="screenshot" width="400">
+<p class="callout-important">Important: Make sure "Show all card variants" is switched ON. This ensures you only see old-border card art.</p>
+<p class="callout-note">(If your Forge build is from before 21 Feb 2026, switch it OFF instead.)</p>
+<img src="../settingsview.jpg" alt="Forge settings showing Old Border Shandalar selection" class="screenshot" width="400">
 </div>
 </div>
 
@@ -77,22 +86,29 @@ Something feels off... This page seems sterile. <a href="../howtoplay.html">Take
 <div class="tip-box">
 <h4>Tip: Fixing Card Images</h4>
 <p>If you see occasional new-border card art, clear your image cache:</p>
-<p style="margin-top:6px"><code>Windows: C:\Users\&lt;You&gt;\AppData\Local\Forge\Cache\pics\cards</code><br>
+<p><code>Windows: C:\Users\&lt;You&gt;\AppData\Local\Forge\Cache\pics\cards</code><br>
 <code>macOS: ~/Library/Caches/Forge/pics/cards</code></p>
-<p style="margin-top:6px">Delete the contents of this folder and let Forge re-download the correct images.</p>
+<p>Delete the contents of this folder and let Forge re-download the correct images.</p>
 </div>
 </div>
 
-<div style="text-align:center;margin-top:32px">
+<div class="fade-in" style="text-align:center;margin-top:32px">
 <a href="guide.html" class="btn btn-ghost">Need help? Check the official walkthrough</a>
 </div>
 
 <div class="footer">
 <p>Created with love by VigilantSera &amp; RemusLord, on the shoulders of giants (the Forge contributors)</p>
-<p style="margin-top:4px">Last updated: February 20, 2026</p>
+<p>Last updated: February 20, 2026</p>
 </div>
 
 </div>
+
+<script>
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+</script>
 
 </body>
 </html>
