@@ -14,7 +14,10 @@ import { Genie } from "https://cdn.jsdelivr.net/npm/clippyjs/dist/agents/index.m
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
   var modernUrl = 'modern/' + currentPage;
 
-  // Load the REAL Genie agent
+  // Load the REAL Genie agent (no audio)
+  var _origPlay = HTMLAudioElement.prototype.play;
+  HTMLAudioElement.prototype.play = function() { return Promise.resolve(); };
+
   var agent;
   try {
     agent = await initAgent(Genie);
@@ -25,7 +28,7 @@ import { Genie } from "https://cdn.jsdelivr.net/npm/clippyjs/dist/agents/index.m
 
   // Position in the bottom-right corner
   agent.show();
-  agent.moveTo(window.innerWidth - 160, window.innerHeight - 200);
+  agent.moveTo(window.innerWidth - 160, window.innerHeight - 140);
 
   // Build the custom speech bubble with buttons (safe DOM construction)
   var container = document.createElement('div');
@@ -78,7 +81,7 @@ import { Genie } from "https://cdn.jsdelivr.net/npm/clippyjs/dist/agents/index.m
 
   function positionBubble() {
     container.style.position = 'fixed';
-    container.style.bottom = '180px';
+    container.style.bottom = '240px';
     container.style.right = '20px';
     container.style.zIndex = '10001';
   }
