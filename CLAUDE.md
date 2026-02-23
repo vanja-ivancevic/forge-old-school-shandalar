@@ -25,18 +25,42 @@ docs/                    # GitHub Pages root — all site content lives here
 ├── changelog.html       # Monthly changelog sourced from Forge repo commits
 ├── community.html       # Discord/Reddit/GitHub links, guestbook, credits
 ├── style.css            # Single shared stylesheet
-└── gifs/                # 19 animated GIFs (dividers, decorations, 88x31 buttons)
+├── shared.js            # Injected sidebar, mobile nav, ribbon, live visitor counter
+├── clippy.js            # MS Agent "Genie" assistant (offers modern site link)
+├── sparkles.js          # Cursor sparkle effect
+├── favicon.svg          # Site favicon
+├── gifs/                # Animated GIFs (dividers, decorations, 88x31 buttons)
+└── modern/              # Modern/clean redesign (same pages, different aesthetic)
+    ├── index.html
+    ├── features.html
+    ├── howtoplay.html
+    ├── guide.html
+    ├── changelog.html
+    ├── community.html
+    └── modern.css        # Modern-only stylesheet
 ```
+
+## Two-Site Architecture
+
+The retro (`docs/`) and modern (`docs/modern/`) sites mirror each other page-for-page. Each version links to the corresponding page on the other version. When adding or renaming a page, update both versions and their cross-links.
+
+- **Retro pages**: HTML 4.01 Transitional, table layout, `style.css`, include `shared.js` + `clippy.js`
+- **Modern pages**: HTML5, semantic layout, `modern.css`, no shared.js (standalone nav per page)
+- **Cross-linking**: `shared.js` generates `modern/<page>` links; modern pages link back to `../<page>`
 
 ## Architecture & Conventions
 
-**Layout**: Table-based (`<table class="layout-table">`) with left sidebar navigation (`<td class="nav-sidebar">`) and main content area (`<td class="main-content">`). Every page replicates this same table structure — there is no templating.
+**Layout (retro)**: Table-based (`<table class="layout-table">`) with left sidebar navigation (`<td class="nav-sidebar">`) and main content area (`<td class="main-content">`). Sidebar, mobile nav, ribbon, and visitor counter are injected by `shared.js` synchronously — pages just include the script and provide `<td class="main-content">`.
 
-**DOCTYPE**: HTML 4.01 Transitional. Uses a mix of old-school HTML attributes (`<FONT>`, `<CENTER>`, `<MARQUEE>`, `bgcolor`, `border`) alongside CSS classes.
+**Layout (modern)**: Semantic HTML5 with flexbox/grid, `<nav>` with hamburger toggle, `modern.css` only. Uses `data-theme="modern"` on `<body>` (Genie checks this to skip modern pages).
 
-**Navigation**: Each page has identical sidebar nav with `.nav-link` buttons. The current page gets `.nav-link.active`. A separate `.mobile-nav` div is hidden on desktop and shown via `@media (max-width: 700px)`.
+**DOCTYPE**: HTML 4.01 Transitional (retro). HTML5 (modern).
 
-**Styling**: Single `style.css` shared across all pages. CSS animations (`@keyframes blinker`, `glow`, `rainbow`) provide effects. Gradient backgrounds simulate a starfield.
+**Navigation (retro)**: `shared.js` auto-generates sidebar nav and mobile nav. Active page is detected from `location.pathname`. Each page also gets a "Modern Site" link pointing to `modern/<same-page>`.
+
+**Navigation (modern)**: Each modern page has its own `<nav>` with a hamburger toggle and a "Retro Site" link back to the retro version.
+
+**Styling**: Single `style.css` shared across retro pages. CSS animations (`@keyframes blinker`, `glow`, `rainbow`) provide effects. Gradient backgrounds simulate a starfield.
 
 **Color palette**:
 - Background: navy `#000033` / `#0a001a`
@@ -49,18 +73,26 @@ docs/                    # GitHub Pages root — all site content lives here
 
 ## Design Philosophy
 
-The site is intentionally designed to look like an authentic mid-to-late 1990s personal homepage. When making changes:
+The retro site is intentionally designed to look like an authentic mid-to-late 1990s personal homepage. When making changes:
 
 - **Maintain the retro aesthetic** — no modern UI patterns (flexbox, grid, smooth transitions, rounded corners)
 - **Use period-appropriate techniques**: `<TABLE>` for layout, `<FONT>` for inline styling, `<CENTER>` for alignment, animated GIFs for decoration
 - **Fire bar GIFs** (`gifs/fire_bar.gif`) serve as section dividers throughout the site
 - **88x31 pixel buttons** in the footer are classic 90s web badges
-- The fake visitor counter is decorative (hardcoded digits, not functional)
+- The visitor counter is **live** — uses CounterAPI.dev (`api.counterapi.dev/v1/old-border-shandalar/visits`). Increments once per session via `sessionStorage`.
+- **Genie assistant** (`clippy.js`): MS Agent loaded from clippyjs CDN. Offers to redirect users to the modern site. Dismissed state stored in `sessionStorage`. Skips modern pages via `data-theme` check.
 
 ## When Adding New Pages
 
-1. Copy the full table layout structure from an existing page (sidebar + main content)
-2. Update the `.nav-link.active` class to the correct page
-3. Update both the sidebar nav and the `.mobile-nav` div
+**Retro page:**
+1. Copy an existing retro page — keep only the `<td class="main-content">` area; the sidebar/nav/ribbon come from `shared.js`
+2. Include `<script src="shared.js"></script>` before body content and `<script type="module" src="clippy.js"></script>` before `</body>`
+3. Add nav link entry in `shared.js` (both sidebar and mobile nav)
 4. Link `style.css` in the `<head>`
-5. Match the HTML 4.01 Transitional DOCTYPE and meta tags
+5. Match the HTML 4.01 Transitional DOCTYPE
+
+**Modern page:**
+1. Copy an existing modern page's full structure
+2. Add the new page link to the `<nav>` in **every** modern page
+3. Add corresponding entry in retro `shared.js` nav
+4. Link `modern.css`, use `<body data-theme="modern">`
