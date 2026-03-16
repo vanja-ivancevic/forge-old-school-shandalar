@@ -798,3 +798,30 @@ h1, h2, h3, h4 {
     position: relative;
   }
 }
+
+/* Loot tables */
+.loot-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 15px;
+}
+.loot-table th {
+  text-align: left;
+  padding: 10px 12px;
+  background: var(--surface-elevated);
+  color: var(--gold);
+  border-bottom: 2px solid var(--border-light);
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.loot-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.loot-table tbody tr:hover {
+  background: var(--surface-hover);
+}

@@ -63,17 +63,27 @@
 <div class="changelog-section">
 <h4 class="new-content">New Content</h4>
 <ul class="changelog-list">
+<li><strong>Reward system overhaul</strong> &mdash; all card drops are now organized into quality tiers (S through E) based on card value and playability. Bosses drop better cards, easy enemies stick to commons/uncommons, and shops stock smarter selections</li>
+<li><strong>Boss treasure chests</strong> &mdash; defeating bosses now splits their best card rewards between the victory screen and a nearby treasure chest, giving you a reason to explore after every boss fight</li>
 <li><strong>Ante results popup</strong> &mdash; see which cards you won or lost after each ante match, with full card art and one-tap auto-sell</li>
+<li><strong>Deck equipment loadouts</strong> &mdash; your equipped items are now saved per deck; switching decks automatically swaps your gear to match</li>
+<li>7 new items available in shops (Goblin Kites, Cloak of Dreams, Aegis of the Meek, and more)</li>
+<li>12 enemies now have unique item drops (Celestial Sword, Shield of the Hivelord, Lucky Clover, and more)</li>
 </ul>
 </div>
 
 <div class="changelog-section">
 <h4 class="bug-fixes">Bug Fixes</h4>
 <ul class="changelog-list">
+<li>Fixed 24 enemy rewards that were silently failing to drop</li>
 <li>Fixed promo and special edition reward cards not appearing correctly</li>
 <li>Fixed empty chest in Knight of Shadow dungeon</li>
 <li>Fixed unwanted dialog popups in dragon lair maps</li>
 <li>Unglued cards no longer appear in shops or random drops</li>
+<li>Removed duplicate enemies, debug areas, and orphaned data left over from development</li>
+<li>Fixed Splicer's Charm being way too cheap in shops</li>
+<li>Fixed shops referencing items that no longer exist (Pearl Trident, Willow Bow)</li>
+<li>Booster pack art downloads restored for all 37 old-border sets</li>
 </ul>
 </div>
 
@@ -87,8 +97,9 @@
 <div class="changelog-section">
 <h4 class="engine">Forge Engine</h4>
 <ul class="changelog-list">
+<li>Map overlay (names/details/events) now remembers your last selection between map openings</li>
+<li>Fixed shops ignoring edition filters for booster packs</li>
 <li>Fixed AI getting stuck in an infinite loop when it can't pay attack costs (e.g. Propaganda)</li>
-<li>Booster pack rewards can now be restricted to specific editions</li>
 </ul>
 </div>
 
@@ -379,7 +390,7 @@
 
 <div class="footer">
 <p>Created with love by VigilantSera &amp; RemusLord, on the shoulders of giants (the Forge contributors)</p>
-<p>Last updated: March 9, 2026</p>
+<p>Last updated: March 16, 2026</p>
 </div>
 
 </div>
