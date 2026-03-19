@@ -7,8 +7,8 @@ import { Genie } from "https://cdn.jsdelivr.net/npm/clippyjs/dist/agents/index.m
   // Don't show on modern pages
   if (document.body.getAttribute('data-theme') === 'modern') return;
 
-  // Check if user already dismissed
-  if (sessionStorage.getItem('clippy-dismissed')) return;
+  // Check if user already dismissed (persists across sessions)
+  if (localStorage.getItem('clippy-dismissed')) return;
 
   // Determine the modern page URL
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -88,7 +88,7 @@ import { Genie } from "https://cdn.jsdelivr.net/npm/clippyjs/dist/agents/index.m
 
   function dismissClippy() {
     container.style.display = 'none';
-    sessionStorage.setItem('clippy-dismissed', '1');
+    localStorage.setItem('clippy-dismissed', '1');
     agent.play('GoodBye');
     setTimeout(function() { agent.hide(); }, 2000);
   }
