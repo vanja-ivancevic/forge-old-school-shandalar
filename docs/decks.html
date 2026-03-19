@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="deck-gallery.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mana-font@latest/css/mana.min.css">
 </head>
 
 <body>
@@ -135,8 +136,6 @@ var lastDocs = [null];
 var selectedColors = [];
 var manaColors = ['W', 'U', 'B', 'R', 'G'];
 var manaNames = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green' };
-var manaChars = { W: '\u2600', U: '\u25CF', B: '\u2620', R: '\u25CF', G: '\u25CF' };
-var manaColorCss = { W: '#FFFFCC', U: '#0088DD', B: '#AA88CC', R: '#DD3300', G: '#00AA44' };
 
 // Build color filter buttons
 (function() {
@@ -146,8 +145,11 @@ var manaColorCss = { W: '#FFFFCC', U: '#0088DD', B: '#AA88CC', R: '#DD3300', G: 
     btn.className = 'color-filter-btn';
     btn.setAttribute('data-color', c);
     btn.title = manaNames[c];
-    btn.style.cssText = 'background:#1a0a2e;color:' + manaColorCss[c] + ';border:2px outset #663399;padding:2px 6px;font-size:14px;cursor:pointer;margin:0 2px';
-    btn.textContent = manaChars[c];
+    btn.style.cssText = 'background:#1a0a2e;border:2px outset #663399;padding:4px 6px;cursor:pointer;margin:0 2px;line-height:1';
+    var icon = document.createElement('i');
+    icon.className = 'ms ms-' + c.toLowerCase() + ' ms-cost ms-shadow';
+    icon.style.fontSize = '18px';
+    btn.appendChild(icon);
     btn.addEventListener('click', function() {
       var idx = selectedColors.indexOf(c);
       if (idx >= 0) {

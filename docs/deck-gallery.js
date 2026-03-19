@@ -712,56 +712,46 @@ export function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
-/** Mana symbol Unicode characters */
-var manaSymbols = {
-  W: { char: '\u2600', color: '#FFFFCC', name: 'White' },  // sun
-  U: { char: '\u2B24', color: '#0088DD', name: 'Blue' },    // circle
-  B: { char: '\u2620', color: '#AA88CC', name: 'Black' },   // skull
-  R: { char: '\u2B24', color: '#DD3300', name: 'Red' },     // circle
-  G: { char: '\u2B24', color: '#00AA44', name: 'Green' }    // circle
-};
+/** Mana color names for title attributes */
+var manaNames = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green' };
 
 /**
- * Render color identity pips as HTML.
+ * Render color identity pips as HTML using Mana font icons.
  * @param {string[]} colorIdentity - e.g. ["W","U","R"]
  * @returns {string} HTML string
  */
 export function renderColorPips(colorIdentity) {
   if (!colorIdentity || !colorIdentity.length) {
-    return '<span style="color:#888" title="Colorless">&#9711;</span>';
+    return '<i class="ms ms-c ms-cost ms-shadow" title="Colorless" style="font-size:16px;margin:0 1px"></i>';
   }
   var html = '';
   for (var i = 0; i < colorIdentity.length; i++) {
-    var sym = manaSymbols[colorIdentity[i]];
-    if (sym) {
-      html += '<span style="color:' + sym.color + ';font-size:14px;margin:0 1px" title="' + sym.name + '">' + sym.char + '</span>';
-    }
+    var c = colorIdentity[i].toLowerCase();
+    var name = manaNames[colorIdentity[i]] || colorIdentity[i];
+    html += '<i class="ms ms-' + c + ' ms-cost ms-shadow" title="' + name + '" style="font-size:16px;margin:0 1px"></i>';
   }
   return html;
 }
 
 /**
  * Render color identity pips using safe DOM methods (no innerHTML).
- * Appends span elements to the given parent.
+ * Appends <i> mana font elements to the given parent.
  */
 export function renderColorPipsDom(colorIdentity, parent) {
   if (!colorIdentity || !colorIdentity.length) {
-    var span = document.createElement('span');
-    span.style.color = '#888';
-    span.title = 'Colorless';
-    span.textContent = '\u25CB';
-    parent.appendChild(span);
+    var icon = document.createElement('i');
+    icon.className = 'ms ms-c ms-cost ms-shadow';
+    icon.title = 'Colorless';
+    icon.style.cssText = 'font-size:16px;margin:0 1px';
+    parent.appendChild(icon);
     return;
   }
   for (var i = 0; i < colorIdentity.length; i++) {
-    var sym = manaSymbols[colorIdentity[i]];
-    if (sym) {
-      var s = document.createElement('span');
-      s.style.cssText = 'color:' + sym.color + ';font-size:14px;margin:0 1px';
-      s.title = sym.name;
-      s.textContent = sym.char;
-      parent.appendChild(s);
-    }
+    var icon = document.createElement('i');
+    icon.className = 'ms ms-' + colorIdentity[i].toLowerCase() + ' ms-cost ms-shadow';
+    icon.title = manaNames[colorIdentity[i]] || colorIdentity[i];
+    icon.style.cssText = 'font-size:16px;margin:0 1px';
+    parent.appendChild(icon);
   }
 }
 

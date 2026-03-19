@@ -14,6 +14,7 @@
 <link rel="canonical" href="https://oldborder-shandalar.net/modern/decks.html">
 <link rel="stylesheet" href="modern.css">
 <link rel="stylesheet" href="deck-gallery-modern.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mana-font@latest/css/mana.min.css">
 </head>
 
 <body data-theme="modern">
@@ -98,8 +99,6 @@ var lastDocs = [null];
 var selectedColors = [];
 var manaColors = ['W','U','B','R','G'];
 var manaNames = { W:'White', U:'Blue', B:'Black', R:'Red', G:'Green' };
-var manaBgCss = { W:'#f0e6c8', U:'#0e68ab', B:'#3d3d3d', R:'#d33', G:'#1a7a38' };
-var manaTextCss = { W:'#333', U:'#fff', B:'#ccc', R:'#fff', G:'#fff' };
 
 // Color filter buttons
 (function() {
@@ -107,10 +106,11 @@ var manaTextCss = { W:'#333', U:'#fff', B:'#ccc', R:'#fff', G:'#fff' };
   manaColors.forEach(function(c) {
     var btn = document.createElement('button');
     btn.className = 'color-btn';
-    btn.style.background = manaBgCss[c];
-    btn.style.color = manaTextCss[c];
     btn.title = manaNames[c];
-    btn.textContent = c;
+    var icon = document.createElement('i');
+    icon.className = 'ms ms-' + c.toLowerCase() + ' ms-cost ms-shadow';
+    icon.style.fontSize = '20px';
+    btn.appendChild(icon);
     btn.addEventListener('click', function() {
       var idx = selectedColors.indexOf(c);
       if (idx >= 0) {
@@ -172,17 +172,17 @@ function buildDeckCard(deck, isVoted) {
   meta.className = 'deck-card-meta';
   if (deck.colorIdentity && deck.colorIdentity.length) {
     deck.colorIdentity.forEach(function(c) {
-      var pip = document.createElement('span');
-      pip.className = 'mana-pip mana-pip-' + c;
-      pip.textContent = c;
+      var pip = document.createElement('i');
+      pip.className = 'ms ms-' + c.toLowerCase() + ' ms-cost ms-shadow';
       pip.title = manaNames[c] || c;
+      pip.style.cssText = 'font-size:16px;margin:0 1px';
       meta.appendChild(pip);
     });
   } else {
-    var pip = document.createElement('span');
-    pip.className = 'mana-pip mana-pip-C';
-    pip.textContent = 'C';
+    var pip = document.createElement('i');
+    pip.className = 'ms ms-c ms-cost ms-shadow';
     pip.title = 'Colorless';
+    pip.style.cssText = 'font-size:16px;margin:0 1px';
     meta.appendChild(pip);
   }
   var count = document.createElement('span');

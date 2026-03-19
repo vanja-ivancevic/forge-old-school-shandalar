@@ -8,6 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="stylesheet" href="modern.css">
 <link rel="stylesheet" href="deck-gallery-modern.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mana-font@latest/css/mana.min.css">
 </head>
 
 <body data-theme="modern">
@@ -97,10 +98,10 @@ async function loadDeck() {
     metaDiv.style.cssText = 'display:flex;align-items:center;gap:6px;margin-top:8px';
     if (deck.colorIdentity && deck.colorIdentity.length) {
       deck.colorIdentity.forEach(function(c) {
-        var pip = document.createElement('span');
-        pip.className = 'mana-pip mana-pip-' + c;
-        pip.textContent = c;
+        var pip = document.createElement('i');
+        pip.className = 'ms ms-' + c.toLowerCase() + ' ms-cost ms-shadow';
         pip.title = manaNames[c] || c;
+        pip.style.cssText = 'font-size:18px;margin:0 1px';
         metaDiv.appendChild(pip);
       });
     }

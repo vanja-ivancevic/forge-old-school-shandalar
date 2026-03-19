@@ -70,23 +70,8 @@
   margin-top: 8px;
 }
 
-/* Color pips */
-.mana-pip {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  font-size: 10px;
-  line-height: 16px;
-  text-align: center;
-  margin: 0 1px;
-}
-.mana-pip-W { background: #f0e6c8; color: #333; }
-.mana-pip-U { background: #0e68ab; color: #fff; }
-.mana-pip-B { background: #3d3d3d; color: #ccc; }
-.mana-pip-R { background: #d33; color: #fff; }
-.mana-pip-G { background: #1a7a38; color: #fff; }
-.mana-pip-C { background: #555; color: #ccc; }
+/* Color filter button styling */
+.color-btn { background: transparent; border: 2px solid var(--border); padding: 4px 6px; line-height: 1; }
 
 /* Tag & badge pills */
 .tag-pill {
