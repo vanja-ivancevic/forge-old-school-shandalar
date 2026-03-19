@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deck Gallery - Old Border Shandalar</title>
+<meta name="description" content="Browse and vote on community Adventure Mode decks for Old Border Shandalar.">
+<meta property="og:title" content="Deck Gallery - Old Border Shandalar">
+<meta property="og:description" content="Browse and vote on community Adventure Mode decks.">
+<meta property="og:image" content="https://oldborder-shandalar.net/Title_image.jpg">
+<meta property="og:url" content="https://oldborder-shandalar.net/modern/decks.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="canonical" href="https://oldborder-shandalar.net/modern/decks.html">
+<link rel="stylesheet" href="modern.css">
+<link rel="stylesheet" href="deck-gallery-modern.css">
+</head>
+
+<body data-theme="modern">
+
+<nav class="nav">
+<div class="nav-inner">
+<span class="nav-brand">Old Border Shandalar</span>
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
+<span></span><span></span><span></span>
+</label>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="features.html">Features</a>
+<a href="howtoplay.html">How to Play</a>
+<a href="guide.html">Guide</a>
+<a href="changelog.html">Changelog</a>
+<a href="community.html">Community</a>
+<a href="decks.html" class="active">Decks</a>
+<a href="../decks.html" class="nav-retro">&#9876; Retro Edition</a>
+</div>
+</div>
+</nav>
+
+<div class="container">
+
+<div class="section fade-in" style="text-align:center">
+<h1 class="section-title" style="font-size:36px">Deck Gallery</h1>
+<p class="section-subtitle">Browse and vote on community Adventure Mode decks</p>
+<a href="submit-deck.html" class="btn-modern" style="display:inline-block;margin-top:16px">Submit Your Deck</a>
+</div>
+
+<!-- Filters -->
+<div class="filter-bar fade-in" id="filter-bar">
+<label>Color:</label>
+<span id="color-filters"></span>
+
+<label>Archetype:</label>
+<select id="filter-tag"><option value="">All</option></select>
+
+<label>Badge:</label>
+<select id="filter-badge"><option value="">All</option></select>
+
+<label>Sort:</label>
+<select id="sort-by">
+<option value="newest">Newest</option>
+<option value="votes">Most Voted</option>
+<option value="alpha">Alphabetical</option>
+</select>
+
+<button id="btn-apply-filters" class="btn-secondary">Apply</button>
+<button id="btn-clear-filters" class="btn-secondary">Clear</button>
+</div>
+
+<!-- Deck grid -->
+<div id="deck-grid" class="deck-grid fade-in"></div>
+
+<div id="loading-indicator" class="fade-in" style="display:none;text-align:center;padding:32px;color:var(--text-muted)">
+Loading decks...
+</div>
+
+<div id="no-results" class="fade-in" style="display:none;text-align:center;padding:32px;color:var(--text-muted)">
+No decks found. Be the first to <a href="submit-deck.html">submit one</a>!
+</div>
+
+<!-- Pagination -->
+<div class="pagination" id="pagination">
+<button id="btn-prev" class="btn-secondary" style="display:none">&larr; Previous</button>
+<span id="page-info" style="color:var(--text-muted);font-size:14px"></span>
+<button id="btn-next" class="btn-secondary" style="display:none">Next &rarr;</button>
+</div>
+
+</div>
+
+<script type="module">
+import { fetchDecks, fetchTagRegistry, getVotedDecks, toggleVote, ensureAuth,
+         formatDate, buildColorCode
+} from '../deck-gallery.js';
+
+var currentPage = 1;
+var lastDocs = [null];
+var selectedColors = [];
+var manaColors = ['W','U','B','R','G'];
+var manaNames = { W:'White', U:'Blue', B:'Black', R:'Red', G:'Green' };
+var manaBgCss = { W:'#f0e6c8', U:'#0e68ab', B:'#3d3d3d', R:'#d33', G:'#1a7a38' };
+var manaTextCss = { W:'#333', U:'#fff', B:'#ccc', R:'#fff', G:'#fff' };
+
+// Color filter buttons
+(function() {
+  var container = document.getElementById('color-filters');
+  manaColors.forEach(function(c) {
+    var btn = document.createElement('button');
+    btn.className = 'color-btn';
+    btn.style.background = manaBgCss[c];
+    btn.style.color = manaTextCss[c];
+    btn.title = manaNames[c];
+    btn.textContent = c;
+    btn.addEventListener('click', function() {
+      var idx = selectedColors.indexOf(c);
+      if (idx >= 0) {
+        selectedColors.splice(idx, 1);
+        btn.classList.remove('active');
+      } else {
+        selectedColors.push(c);
+        btn.classList.add('active');
+      }
+    });
+    container.appendChild(btn);
+  });
+})();
+
+// Populate dropdowns
+fetchTagRegistry().then(function(registry) {
+  populateDropdown('filter-tag', registry.archetypes);
+  populateDropdown('filter-badge', registry.badges);
+}).catch(function() {
+  var defaults = {
+    archetypes: ['aggro','control','combo','midrange','tempo','ramp','tribal','mill','burn','reanimator','prison','toolbox'],
+    badges: ['boss-killer','budget','meme','competitive','beginner-friendly','jank','spicy']
+  };
+  populateDropdown('filter-tag', defaults.archetypes);
+  populateDropdown('filter-badge', defaults.badges);
+});
+
+function populateDropdown(id, items) {
+  var sel = document.getElementById(id);
+  items.forEach(function(item) {
+    var opt = document.createElement('option');
+    opt.value = item;
+    opt.textContent = item.replace(/-/g, ' ');
+    sel.appendChild(opt);
+  });
+}
+
+function clearEl(el) { while (el.firstChild) el.removeChild(el.firstChild); }
+
+function buildDeckCard(deck, isVoted) {
+  var card = document.createElement('div');
+  card.className = 'deck-card';
+
+  // Title
+  var title = document.createElement('a');
+  title.className = 'deck-card-title';
+  title.href = 'deck.html?id=' + encodeURIComponent(deck.id);
+  title.textContent = deck.title;
+  card.appendChild(title);
+
+  // Author
+  var author = document.createElement('div');
+  author.className = 'deck-card-author';
+  author.textContent = 'by ' + deck.author;
+  card.appendChild(author);
+
+  // Meta: color pips + card count
+  var meta = document.createElement('div');
+  meta.className = 'deck-card-meta';
+  if (deck.colorIdentity && deck.colorIdentity.length) {
+    deck.colorIdentity.forEach(function(c) {
+      var pip = document.createElement('span');
+      pip.className = 'mana-pip mana-pip-' + c;
+      pip.textContent = c;
+      pip.title = manaNames[c] || c;
+      meta.appendChild(pip);
+    });
+  } else {
+    var pip = document.createElement('span');
+    pip.className = 'mana-pip mana-pip-C';
+    pip.textContent = 'C';
+    pip.title = 'Colorless';
+    meta.appendChild(pip);
+  }
+  var count = document.createElement('span');
+  count.textContent = (deck.cardCount || '?') + ' cards';
+  meta.appendChild(count);
+  card.appendChild(meta);
+
+  // Labels (tags + badges)
+  if ((deck.tags && deck.tags.length) || (deck.badges && deck.badges.length)) {
+    var labels = document.createElement('div');
+    labels.className = 'deck-card-labels';
+    if (deck.tags) deck.tags.forEach(function(t) {
+      var span = document.createElement('span');
+      span.className = 'tag-pill';
+      span.textContent = t;
+      labels.appendChild(span);
+    });
+    if (deck.badges) deck.badges.forEach(function(b) {
+      var span = document.createElement('span');
+      span.className = 'badge-pill badge-' + b;
+      span.textContent = b.replace(/-/g, ' ');
+      labels.appendChild(span);
+    });
+    card.appendChild(labels);
+  }
+
+  // Footer: vote + date
+  var footer = document.createElement('div');
+  footer.className = 'deck-card-footer';
+
+  var voteBtn = document.createElement('button');
+  voteBtn.className = 'vote-btn-modern' + (isVoted ? ' voted' : '');
+  voteBtn.setAttribute('data-deck-id', deck.id);
+  voteBtn.textContent = (isVoted ? '\uD83D\uDC4D' : '\u261D') + ' ' + (deck.voteCount || 0);
+  footer.appendChild(voteBtn);
+
+  var dateSpan = document.createElement('span');
+  dateSpan.style.cssText = 'font-size:12px;color:var(--text-muted)';
+  dateSpan.textContent = formatDate(deck.createdAt);
+  footer.appendChild(dateSpan);
+
+  card.appendChild(footer);
+  return card;
+}
+
+async function loadDecks() {
+  document.getElementById('loading-indicator').style.display = 'block';
+  document.getElementById('no-results').style.display = 'none';
+  var grid = document.getElementById('deck-grid');
+  clearEl(grid);
+
+  var opts = {
+    sortBy: document.getElementById('sort-by').value,
+    tag: document.getElementById('filter-tag').value || undefined,
+    badge: document.getElementById('filter-badge').value || undefined,
+    lastDoc: lastDocs[currentPage - 1] || undefined,
+    pageSize: 12
+  };
+  var colorCode = buildColorCode(selectedColors);
+  if (colorCode) opts.colorCode = colorCode;
+
+  try {
+    var result = await fetchDecks(opts);
+    document.getElementById('loading-indicator').style.display = 'none';
+
+    if (result.decks.length === 0) {
+      document.getElementById('no-results').style.display = 'block';
+      return;
+    }
+
+    var deckIds = result.decks.map(function(d) { return d.id; });
+    var votedSet = new Set();
+    try { await ensureAuth(); votedSet = await getVotedDecks(deckIds); } catch(e) {}
+
+    result.decks.forEach(function(deck) {
+      grid.appendChild(buildDeckCard(deck, votedSet.has(deck.id)));
+    });
+
+    // Pagination
+    document.getElementById('btn-prev').style.display = currentPage > 1 ? 'inline' : 'none';
+    document.getElementById('btn-next').style.display = result.hasMore ? 'inline' : 'none';
+    document.getElementById('page-info').textContent = 'Page ' + currentPage;
+    if (result.hasMore) lastDocs[currentPage] = result.lastDoc;
+
+    // Wire vote buttons
+    grid.querySelectorAll('.vote-btn-modern').forEach(function(btn) {
+      btn.addEventListener('click', async function() {
+        var deckId = btn.getAttribute('data-deck-id');
+        try {
+          var res = await toggleVote(deckId);
+          btn.textContent = (res.voted ? '\uD83D\uDC4D' : '\u261D') + ' ' + res.newCount;
+          btn.classList.toggle('voted', res.voted);
+        } catch(e) {}
+      });
+    });
+
+  } catch (e) {
+    document.getElementById('loading-indicator').style.display = 'none';
+    var errP = document.createElement('p');
+    errP.style.color = 'var(--red)';
+    errP.textContent = 'Error loading decks: ' + e.message;
+    grid.appendChild(errP);
+  }
+}
+
+document.getElementById('btn-apply-filters').addEventListener('click', function() {
+  currentPage = 1; lastDocs = [null]; loadDecks();
+});
+document.getElementById('btn-clear-filters').addEventListener('click', function() {
+  selectedColors = [];
+  document.querySelectorAll('.color-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById('filter-tag').value = '';
+  document.getElementById('filter-badge').value = '';
+  document.getElementById('sort-by').value = 'newest';
+  currentPage = 1; lastDocs = [null]; loadDecks();
+});
+document.getElementById('btn-prev').addEventListener('click', function() {
+  if (currentPage > 1) { currentPage--; loadDecks(); }
+});
+document.getElementById('btn-next').addEventListener('click', function() {
+  currentPage++; loadDecks();
+});
+
+loadDecks();
+</script>
+
+<script>
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+</script>
+</body>
+</html>

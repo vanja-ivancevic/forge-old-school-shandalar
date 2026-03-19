@@ -1,0 +1,62 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Decks: anyone can read published; authenticated users can create
+    match /decks/{deckId} {
+      allow read: if resource.data.status == 'published';
+
+      allow create: if request.auth != null
+        && request.resource.data.authorUid == request.auth.uid
+        && request.resource.data.status == 'published'
+        && request.resource.data.voteCount == 0
+        && request.resource.data.title is string
+        && request.resource.data.title.size() > 0
+        && request.resource.data.title.size() <= 100
+        && request.resource.data.cards is list
+        && request.resource.data.cards.size() > 0
+        && request.resource.data.cards.size() <= 200;
+
+      // Author can update their own deck (but not voteCount)
+      allow update: if request.auth != null
+        && resource.data.authorUid == request.auth.uid
+        && request.resource.data.authorUid == resource.data.authorUid
+        && request.resource.data.voteCount == resource.data.voteCount;
+
+      // Any authenticated user can update only voteCount (by exactly +1 or -1)
+      allow update: if request.auth != null
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['voteCount', 'updatedAt'])
+        && (request.resource.data.voteCount == resource.data.voteCount + 1
+            || request.resource.data.voteCount == resource.data.voteCount - 1);
+
+      allow delete: if false;
+    }
+
+    // Votes: one per user per deck, enforced by document ID
+    match /votes/{voteId} {
+      allow read: if request.auth != null;
+
+      allow create: if request.auth != null
+        && voteId == request.resource.data.deckId + '__' + request.auth.uid
+        && request.resource.data.oderId == request.auth.uid;
+
+      allow delete: if request.auth != null
+        && resource.data.oderId == request.auth.uid;
+
+      allow update: if false;
+    }
+
+    // Tag registry: anyone can read, authenticated users can add new tags/badges
+    match /tags/{docId} {
+      allow read: if true;
+      allow update: if request.auth != null
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['archetypes', 'badges'])
+        && request.resource.data.archetypes is list
+        && request.resource.data.badges is list
+        && request.resource.data.archetypes.size() <= 50
+        && request.resource.data.badges.size() <= 50;
+      allow create: if request.auth != null;
+      allow delete: if false;
+    }
+  }
+}

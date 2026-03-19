@@ -1,0 +1,228 @@
+/* ~*~ Deck Gallery Styles ~*~ */
+/* Retro deck-specific CSS — loaded only on deck pages */
+
+/* Vote button hover */
+.vote-btn:hover {
+  background: #003300 !important;
+  border-color: #006600 !important;
+}
+
+/* Color filter button hover */
+.color-filter-btn:hover {
+  opacity: 0.8;
+}
+
+/* Card tooltip (created by JS, styled here as fallback) */
+#card-tooltip {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  border: 2px solid #663399;
+  background: #000;
+  padding: 2px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+#card-tooltip img {
+  display: block;
+  width: 190px;
+  height: 265px;
+}
+
+/* Deck card cells hover effect */
+td[bgcolor="#220044"]:hover {
+  background-color: #2a0055 !important;
+}
+
+/* Parse/submit textarea focus */
+#deck-input:focus,
+#deck-title:focus,
+#deck-author:focus,
+#deck-description:focus {
+  border-color: #7744AA;
+  outline: none;
+  box-shadow: 0 0 5px rgba(119,68,170,0.5);
+}
+
+/* ── View Toggle Buttons ── */
+.view-toggle {
+  display: inline-flex;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.view-toggle button {
+  background: #1a0a2e;
+  color: #AACCFF;
+  border: 2px outset #663399;
+  padding: 4px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+.view-toggle button.active {
+  background: #330066;
+  border-style: inset;
+  color: #FFFF00;
+}
+
+/* ── All views: hidden unless active ── */
+.deck-view-list,
+.deck-view-grid,
+.deck-view-stacks {
+  display: none !important;
+}
+.deck-view-list.active,
+.deck-view-grid.active,
+.deck-view-stacks.active {
+  display: block !important;
+}
+.card-grid-group {
+  margin-bottom: 12px;
+}
+.card-grid-group-title {
+  color: #FF6600;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.card-grid-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.card-grid-item {
+  position: relative;
+  width: var(--card-w, 130px);
+}
+.card-grid-item img {
+  width: var(--card-w, 130px);
+  height: var(--card-h, 181px);
+  border: 1px solid #333366;
+  border-radius: 4px;
+  display: block;
+  background: #0a001a;
+  transition: transform 0.15s, z-index 0s;
+}
+.card-grid-item:hover {
+  z-index: 10;
+  position: relative;
+}
+.card-grid-item:hover img {
+  transform: scale(1.15);
+  border-color: #7744AA;
+  box-shadow: 0 0 12px rgba(119,68,170,0.6);
+}
+.card-grid-qty {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: rgba(0,0,0,0.8);
+  color: #00FF00;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid #333366;
+}
+
+/* ── Stacks View ── */
+.stacks-container {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.stack-column {
+  display: flex;
+  flex-direction: column;
+  min-width: var(--card-w, 130px);
+}
+.stack-column-title {
+  color: #FF6600;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-align: center;
+}
+.stack-card {
+  position: relative;
+  width: var(--card-w, 130px);
+  height: calc(var(--card-h, 181px) * 0.2);
+  overflow: hidden;
+}
+.stack-card:last-child {
+  height: auto;
+  overflow: visible;
+}
+.stack-card img {
+  width: var(--card-w, 130px);
+  height: var(--card-h, 181px);
+  border: 1px solid #333366;
+  border-radius: 4px;
+  display: block;
+  background: #0a001a;
+  transition: transform 0.15s;
+}
+.stack-card:hover {
+  z-index: 10;
+  position: relative;
+  overflow: visible !important;
+  height: auto !important;
+}
+.stack-card:hover img {
+  transform: scale(1.15);
+  border-color: #7744AA;
+  box-shadow: 0 0 12px rgba(119,68,170,0.6);
+}
+.stack-card .card-grid-qty {
+  top: 1px;
+  left: 1px;
+  font-size: 10px;
+  padding: 0 4px;
+}
+
+/* ── List View ── */
+
+/* Mobile adjustments for deck pages */
+@media (max-width: 700px) {
+  #deck-grid table {
+    display: block;
+  }
+  #deck-grid tr {
+    display: block;
+  }
+  #deck-grid td {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 8px;
+  }
+
+  /* Stack filter controls vertically */
+  #filter-tag,
+  #filter-badge,
+  #sort-by {
+    display: block;
+    margin: 4px 0;
+  }
+
+  .card-grid-item {
+    width: 100px;
+  }
+  .card-grid-item img {
+    width: 100px;
+    height: 140px;
+  }
+  .stack-column {
+    min-width: 100px;
+  }
+  .stack-card {
+    width: 100px;
+    height: 28px;
+  }
+  .stack-card img {
+    width: 100px;
+    height: 140px;
+  }
+}

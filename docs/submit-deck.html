@@ -1,0 +1,503 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>~*~ Old Border Shandalar ~*~ Submit Your Deck ~*~</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="deck-gallery.css">
+</head>
+
+<body>
+
+<script src="shared.js"></script>
+
+<!-- MAIN CONTENT -->
+<td class="main-content">
+<center>
+
+<img src="gifs/fire_bar.gif" alt="~*~*~*~" class="firebar" width="100%" style="max-width:664px">
+<br><br>
+
+<font size="5" color="#FFFF00" class="section-header">
+<b>&#9733; Submit Your Deck &#9733;</b>
+</font>
+<br>
+<font size="2" color="#AAAACC">Share your Adventure Mode deck with the community!</font>
+<br><br>
+
+<!-- STEP 1: PASTE DECK -->
+<table width="90%" border="2" bordercolor="#333366" cellpadding="15" cellspacing="0" bgcolor="#0a0a2e" style="max-width:600px">
+<tr><td>
+
+<font size="3" color="#FFFF00"><b>Step 1: Paste Your Deck List</b></font>
+<br>
+<font size="2" color="#AAAACC">
+Paste from Forge clipboard, .dck format, or a simple list (4 Card Name).
+</font>
+<br><br>
+<table border="1" bordercolor="#333366" cellpadding="8" cellspacing="0" bgcolor="#1a0a2e" style="width:100%;max-width:500px">
+<tr><td>
+<font size="2" color="#FF6600"><b>&#9654; How to export your deck from Forge:</b></font><br>
+<font size="2" color="#CCCCFF">
+1. Open your deck in the Adventure Mode deck editor<br>
+2. Tap the <font color="#FFFF00">&#8942; More Options</font> button (top of editor)<br>
+3. Select <font color="#00FF00">"Copy to Clipboard"</font><br>
+4. Paste it right here!
+</font>
+</td></tr>
+</table>
+<br><br>
+
+<textarea id="deck-input" rows="12" cols="50" style="width:100%;max-width:500px;background:#0a001a;color:#00FF00;border:2px inset #663399;font-family:'Courier New',monospace;font-size:13px;padding:8px" placeholder="Paste your deck list here...
+Example:
+4 Lightning Bolt
+4 Chain Lightning
+4 Fireblast
+20 Mountain"></textarea>
+
+<br><br>
+<button id="btn-parse" style="background:#220044;color:#FFFF00;border:2px outset #663399;padding:6px 20px;font-size:14px;cursor:pointer;font-family:'Comic Sans MS',sans-serif">
+&#9654; Parse Deck
+</button>
+
+<div id="parse-errors" style="margin-top:10px"></div>
+
+</td></tr>
+</table>
+
+<br>
+
+<!-- STEP 2: PREVIEW (hidden until parsed) -->
+<div id="preview-section" style="display:none">
+
+<img src="gifs/swords_divider.gif" alt="~*~*~*~" class="firebar" style="max-width:332px;width:80%">
+<br><br>
+
+<table width="90%" border="2" bordercolor="#333366" cellpadding="15" cellspacing="0" bgcolor="#0a0a2e" style="max-width:600px">
+<tr><td>
+
+<font size="3" color="#FFFF00"><b>Step 2: Review &amp; Customize</b></font>
+<br><br>
+
+<!-- Deck title -->
+<font size="2" color="#CCCCFF"><b>Deck Name:</b></font><br>
+<input type="text" id="deck-title" maxlength="100" style="width:100%;max-width:400px;background:#0a001a;color:#FFFF00;border:2px inset #663399;padding:5px;font-size:14px" placeholder="Enter a name for your deck">
+<br><br>
+
+<!-- Author -->
+<font size="2" color="#CCCCFF"><b>Your Name / Discord Handle:</b></font><br>
+<input type="text" id="deck-author" maxlength="50" style="width:100%;max-width:300px;background:#0a001a;color:#00CCFF;border:2px inset #663399;padding:5px;font-size:14px" placeholder="e.g. ShandalarMage420">
+<br><br>
+
+<!-- Description -->
+<font size="2" color="#CCCCFF"><b>Description (optional):</b></font><br>
+<textarea id="deck-description" rows="3" cols="50" maxlength="500" style="width:100%;max-width:500px;background:#0a001a;color:#CCCCFF;border:2px inset #663399;padding:5px;font-size:13px" placeholder="Strategy notes, matchup tips, etc."></textarea>
+<br><br>
+
+<!-- Color Identity (auto-detected) -->
+<font size="2" color="#CCCCFF"><b>Color Identity:</b></font>
+<span id="color-pips" style="margin-left:8px;font-size:16px"></span>
+<br><br>
+
+<!-- Card count -->
+<font size="2" color="#CCCCFF"><b>Cards:</b></font>
+<font size="2" color="#00FF00"><span id="card-count">0</span> cards</font>
+<br><br>
+
+<!-- Tags -->
+<font size="2" color="#CCCCFF"><b>Archetype (pick 1-3):</b></font><br>
+<div id="tag-checkboxes" style="margin:5px 0;text-align:left;display:inline-block"></div>
+<br>
+<font size="2" color="#AAAACC">Add custom:</font>
+<input type="text" id="custom-tag" maxlength="30" style="width:140px;background:#0a001a;color:#AACCFF;border:2px inset #663399;padding:3px 5px;font-size:12px" placeholder="e.g. voltron">
+<button id="btn-add-tag" style="background:#220044;color:#00CCFF;border:2px outset #663399;padding:3px 10px;font-size:11px;cursor:pointer">+ Add</button>
+<br><br>
+
+<!-- Badges -->
+<font size="2" color="#CCCCFF"><b>Badges (pick 0-2):</b></font><br>
+<div id="badge-checkboxes" style="margin:5px 0;text-align:left;display:inline-block"></div>
+<br>
+<font size="2" color="#AAAACC">Add custom:</font>
+<input type="text" id="custom-badge" maxlength="30" style="width:140px;background:#0a001a;color:#AACCFF;border:2px inset #663399;padding:3px 5px;font-size:12px" placeholder="e.g. speed-run">
+<button id="btn-add-badge" style="background:#220044;color:#00CCFF;border:2px outset #663399;padding:3px 10px;font-size:11px;cursor:pointer">+ Add</button>
+<br><br>
+
+<!-- Parsed card list preview -->
+<font size="2" color="#CCCCFF"><b>Card List Preview:</b></font><br>
+<div id="card-preview" style="margin-top:8px;text-align:left;display:inline-block;max-width:500px;width:100%"></div>
+
+<br><br>
+<img src="gifs/fire_bar2.gif" alt="~*~*~*~" class="firebar" style="max-width:345px;width:80%">
+<br><br>
+
+<button id="btn-submit" style="background:#003300;color:#00FF00;border:2px outset #006600;padding:8px 30px;font-size:16px;cursor:pointer;font-family:'Comic Sans MS',sans-serif">
+&#9733; Submit Deck &#9733;
+</button>
+
+<div id="submit-status" style="margin-top:10px"></div>
+
+</td></tr>
+</table>
+
+</div>
+
+<br><br>
+<img src="gifs/fire_bar.gif" alt="~*~*~*~" class="firebar" width="100%" style="max-width:664px">
+<br><br>
+
+<font size="2" color="#666688">
+<a href="decks.html">&laquo; Back to Deck Gallery</a>
+</font>
+
+<br><br>
+</center>
+</td>
+
+</tr>
+</table>
+
+<script type="module">
+import { parseDeck, validateAndEnrichCards, submitDeck, ensureAuth, escapeHtml,
+         renderColorPips, fetchTagRegistry, addToRegistry, createTooltip, setupCardHovers
+} from './deck-gallery.js';
+
+var parsedCards = null;
+var parsedSideboard = null;
+var enrichedData = null;
+
+// Load tag registry for checkboxes
+fetchTagRegistry().then(function(registry) {
+  buildCheckboxes('tag-checkboxes', registry.archetypes, 'tag', 3);
+  buildCheckboxes('badge-checkboxes', registry.badges, 'badge', 2);
+}).catch(function() {
+  var defaults = {
+    archetypes: ['aggro','control','combo','midrange','tempo','ramp','tribal','mill','burn','reanimator','prison','toolbox'],
+    badges: ['boss-killer','budget','meme','competitive','beginner-friendly','jank','spicy']
+  };
+  buildCheckboxes('tag-checkboxes', defaults.archetypes, 'tag', 3);
+  buildCheckboxes('badge-checkboxes', defaults.badges, 'badge', 2);
+});
+
+// Add custom tag button
+document.getElementById('btn-add-tag').addEventListener('click', async function() {
+  var input = document.getElementById('custom-tag');
+  var val = input.value.trim();
+  if (!val) return;
+  try {
+    var slug = await addToRegistry('archetypes', val);
+    if (slug) {
+      addCheckbox('tag-checkboxes', slug, 'tag', 3, true);
+      input.value = '';
+    }
+  } catch(e) { /* silently fail */ }
+});
+
+// Add custom badge button
+document.getElementById('btn-add-badge').addEventListener('click', async function() {
+  var input = document.getElementById('custom-badge');
+  var val = input.value.trim();
+  if (!val) return;
+  try {
+    var slug = await addToRegistry('badges', val);
+    if (slug) {
+      addCheckbox('badge-checkboxes', slug, 'badge', 2, true);
+      input.value = '';
+    }
+  } catch(e) { /* silently fail */ }
+});
+
+// Add a single checkbox to an existing group (for custom entries)
+function addCheckbox(containerId, item, prefix, maxChecked, autoCheck) {
+  var container = document.getElementById(containerId);
+  // Check if already exists
+  var existing = container.querySelectorAll('input');
+  for (var i = 0; i < existing.length; i++) {
+    if (existing[i].value === item) return;
+  }
+  var label = document.createElement('label');
+  label.style.cssText = 'display:inline-block;margin:2px 6px;color:#FFCC44;font-size:12px;cursor:pointer';
+  var cb = document.createElement('input');
+  cb.type = 'checkbox';
+  cb.name = prefix;
+  cb.value = item;
+  if (autoCheck) cb.checked = true;
+  cb.addEventListener('change', function() {
+    var checked = container.querySelectorAll('input:checked');
+    if (checked.length > maxChecked) this.checked = false;
+  });
+  label.appendChild(cb);
+  label.appendChild(document.createTextNode(' ' + item.replace(/-/g, ' ') + ' \u2728'));
+  container.appendChild(label);
+}
+
+function buildCheckboxes(containerId, items, prefix, maxChecked) {
+  var container = document.getElementById(containerId);
+  while (container.firstChild) container.removeChild(container.firstChild);
+  for (var i = 0; i < items.length; i++) {
+    var label = document.createElement('label');
+    label.style.cssText = 'display:inline-block;margin:2px 6px;color:#AACCFF;font-size:12px;cursor:pointer';
+    var cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.name = prefix;
+    cb.value = items[i];
+    cb.addEventListener('change', function() {
+      var checked = container.querySelectorAll('input:checked');
+      if (checked.length > maxChecked) {
+        this.checked = false;
+      }
+    });
+    label.appendChild(cb);
+    label.appendChild(document.createTextNode(' ' + items[i].replace(/-/g, ' ')));
+    container.appendChild(label);
+  }
+}
+
+function setStatus(elementId, text, color) {
+  var el = document.getElementById(elementId);
+  while (el.firstChild) el.removeChild(el.firstChild);
+  var font = document.createElement('font');
+  font.setAttribute('color', color);
+  font.textContent = text;
+  el.appendChild(font);
+}
+
+// Build card preview table using safe DOM methods
+function buildCardPreview(cards, append) {
+  var container = document.getElementById('card-preview');
+  if (!append) while (container.firstChild) container.removeChild(container.firstChild);
+
+  var table = document.createElement('table');
+  table.setAttribute('border', '1');
+  table.setAttribute('bordercolor', '#333366');
+  table.setAttribute('cellpadding', '4');
+  table.setAttribute('cellspacing', '0');
+  table.setAttribute('bgcolor', '#0a001a');
+  table.style.width = '100%';
+
+  // Header row
+  var headerRow = document.createElement('tr');
+  headerRow.setAttribute('bgcolor', '#220044');
+  ['Qty', 'Card Name', 'Type'].forEach(function(text) {
+    var td = document.createElement('td');
+    var font = document.createElement('font');
+    font.setAttribute('size', '2');
+    font.setAttribute('color', '#FFFF00');
+    var b = document.createElement('b');
+    b.textContent = text;
+    font.appendChild(b);
+    td.appendChild(font);
+    headerRow.appendChild(td);
+  });
+  table.appendChild(headerRow);
+
+  // Card rows
+  for (var j = 0; j < cards.length; j++) {
+    var card = cards[j];
+    var row = document.createElement('tr');
+
+    // Qty cell
+    var qtyTd = document.createElement('td');
+    qtyTd.setAttribute('align', 'center');
+    var qtyFont = document.createElement('font');
+    qtyFont.setAttribute('size', '2');
+    qtyFont.setAttribute('color', '#00FF00');
+    qtyFont.textContent = card.qty;
+    qtyTd.appendChild(qtyFont);
+    row.appendChild(qtyTd);
+
+    // Name cell with hover data attribute
+    var nameTd = document.createElement('td');
+    var nameFont = document.createElement('font');
+    nameFont.setAttribute('size', '2');
+    var nameLink = document.createElement('a');
+    nameLink.href = '#';
+    nameLink.style.cssText = 'color:#00CCFF;text-decoration:none';
+    nameLink.textContent = card.name;
+    nameLink.onclick = function(e) { e.preventDefault(); };
+    if (card.scryfallImg && card.scryfallImg.match(/^https:\/\/cards\.scryfall\.io\//)) {
+      nameLink.setAttribute('data-img', card.scryfallImg);
+    }
+    nameFont.appendChild(nameLink);
+    nameTd.appendChild(nameFont);
+    row.appendChild(nameTd);
+
+    // Type cell
+    var typeTd = document.createElement('td');
+    var typeFont = document.createElement('font');
+    typeFont.setAttribute('size', '1');
+    typeFont.setAttribute('color', '#888888');
+    typeFont.textContent = card.typeLine || '';
+    typeTd.appendChild(typeFont);
+    row.appendChild(typeTd);
+
+    table.appendChild(row);
+  }
+
+  container.appendChild(table);
+}
+
+// Parse button
+document.getElementById('btn-parse').addEventListener('click', async function() {
+  var text = document.getElementById('deck-input').value;
+  var errDiv = document.getElementById('parse-errors');
+
+  var result = parseDeck(text);
+  if (result.cards.length === 0) {
+    setStatus('parse-errors', 'No cards found. Check the format and try again.', '#FF4444');
+    return;
+  }
+
+  setStatus('parse-errors', 'Validating ' + result.cards.length + ' card(s) against Scryfall...', '#FFFF00');
+
+  try {
+    enrichedData = await validateAndEnrichCards(result.cards, result.sideboard);
+  } catch (e) {
+    setStatus('parse-errors', 'Scryfall API error: ' + e.message, '#FF4444');
+    return;
+  }
+
+  // Show results
+  var errContainer = document.getElementById('parse-errors');
+  while (errContainer.firstChild) errContainer.removeChild(errContainer.firstChild);
+
+  if (result.errors.length > 0) {
+    var warnFont = document.createElement('font');
+    warnFont.setAttribute('color', '#FF8800');
+    warnFont.textContent = 'Parse warnings: ' + result.errors.join(', ');
+    errContainer.appendChild(warnFont);
+    errContainer.appendChild(document.createElement('br'));
+  }
+  if (enrichedData.invalidNames.length > 0) {
+    var errFont = document.createElement('font');
+    errFont.setAttribute('color', '#FF4444');
+    errFont.textContent = 'Cards not found: ' + enrichedData.invalidNames.join(', ');
+    errContainer.appendChild(errFont);
+    errContainer.appendChild(document.createElement('br'));
+  }
+  if (enrichedData.validCards.length > 0) {
+    var okFont = document.createElement('font');
+    okFont.setAttribute('color', '#00FF00');
+    okFont.textContent = '\u2714 ' + enrichedData.validCards.length + ' unique card(s) validated!';
+    errContainer.appendChild(okFont);
+  }
+
+  if (enrichedData.validCards.length === 0) return;
+
+  parsedCards = enrichedData.validCards;
+  parsedSideboard = enrichedData.validSideboard || [];
+
+  // Auto-fill title from parsed deck
+  if (result.title && !document.getElementById('deck-title').value) {
+    document.getElementById('deck-title').value = result.title;
+  }
+
+  // Show color identity (renderColorPips uses only controlled mana symbol data, safe)
+  document.getElementById('color-pips').innerHTML = renderColorPips(enrichedData.colorIdentity);
+
+  // Show card count
+  var total = 0;
+  for (var i = 0; i < parsedCards.length; i++) total += parsedCards[i].qty;
+  var sbTotal = 0;
+  for (var s = 0; s < parsedSideboard.length; s++) sbTotal += parsedSideboard[s].qty;
+  document.getElementById('card-count').textContent = total + (sbTotal > 0 ? ' main + ' + sbTotal + ' sideboard' : '');
+
+  // Build card preview using safe DOM methods
+  buildCardPreview(parsedCards);
+  if (parsedSideboard.length > 0) {
+    var sbHeader = document.createElement('div');
+    sbHeader.style.cssText = 'margin-top:12px;margin-bottom:4px';
+    var sbFont = document.createElement('font');
+    sbFont.setAttribute('size', '2');
+    sbFont.setAttribute('color', '#FFFF00');
+    var sbB = document.createElement('b');
+    sbB.textContent = 'Sideboard (' + sbTotal + ')';
+    sbFont.appendChild(sbB);
+    sbHeader.appendChild(sbFont);
+    document.getElementById('card-preview').appendChild(sbHeader);
+    buildCardPreview(parsedSideboard, true);
+  }
+
+  // Setup hover tooltips
+  createTooltip();
+  setupCardHovers(document.getElementById('card-preview'));
+
+  // Show preview section
+  document.getElementById('preview-section').style.display = 'block';
+  document.getElementById('preview-section').scrollIntoView({ behavior: 'smooth' });
+});
+
+// Submit button
+document.getElementById('btn-submit').addEventListener('click', async function() {
+  var title = document.getElementById('deck-title').value.trim();
+  var author = document.getElementById('deck-author').value.trim();
+
+  if (!title) {
+    setStatus('submit-status', 'Please enter a deck name.', '#FF4444');
+    return;
+  }
+  if (!author) {
+    setStatus('submit-status', 'Please enter your name or Discord handle.', '#FF4444');
+    return;
+  }
+  if (!parsedCards || parsedCards.length === 0) {
+    setStatus('submit-status', 'No cards to submit. Parse a deck first.', '#FF4444');
+    return;
+  }
+
+  // Gather tags and badges
+  var tags = [];
+  document.querySelectorAll('#tag-checkboxes input:checked').forEach(function(cb) { tags.push(cb.value); });
+  var badges = [];
+  document.querySelectorAll('#badge-checkboxes input:checked').forEach(function(cb) { badges.push(cb.value); });
+
+  setStatus('submit-status', 'Submitting deck...', '#FFFF00');
+
+  try {
+    var deckId = await submitDeck({
+      title: title,
+      author: author,
+      description: document.getElementById('deck-description').value.trim(),
+      cards: parsedCards,
+      sideboard: parsedSideboard,
+      colorIdentity: enrichedData.colorIdentity,
+      colorCode: enrichedData.colorCode,
+      tags: tags,
+      badges: badges
+    });
+
+    var statusDiv = document.getElementById('submit-status');
+    while (statusDiv.firstChild) statusDiv.removeChild(statusDiv.firstChild);
+
+    var successFont = document.createElement('font');
+    successFont.setAttribute('color', '#00FF00');
+    successFont.setAttribute('size', '3');
+    var b = document.createElement('b');
+    b.textContent = '\u2714 Deck submitted!';
+    successFont.appendChild(b);
+    statusDiv.appendChild(successFont);
+    statusDiv.appendChild(document.createElement('br'));
+    statusDiv.appendChild(document.createElement('br'));
+
+    var viewLink = document.createElement('a');
+    viewLink.href = 'deck.html?id=' + encodeURIComponent(deckId);
+    var linkFont = document.createElement('font');
+    linkFont.setAttribute('color', '#00CCFF');
+    linkFont.textContent = 'View your deck \u00BB';
+    viewLink.appendChild(linkFont);
+    statusDiv.appendChild(viewLink);
+
+    // Disable submit button
+    document.getElementById('btn-submit').disabled = true;
+    document.getElementById('btn-submit').style.opacity = '0.5';
+
+  } catch (e) {
+    setStatus('submit-status', 'Error submitting deck: ' + e.message, '#FF4444');
+  }
+});
+</script>
+
+<script type="module" src="clippy.js"></script>
+<script src="sparkles.js"></script>
+</body>
+</html>

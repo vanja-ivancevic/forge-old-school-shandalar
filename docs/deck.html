@@ -1,0 +1,459 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>~*~ Old Border Shandalar ~*~ Deck View ~*~</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="deck-gallery.css">
+</head>
+
+<body>
+
+<script src="shared.js"></script>
+
+<!-- MAIN CONTENT -->
+<td class="main-content">
+<center>
+
+<img src="gifs/fire_bar.gif" alt="~*~*~*~" class="firebar" width="100%" style="max-width:664px">
+<br><br>
+
+<!-- Deck content rendered by JS -->
+<div id="deck-content">
+<font color="#FFFF00">Loading deck...</font>
+</div>
+
+<br>
+<img src="gifs/fire_bar.gif" alt="~*~*~*~" class="firebar" width="100%" style="max-width:664px">
+<br><br>
+
+<font size="2" color="#666688">
+<a href="decks.html">&laquo; Back to Deck Gallery</a>
+</font>
+
+<br><br>
+</center>
+</td>
+
+</tr>
+</table>
+
+<script type="module">
+import { fetchDeck, toggleVote, getVotedDecks, ensureAuth, downloadDeck,
+         renderColorPipsDom, renderTagDom, renderBadgeDom, formatDate,
+         groupCardsByType, getNormalImgUrl, createTooltip, setupCardHovers
+} from './deck-gallery.js';
+
+var deckId = new URLSearchParams(window.location.search).get('id');
+var container = document.getElementById('deck-content');
+
+function clearEl(el) {
+  while (el.firstChild) el.removeChild(el.firstChild);
+}
+
+function createFont(text, color, size) {
+  var f = document.createElement('font');
+  if (color) f.setAttribute('color', color);
+  if (size) f.setAttribute('size', String(size));
+  f.textContent = text;
+  return f;
+}
+
+async function loadDeck() {
+  if (!deckId) {
+    clearEl(container);
+    container.appendChild(createFont('No deck ID specified.', '#FF4444', 3));
+    return;
+  }
+
+  try {
+    var deck = await fetchDeck(deckId);
+
+    if (!deck) {
+      clearEl(container);
+      container.appendChild(createFont('Deck not found.', '#FF4444', 3));
+      return;
+    }
+
+    // Update page title
+    document.title = '~*~ Old Border Shandalar ~*~ ' + deck.title + ' ~*~';
+
+    clearEl(container);
+
+    // Deck title
+    container.appendChild(createFont(deck.title, '#FFFF00', 5));
+    container.appendChild(document.createElement('br'));
+
+    // Author
+    container.appendChild(createFont('by ' + deck.author, '#00CCFF', 3));
+    container.appendChild(document.createElement('br'));
+
+    // Color pips
+    var pipsSpan = document.createElement('span');
+    renderColorPipsDom(deck.colorIdentity, pipsSpan);
+    pipsSpan.appendChild(document.createTextNode(' \u2022 ' + (deck.cardCount || '?') + ' cards'));
+    container.appendChild(pipsSpan);
+    container.appendChild(document.createElement('br'));
+
+    // Date
+    container.appendChild(createFont('Submitted: ' + formatDate(deck.createdAt), '#666688', 2));
+    container.appendChild(document.createElement('br'));
+    container.appendChild(document.createElement('br'));
+
+    // Tags + badges
+    if ((deck.tags && deck.tags.length) || (deck.badges && deck.badges.length)) {
+      var labelSpan = document.createElement('span');
+      if (deck.tags) deck.tags.forEach(function(t) { renderTagDom(t, labelSpan); });
+      if (deck.badges) deck.badges.forEach(function(b) { renderBadgeDom(b, labelSpan); });
+      container.appendChild(labelSpan);
+      container.appendChild(document.createElement('br'));
+      container.appendChild(document.createElement('br'));
+    }
+
+    // Vote button
+    var isVoted = false;
+    try {
+      await ensureAuth();
+      var votedSet = await getVotedDecks([deckId]);
+      isVoted = votedSet.has(deckId);
+    } catch(e) { /* auth unavailable */ }
+
+    var voteBtn = document.createElement('button');
+    voteBtn.id = 'vote-btn';
+    voteBtn.style.cssText = 'background:' + (isVoted ? '#003300' : '#220044') + ';color:#00FF00;border:2px outset ' + (isVoted ? '#006600' : '#663399') + ';padding:6px 20px;font-size:14px;cursor:pointer;font-family:"Comic Sans MS",sans-serif';
+    voteBtn.textContent = (isVoted ? '\uD83D\uDC4D Liked!' : '\u261D Like') + ' (' + (deck.voteCount || 0) + ')';
+    voteBtn.addEventListener('click', async function() {
+      try {
+        var res = await toggleVote(deckId);
+        voteBtn.textContent = (res.voted ? '\uD83D\uDC4D Liked!' : '\u261D Like') + ' (' + res.newCount + ')';
+        voteBtn.style.background = res.voted ? '#003300' : '#220044';
+        voteBtn.style.borderColor = res.voted ? '#006600' : '#663399';
+      } catch(e) { console.error('Vote error:', e); }
+    });
+    container.appendChild(voteBtn);
+
+    // Download .dck button
+    var dlBtn = document.createElement('button');
+    dlBtn.style.cssText = 'background:#220044;color:#00CCFF;border:2px outset #663399;padding:6px 20px;font-size:14px;cursor:pointer;font-family:"Comic Sans MS",sans-serif;margin-left:10px';
+    dlBtn.textContent = '\u2B07 Download .dck';
+    dlBtn.addEventListener('click', function() { downloadDeck(deck); });
+    container.appendChild(dlBtn);
+    container.appendChild(document.createElement('br'));
+
+    // Description
+    if (deck.description) {
+      container.appendChild(document.createElement('br'));
+      var descTable = document.createElement('table');
+      descTable.setAttribute('width', '80%');
+      descTable.setAttribute('border', '1');
+      descTable.setAttribute('bordercolor', '#333366');
+      descTable.setAttribute('cellpadding', '12');
+      descTable.setAttribute('cellspacing', '0');
+      descTable.setAttribute('bgcolor', '#0a0a2e');
+      descTable.style.maxWidth = '500px';
+      var descRow = document.createElement('tr');
+      var descTd = document.createElement('td');
+      descTd.appendChild(createFont(deck.description, '#CCCCFF', 2));
+      descRow.appendChild(descTd);
+      descTable.appendChild(descRow);
+      container.appendChild(descTable);
+    }
+
+    container.appendChild(document.createElement('br'));
+
+    // Divider
+    var divImg = document.createElement('img');
+    divImg.src = 'gifs/swords_divider.gif';
+    divImg.alt = '~*~*~*~';
+    divImg.className = 'firebar';
+    divImg.style.cssText = 'max-width:332px;width:80%';
+    container.appendChild(divImg);
+    container.appendChild(document.createElement('br'));
+    container.appendChild(document.createElement('br'));
+
+    // Card list header
+    container.appendChild(createFont('Card List', '#FFFF00', 4));
+    container.appendChild(document.createElement('br'));
+    container.appendChild(document.createElement('br'));
+
+    // View toggle buttons
+    var toggleDiv = document.createElement('div');
+    toggleDiv.className = 'view-toggle';
+    var views = [
+      { id: 'list', label: '\u2630 List' },
+      { id: 'grid', label: '\u25A6 Visual' },
+      { id: 'stacks', label: '\u2583 Stacks' }
+    ];
+    views.forEach(function(v) {
+      var btn = document.createElement('button');
+      btn.textContent = v.label;
+      btn.setAttribute('data-view', v.id);
+      if (v.id === 'list') btn.className = 'active';
+      btn.addEventListener('click', function() {
+        toggleDiv.querySelectorAll('button').forEach(function(b) { b.className = ''; });
+        btn.className = 'active';
+        document.querySelectorAll('.deck-view-list,.deck-view-grid,.deck-view-stacks').forEach(function(el) {
+          el.classList.remove('active');
+        });
+        document.querySelector('.deck-view-' + v.id).classList.add('active');
+      });
+      toggleDiv.appendChild(btn);
+    });
+    container.appendChild(toggleDiv);
+
+    // Zoom slider
+    var zoomDiv = document.createElement('div');
+    zoomDiv.style.cssText = 'margin-bottom:12px';
+    var zoomLabel = document.createElement('font');
+    zoomLabel.setAttribute('size', '2');
+    zoomLabel.setAttribute('color', '#AAAACC');
+    zoomLabel.textContent = 'Zoom: ';
+    zoomDiv.appendChild(zoomLabel);
+    var zoomSlider = document.createElement('input');
+    zoomSlider.type = 'range';
+    zoomSlider.min = '100';
+    zoomSlider.max = '200';
+    zoomSlider.value = '150';
+    zoomSlider.style.cssText = 'width:120px;vertical-align:middle;cursor:pointer';
+    var zoomVal = document.createElement('font');
+    zoomVal.setAttribute('size', '2');
+    zoomVal.setAttribute('color', '#00FF00');
+    zoomVal.textContent = ' 150%';
+    zoomSlider.addEventListener('input', function() {
+      var pct = parseInt(zoomSlider.value);
+      var scale = pct / 100;
+      zoomVal.textContent = ' ' + pct + '%';
+      var baseW = 130, baseH = 181;
+      var w = Math.round(baseW * scale);
+      var h = Math.round(baseH * scale);
+      var gridEl = document.querySelector('.deck-view-grid');
+      var stacksEl = document.querySelector('.deck-view-stacks');
+      if (gridEl) { gridEl.style.setProperty('--card-w', w + 'px'); gridEl.style.setProperty('--card-h', h + 'px'); }
+      if (stacksEl) { stacksEl.style.setProperty('--card-w', w + 'px'); stacksEl.style.setProperty('--card-h', h + 'px'); }
+    });
+    zoomDiv.appendChild(zoomSlider);
+    zoomDiv.appendChild(zoomVal);
+    container.appendChild(zoomDiv);
+
+    var allCards = deck.cards || [];
+    var groups = groupCardsByType(allCards);
+
+    // Helper: build card row for list view
+    function buildCardRow(card) {
+      var row = document.createElement('tr');
+      var qtyTd = document.createElement('td');
+      qtyTd.setAttribute('align', 'center');
+      qtyTd.setAttribute('width', '40');
+      qtyTd.appendChild(createFont(String(card.qty), '#00FF00', 2));
+      row.appendChild(qtyTd);
+      var nameTd = document.createElement('td');
+      var nameLink = document.createElement('a');
+      nameLink.href = '#';
+      nameLink.style.cssText = 'color:#00CCFF;text-decoration:none;font-size:13px';
+      nameLink.textContent = card.name;
+      nameLink.onclick = function(e) { e.preventDefault(); };
+      if (card.scryfallImg && card.scryfallImg.match(/^https:\/\/cards\.scryfall\.io\//)) {
+        nameLink.setAttribute('data-img', card.scryfallImg);
+      }
+      nameTd.appendChild(nameLink);
+      row.appendChild(nameTd);
+      return row;
+    }
+
+    // Helper: build card image element for grid/stacks
+    function buildCardImg(card) {
+      var div = document.createElement('div');
+      div.className = 'card-grid-item';
+      var img = document.createElement('img');
+      var normalUrl = getNormalImgUrl(card.scryfallImg);
+      if (normalUrl && normalUrl.match(/^https:\/\/cards\.scryfall\.io\//)) {
+        img.src = normalUrl;
+      }
+      img.alt = card.name;
+      img.loading = 'lazy';
+      div.appendChild(img);
+      if (card.qty > 1) {
+        var qty = document.createElement('span');
+        qty.className = 'card-grid-qty';
+        qty.textContent = card.qty + 'x';
+        div.appendChild(qty);
+      }
+      return div;
+    }
+
+    // ── LIST VIEW ──
+    var listDiv = document.createElement('div');
+    listDiv.className = 'deck-view-list active';
+    listDiv.style.cssText = 'max-width:500px;width:90%;text-align:left';
+
+    for (var g = 0; g < groups.length; g++) {
+      var group = groups[g];
+      var hdrB = document.createElement('b');
+      hdrB.appendChild(createFont(group.type + ' (' + group.totalQty + ')', '#FF6600', 2));
+      listDiv.appendChild(hdrB);
+      listDiv.appendChild(document.createElement('br'));
+      var tbl = document.createElement('table');
+      tbl.setAttribute('width', '100%');
+      tbl.setAttribute('border', '1');
+      tbl.setAttribute('bordercolor', '#333366');
+      tbl.setAttribute('cellpadding', '4');
+      tbl.setAttribute('cellspacing', '0');
+      tbl.setAttribute('bgcolor', '#0a001a');
+      for (var ci = 0; ci < group.cards.length; ci++) {
+        tbl.appendChild(buildCardRow(group.cards[ci]));
+      }
+      listDiv.appendChild(tbl);
+      listDiv.appendChild(document.createElement('br'));
+    }
+
+    // Sideboard in list view
+    if (deck.sideboard && deck.sideboard.length > 0) {
+      var sbB = document.createElement('b');
+      sbB.appendChild(createFont('Sideboard (' + deck.sideboard.length + ')', '#FFFF00', 3));
+      listDiv.appendChild(sbB);
+      listDiv.appendChild(document.createElement('br'));
+      var sbTbl = document.createElement('table');
+      sbTbl.setAttribute('width', '100%');
+      sbTbl.setAttribute('border', '1');
+      sbTbl.setAttribute('bordercolor', '#333366');
+      sbTbl.setAttribute('cellpadding', '4');
+      sbTbl.setAttribute('cellspacing', '0');
+      sbTbl.setAttribute('bgcolor', '#0a001a');
+      for (var si = 0; si < deck.sideboard.length; si++) {
+        sbTbl.appendChild(buildCardRow(deck.sideboard[si]));
+      }
+      listDiv.appendChild(sbTbl);
+    }
+    container.appendChild(listDiv);
+
+    // ── GRID VIEW ──
+    var gridDiv = document.createElement('div');
+    gridDiv.className = 'deck-view-grid';
+    gridDiv.style.cssText = 'max-width:700px;width:95%;text-align:left';
+
+    for (var gg = 0; gg < groups.length; gg++) {
+      var grp = groups[gg];
+      var grpDiv = document.createElement('div');
+      grpDiv.className = 'card-grid-group';
+      var grpTitle = document.createElement('div');
+      grpTitle.className = 'card-grid-group-title';
+      grpTitle.textContent = grp.type + ' (' + grp.totalQty + ')';
+      grpDiv.appendChild(grpTitle);
+      var imgsDiv = document.createElement('div');
+      imgsDiv.className = 'card-grid-images';
+      for (var gi = 0; gi < grp.cards.length; gi++) {
+        imgsDiv.appendChild(buildCardImg(grp.cards[gi]));
+      }
+      grpDiv.appendChild(imgsDiv);
+      gridDiv.appendChild(grpDiv);
+    }
+    if (deck.sideboard && deck.sideboard.length > 0) {
+      var sbGrpDiv = document.createElement('div');
+      sbGrpDiv.className = 'card-grid-group';
+      var sbGrpTitle = document.createElement('div');
+      sbGrpTitle.className = 'card-grid-group-title';
+      sbGrpTitle.style.color = '#FFFF00';
+      sbGrpTitle.textContent = 'Sideboard (' + deck.sideboard.length + ')';
+      sbGrpDiv.appendChild(sbGrpTitle);
+      var sbImgsDiv = document.createElement('div');
+      sbImgsDiv.className = 'card-grid-images';
+      for (var sgi = 0; sgi < deck.sideboard.length; sgi++) {
+        sbImgsDiv.appendChild(buildCardImg(deck.sideboard[sgi]));
+      }
+      sbGrpDiv.appendChild(sbImgsDiv);
+      gridDiv.appendChild(sbGrpDiv);
+    }
+    container.appendChild(gridDiv);
+
+    // ── STACKS VIEW ──
+    var stacksDiv = document.createElement('div');
+    stacksDiv.className = 'deck-view-stacks';
+    stacksDiv.style.cssText = 'max-width:700px;width:95%;margin:0 auto';
+    var stacksContainer = document.createElement('div');
+    stacksContainer.className = 'stacks-container';
+
+    for (var sg = 0; sg < groups.length; sg++) {
+      var sgrp = groups[sg];
+      var col = document.createElement('div');
+      col.className = 'stack-column';
+      var colTitle = document.createElement('div');
+      colTitle.className = 'stack-column-title';
+      colTitle.textContent = sgrp.type + ' (' + sgrp.totalQty + ')';
+      col.appendChild(colTitle);
+      for (var sci = 0; sci < sgrp.cards.length; sci++) {
+        var stackCard = document.createElement('div');
+        stackCard.className = 'stack-card';
+        var sImg = document.createElement('img');
+        var sNormalUrl = getNormalImgUrl(sgrp.cards[sci].scryfallImg);
+        if (sNormalUrl && sNormalUrl.match(/^https:\/\/cards\.scryfall\.io\//)) {
+          sImg.src = sNormalUrl;
+        }
+        sImg.alt = sgrp.cards[sci].name;
+        sImg.loading = 'lazy';
+        stackCard.appendChild(sImg);
+        if (sgrp.cards[sci].qty > 1) {
+          var sqty = document.createElement('span');
+          sqty.className = 'card-grid-qty';
+          sqty.textContent = sgrp.cards[sci].qty + 'x';
+          stackCard.appendChild(sqty);
+        }
+        col.appendChild(stackCard);
+      }
+      stacksContainer.appendChild(col);
+    }
+    stacksDiv.appendChild(stacksContainer);
+
+    if (deck.sideboard && deck.sideboard.length > 0) {
+      var sbStackTitle = document.createElement('div');
+      sbStackTitle.style.cssText = 'width:100%;margin-top:12px;color:#FFFF00;font-weight:bold;font-size:13px';
+      sbStackTitle.textContent = 'Sideboard (' + deck.sideboard.length + ')';
+      stacksDiv.appendChild(sbStackTitle);
+      var sbStackContainer = document.createElement('div');
+      sbStackContainer.className = 'stacks-container';
+      var sbCol = document.createElement('div');
+      sbCol.className = 'stack-column';
+      for (var ssi = 0; ssi < deck.sideboard.length; ssi++) {
+        var sbStackCard = document.createElement('div');
+        sbStackCard.className = 'stack-card';
+        var sbSImg = document.createElement('img');
+        var sbSNormalUrl = getNormalImgUrl(deck.sideboard[ssi].scryfallImg);
+        if (sbSNormalUrl && sbSNormalUrl.match(/^https:\/\/cards\.scryfall\.io\//)) {
+          sbSImg.src = sbSNormalUrl;
+        }
+        sbSImg.alt = deck.sideboard[ssi].name;
+        sbSImg.loading = 'lazy';
+        sbStackCard.appendChild(sbSImg);
+        if (deck.sideboard[ssi].qty > 1) {
+          var sbSqty = document.createElement('span');
+          sbSqty.className = 'card-grid-qty';
+          sbSqty.textContent = deck.sideboard[ssi].qty + 'x';
+          sbStackCard.appendChild(sbSqty);
+        }
+        sbCol.appendChild(sbStackCard);
+      }
+      sbStackContainer.appendChild(sbCol);
+      stacksDiv.appendChild(sbStackContainer);
+    }
+    container.appendChild(stacksDiv);
+
+    // Setup hover tooltips (list view)
+    createTooltip();
+    setupCardHovers(listDiv);
+
+    // Apply initial 150% zoom now that views exist
+    zoomSlider.dispatchEvent(new Event('input'));
+
+  } catch (e) {
+    clearEl(container);
+    container.appendChild(createFont('Error loading deck: ' + e.message, '#FF4444', 3));
+  }
+}
+
+loadDeck();
+</script>
+
+<script type="module" src="clippy.js"></script>
+<script src="sparkles.js"></script>
+</body>
+</html>

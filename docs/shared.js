@@ -34,6 +34,7 @@
     '<a href="guide.html">Guide</a>' +
     '<a href="changelog.html">Changelog</a>' +
     '<a href="community.html">Community</a>' +
+    '<a href="decks.html">Decks</a>' +
     '<a href="modern/' + page + '" class="mobile-modern-link">&#10022; Modern</a>' +
     '</div>'
   );
@@ -54,6 +55,7 @@
     '<a href="guide.html" class="nav-link' + activeClass('guide.html') + '">&#128214; Guide</a>' +
     '<a href="changelog.html" class="nav-link' + activeClass('changelog.html') + '">&#128240; Changelog</a>' +
     '<a href="community.html" class="nav-link' + activeClass('community.html') + '">&#128172; Community</a>' +
+    '<a href="decks.html" class="nav-link' + activeClass('decks.html') + '">&#9824; Decks</a>' +
 
     '<hr class="nav-separator">' +
 

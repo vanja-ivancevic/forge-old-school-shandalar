@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Submit Deck - Old Border Shandalar</title>
+<meta name="description" content="Submit your Adventure Mode deck to the Old Border Shandalar community gallery.">
+<meta property="og:title" content="Submit Deck - Old Border Shandalar">
+<meta property="og:image" content="https://oldborder-shandalar.net/Title_image.jpg">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="canonical" href="https://oldborder-shandalar.net/modern/submit-deck.html">
+<link rel="stylesheet" href="modern.css">
+<link rel="stylesheet" href="deck-gallery-modern.css">
+</head>
+
+<body data-theme="modern">
+
+<nav class="nav">
+<div class="nav-inner">
+<span class="nav-brand">Old Border Shandalar</span>
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
+<span></span><span></span><span></span>
+</label>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="features.html">Features</a>
+<a href="howtoplay.html">How to Play</a>
+<a href="guide.html">Guide</a>
+<a href="changelog.html">Changelog</a>
+<a href="community.html">Community</a>
+<a href="decks.html">Decks</a>
+<a href="../submit-deck.html" class="nav-retro">&#9876; Retro Edition</a>
+</div>
+</div>
+</nav>
+
+<div class="container">
+
+<div class="section fade-in" style="text-align:center">
+<h1 class="section-title" style="font-size:32px">Submit Your Deck</h1>
+<p class="section-subtitle">Share your Adventure Mode deck with the community</p>
+</div>
+
+<!-- Step 1: Paste -->
+<div class="deck-card fade-in" style="margin-bottom:24px">
+<h2 style="font-family:var(--font-heading);font-size:18px;color:var(--gold);margin-bottom:12px">Step 1: Paste Your Deck List</h2>
+<p style="font-size:13px;color:var(--text-muted);margin-bottom:12px">
+Paste from Forge clipboard, .dck format, or a simple list (4 Card Name).
+</p>
+
+<details style="margin-bottom:16px;font-size:13px;color:var(--text-muted);background:var(--surface-elevated);border:1px solid var(--border);border-radius:var(--radius);padding:12px">
+<summary style="cursor:pointer;color:var(--gold);font-weight:600">How to export your deck from Forge</summary>
+<ol style="margin:8px 0 0 16px;line-height:1.8">
+<li>Open your deck in the Adventure Mode deck editor</li>
+<li>Tap the <strong style="color:var(--text)">&#8942; More Options</strong> button (top of editor)</li>
+<li>Select <strong style="color:var(--green)">"Copy to Clipboard"</strong></li>
+<li>Paste it right here!</li>
+</ol>
+</details>
+
+<div class="form-group">
+<textarea id="deck-input" class="form-textarea" rows="12" placeholder="Paste your deck list here...
+Example:
+4 Lightning Bolt
+4 Chain Lightning
+4 Fireblast
+20 Mountain"></textarea>
+</div>
+
+<button id="btn-parse" class="btn-modern">Parse Deck</button>
+
+<div id="parse-errors" style="margin-top:12px"></div>
+</div>
+
+<!-- Step 2: Customize (hidden until parsed) -->
+<div id="preview-section" style="display:none">
+
+<div class="deck-card fade-in" style="margin-bottom:24px">
+<h2 style="font-family:var(--font-heading);font-size:18px;color:var(--gold);margin-bottom:16px">Step 2: Review &amp; Customize</h2>
+
+<div class="form-group">
+<label class="form-label">Deck Name</label>
+<input type="text" id="deck-title" class="form-input" maxlength="100" placeholder="Enter a name for your deck">
+</div>
+
+<div class="form-group">
+<label class="form-label">Your Name / Discord Handle</label>
+<input type="text" id="deck-author" class="form-input" maxlength="50" placeholder="e.g. ShandalarMage420" style="max-width:300px">
+</div>
+
+<div class="form-group">
+<label class="form-label">Description (optional)</label>
+<textarea id="deck-description" class="form-input" rows="3" maxlength="500" placeholder="Strategy notes, matchup tips, etc." style="font-family:var(--font-body)"></textarea>
+</div>
+
+<div class="form-group">
+<label class="form-label">Color Identity</label>
+<span id="color-pips" style="display:inline-flex;gap:4px;vertical-align:middle"></span>
+<span id="card-count" style="color:var(--text-muted);font-size:14px;margin-left:12px"></span>
+</div>
+
+<div class="form-group">
+<label class="form-label">Archetype (pick 1-3)</label>
+<div id="tag-checkboxes" class="checkbox-group"></div>
+<div style="display:flex;gap:8px;margin-top:8px;align-items:center">
+<input type="text" id="custom-tag" class="form-input" maxlength="30" placeholder="Add custom archetype..." style="max-width:200px;font-size:13px;padding:6px 10px">
+<button id="btn-add-tag" class="btn-secondary" style="white-space:nowrap">+ Add</button>
+</div>
+</div>
+
+<div class="form-group">
+<label class="form-label">Badges (pick 0-2)</label>
+<div id="badge-checkboxes" class="checkbox-group"></div>
+<div style="display:flex;gap:8px;margin-top:8px;align-items:center">
+<input type="text" id="custom-badge" class="form-input" maxlength="30" placeholder="Add custom badge..." style="max-width:200px;font-size:13px;padding:6px 10px">
+<button id="btn-add-badge" class="btn-secondary" style="white-space:nowrap">+ Add</button>
+</div>
+</div>
+
+<div class="form-group">
+<label class="form-label">Card List Preview</label>
+<div id="card-preview"></div>
+</div>
+
+<button id="btn-submit" class="btn-modern" style="font-size:16px;padding:10px 32px">Submit Deck</button>
+<div id="submit-status" style="margin-top:12px"></div>
+</div>
+
+</div>
+
+<div style="margin-top:24px">
+<a href="decks.html">&larr; Back to Deck Gallery</a>
+</div>
+
+</div>
+
+<script type="module">
+import { parseDeck, validateAndEnrichCards, submitDeck, ensureAuth,
+         fetchTagRegistry, addToRegistry, createTooltip, setupCardHovers
+} from '../deck-gallery.js';
+
+var parsedCards = null;
+var parsedSideboard = null;
+var enrichedData = null;
+var manaNames = { W:'White', U:'Blue', B:'Black', R:'Red', G:'Green' };
+
+// Load tag registry
+fetchTagRegistry().then(function(registry) {
+  buildCheckboxes('tag-checkboxes', registry.archetypes, 'tag', 3);
+  buildCheckboxes('badge-checkboxes', registry.badges, 'badge', 2);
+}).catch(function() {
+  var defaults = {
+    archetypes: ['aggro','control','combo','midrange','tempo','ramp','tribal','mill','burn','reanimator','prison','toolbox'],
+    badges: ['boss-killer','budget','meme','competitive','beginner-friendly','jank','spicy']
+  };
+  buildCheckboxes('tag-checkboxes', defaults.archetypes, 'tag', 3);
+  buildCheckboxes('badge-checkboxes', defaults.badges, 'badge', 2);
+});
+
+// Add custom tag
+document.getElementById('btn-add-tag').addEventListener('click', async function() {
+  var input = document.getElementById('custom-tag');
+  var val = input.value.trim();
+  if (!val) return;
+  try {
+    var slug = await addToRegistry('archetypes', val);
+    if (slug) { addCheckbox('tag-checkboxes', slug, 'tag', 3, true); input.value = ''; }
+  } catch(e) {}
+});
+
+// Add custom badge
+document.getElementById('btn-add-badge').addEventListener('click', async function() {
+  var input = document.getElementById('custom-badge');
+  var val = input.value.trim();
+  if (!val) return;
+  try {
+    var slug = await addToRegistry('badges', val);
+    if (slug) { addCheckbox('badge-checkboxes', slug, 'badge', 2, true); input.value = ''; }
+  } catch(e) {}
+});
+
+function addCheckbox(containerId, item, prefix, maxChecked, autoCheck) {
+  var container = document.getElementById(containerId);
+  var existing = container.querySelectorAll('input');
+  for (var i = 0; i < existing.length; i++) {
+    if (existing[i].value === item) return;
+  }
+  var label = document.createElement('label');
+  label.style.borderColor = 'var(--gold-dim)';
+  var cb = document.createElement('input');
+  cb.type = 'checkbox'; cb.name = prefix; cb.value = item;
+  if (autoCheck) cb.checked = true;
+  cb.addEventListener('change', function() {
+    var checked = container.querySelectorAll('input:checked');
+    if (checked.length > maxChecked) this.checked = false;
+  });
+  label.appendChild(cb);
+  label.appendChild(document.createTextNode(' ' + item.replace(/-/g, ' ')));
+  container.appendChild(label);
+}
+
+function buildCheckboxes(containerId, items, prefix, maxChecked) {
+  var container = document.getElementById(containerId);
+  while (container.firstChild) container.removeChild(container.firstChild);
+  items.forEach(function(item) {
+    var label = document.createElement('label');
+    var cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.name = prefix;
+    cb.value = item;
+    cb.addEventListener('change', function() {
+      var checked = container.querySelectorAll('input:checked');
+      if (checked.length > maxChecked) this.checked = false;
+    });
+    label.appendChild(cb);
+    label.appendChild(document.createTextNode(' ' + item.replace(/-/g, ' ')));
+    container.appendChild(label);
+  });
+}
+
+function clearEl(el) { while (el.firstChild) el.removeChild(el.firstChild); }
+
+function setStatus(id, text, isError) {
+  var el = document.getElementById(id);
+  clearEl(el);
+  var p = document.createElement('p');
+  p.style.color = isError ? 'var(--red)' : 'var(--green)';
+  p.style.fontSize = '14px';
+  p.textContent = text;
+  el.appendChild(p);
+}
+
+// Parse
+document.getElementById('btn-parse').addEventListener('click', async function() {
+  var text = document.getElementById('deck-input').value;
+  var result = parseDeck(text);
+  if (result.cards.length === 0) {
+    setStatus('parse-errors', 'No cards found. Check the format and try again.', true);
+    return;
+  }
+
+  setStatus('parse-errors', 'Validating ' + result.cards.length + ' card(s) against Scryfall...', false);
+
+  try {
+    enrichedData = await validateAndEnrichCards(result.cards, result.sideboard);
+  } catch (e) {
+    setStatus('parse-errors', 'Scryfall API error: ' + e.message, true);
+    return;
+  }
+
+  var errEl = document.getElementById('parse-errors');
+  clearEl(errEl);
+
+  if (result.errors.length > 0) {
+    var w = document.createElement('p');
+    w.style.cssText = 'color:var(--gold);font-size:13px';
+    w.textContent = 'Parse warnings: ' + result.errors.join(', ');
+    errEl.appendChild(w);
+  }
+  if (enrichedData.invalidNames.length > 0) {
+    var e2 = document.createElement('p');
+    e2.style.cssText = 'color:var(--red);font-size:13px';
+    e2.textContent = 'Cards not found: ' + enrichedData.invalidNames.join(', ');
+    errEl.appendChild(e2);
+  }
+  if (enrichedData.validCards.length > 0) {
+    var ok = document.createElement('p');
+    ok.style.cssText = 'color:var(--green);font-size:13px';
+    ok.textContent = '\u2714 ' + enrichedData.validCards.length + ' unique card(s) validated!';
+    errEl.appendChild(ok);
+  }
+
+  if (enrichedData.validCards.length === 0) return;
+  parsedCards = enrichedData.validCards;
+  parsedSideboard = enrichedData.validSideboard || [];
+
+  if (result.title && !document.getElementById('deck-title').value) {
+    document.getElementById('deck-title').value = result.title;
+  }
+
+  // Color pips
+  var pipsEl = document.getElementById('color-pips');
+  clearEl(pipsEl);
+  if (enrichedData.colorIdentity.length) {
+    enrichedData.colorIdentity.forEach(function(c) {
+      var pip = document.createElement('span');
+      pip.className = 'mana-pip mana-pip-' + c;
+      pip.textContent = c;
+      pip.title = manaNames[c] || c;
+      pipsEl.appendChild(pip);
+    });
+  }
+
+  // Card count
+  var total = 0;
+  parsedCards.forEach(function(c) { total += c.qty; });
+  var sbTotal = 0;
+  parsedSideboard.forEach(function(c) { sbTotal += c.qty; });
+  document.getElementById('card-count').textContent = total + ' cards' + (sbTotal > 0 ? ' + ' + sbTotal + ' sideboard' : '');
+
+  // Card preview table
+  var preview = document.getElementById('card-preview');
+  clearEl(preview);
+
+  var table = document.createElement('table');
+  table.className = 'card-list-table';
+  var thead = document.createElement('thead');
+  var headRow = document.createElement('tr');
+  ['Qty', 'Card Name', 'Type'].forEach(function(t) {
+    var th = document.createElement('th');
+    th.textContent = t;
+    headRow.appendChild(th);
+  });
+  thead.appendChild(headRow);
+  table.appendChild(thead);
+
+  var tbody = document.createElement('tbody');
+  parsedCards.forEach(function(card) {
+    var row = document.createElement('tr');
+    var qtyTd = document.createElement('td');
+    qtyTd.style.width = '40px';
+    qtyTd.textContent = card.qty;
+    row.appendChild(qtyTd);
+
+    var nameTd = document.createElement('td');
+    var nameLink = document.createElement('a');
+    nameLink.href = '#';
+    nameLink.textContent = card.name;
+    nameLink.onclick = function(e) { e.preventDefault(); };
+    if (card.scryfallImg && card.scryfallImg.match(/^https:\/\/cards\.scryfall\.io\//)) {
+      nameLink.setAttribute('data-img', card.scryfallImg);
+    }
+    nameTd.appendChild(nameLink);
+    row.appendChild(nameTd);
+
+    var typeTd = document.createElement('td');
+    typeTd.style.color = 'var(--text-muted)';
+    typeTd.textContent = card.typeLine || '';
+    row.appendChild(typeTd);
+
+    tbody.appendChild(row);
+  });
+  table.appendChild(tbody);
+  preview.appendChild(table);
+
+  // Sideboard preview
+  if (parsedSideboard.length > 0) {
+    var sbH = document.createElement('h3');
+    sbH.style.cssText = 'font-size:14px;color:var(--gold);margin:12px 0 6px;font-family:var(--font-heading)';
+    sbH.textContent = 'Sideboard (' + sbTotal + ')';
+    preview.appendChild(sbH);
+
+    var sbTable = document.createElement('table');
+    sbTable.className = 'card-list-table';
+    var sbTbody = document.createElement('tbody');
+    parsedSideboard.forEach(function(card) {
+      var row = document.createElement('tr');
+      var qtyTd = document.createElement('td');
+      qtyTd.style.width = '40px';
+      qtyTd.textContent = card.qty;
+      row.appendChild(qtyTd);
+      var nameTd = document.createElement('td');
+      var nameLink = document.createElement('a');
+      nameLink.href = '#';
+      nameLink.textContent = card.name;
+      nameLink.onclick = function(e) { e.preventDefault(); };
+      if (card.scryfallImg && card.scryfallImg.match(/^https:\/\/cards\.scryfall\.io\//)) {
+        nameLink.setAttribute('data-img', card.scryfallImg);
+      }
+      nameTd.appendChild(nameLink);
+      row.appendChild(nameTd);
+      var typeTd = document.createElement('td');
+      typeTd.style.color = 'var(--text-muted)';
+      typeTd.textContent = card.typeLine || '';
+      row.appendChild(typeTd);
+      sbTbody.appendChild(row);
+    });
+    sbTable.appendChild(sbTbody);
+    preview.appendChild(sbTable);
+  }
+
+  createTooltip();
+  setupCardHovers(preview);
+
+  document.getElementById('preview-section').style.display = 'block';
+  document.getElementById('preview-section').scrollIntoView({ behavior: 'smooth' });
+});
+
+// Submit
+document.getElementById('btn-submit').addEventListener('click', async function() {
+  var title = document.getElementById('deck-title').value.trim();
+  var author = document.getElementById('deck-author').value.trim();
+
+  if (!title) { setStatus('submit-status', 'Please enter a deck name.', true); return; }
+  if (!author) { setStatus('submit-status', 'Please enter your name or Discord handle.', true); return; }
+  if (!parsedCards || !parsedCards.length) { setStatus('submit-status', 'No cards to submit.', true); return; }
+
+  var tags = [];
+  document.querySelectorAll('#tag-checkboxes input:checked').forEach(function(cb) { tags.push(cb.value); });
+  var badges = [];
+  document.querySelectorAll('#badge-checkboxes input:checked').forEach(function(cb) { badges.push(cb.value); });
+
+  setStatus('submit-status', 'Submitting deck...', false);
+
+  try {
+    var deckId = await submitDeck({
+      title: title,
+      author: author,
+      description: document.getElementById('deck-description').value.trim(),
+      cards: parsedCards,
+      sideboard: parsedSideboard,
+      colorIdentity: enrichedData.colorIdentity,
+      colorCode: enrichedData.colorCode,
+      tags: tags,
+      badges: badges
+    });
+
+    var statusEl = document.getElementById('submit-status');
+    clearEl(statusEl);
+    var successP = document.createElement('p');
+    successP.style.color = 'var(--green)';
+    successP.textContent = '\u2714 Deck submitted! ';
+    var viewLink = document.createElement('a');
+    viewLink.href = 'deck.html?id=' + encodeURIComponent(deckId);
+    viewLink.textContent = 'View your deck \u2192';
+    successP.appendChild(viewLink);
+    statusEl.appendChild(successP);
+
+    document.getElementById('btn-submit').disabled = true;
+    document.getElementById('btn-submit').style.opacity = '0.5';
+
+  } catch (e) {
+    setStatus('submit-status', 'Error: ' + e.message, true);
+  }
+});
+</script>
+
+<script>
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+</script>
+</body>
+</html>
