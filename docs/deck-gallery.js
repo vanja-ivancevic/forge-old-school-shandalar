@@ -232,9 +232,20 @@ export async function validateAndEnrichCards(cards, sideboard) {
   }
 
   // Step 1: Validate all cards via /cards/collection (fast batch lookup)
+  // For split cards ("Fire // Ice"), Scryfall collection API only accepts the first half
+  var splitNameMap = {}; // maps normalized first-half name -> original full name
+  var normalizedNames = uniqueNames.map(function(name) {
+    if (name.indexOf(' // ') !== -1) {
+      var firstHalf = name.split(' // ')[0].trim();
+      splitNameMap[firstHalf.toLowerCase()] = name.toLowerCase();
+      return firstHalf;
+    }
+    return name;
+  });
+
   var batches = [];
-  for (var j = 0; j < uniqueNames.length; j += 75) {
-    batches.push(uniqueNames.slice(j, j + 75));
+  for (var j = 0; j < normalizedNames.length; j += 75) {
+    batches.push(normalizedNames.slice(j, j + 75));
   }
 
   var cardDataMap = {}; // lowercase name -> scryfall data
@@ -257,6 +268,9 @@ export async function validateAndEnrichCards(cards, sideboard) {
       for (var k = 0; k < data.data.length; k++) {
         var card = data.data[k];
         cardDataMap[card.name.toLowerCase()] = card;
+        // Also map the original full split name (e.g. "fire // ice") to this card
+        var origName = splitNameMap[card.name.split(' // ')[0].toLowerCase()];
+        if (origName) cardDataMap[origName] = card;
       }
     }
     if (data.not_found) {
