@@ -71,7 +71,7 @@
 }
 
 /* Color filter button styling */
-.color-btn { background: transparent; border: 2px solid var(--border); padding: 4px 6px; line-height: 1; }
+.color-btn { background: transparent; border: 0; padding: 0; line-height: 1; }
 
 /* Tag & badge pills */
 .tag-pill {
@@ -157,10 +157,14 @@
 .color-btn {
   width: 28px;
   height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  border: 2px solid var(--border);
+  border: 0;
+  background: transparent;
   cursor: pointer;
-  transition: border-color 0.2s, transform 0.15s;
+  transition: box-shadow 0.2s, transform 0.15s;
   font-size: 12px;
   line-height: 24px;
   text-align: center;
@@ -169,7 +173,6 @@
   transform: scale(1.1);
 }
 .color-btn.active {
-  border-color: var(--gold);
   box-shadow: 0 0 8px var(--gold-glow);
 }
 
