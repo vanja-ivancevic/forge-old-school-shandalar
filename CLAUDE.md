@@ -96,3 +96,13 @@ The retro site is intentionally designed to look like an authentic mid-to-late 1
 2. Add the new page link to the `<nav>` in **every** modern page
 3. Add corresponding entry in retro `shared.js` nav
 4. Link `modern.css`, use `<body data-theme="modern">`
+
+## Firebase / Firestore
+
+The deck gallery uses **Firebase** (project: `decklists-3a783`) with Firestore + Anonymous Auth. The Firebase CLI is installed and authenticated — you can deploy directly.
+
+- **Rules**: `firestore.rules` — deploy with `firebase deploy --only firestore:rules`
+- **Indexes**: `firestore.indexes.json` — deploy with `firebase deploy --only firestore:indexes`
+- **Deploy both**: `firebase deploy --only firestore:rules,firestore:indexes`
+- **Config**: `firebase.json` points to the rules and indexes files
+- **Console**: https://console.firebase.google.com/project/decklists-3a783/overview
