@@ -21,21 +21,22 @@
 <br><br>
 
 <font size="5" color="#FFFF00" class="section-header">
-<b>&#9733; Deck Gallery &#9733;</b>
+<b>&#9733; User Deck Gallery &#9733;</b>
 </font>
 <br>
 <font size="2" color="#AAAACC">Browse and vote on community Adventure Mode decks!</font>
-<br><br>
-
-<!-- SUBMIT BUTTON -->
-<a href="submit-deck.html">
-<button style="background:#220044;color:#FFFF00;border:2px outset #663399;padding:8px 24px;font-size:14px;cursor:pointer;font-family:'Comic Sans MS',sans-serif">
-&#9733; Submit Your Deck &#9733;
-</button>
-</a>
+<br>
+<font size="2" color="#888888">Looking for the game's built-in decks? <a href="precon.html">Browse all 113 pre-constructed decks</a></font>
 <br><br>
 
 <img src="gifs/swords_divider.gif" alt="~*~*~*~" class="firebar" style="max-width:332px;width:80%">
+<br><br>
+
+<a href="submit-deck.html">
+<button style="background:#006600;color:#FFFF00;border:2px outset #00AA00;padding:10px 28px;font-size:16px;cursor:pointer;font-family:'Comic Sans MS',sans-serif">
+&#9733; Submit Your Deck &#9733;
+</button>
+</a>
 <br><br>
 
 <!-- FILTERS -->
@@ -45,38 +46,33 @@
 <font size="2" color="#CCCCFF"><b>Filter &amp; Sort:</b></font>
 <br><br>
 
-<!-- Color Identity Filter -->
+<!-- Row 1: Color Identity -->
 <font size="2" color="#AAAACC">Color:</font>&nbsp;
 <span id="color-filters"></span>
-&nbsp;&nbsp;
+<br><br>
 
-<!-- Archetype Dropdown -->
+<!-- Row 2: Dropdowns + Clear -->
 <font size="2" color="#AAAACC">Archetype:</font>&nbsp;
 <select id="filter-tag" style="background:#0a001a;color:#AACCFF;border:1px inset #663399;font-size:12px">
 <option value="">All</option>
 </select>
 &nbsp;&nbsp;
 
-<!-- Badge Dropdown -->
 <font size="2" color="#AAAACC">Badge:</font>&nbsp;
 <select id="filter-badge" style="background:#0a001a;color:#AACCFF;border:1px inset #663399;font-size:12px">
 <option value="">All</option>
 </select>
 &nbsp;&nbsp;
 
-<!-- Sort -->
 <font size="2" color="#AAAACC">Sort:</font>&nbsp;
 <select id="sort-by" style="background:#0a001a;color:#AACCFF;border:1px inset #663399;font-size:12px">
 <option value="newest">Newest</option>
 <option value="votes">Most Voted</option>
 <option value="alpha">Alphabetical</option>
 </select>
+&nbsp;&nbsp;
 
-<br><br>
-<button id="btn-apply-filters" style="background:#220044;color:#00CCFF;border:2px outset #663399;padding:4px 16px;font-size:12px;cursor:pointer">
-Apply Filters
-</button>
-<button id="btn-clear-filters" style="background:#1a0a2e;color:#888;border:2px outset #333366;padding:4px 16px;font-size:12px;cursor:pointer;margin-left:8px">
+<button id="btn-clear-filters" style="background:#1a0a2e;color:#888;border:2px outset #333366;padding:4px 16px;font-size:12px;cursor:pointer">
 Clear
 </button>
 
@@ -89,10 +85,12 @@ Clear
 <div id="deck-grid" style="max-width:650px;width:90%"></div>
 
 <!-- LOADING -->
-<div id="loading-indicator" style="display:none">
+<div id="loading-indicator" class="retro-loader" style="display:none">
+<font color="#FFFF00"><b>Loading decks...</b></font>
 <br>
-<font color="#FFFF00">Loading decks...</font>
-<br><br>
+<div class="retro-loader-bar"><div class="retro-loader-bar-fill"></div></div>
+<br>
+<font size="1" color="#666688">Connecting to the Information Superhighway...</font>
 </div>
 
 <!-- NO RESULTS -->
@@ -128,7 +126,7 @@ Next &raquo;
 
 <script type="module">
 import { fetchDecks, fetchTagRegistry, getVotedDecks, toggleVote, ensureAuth,
-         renderColorPipsDom, renderBadgeDom, renderTagDom, formatDate, buildColorCode
+         renderColorPipsDom, renderBadgeDom, renderTagDom, formatDate
 } from './deck-gallery.js';
 
 var currentPage = 1;
@@ -161,6 +159,7 @@ var manaNames = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green' };
         btn.style.borderStyle = 'inset';
         btn.style.background = '#330066';
       }
+      resetAndLoad();
     });
     container.appendChild(btn);
   });
@@ -221,6 +220,8 @@ function buildDeckCell(deck, isVoted) {
 
   // Color pips + card count
   var metaSpan = document.createElement('span');
+  metaSpan.style.display = 'inline-block';
+  metaSpan.style.marginBottom = '4px';
   renderColorPipsDom(deck.colorIdentity, metaSpan);
   metaSpan.appendChild(document.createTextNode(' \u2022 ' + (deck.cardCount || '?') + ' cards'));
   td.appendChild(metaSpan);
@@ -275,15 +276,13 @@ async function loadDecks() {
     pageSize: 12
   };
 
-  var colorCode = buildColorCode(selectedColors);
-  if (colorCode) opts.colorCode = colorCode;
+  if (selectedColors.length > 0) opts.colors = selectedColors.slice();
 
   try {
     var result = await fetchDecks(opts);
 
-    document.getElementById('loading-indicator').style.display = 'none';
-
     if (result.decks.length === 0) {
+      document.getElementById('loading-indicator').style.display = 'none';
       document.getElementById('no-results').style.display = 'block';
       document.getElementById('pagination').style.display = 'none';
       return;
@@ -320,6 +319,7 @@ async function loadDecks() {
     }
 
     grid.appendChild(table);
+    document.getElementById('loading-indicator').style.display = 'none';
 
     // Pagination
     document.getElementById('pagination').style.display = 'block';
@@ -350,12 +350,16 @@ async function loadDecks() {
   }
 }
 
-// Filter/sort buttons
-document.getElementById('btn-apply-filters').addEventListener('click', function() {
+function resetAndLoad() {
   currentPage = 1;
   lastDocs = [null];
   loadDecks();
-});
+}
+
+// Auto-apply on dropdown changes
+document.getElementById('filter-tag').addEventListener('change', resetAndLoad);
+document.getElementById('filter-badge').addEventListener('change', resetAndLoad);
+document.getElementById('sort-by').addEventListener('change', resetAndLoad);
 
 document.getElementById('btn-clear-filters').addEventListener('click', function() {
   selectedColors = [];

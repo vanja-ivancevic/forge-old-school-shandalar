@@ -30,6 +30,23 @@ service cloud.firestore {
             || request.resource.data.voteCount == resource.data.voteCount - 1);
 
       allow delete: if false;
+
+      // Comments subcollection
+      match /comments/{commentId} {
+        allow read: if true;
+
+        allow create: if request.auth != null
+          && request.resource.data.text is string
+          && request.resource.data.text.size() >= 3
+          && request.resource.data.text.size() <= 500
+          && request.resource.data.authorName is string
+          && request.resource.data.authorName.size() >= 1
+          && request.resource.data.authorName.size() <= 50
+          && request.resource.data.authorUid == request.auth.uid;
+
+        allow update: if false;
+        allow delete: if false;
+      }
     }
 
     // Votes: one per user per deck, enforced by document ID

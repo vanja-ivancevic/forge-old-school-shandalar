@@ -535,23 +535,34 @@ export function downloadDeck(deck) {
 
 /**
  * Fetch decks with filters, sorting, and pagination.
- * @param {Object} opts - { colorCode?, tag?, badge?, sortBy?, pageSize?, lastDoc? }
+ * @param {Object} opts - { colors?, tag?, badge?, sortBy?, pageSize?, lastDoc? }
  * @returns { decks: [], lastDoc: DocumentSnapshot|null, hasMore: boolean }
  */
 export async function fetchDecks(opts) {
   opts = opts || {};
   var pageSize = opts.pageSize || 12;
+  var colors = opts.colors || [];
 
   var constraints = [where('status', '==', 'published')];
 
-  if (opts.colorCode) {
-    constraints.push(where('colorCode', '==', opts.colorCode));
+  // Firestore allows only one array-contains per query.
+  // Use it for the first color if no tag/badge also needs it.
+  var usedArrayContains = false;
+  var clientColors = colors.slice();
+
+  if (colors.length > 0 && !opts.tag && !opts.badge) {
+    constraints.push(where('colorIdentity', 'array-contains', colors[0]));
+    usedArrayContains = true;
+    clientColors = colors.slice(1);
   }
+
   if (opts.tag) {
     constraints.push(where('tags', 'array-contains', opts.tag));
+    usedArrayContains = true;
   }
-  if (opts.badge) {
+  if (opts.badge && !usedArrayContains) {
     constraints.push(where('badges', 'array-contains', opts.badge));
+    usedArrayContains = true;
   }
 
   // Sort
@@ -565,7 +576,12 @@ export async function fetchDecks(opts) {
     sortDir = 'asc';
   }
   constraints.push(orderBy(sortField, sortDir));
-  constraints.push(limit(pageSize + 1));
+
+  // Over-fetch when client-side filtering is needed
+  var needsClientFilter = clientColors.length > 0
+    || (opts.badge && opts.tag);
+  var fetchSize = needsClientFilter ? pageSize * 5 : pageSize;
+  constraints.push(limit(fetchSize + 1));
 
   if (opts.lastDoc) {
     constraints.push(startAfter(opts.lastDoc));
@@ -578,9 +594,24 @@ export async function fetchDecks(opts) {
   var lastVisible = null;
   var hasMore = false;
 
-  snap.forEach(function(docSnap, idx) {
+  snap.forEach(function(docSnap) {
+    var data = docSnap.data();
+
+    // Client-side color filter: deck must contain ALL selected colors
+    if (clientColors.length > 0) {
+      var ci = data.colorIdentity || [];
+      for (var i = 0; i < clientColors.length; i++) {
+        if (ci.indexOf(clientColors[i]) < 0) return;
+      }
+    }
+
+    // Client-side badge filter when it couldn't go in the query
+    if (opts.badge && opts.tag) {
+      if (!data.badges || data.badges.indexOf(opts.badge) < 0) return;
+    }
+
     if (decks.length < pageSize) {
-      decks.push({ id: docSnap.id, ...docSnap.data() });
+      decks.push({ id: docSnap.id, ...data });
       lastVisible = docSnap;
     } else {
       hasMore = true;
@@ -736,13 +767,13 @@ var manaNames = { W: 'White', U: 'Blue', B: 'Black', R: 'Red', G: 'Green' };
  */
 export function renderColorPips(colorIdentity) {
   if (!colorIdentity || !colorIdentity.length) {
-    return '<i class="ms ms-c ms-cost ms-shadow" title="Colorless" style="font-size:16px;margin:0 1px"></i>';
+    return '<i class="ms ms-c ms-cost ms-shadow" title="Colorless" style="font-size:13px;margin:0 1px"></i>';
   }
   var html = '';
   for (var i = 0; i < colorIdentity.length; i++) {
     var c = colorIdentity[i].toLowerCase();
     var name = manaNames[colorIdentity[i]] || colorIdentity[i];
-    html += '<i class="ms ms-' + c + ' ms-cost ms-shadow" title="' + name + '" style="font-size:16px;margin:0 1px"></i>';
+    html += '<i class="ms ms-' + c + ' ms-cost ms-shadow" title="' + name + '" style="font-size:13px;margin:0 1px"></i>';
   }
   return html;
 }
@@ -756,7 +787,7 @@ export function renderColorPipsDom(colorIdentity, parent) {
     var icon = document.createElement('i');
     icon.className = 'ms ms-c ms-cost ms-shadow';
     icon.title = 'Colorless';
-    icon.style.cssText = 'font-size:16px;margin:0 1px';
+    icon.style.cssText = 'font-size:13px;margin:0 1px';
     parent.appendChild(icon);
     return;
   }
@@ -764,7 +795,7 @@ export function renderColorPipsDom(colorIdentity, parent) {
     var icon = document.createElement('i');
     icon.className = 'ms ms-' + colorIdentity[i].toLowerCase() + ' ms-cost ms-shadow';
     icon.title = manaNames[colorIdentity[i]] || colorIdentity[i];
-    icon.style.cssText = 'font-size:16px;margin:0 1px';
+    icon.style.cssText = 'font-size:13px;margin:0 1px';
     parent.appendChild(icon);
   }
 }
@@ -837,6 +868,76 @@ export function formatDate(ts) {
 export function buildColorCode(selectedColors) {
   var order = ['W','U','B','R','G'];
   return order.filter(function(c) { return selectedColors.indexOf(c) >= 0; }).join('');
+}
+
+// ============================================================
+// COMMENTS
+// ============================================================
+
+/**
+ * Fetch comments for a deck, ordered by newest first.
+ * @param {string} deckId
+ * @returns {Promise<Array>} [{ id, text, authorName, authorUid, createdAt }]
+ */
+export async function fetchComments(deckId) {
+  var commentsRef = collection(db, 'decks', deckId, 'comments');
+  var q = query(commentsRef, orderBy('createdAt', 'desc'), limit(100));
+  var snap = await getDocs(q);
+  return snap.docs.map(function(d) {
+    var data = d.data();
+    data.id = d.id;
+    return data;
+  });
+}
+
+/**
+ * Add a comment to a deck. Rate-limited: 1 comment per 2 minutes per user.
+ * @param {string} deckId
+ * @param {string} text - Comment text (10-500 chars)
+ * @param {string} authorName - Display name (1-50 chars)
+ * @returns {Promise<object>} The new comment data
+ */
+export async function addComment(deckId, text, authorName) {
+  var user = await ensureAuth();
+  if (!user) throw new Error('Authentication required');
+
+  text = text.trim();
+  authorName = authorName.trim();
+  if (text.length < 3 || text.length > 500) throw new Error('Comment must be 3-500 characters');
+  if (authorName.length < 1 || authorName.length > 50) throw new Error('Name must be 1-50 characters');
+
+  // Rate limit: check for recent comments by this user (any deck)
+  var recentQuery = query(
+    collection(db, 'decks', deckId, 'comments'),
+    where('authorUid', '==', user.uid),
+    orderBy('createdAt', 'desc'),
+    limit(1)
+  );
+  var recentSnap = await getDocs(recentQuery);
+  if (recentSnap.docs.length > 0) {
+    var lastComment = recentSnap.docs[0].data();
+    if (lastComment.createdAt) {
+      var lastTime = lastComment.createdAt.toDate ? lastComment.createdAt.toDate() : new Date(lastComment.createdAt);
+      var elapsed = Date.now() - lastTime.getTime();
+      if (elapsed < 120000) {
+        var waitSec = Math.ceil((120000 - elapsed) / 1000);
+        throw new Error('Please wait ' + waitSec + ' seconds before commenting again');
+      }
+    }
+  }
+
+  var commentData = {
+    text: text,
+    authorName: authorName,
+    authorUid: user.uid,
+    createdAt: serverTimestamp()
+  };
+
+  var commentsRef = collection(db, 'decks', deckId, 'comments');
+  var docRef = await addDoc(commentsRef, commentData);
+  commentData.id = docRef.id;
+  commentData.createdAt = { toDate: function() { return new Date(); } };
+  return commentData;
 }
 
 /**

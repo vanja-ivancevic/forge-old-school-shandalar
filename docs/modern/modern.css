@@ -825,3 +825,312 @@ h1, h2, h3, h4 {
 .loot-table tbody tr:hover {
   background: var(--surface-hover);
 }
+
+
+/* ─── Guide Sections (collapsible) ─── */
+
+.guide-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+}
+.guide-section summary {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-heading);
+  cursor: pointer;
+  padding: 18px 22px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: color 0.2s, background 0.2s;
+  border-radius: var(--radius);
+}
+.guide-section summary:hover {
+  color: var(--gold);
+  background: var(--surface-hover);
+}
+.guide-section summary::-webkit-details-marker { display: none; }
+.guide-section summary::before {
+  content: '\25B8';
+  font-size: 13px;
+  color: var(--gold-dim);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.guide-section[open] summary::before {
+  transform: rotate(90deg);
+}
+.guide-section summary img {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid var(--border-light);
+  flex-shrink: 0;
+}
+.guide-section .guide-content {
+  padding: 0 22px 22px;
+  border-top: 1px solid var(--border);
+  margin-top: -1px;
+}
+.guide-section .guide-content p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-top: 16px;
+}
+.guide-section .guide-content p:first-child {
+  margin-top: 18px;
+}
+.guide-section .guide-content strong {
+  color: var(--text);
+}
+.guide-section .guide-content ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+}
+.guide-section .guide-content li {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 6px;
+}
+.guide-section .guide-content li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: var(--gold-dim);
+}
+
+/* Nested sub-section within a guide section */
+.guide-subsection {
+  margin-top: 16px;
+}
+.guide-subsection summary {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 10px 14px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.guide-subsection summary:hover {
+  color: var(--text-heading);
+  border-color: var(--border-light);
+  background: var(--surface-hover);
+}
+.guide-subsection summary::-webkit-details-marker { display: none; }
+.guide-subsection summary::before {
+  content: '\25B8';
+  font-size: 11px;
+  color: var(--gold-dim);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.guide-subsection[open] summary::before {
+  transform: rotate(90deg);
+}
+.guide-subsection[open] summary {
+  border-color: var(--gold-dim);
+  color: var(--gold);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Boss entries */
+.boss-entry {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-top: none;
+  background: var(--bg-alt);
+  font-size: 14px;
+}
+.boss-entry:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.boss-entry-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+.boss-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text-heading);
+}
+.boss-colors {
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: 2px 8px;
+  background: var(--surface-elevated);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+.diff-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.diff-low { background: rgba(90,156,108,0.15); color: var(--green); border: 1px solid rgba(90,156,108,0.3); }
+.diff-medium { background: rgba(201,168,76,0.12); color: var(--gold); border: 1px solid rgba(201,168,76,0.25); }
+.diff-hard { background: rgba(204,68,68,0.12); color: var(--red); border: 1px solid rgba(204,68,68,0.25); }
+.diff-vhard { background: rgba(139,108,191,0.15); color: var(--purple); border: 1px solid rgba(139,108,191,0.3); }
+.diff-ehard { background: rgba(204,68,68,0.2); color: #e55; border: 1px solid rgba(204,68,68,0.4); }
+.boss-location {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.boss-strategy {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-top: 4px;
+}
+.boss-drop {
+  font-size: 12px;
+  color: var(--gold-dim);
+  margin-top: 6px;
+}
+
+/* Standout cards grid */
+.standout-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+.standout-panel {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px;
+  border-left-width: 3px;
+}
+.standout-color {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.standout-tier {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+.standout-label {
+  font-weight: 700;
+  color: var(--gold-dim);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.standout-panel .card-hover {
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 1px dotted var(--border-light);
+  transition: color 0.15s, border-color 0.15s;
+}
+.standout-panel .card-hover:hover {
+  color: var(--gold);
+  border-color: var(--gold-dim);
+  text-decoration: none;
+}
+@media (max-width: 700px) {
+  .standout-grid { grid-template-columns: 1fr; }
+}
+
+/* Equipment table */
+.equip-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 13px;
+}
+.equip-table th {
+  text-align: left;
+  padding: 8px 10px;
+  background: var(--surface-elevated);
+  color: var(--gold);
+  border-bottom: 2px solid var(--border-light);
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: sticky;
+  top: 60px;
+  z-index: 2;
+}
+.equip-table td {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  vertical-align: top;
+}
+.equip-table tbody tr:hover {
+  background: var(--surface-hover);
+}
+.equip-table td:first-child {
+  color: var(--text);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.equip-filter {
+  width: 100%;
+  padding: 10px 14px;
+  margin: 14px 0;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+}
+.equip-filter:focus {
+  border-color: var(--gold-dim);
+}
+.equip-filter::placeholder {
+  color: var(--text-muted);
+}
+
+/* Castle info */
+.castle-info {
+  font-size: 13px;
+  color: var(--gold-dim);
+  font-style: italic;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-top: none;
+  background: var(--surface);
+}
+
+@media (max-width: 700px) {
+  .guide-section summary { font-size: 17px; padding: 14px 16px; }
+  .guide-section summary img { width: 40px; height: 40px; }
+  .guide-section .guide-content { padding: 0 16px 16px; }
+  .boss-entry-header { gap: 6px; }
+  .equip-table { font-size: 12px; }
+  .equip-table th, .equip-table td { padding: 5px 6px; }
+}

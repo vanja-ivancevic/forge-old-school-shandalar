@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pre-Constructed Decks - Old Border Shandalar</title>
+<meta name="description" content="Browse all 113 pre-constructed starter decks from every edition in Old Border Shandalar.">
+<meta property="og:title" content="Pre-Constructed Decks - Old Border Shandalar">
+<meta property="og:description" content="Browse all 113 pre-constructed starter decks from every edition in Old Border Shandalar.">
+<meta property="og:image" content="https://oldborder-shandalar.net/Title_image.jpg">
+<meta property="og:url" content="https://oldborder-shandalar.net/modern/precon.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="canonical" href="https://oldborder-shandalar.net/modern/precon.html">
+<link rel="stylesheet" href="modern.css">
+<link rel="stylesheet" href="deck-gallery-modern.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mana-font@latest/css/mana.min.css">
+<style>
+/* Edition accordion */
+.edition-section {
+  margin-bottom: 8px;
+}
+.edition-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  user-select: none;
+}
+.edition-header:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-light);
+}
+.edition-header.open {
+  border-radius: var(--radius) var(--radius) 0 0;
+  border-bottom-color: transparent;
+  background: var(--surface-hover);
+}
+.edition-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.edition-name {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+.edition-year {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.edition-count {
+  font-size: 11px;
+  color: var(--gold-dim);
+  background: var(--gold-glow);
+  padding: 2px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(201,168,76,0.2);
+}
+.edition-arrow {
+  font-size: 12px;
+  color: var(--gold-dim);
+  transition: transform 0.2s;
+}
+.edition-header.open .edition-arrow {
+  transform: rotate(90deg);
+}
+.edition-body {
+  display: none;
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 16px;
+  background: var(--bg-alt);
+}
+.edition-body.open {
+  display: block;
+}
+.edition-decks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media (max-width: 600px) {
+  .edition-decks {
+    grid-template-columns: 1fr;
+  }
+}
+/* Precon deck card */
+.precon-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.precon-card:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-light);
+}
+.precon-card.expanded {
+  background: var(--surface-elevated);
+  border-color: var(--gold-dim);
+}
+.precon-card-title {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.precon-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.precon-card-list {
+  display: none;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+.precon-card-list.open {
+  display: block;
+}
+.precon-card-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.precon-card-list td {
+  padding: 3px 8px;
+  font-size: 13px;
+}
+.precon-card-list tr:hover td {
+  background: var(--surface-hover);
+}
+/* Filter bar extras */
+.precon-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+}
+.precon-controls label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.precon-count {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 16px;
+}
+/* Color filter hidden */
+.precon-card.color-hidden {
+  display: none !important;
+}
+.edition-section.color-hidden {
+  display: none !important;
+}
+</style>
+</head>
+
+<body data-theme="modern">
+
+<nav class="nav">
+<div class="nav-inner">
+<span class="nav-brand">Old Border Shandalar</span>
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
+<span></span><span></span><span></span>
+</label>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="features.html">Features</a>
+<a href="howtoplay.html">How to Play</a>
+<a href="guide.html">Guide</a>
+<a href="precon.html" class="active">Precons</a>
+<a href="community.html">Community</a>
+<a href="decks.html">Decks</a>
+<a href="changelog.html">Changelog</a>
+<a href="../precon.html" class="nav-retro">&#9876; Retro Edition</a>
+</div>
+</div>
+</nav>
+
+<div class="container">
+
+<div class="section fade-in" style="text-align:center">
+<h1 class="section-title" style="font-size:36px">Pre-Constructed Decks</h1>
+<p class="section-subtitle">All 113 starter decks from every edition in Old Border Shandalar</p>
+</div>
+
+<!-- Controls -->
+<div class="precon-controls fade-in">
+<label>Color:</label>
+<span id="color-filters"></span>
+<button id="btn-clear-colors" class="btn-secondary">Clear</button>
+<span style="color:var(--border-light)">|</span>
+<button id="btn-expand-all" class="btn-secondary">Expand All</button>
+<button id="btn-collapse-all" class="btn-secondary">Collapse All</button>
+</div>
+
+<div class="precon-count fade-in" id="deck-count-display">Showing 113 of 113 decks</div>
+
+<!-- Edition sections -->
+<div id="editions-container" class="fade-in"></div>
+
+<div class="fade-in" style="text-align:center;margin-top:32px">
+<p style="color:var(--text-muted);font-size:14px">Looking for community-built decks? Check out the <a href="decks.html">Deck Gallery</a>!</p>
+</div>
+
+<div class="footer">
+<p>Created with love by VigilantSera &amp; RemusLord, on the shoulders of giants (the Forge contributors)</p>
+</div>
+
+</div>
+
+<script>
+(function() {
+  var selectedColors = [];
+  var manaColors = ['W','U','B','R','G'];
+  var manaNames = { W:'White', U:'Blue', B:'Black', R:'Red', G:'Green' };
+
+  // Build color filter buttons
+  var filterContainer = document.getElementById('color-filters');
+  manaColors.forEach(function(c) {
+    var btn = document.createElement('button');
+    btn.className = 'color-btn';
+    btn.title = manaNames[c];
+    var icon = document.createElement('i');
+    icon.className = 'ms ms-' + c.toLowerCase() + ' ms-cost ms-shadow';
+    icon.style.fontSize = '20px';
+    btn.appendChild(icon);
+    btn.addEventListener('click', function() {
+      var idx = selectedColors.indexOf(c);
+      if (idx >= 0) {
+        selectedColors.splice(idx, 1);
+        btn.classList.remove('active');
+      } else {
+        selectedColors.push(c);
+        btn.classList.add('active');
+      }
+      applyColorFilter();
+    });
+    filterContainer.appendChild(btn);
+  });
+
+  document.getElementById('btn-clear-colors').addEventListener('click', function() {
+    selectedColors = [];
+    document.querySelectorAll('.color-btn').forEach(function(b) { b.classList.remove('active'); });
+    applyColorFilter();
+  });
+  document.getElementById('btn-expand-all').addEventListener('click', function() {
+    document.querySelectorAll('.edition-header').forEach(function(h) {
+      h.classList.add('open');
+      h.nextElementSibling.classList.add('open');
+    });
+  });
+  document.getElementById('btn-collapse-all').addEventListener('click', function() {
+    document.querySelectorAll('.edition-header').forEach(function(h) {
+      h.classList.remove('open');
+      h.nextElementSibling.classList.remove('open');
+    });
+  });
+
+  function applyColorFilter() {
+    var totalShown = 0, totalDecks = 0;
+    document.querySelectorAll('.precon-card').forEach(function(card) {
+      totalDecks++;
+      if (selectedColors.length === 0) {
+        card.classList.remove('color-hidden');
+        totalShown++;
+        return;
+      }
+      var deckColors = (card.getAttribute('data-colors') || '').split(',').filter(Boolean);
+      var match = selectedColors.some(function(sc) { return deckColors.indexOf(sc) >= 0; });
+      if (match) {
+        card.classList.remove('color-hidden');
+        totalShown++;
+      } else {
+        card.classList.add('color-hidden');
+      }
+    });
+    document.querySelectorAll('.edition-section').forEach(function(section) {
+      var visible = section.querySelectorAll('.precon-card:not(.color-hidden)');
+      section.classList.toggle('color-hidden', visible.length === 0);
+    });
+    document.getElementById('deck-count-display').textContent = 'Showing ' + totalShown + ' of ' + totalDecks + ' decks';
+  }
+
+  function renderPips(colors, container) {
+    if (!colors || colors.length === 0) {
+      var pip = document.createElement('i');
+      pip.className = 'ms ms-c ms-cost ms-shadow';
+      pip.style.cssText = 'font-size:14px';
+      pip.title = 'Colorless';
+      container.appendChild(pip);
+      return;
+    }
+    colors.forEach(function(c) {
+      var pip = document.createElement('i');
+      pip.className = 'ms ms-' + c.toLowerCase() + ' ms-cost ms-shadow';
+      pip.style.cssText = 'font-size:14px;margin:0 1px';
+      pip.title = manaNames[c] || c;
+      container.appendChild(pip);
+    });
+  }
+
+  function renderManaCost(mana, container) {
+    if (!mana) return;
+    mana.split(' ').forEach(function(sym) {
+      if (!sym) return;
+      var icon = document.createElement('i');
+      icon.className = 'ms ms-' + sym.toLowerCase() + ' ms-cost ms-shadow';
+      icon.style.fontSize = '13px';
+      container.appendChild(icon);
+    });
+  }
+
+  function buildEditions(data) {
+    var container = document.getElementById('editions-container');
+
+    data.editions.forEach(function(edition) {
+      var section = document.createElement('div');
+      section.className = 'edition-section';
+
+      var header = document.createElement('div');
+      header.className = 'edition-header';
+
+      var left = document.createElement('div');
+      left.className = 'edition-header-left';
+      var name = document.createElement('span');
+      name.className = 'edition-name';
+      name.textContent = edition.name;
+      left.appendChild(name);
+      var year = document.createElement('span');
+      year.className = 'edition-year';
+      year.textContent = edition.year;
+      left.appendChild(year);
+      var count = document.createElement('span');
+      count.className = 'edition-count';
+      count.textContent = edition.decks.length + ' decks';
+      left.appendChild(count);
+      header.appendChild(left);
+
+      var arrow = document.createElement('span');
+      arrow.className = 'edition-arrow';
+      arrow.textContent = '\u25B8';
+      header.appendChild(arrow);
+
+      var body = document.createElement('div');
+      body.className = 'edition-body';
+
+      header.addEventListener('click', function() {
+        header.classList.toggle('open');
+        body.classList.toggle('open');
+      });
+
+      var grid = document.createElement('div');
+      grid.className = 'edition-decks';
+
+      edition.decks.forEach(function(deck) {
+        grid.appendChild(buildDeckCard(deck, edition.code));
+      });
+
+      body.appendChild(grid);
+      section.appendChild(header);
+      section.appendChild(body);
+      container.appendChild(section);
+    });
+  }
+
+  function buildDeckCard(deck, setCode) {
+    var card = document.createElement('div');
+    card.className = 'precon-card';
+    card.setAttribute('data-colors', deck.colors.join(','));
+
+    var title = document.createElement('div');
+    title.className = 'precon-card-title';
+    title.textContent = deck.name;
+    card.appendChild(title);
+
+    var meta = document.createElement('div');
+    meta.className = 'precon-card-meta';
+    renderPips(deck.colors, meta);
+    var countSpan = document.createElement('span');
+    countSpan.textContent = deck.cardCount + ' cards';
+    meta.appendChild(countSpan);
+    card.appendChild(meta);
+
+    // Expandable card list grouped by type
+    var cardList = document.createElement('div');
+    cardList.className = 'precon-card-list';
+
+    var typeOrder = ['Creature','Instant','Sorcery','Enchantment','Artifact','Land','Other'];
+    var groups = {};
+    deck.cards.forEach(function(c) {
+      var t = c.type || 'Other';
+      if (!groups[t]) groups[t] = { cards: [], totalQty: 0 };
+      groups[t].cards.push(c);
+      groups[t].totalQty += c.qty;
+    });
+
+    typeOrder.forEach(function(type) {
+      if (!groups[type]) return;
+      var g = groups[type];
+
+      var hdr = document.createElement('div');
+      hdr.style.cssText = 'color:var(--gold-dim);font-size:12px;font-weight:700;margin-top:6px;font-family:var(--font-heading)';
+      hdr.textContent = type + ' (' + g.totalQty + ')';
+      cardList.appendChild(hdr);
+
+      var table = document.createElement('table');
+      table.style.cssText = 'width:100%;margin-bottom:4px';
+      g.cards.forEach(function(c) {
+        var tr = document.createElement('tr');
+        var qtyTd = document.createElement('td');
+        qtyTd.style.cssText = 'width:30px;text-align:right;color:var(--gold);font-weight:600';
+        qtyTd.textContent = c.qty + 'x';
+
+        var manaTd = document.createElement('td');
+        manaTd.style.cssText = 'width:auto;white-space:nowrap;padding:0 4px';
+        renderManaCost(c.mana, manaTd);
+
+        var nameTd = document.createElement('td');
+        var nameLink = document.createElement('a');
+        nameLink.href = '#';
+        nameLink.style.cssText = 'color:var(--text);text-decoration:none';
+        nameLink.textContent = c.name;
+        nameLink.onclick = function(e) { e.preventDefault(); e.stopPropagation(); };
+        nameLink.setAttribute('data-img',
+          'https://api.scryfall.com/cards/named?format=image&version=normal&exact=' +
+          encodeURIComponent(c.name) +
+          (c.set ? '&set=' + encodeURIComponent(c.set.toLowerCase()) : ''));
+        nameTd.appendChild(nameLink);
+        tr.appendChild(qtyTd);
+        tr.appendChild(nameTd);
+        tr.appendChild(manaTd);
+        table.appendChild(tr);
+      });
+      cardList.appendChild(table);
+    });
+
+    card.appendChild(cardList);
+
+    card.addEventListener('click', function() {
+      card.classList.toggle('expanded');
+      cardList.classList.toggle('open');
+    });
+
+    return card;
+  }
+
+  // Tooltip for card hover
+  function initTooltip() {
+    var tip = document.createElement('div');
+    tip.id = 'card-tooltip';
+    tip.style.cssText = 'display:none;position:fixed;z-index:9999;pointer-events:none;' +
+      'border:1px solid var(--border-light);border-radius:8px;background:var(--bg);padding:4px;' +
+      'box-shadow:0 8px 24px rgba(0,0,0,0.5)';
+    var img = document.createElement('img');
+    img.style.cssText = 'display:block;width:190px;height:265px;border-radius:6px';
+    tip.appendChild(img);
+    document.body.appendChild(tip);
+
+    document.addEventListener('mousemove', function(e) {
+      if (tip.style.display === 'none') return;
+      var x = e.clientX + 15;
+      var y = e.clientY - 100;
+      if (x + 200 > window.innerWidth) x = e.clientX - 205;
+      if (y < 5) y = 5;
+      if (y + 275 > window.innerHeight) y = window.innerHeight - 280;
+      tip.style.left = x + 'px';
+      tip.style.top = y + 'px';
+    });
+
+    var container = document.getElementById('editions-container');
+    container.addEventListener('mouseenter', function(e) {
+      var target = e.target.closest('[data-img]');
+      if (!target) return;
+      var imgUrl = target.getAttribute('data-img');
+      if (imgUrl) {
+        img.src = imgUrl;
+        tip.style.display = 'block';
+      }
+    }, true);
+    container.addEventListener('mouseleave', function(e) {
+      var target = e.target.closest('[data-img]');
+      if (!target) return;
+      tip.style.display = 'none';
+    }, true);
+  }
+
+  // Load data
+  fetch('../precon-data.json')
+    .then(function(r) { return r.json(); })
+    .then(function(d) { buildEditions(d); initTooltip(); })
+    .catch(function(e) {
+      var errP = document.createElement('p');
+      errP.style.color = 'var(--red)';
+      errP.textContent = 'Error loading deck data: ' + e.message;
+      document.getElementById('editions-container').appendChild(errP);
+    });
+})();
+</script>
+
+<script>
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+</script>
+
+</body>
+</html>

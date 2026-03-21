@@ -29,9 +29,10 @@
 <a href="features.html">Features</a>
 <a href="howtoplay.html">How to Play</a>
 <a href="guide.html">Guide</a>
-<a href="changelog.html" class="active">Changelog</a>
+<a href="precon.html">Precons</a>
 <a href="community.html">Community</a>
-<a href="decks.html">Decks</a>
+<a href="decks.html">User Decks</a>
+<a href="changelog.html" class="active">Changelog</a>
 <a href="../changelog.html" class="nav-retro">&#9876; Retro Edition</a>
 </div>
 </div>
@@ -42,6 +43,11 @@
 <div class="section fade-in" style="text-align:center">
 <h1 class="section-title" style="font-size:36px">Changelog</h1>
 <p class="section-subtitle">Development history for Old Border Shandalar &mdash; sourced from the <a href="https://github.com/vanja-ivancevic/forge" target="_blank" rel="noopener">Forge repository</a></p>
+</div>
+
+<div class="card fade-in" style="text-align:center;padding:32px">
+<p style="color:var(--text-muted);margin-bottom:16px">This changelog is compiled from the <a href="https://github.com/vanja-ivancevic/forge" target="_blank" rel="noopener">Forge repository</a> commit history. For the latest updates and to report bugs, visit the <a href="community.html">Community</a> page.</p>
+<a href="https://github.com/Card-Forge/forge/releases/tag/daily-snapshots" target="_blank" rel="noopener" class="btn btn-primary">Download Latest Forge</a>
 </div>
 
 <div class="changelog-nav fade-in">
@@ -64,6 +70,8 @@
 <div class="changelog-section">
 <h4 class="new-content">New Content</h4>
 <ul class="changelog-list">
+<li><strong>Sealed Deck tournaments</strong> &mdash; a brand-new Adventure event type! Open 6 booster packs, build a 40-card deck, and compete in an 8-player single elimination tournament. Uses Silver Challenger Coins or gold to enter, with the full sealed pool as the champion reward (contributed by <a href="https://github.com/Agetian" target="_blank" rel="noopener">Agetian</a>)</li>
+<li><strong>Precon starter deck selection</strong> &mdash; new game mode lets you browse and pick from ~107 preconstructed theme decks grouped by edition (Mirage, Tempest, Urza's Saga, and more) instead of building from scratch</li>
 <li><strong>Reward system overhaul</strong> &mdash; all card drops are now organized into quality tiers (S through E) based on card value and playability. Bosses drop better cards, easy enemies stick to commons/uncommons, and shops stock smarter selections</li>
 <li><strong>Boss treasure chests</strong> &mdash; defeating bosses now splits their best card rewards between the victory screen and a nearby treasure chest, giving you a reason to explore after every boss fight</li>
 <li><strong>Ante results popup</strong> &mdash; see which cards you won or lost after each ante match, with full card art and one-tap auto-sell</li>
@@ -76,6 +84,9 @@
 <div class="changelog-section">
 <h4 class="bug-fixes">Bug Fixes</h4>
 <ul class="changelog-list">
+<li>Fixed Dungeon Master quest getting permanently stuck when bosses are killed out of order &mdash; hidden triggers now re-grant trophies at dungeon entry points</li>
+<li>Card rewards now preserve the original edition when "Use All Card Variants" is enabled, instead of randomizing to any printing</li>
+<li>Fixed Scryfall image fallback skipping the requested card's own edition, causing wrong-frame art</li>
 <li>Fixed 24 enemy rewards that were silently failing to drop</li>
 <li>Fixed promo and special edition reward cards not appearing correctly</li>
 <li>Fixed empty chest in Knight of Shadow dungeon</li>
@@ -99,6 +110,8 @@
 <div class="changelog-section">
 <h4 class="engine">Forge Engine</h4>
 <ul class="changelog-list">
+<li>Removed Standard, Constructed, and Genetic AI modes from Old Border Shandalar &mdash; these generated decks with modern cards that broke the old-border experience. Replaced by the new Precon starter mode</li>
+<li>Sealed pool reward cards are now sellable in Adventure Mode</li>
 <li>Map overlay (names/details/events) now remembers your last selection between map openings</li>
 <li>Fixed shops ignoring edition filters for booster packs</li>
 <li>Fixed AI getting stuck in an infinite loop when it can't pay attack costs (e.g. Propaganda)</li>
@@ -392,7 +405,7 @@
 
 <div class="footer">
 <p>Created with love by VigilantSera &amp; RemusLord, on the shoulders of giants (the Forge contributors)</p>
-<p>Last updated: March 16, 2026</p>
+<p>Last updated: March 21, 2026</p>
 </div>
 
 </div>

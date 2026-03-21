@@ -25,9 +25,10 @@
 <a href="features.html">Features</a>
 <a href="howtoplay.html">How to Play</a>
 <a href="guide.html">Guide</a>
-<a href="changelog.html">Changelog</a>
+<a href="precon.html">Precons</a>
 <a href="community.html">Community</a>
-<a href="decks.html">Decks</a>
+<a href="decks.html">User Decks</a>
+<a href="changelog.html">Changelog</a>
 <a href="../deck.html" class="nav-retro">&#9876; Retro Edition</a>
 </div>
 </div>
@@ -45,7 +46,8 @@
 
 <script type="module">
 import { fetchDeck, toggleVote, getVotedDecks, ensureAuth, downloadDeck,
-         groupCardsByType, getNormalImgUrl, formatDate, createTooltip, setupCardHovers
+         groupCardsByType, getNormalImgUrl, formatDate, createTooltip, setupCardHovers,
+         fetchComments, addComment
 } from '../deck-gallery.js';
 
 var deckId = new URLSearchParams(window.location.search).get('id');
@@ -403,6 +405,160 @@ async function loadDeck() {
 
     // Apply initial 150% zoom now that views exist
     zoomSlider.dispatchEvent(new Event('input'));
+
+    // ── COMMENTS SECTION ──
+    var commentSep = document.createElement('div');
+    commentSep.className = 'separator';
+    container.appendChild(commentSep);
+
+    var commentH2 = document.createElement('h2');
+    commentH2.style.cssText = 'font-family:var(--font-heading);font-size:20px;margin-bottom:16px;color:var(--gold)';
+    commentH2.textContent = 'Comments';
+    container.appendChild(commentH2);
+
+    // Comment form
+    var formCard = document.createElement('div');
+    formCard.className = 'comment-form-card';
+
+    var nameGroup = document.createElement('div');
+    nameGroup.className = 'form-group';
+    var nameLabel = document.createElement('label');
+    nameLabel.className = 'form-label';
+    nameLabel.textContent = 'Name';
+    var nameInput = document.createElement('input');
+    nameInput.type = 'text';
+    nameInput.className = 'form-input';
+    nameInput.maxLength = 50;
+    nameInput.placeholder = 'Your name';
+    nameInput.style.maxWidth = '250px';
+    nameGroup.appendChild(nameLabel);
+    nameGroup.appendChild(nameInput);
+    formCard.appendChild(nameGroup);
+
+    var textGroup = document.createElement('div');
+    textGroup.className = 'form-group';
+    var textLabel = document.createElement('label');
+    textLabel.className = 'form-label';
+    textLabel.textContent = 'Comment';
+    var commentArea = document.createElement('textarea');
+    commentArea.className = 'form-textarea';
+    commentArea.maxLength = 500;
+    commentArea.rows = 3;
+    commentArea.placeholder = 'Write your comment...';
+    textGroup.appendChild(textLabel);
+    textGroup.appendChild(commentArea);
+    formCard.appendChild(textGroup);
+
+    var submitRow = document.createElement('div');
+    submitRow.style.cssText = 'display:flex;align-items:center;gap:12px';
+    var submitBtn = document.createElement('button');
+    submitBtn.className = 'btn-modern';
+    submitBtn.textContent = 'Post Comment';
+    submitRow.appendChild(submitBtn);
+    var commentStatus = document.createElement('span');
+    commentStatus.style.cssText = 'font-size:13px';
+    submitRow.appendChild(commentStatus);
+    formCard.appendChild(submitRow);
+
+    container.appendChild(formCard);
+
+    // Comments list
+    var commentsList = document.createElement('div');
+    commentsList.id = 'comments-list';
+    commentsList.style.marginTop = '16px';
+    container.appendChild(commentsList);
+
+    function renderComment(comment) {
+      var card = document.createElement('div');
+      card.className = 'comment-card';
+
+      var header = document.createElement('div');
+      header.className = 'comment-header';
+      var author = document.createElement('span');
+      author.className = 'comment-author';
+      author.textContent = comment.authorName;
+      header.appendChild(author);
+
+      if (comment.createdAt) {
+        var d = comment.createdAt.toDate ? comment.createdAt.toDate() : new Date(comment.createdAt);
+        var dateSpan = document.createElement('span');
+        dateSpan.className = 'comment-date';
+        dateSpan.textContent = d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
+        header.appendChild(dateSpan);
+      }
+      card.appendChild(header);
+
+      var body = document.createElement('p');
+      body.className = 'comment-text';
+      body.textContent = comment.text;
+      card.appendChild(body);
+
+      return card;
+    }
+
+    // Load comments
+    var loadingP = document.createElement('p');
+    loadingP.style.cssText = 'color:var(--text-muted);font-size:14px';
+    loadingP.textContent = 'Loading comments...';
+    commentsList.appendChild(loadingP);
+
+    fetchComments(deckId).then(function(comments) {
+      clearEl(commentsList);
+      if (comments.length === 0) {
+        var emptyP = document.createElement('p');
+        emptyP.style.cssText = 'color:var(--text-muted);font-size:14px';
+        emptyP.textContent = 'No comments yet. Be the first!';
+        commentsList.appendChild(emptyP);
+      } else {
+        comments.forEach(function(c) {
+          commentsList.appendChild(renderComment(c));
+        });
+      }
+    }).catch(function() {
+      clearEl(commentsList);
+    });
+
+    // Submit handler
+    submitBtn.addEventListener('click', async function() {
+      var nameVal = nameInput.value.trim();
+      var textVal = commentArea.value.trim();
+      commentStatus.textContent = '';
+      commentStatus.style.color = '';
+
+      if (!nameVal) {
+        commentStatus.style.color = 'var(--red)';
+        commentStatus.textContent = 'Please enter your name';
+        return;
+      }
+      if (textVal.length < 3) {
+        commentStatus.style.color = 'var(--red)';
+        commentStatus.textContent = 'Comment is too short';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Posting...';
+
+      try {
+        var newComment = await addComment(deckId, textVal, nameVal);
+        commentArea.value = '';
+        commentStatus.style.color = 'var(--green)';
+        commentStatus.textContent = 'Posted!';
+        setTimeout(function() { commentStatus.textContent = ''; }, 3000);
+
+        var firstP = commentsList.querySelector('p');
+        if (firstP && firstP.textContent.indexOf('No comments') >= 0) {
+          clearEl(commentsList);
+        }
+        commentsList.insertBefore(renderComment(newComment), commentsList.firstChild);
+      } catch(e) {
+        commentStatus.style.color = 'var(--red)';
+        commentStatus.textContent = e.message;
+      }
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Post Comment';
+    });
 
   } catch (e) {
     clearEl(container);

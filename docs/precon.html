@@ -1,0 +1,530 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>~*~ Old Border Shandalar ~*~ Pre-Constructed Decks ~*~</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="deck-gallery.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mana-font@latest/css/mana.min.css">
+<style>
+/* Edition accordion */
+.edition-header {
+  background: #220044;
+  border: 2px outset #663399;
+  padding: 8px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+  user-select: none;
+}
+.edition-header:hover {
+  background: #2a0055;
+}
+.edition-header .arrow {
+  color: #FFFF00;
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+.edition-header.open .arrow {
+  transform: rotate(90deg);
+}
+.edition-body {
+  display: none;
+  border: 2px solid #663399;
+  border-top: none;
+  padding: 8px;
+  background: #0a0a2e;
+}
+.edition-body.open {
+  display: block;
+}
+/* Deck card within edition */
+.precon-card {
+  background: #1a0a2e;
+  border: 2px outset #663399;
+  padding: 10px 12px;
+  vertical-align: top;
+  cursor: pointer;
+}
+.precon-card:hover {
+  background: #2a0055;
+}
+.precon-card.expanded {
+  background: #2a1055;
+  border-style: inset;
+}
+/* Card list inside expanded deck */
+.precon-card-list {
+  display: none;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #663399;
+}
+.precon-card-list.open {
+  display: block;
+}
+.precon-card-list table {
+  width: 100%;
+}
+.precon-card-list td {
+  padding: 2px 6px;
+  font-size: 12px;
+}
+/* Color filter active state */
+.color-filter-btn.active {
+  border-style: inset !important;
+  background: #330066 !important;
+}
+/* Expand/collapse all button */
+.expand-all-btn {
+  background: #1a0a2e;
+  color: #AACCFF;
+  border: 2px outset #333366;
+  padding: 4px 14px;
+  font-size: 12px;
+  cursor: pointer;
+  margin: 0 4px;
+}
+.expand-all-btn:hover {
+  background: #220044;
+}
+/* Edition deck count badge */
+.edition-count {
+  background: #0a0a2e;
+  color: #AACCFF;
+  font-size: 11px;
+  padding: 1px 8px;
+  border: 1px solid #663399;
+  margin-left: 8px;
+}
+/* Hidden by color filter */
+.precon-card.color-hidden {
+  display: none !important;
+}
+.edition-section.color-hidden {
+  display: none !important;
+}
+</style>
+</head>
+
+<body>
+
+<script src="shared.js"></script>
+
+<!-- MAIN CONTENT -->
+<td class="main-content">
+<center>
+
+<img src="gifs/fire_bar.gif" alt="~*~*~*~" class="firebar" width="100%" style="max-width:664px">
+<br><br>
+
+<font size="5" color="#FFFF00" class="section-header">
+<b>&#9733; Pre-Constructed Decks &#9733;</b>
+</font>
+<br>
+<font size="2" color="#AAAACC">All 113 starter decks from every edition in Old Border Shandalar</font>
+<br><br>
+
+<img src="gifs/swords_divider.gif" alt="~*~*~*~" class="firebar" style="max-width:332px;width:60%">
+<br><br>
+
+<!-- FILTERS -->
+<table width="90%" border="2" bordercolor="#333366" cellpadding="10" cellspacing="0" bgcolor="#0a0a2e" style="max-width:600px">
+<tr><td>
+<font size="2" color="#CCCCFF"><b>Filter by Color:</b></font>&nbsp;
+<span id="color-filters"></span>
+&nbsp;&nbsp;
+<button id="btn-clear-colors" class="expand-all-btn">Clear</button>
+&nbsp;&nbsp;|&nbsp;&nbsp;
+<button id="btn-expand-all" class="expand-all-btn">Expand All</button>
+<button id="btn-collapse-all" class="expand-all-btn">Collapse All</button>
+</td></tr>
+</table>
+
+<br>
+
+<font size="2" color="#888888" id="deck-count-display">Showing 113 of 113 decks</font>
+
+<br><br>
+
+<!-- EDITION SECTIONS -->
+<div id="editions-container" style="max-width:620px;width:90%;text-align:left"></div>
+
+<br>
+<img src="gifs/fire_bar.gif" alt="~*~*~*~" class="firebar" width="100%" style="max-width:664px">
+<br><br>
+
+<font size="2" color="#888888">
+Looking for community-built decks? Check out the <a href="decks.html">Deck Gallery</a>!
+</font>
+
+<br><br>
+</center>
+</td>
+
+</tr>
+</table>
+
+<script>
+(function() {
+  var data = null;
+  var selectedColors = [];
+  var manaColors = ['W','U','B','R','G'];
+  var manaNames = { W:'White', U:'Blue', B:'Black', R:'Red', G:'Green' };
+
+  // Build color filter buttons
+  var filterContainer = document.getElementById('color-filters');
+  manaColors.forEach(function(c) {
+    var btn = document.createElement('button');
+    btn.className = 'color-filter-btn';
+    btn.setAttribute('data-color', c);
+    btn.title = manaNames[c];
+    btn.style.cssText = 'background:#1a0a2e;border:2px outset #663399;padding:4px 6px;cursor:pointer;margin:0 2px;line-height:1';
+    var icon = document.createElement('i');
+    icon.className = 'ms ms-' + c.toLowerCase() + ' ms-cost ms-shadow';
+    icon.style.fontSize = '18px';
+    btn.appendChild(icon);
+    btn.addEventListener('click', function() {
+      var idx = selectedColors.indexOf(c);
+      if (idx >= 0) {
+        selectedColors.splice(idx, 1);
+        btn.classList.remove('active');
+      } else {
+        selectedColors.push(c);
+        btn.classList.add('active');
+      }
+      applyColorFilter();
+    });
+    filterContainer.appendChild(btn);
+  });
+
+  // Clear color filters
+  document.getElementById('btn-clear-colors').addEventListener('click', function() {
+    selectedColors = [];
+    document.querySelectorAll('.color-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    applyColorFilter();
+  });
+
+  // Expand/collapse all
+  document.getElementById('btn-expand-all').addEventListener('click', function() {
+    document.querySelectorAll('.edition-header').forEach(function(h) {
+      h.classList.add('open');
+      h.nextElementSibling.classList.add('open');
+    });
+  });
+  document.getElementById('btn-collapse-all').addEventListener('click', function() {
+    document.querySelectorAll('.edition-header').forEach(function(h) {
+      h.classList.remove('open');
+      h.nextElementSibling.classList.remove('open');
+    });
+  });
+
+  function applyColorFilter() {
+    var totalShown = 0;
+    var totalDecks = 0;
+
+    document.querySelectorAll('.precon-card').forEach(function(card) {
+      totalDecks++;
+      if (selectedColors.length === 0) {
+        card.classList.remove('color-hidden');
+        totalShown++;
+        return;
+      }
+      var deckColors = (card.getAttribute('data-colors') || '').split(',').filter(Boolean);
+      var match = selectedColors.some(function(sc) { return deckColors.indexOf(sc) >= 0; });
+      if (match) {
+        card.classList.remove('color-hidden');
+        totalShown++;
+      } else {
+        card.classList.add('color-hidden');
+      }
+    });
+
+    // Hide edition sections with no visible decks
+    document.querySelectorAll('.edition-section').forEach(function(section) {
+      var visibleCards = section.querySelectorAll('.precon-card:not(.color-hidden)');
+      if (visibleCards.length === 0) {
+        section.classList.add('color-hidden');
+      } else {
+        section.classList.remove('color-hidden');
+      }
+    });
+
+    document.getElementById('deck-count-display').textContent = 'Showing ' + totalShown + ' of ' + totalDecks + ' decks';
+  }
+
+  function renderColorPips(colors, container) {
+    if (!colors || colors.length === 0) {
+      var pip = document.createElement('i');
+      pip.className = 'ms ms-c ms-cost ms-shadow';
+      pip.style.cssText = 'font-size:14px;margin:0 1px';
+      pip.title = 'Colorless';
+      container.appendChild(pip);
+      return;
+    }
+    colors.forEach(function(c) {
+      var pip = document.createElement('i');
+      pip.className = 'ms ms-' + c.toLowerCase() + ' ms-cost ms-shadow';
+      pip.style.cssText = 'font-size:14px;margin:0 1px';
+      pip.title = manaNames[c] || c;
+      container.appendChild(pip);
+    });
+  }
+
+  function renderManaCost(mana, container) {
+    if (!mana) return;
+    mana.split(' ').forEach(function(sym) {
+      if (!sym) return;
+      var icon = document.createElement('i');
+      icon.className = 'ms ms-' + sym.toLowerCase() + ' ms-cost ms-shadow';
+      icon.style.fontSize = '13px';
+      container.appendChild(icon);
+    });
+  }
+
+  function buildEditions(jsonData) {
+    var container = document.getElementById('editions-container');
+
+    jsonData.editions.forEach(function(edition) {
+      var section = document.createElement('div');
+      section.className = 'edition-section';
+
+      // Header
+      var header = document.createElement('div');
+      header.className = 'edition-header';
+      var leftSpan = document.createElement('span');
+
+      var titleB = document.createElement('b');
+      var titleFont = document.createElement('font');
+      titleFont.setAttribute('color', '#FFFF00');
+      titleFont.setAttribute('size', '3');
+      titleB.textContent = edition.name;
+      titleFont.appendChild(titleB);
+      leftSpan.appendChild(titleFont);
+
+      var yearFont = document.createElement('font');
+      yearFont.setAttribute('color', '#AAAACC');
+      yearFont.setAttribute('size', '2');
+      yearFont.textContent = ' (' + edition.year + ')';
+      leftSpan.appendChild(yearFont);
+
+      var countSpan = document.createElement('span');
+      countSpan.className = 'edition-count';
+      countSpan.textContent = edition.decks.length + ' decks';
+      leftSpan.appendChild(countSpan);
+
+      header.appendChild(leftSpan);
+
+      var arrow = document.createElement('span');
+      arrow.className = 'arrow';
+      arrow.textContent = '\u25B6';
+      header.appendChild(arrow);
+
+      header.addEventListener('click', function() {
+        header.classList.toggle('open');
+        body.classList.toggle('open');
+      });
+
+      section.appendChild(header);
+
+      // Body
+      var body = document.createElement('div');
+      body.className = 'edition-body';
+
+      var table = document.createElement('table');
+      table.setAttribute('width', '100%');
+      table.setAttribute('border', '0');
+      table.setAttribute('cellpadding', '6');
+      table.setAttribute('cellspacing', '4');
+
+      for (var i = 0; i < edition.decks.length; i += 2) {
+        var row = document.createElement('tr');
+        row.appendChild(buildDeckCell(edition.decks[i], edition.code));
+        if (edition.decks[i + 1]) {
+          row.appendChild(buildDeckCell(edition.decks[i + 1], edition.code));
+        } else {
+          var empty = document.createElement('td');
+          empty.style.width = '50%';
+          row.appendChild(empty);
+        }
+        table.appendChild(row);
+      }
+
+      body.appendChild(table);
+      section.appendChild(body);
+      container.appendChild(section);
+    });
+  }
+
+  function buildDeckCell(deck, setCode) {
+    var td = document.createElement('td');
+    td.className = 'precon-card';
+    td.setAttribute('data-colors', deck.colors.join(','));
+    td.style.width = '50%';
+
+    // Title
+    var titleFont = document.createElement('font');
+    titleFont.setAttribute('color', '#FFFF00');
+    titleFont.setAttribute('size', '3');
+    var titleB = document.createElement('b');
+    titleB.textContent = deck.name;
+    titleFont.appendChild(titleB);
+    td.appendChild(titleFont);
+    td.appendChild(document.createElement('br'));
+
+    // Set code
+    var setFont = document.createElement('font');
+    setFont.setAttribute('color', '#888888');
+    setFont.setAttribute('size', '1');
+    setFont.textContent = setCode;
+    td.appendChild(setFont);
+    td.appendChild(document.createTextNode(' '));
+
+    // Color pips + card count
+    var metaSpan = document.createElement('span');
+    renderColorPips(deck.colors, metaSpan);
+    var countFont = document.createElement('font');
+    countFont.setAttribute('color', '#AAAACC');
+    countFont.setAttribute('size', '2');
+    countFont.textContent = ' \u2022 ' + deck.cardCount + ' cards';
+    metaSpan.appendChild(countFont);
+    td.appendChild(metaSpan);
+
+    // Expandable card list grouped by type
+    var cardList = document.createElement('div');
+    cardList.className = 'precon-card-list';
+
+    var typeOrder = ['Creature','Instant','Sorcery','Enchantment','Artifact','Land','Other'];
+    var groups = {};
+    deck.cards.forEach(function(card) {
+      var t = card.type || 'Other';
+      if (!groups[t]) groups[t] = { cards: [], totalQty: 0 };
+      groups[t].cards.push(card);
+      groups[t].totalQty += card.qty;
+    });
+
+    typeOrder.forEach(function(type) {
+      if (!groups[type]) return;
+      var g = groups[type];
+
+      var hdr = document.createElement('font');
+      hdr.setAttribute('color', '#FF6600');
+      hdr.setAttribute('size', '2');
+      var hdrB = document.createElement('b');
+      hdrB.textContent = type + ' (' + g.totalQty + ')';
+      hdr.appendChild(hdrB);
+      cardList.appendChild(hdr);
+
+      var listTable = document.createElement('table');
+      listTable.setAttribute('border', '0');
+      listTable.setAttribute('cellpadding', '2');
+      listTable.setAttribute('cellspacing', '0');
+      listTable.style.cssText = 'width:100%;margin-bottom:6px';
+
+      g.cards.forEach(function(card) {
+        var tr = document.createElement('tr');
+        var qtyTd = document.createElement('td');
+        qtyTd.style.cssText = 'width:24px;text-align:right';
+        var qtyFont = document.createElement('font');
+        qtyFont.setAttribute('color', '#00FF00');
+        qtyFont.setAttribute('size', '2');
+        qtyFont.textContent = card.qty + 'x';
+        qtyTd.appendChild(qtyFont);
+
+        var manaTd = document.createElement('td');
+        manaTd.style.cssText = 'width:auto;white-space:nowrap;padding:0 4px';
+        renderManaCost(card.mana, manaTd);
+
+        var nameTd = document.createElement('td');
+        var nameLink = document.createElement('a');
+        nameLink.href = '#';
+        nameLink.style.cssText = 'color:#CCCCFF;text-decoration:none;font-size:13px';
+        nameLink.textContent = card.name;
+        nameLink.onclick = function(e) { e.preventDefault(); e.stopPropagation(); };
+        nameLink.setAttribute('data-img',
+          'https://api.scryfall.com/cards/named?format=image&version=normal&exact=' +
+          encodeURIComponent(card.name) +
+          (card.set ? '&set=' + encodeURIComponent(card.set.toLowerCase()) : ''));
+        nameTd.appendChild(nameLink);
+
+        tr.appendChild(qtyTd);
+        tr.appendChild(nameTd);
+        tr.appendChild(manaTd);
+        listTable.appendChild(tr);
+      });
+
+      cardList.appendChild(listTable);
+    });
+
+    td.appendChild(cardList);
+
+    // Click to expand
+    td.addEventListener('click', function(e) {
+      td.classList.toggle('expanded');
+      cardList.classList.toggle('open');
+    });
+
+    return td;
+  }
+
+  // Tooltip for card hover
+  function initTooltip() {
+    var tip = document.createElement('div');
+    tip.id = 'card-tooltip';
+    var img = document.createElement('img');
+    img.style.cssText = 'display:block;width:190px;height:265px';
+    tip.appendChild(img);
+    document.body.appendChild(tip);
+
+    document.addEventListener('mousemove', function(e) {
+      if (tip.style.display === 'none') return;
+      var x = e.clientX + 15;
+      var y = e.clientY - 100;
+      if (x + 200 > window.innerWidth) x = e.clientX - 205;
+      if (y < 5) y = 5;
+      if (y + 275 > window.innerHeight) y = window.innerHeight - 280;
+      tip.style.left = x + 'px';
+      tip.style.top = y + 'px';
+    });
+
+    var container = document.getElementById('editions-container');
+    container.addEventListener('mouseenter', function(e) {
+      var target = e.target.closest('[data-img]');
+      if (!target) return;
+      var imgUrl = target.getAttribute('data-img');
+      if (imgUrl) {
+        img.src = imgUrl;
+        tip.style.display = 'block';
+      }
+    }, true);
+    container.addEventListener('mouseleave', function(e) {
+      var target = e.target.closest('[data-img]');
+      if (!target) return;
+      tip.style.display = 'none';
+    }, true);
+  }
+
+  // Load data
+  fetch('precon-data.json')
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      data = d;
+      buildEditions(d);
+      initTooltip();
+    })
+    .catch(function(e) {
+      var errFont = document.createElement('font');
+      errFont.setAttribute('color', '#FF4444');
+      errFont.textContent = 'Error loading deck data: ' + e.message;
+      document.getElementById('editions-container').appendChild(errFont);
+    });
+})();
+</script>
+
+<script type="module" src="clippy.js"></script>
+<script src="sparkles.js"></script>
+</body>
+</html>

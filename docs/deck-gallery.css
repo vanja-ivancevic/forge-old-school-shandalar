@@ -226,3 +226,8 @@ td[bgcolor="#220044"]:hover {
     height: 140px;
   }
 }
+
+/* ── Comments ── */
+#comments-list table:hover {
+  border-color: #7744AA;
+}

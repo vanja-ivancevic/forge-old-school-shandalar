@@ -43,7 +43,8 @@
 <script type="module">
 import { fetchDeck, toggleVote, getVotedDecks, ensureAuth, downloadDeck,
          renderColorPipsDom, renderTagDom, renderBadgeDom, formatDate,
-         groupCardsByType, getNormalImgUrl, createTooltip, setupCardHovers
+         groupCardsByType, getNormalImgUrl, createTooltip, setupCardHovers,
+         fetchComments, addComment
 } from './deck-gallery.js';
 
 var deckId = new URLSearchParams(window.location.search).get('id');
@@ -444,6 +445,170 @@ async function loadDeck() {
 
     // Apply initial 150% zoom now that views exist
     zoomSlider.dispatchEvent(new Event('input'));
+
+    // ── COMMENTS SECTION ──
+    container.appendChild(document.createElement('br'));
+    var commentDivider = document.createElement('img');
+    commentDivider.src = 'gifs/swords_divider.gif';
+    commentDivider.alt = '~*~*~*~';
+    commentDivider.className = 'firebar';
+    commentDivider.style.cssText = 'max-width:332px;width:80%';
+    container.appendChild(commentDivider);
+    container.appendChild(document.createElement('br'));
+    container.appendChild(document.createElement('br'));
+
+    container.appendChild(createFont('Comments', '#FFFF00', 4));
+    container.appendChild(document.createElement('br'));
+    container.appendChild(document.createElement('br'));
+
+    // Comment form
+    var formTable = document.createElement('table');
+    formTable.setAttribute('width', '80%');
+    formTable.setAttribute('border', '2');
+    formTable.setAttribute('bordercolor', '#333366');
+    formTable.setAttribute('cellpadding', '12');
+    formTable.setAttribute('cellspacing', '0');
+    formTable.setAttribute('bgcolor', '#0a0a2e');
+    formTable.style.maxWidth = '500px';
+    var formRow = document.createElement('tr');
+    var formTd = document.createElement('td');
+
+    formTd.appendChild(createFont('Leave a comment:', '#AAAACC', 2));
+    formTd.appendChild(document.createElement('br'));
+    formTd.appendChild(document.createElement('br'));
+
+    var nameLabel = createFont('Name: ', '#CCCCFF', 2);
+    formTd.appendChild(nameLabel);
+    var nameInput = document.createElement('input');
+    nameInput.type = 'text';
+    nameInput.maxLength = 50;
+    nameInput.placeholder = 'Your name';
+    nameInput.style.cssText = 'background:#0a001a;color:#AACCFF;border:1px inset #663399;padding:4px 8px;font-size:12px;width:200px';
+    formTd.appendChild(nameInput);
+    formTd.appendChild(document.createElement('br'));
+    formTd.appendChild(document.createElement('br'));
+
+    var commentArea = document.createElement('textarea');
+    commentArea.maxLength = 500;
+    commentArea.rows = 3;
+    commentArea.placeholder = 'Write your comment...';
+    commentArea.style.cssText = 'background:#0a001a;color:#AACCFF;border:1px inset #663399;padding:6px 8px;font-size:12px;width:95%;resize:vertical;font-family:inherit';
+    formTd.appendChild(commentArea);
+    formTd.appendChild(document.createElement('br'));
+    formTd.appendChild(document.createElement('br'));
+
+    var submitBtn = document.createElement('button');
+    submitBtn.style.cssText = 'background:#220044;color:#00CCFF;border:2px outset #663399;padding:4px 16px;font-size:12px;cursor:pointer';
+    submitBtn.textContent = 'Post Comment';
+    formTd.appendChild(submitBtn);
+
+    var commentStatus = document.createElement('font');
+    commentStatus.setAttribute('size', '2');
+    commentStatus.style.marginLeft = '10px';
+    formTd.appendChild(commentStatus);
+
+    formRow.appendChild(formTd);
+    formTable.appendChild(formRow);
+    container.appendChild(formTable);
+    container.appendChild(document.createElement('br'));
+
+    // Comments list
+    var commentsList = document.createElement('div');
+    commentsList.id = 'comments-list';
+    commentsList.style.cssText = 'max-width:500px;width:80%;text-align:left';
+    container.appendChild(commentsList);
+
+    function renderComment(comment) {
+      var cTable = document.createElement('table');
+      cTable.setAttribute('width', '100%');
+      cTable.setAttribute('border', '1');
+      cTable.setAttribute('bordercolor', '#333366');
+      cTable.setAttribute('cellpadding', '10');
+      cTable.setAttribute('cellspacing', '0');
+      cTable.setAttribute('bgcolor', '#0a001a');
+      cTable.style.marginBottom = '6px';
+      var cRow = document.createElement('tr');
+      var cTd = document.createElement('td');
+
+      var authorFont = createFont(comment.authorName, '#00CCFF', 2);
+      var bAuthor = document.createElement('b');
+      bAuthor.appendChild(authorFont);
+      cTd.appendChild(bAuthor);
+
+      var dateStr = '';
+      if (comment.createdAt) {
+        var d = comment.createdAt.toDate ? comment.createdAt.toDate() : new Date(comment.createdAt);
+        dateStr = ' \u2022 ' + d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
+      }
+      cTd.appendChild(createFont(dateStr, '#666688', 1));
+      cTd.appendChild(document.createElement('br'));
+
+      var textFont = createFont(comment.text, '#CCCCFF', 2);
+      cTd.appendChild(textFont);
+
+      cRow.appendChild(cTd);
+      cTable.appendChild(cRow);
+      return cTable;
+    }
+
+    // Load comments
+    var noCommentsMsg = createFont('No comments yet. Be the first!', '#666688', 2);
+    commentsList.appendChild(noCommentsMsg);
+
+    fetchComments(deckId).then(function(comments) {
+      clearEl(commentsList);
+      if (comments.length === 0) {
+        commentsList.appendChild(createFont('No comments yet. Be the first!', '#666688', 2));
+      } else {
+        comments.forEach(function(c) {
+          commentsList.appendChild(renderComment(c));
+        });
+      }
+    }).catch(function() {});
+
+    // Submit handler
+    submitBtn.addEventListener('click', async function() {
+      var nameVal = nameInput.value.trim();
+      var textVal = commentArea.value.trim();
+      commentStatus.textContent = '';
+      commentStatus.setAttribute('color', '');
+
+      if (!nameVal) {
+        commentStatus.setAttribute('color', '#FF4444');
+        commentStatus.textContent = 'Please enter your name';
+        return;
+      }
+      if (textVal.length < 3) {
+        commentStatus.setAttribute('color', '#FF4444');
+        commentStatus.textContent = 'Comment is too short';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Posting...';
+
+      try {
+        var newComment = await addComment(deckId, textVal, nameVal);
+        commentArea.value = '';
+        commentStatus.setAttribute('color', '#00FF00');
+        commentStatus.textContent = 'Posted!';
+        setTimeout(function() { commentStatus.textContent = ''; }, 3000);
+
+        // Remove "no comments" message if present
+        var existing = commentsList.querySelector('font');
+        if (existing && existing.textContent.indexOf('No comments') >= 0) {
+          clearEl(commentsList);
+        }
+        // Prepend new comment
+        commentsList.insertBefore(renderComment(newComment), commentsList.firstChild);
+      } catch(e) {
+        commentStatus.setAttribute('color', '#FF4444');
+        commentStatus.textContent = e.message;
+      }
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Post Comment';
+    });
 
   } catch (e) {
     clearEl(container);

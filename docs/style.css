@@ -69,6 +69,52 @@ a:active { color: #FF0000; }
   animation: rainbow 3s linear infinite;
 }
 
+/* === RETRO LOADING SPINNER === */
+@keyframes retro-spin {
+  0%   { content: '|'; }
+  25%  { content: '/'; }
+  50%  { content: '\2014'; }
+  75%  { content: '\\'; }
+}
+@keyframes hourglass-flip {
+  0%, 49%   { content: '\231B'; }
+  50%, 100% { content: '\23F3'; }
+}
+.retro-loader {
+  text-align: center;
+  padding: 20px 0;
+}
+.retro-loader-hourglass {
+  font-size: 32px;
+  display: inline-block;
+  animation: blinker 1s step-start infinite;
+}
+.retro-loader-bar {
+  display: inline-block;
+  margin: 8px auto;
+  width: 160px;
+  height: 14px;
+  border: 2px inset #663399;
+  background: #0a001a;
+  position: relative;
+  overflow: hidden;
+}
+.retro-loader-bar-fill {
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    #00FF00 0px, #00FF00 8px,
+    #003300 8px, #003300 16px
+  );
+  animation: retro-progress 1.5s linear infinite;
+}
+@keyframes retro-progress {
+  0%   { left: -100%; }
+  100% { left: 100%; }
+}
+
 /* === MARQUEE STYLING === */
 marquee {
   font-family: "Comic Sans MS", "Comic Sans", sans-serif;
@@ -265,6 +311,7 @@ hr {
     padding: 10px;
   }
   img.firebar { width: 100%; height: auto; }
+  .testimonial-cell { display: block; width: 100% !important; }
 }
 
 .mobile-nav {
@@ -410,4 +457,163 @@ hr {
     font-size: 12px;
     padding: 10px;
   }
+}
+
+/* === GUIDE COLLAPSIBLE SECTIONS === */
+details.retro-section {
+  width: 95%;
+  max-width: 650px;
+  margin: 8px auto;
+  text-align: left;
+}
+details.retro-section summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 10px 14px;
+  border: 2px solid #333366;
+  background: #220044;
+  font-size: 110%;
+  color: #FFFF00;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+details.retro-section summary:hover {
+  background: #330066;
+  border-color: #7744AA;
+}
+details.retro-section summary::-webkit-details-marker { display: none; }
+details.retro-section summary::before {
+  content: '\25B6';
+  font-size: 10px;
+  color: #FFCC00;
+  transition: transform 0.2s;
+}
+details.retro-section[open] summary::before {
+  transform: rotate(90deg);
+}
+details.retro-section summary img {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #663399;
+  object-fit: cover;
+}
+details.retro-section .retro-guide-content {
+  border: 2px solid #333366;
+  border-top: none;
+  background: #000011;
+  padding: 12px;
+  font-size: 95%;
+  color: #CCCCFF;
+}
+details.retro-section .retro-guide-content p {
+  margin: 8px 0;
+}
+details.retro-section .retro-guide-content strong {
+  color: #FFFF00;
+}
+
+/* Retro sub-sections (boss regions) */
+details.retro-sub {
+  margin: 8px 0;
+}
+details.retro-sub summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 6px 10px;
+  border: 1px solid #333366;
+  background: #0a0a2e;
+  font-size: 100%;
+  color: #FFCC66;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+details.retro-sub summary:hover {
+  background: #151540;
+  border-color: #663399;
+}
+details.retro-sub summary::-webkit-details-marker { display: none; }
+details.retro-sub summary::before {
+  content: '\25B6';
+  font-size: 9px;
+  color: #FFCC00;
+  transition: transform 0.2s;
+}
+details.retro-sub[open] summary::before {
+  transform: rotate(90deg);
+}
+details.retro-sub summary img {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #333366;
+  object-fit: cover;
+}
+
+/* Boss entry (retro) */
+.retro-boss {
+  padding: 8px 10px;
+  border: 1px solid #222244;
+  border-top: none;
+  background: #050520;
+}
+.retro-boss:first-of-type {
+  border-top: 1px solid #222244;
+}
+.retro-boss-name {
+  color: #FFFF00;
+  font-weight: bold;
+  font-size: 100%;
+}
+.retro-boss-meta {
+  font-size: 85%;
+  color: #8888AA;
+}
+.retro-boss-strategy {
+  font-size: 90%;
+  color: #AAAACC;
+  margin-top: 2px;
+}
+.retro-boss-drop {
+  font-size: 85%;
+  color: #00FF00;
+  margin-top: 2px;
+}
+.retro-diff-low { color: #00CC66; }
+.retro-diff-medium { color: #FFCC00; }
+.retro-diff-hard { color: #FF6600; }
+.retro-diff-vhard { color: #CC66FF; }
+.retro-diff-ehard { color: #FF3333; }
+
+/* Equipment table (retro) */
+.retro-equip-search {
+  width: 90%;
+  max-width: 620px;
+  padding: 6px 10px;
+  margin: 8px auto;
+  display: block;
+  background: #0a0a2e;
+  border: 1px solid #333366;
+  color: #FFFFFF;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 100%;
+}
+.retro-equip-search::placeholder {
+  color: #666688;
+}
+
+/* Card color groups (retro) */
+.retro-card-group {
+  margin: 8px 0;
+}
+.retro-card-group b {
+  color: #FFFF00;
+}
+.retro-card-list {
+  color: #CCCCFF;
+  font-size: 90%;
+  margin-top: 2px;
 }

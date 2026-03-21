@@ -32,9 +32,10 @@
     '<a href="features.html">Features</a>' +
     '<a href="howtoplay.html">How to Play</a>' +
     '<a href="guide.html">Guide</a>' +
-    '<a href="changelog.html">Changelog</a>' +
+    '<a href="precon.html">Precons</a>' +
     '<a href="community.html">Community</a>' +
-    '<a href="decks.html">Decks</a>' +
+    '<a href="decks.html">User Decks</a>' +
+    '<a href="changelog.html">Changelog</a>' +
     '<a href="modern/' + page + '" class="mobile-modern-link">&#10022; Modern</a>' +
     '</div>'
   );
@@ -53,9 +54,10 @@
     '<a href="features.html" class="nav-link' + activeClass('features.html') + '">&#9876; Features</a>' +
     '<a href="howtoplay.html" class="nav-link' + activeClass('howtoplay.html') + '">&#9654; How to Play</a>' +
     '<a href="guide.html" class="nav-link' + activeClass('guide.html') + '">&#128214; Guide</a>' +
-    '<a href="changelog.html" class="nav-link' + activeClass('changelog.html') + '">&#128240; Changelog</a>' +
+    '<a href="precon.html" class="nav-link' + activeClass('precon.html') + '">&#127183; Precons</a>' +
     '<a href="community.html" class="nav-link' + activeClass('community.html') + '">&#128172; Community</a>' +
-    '<a href="decks.html" class="nav-link' + activeClass('decks.html') + '">&#9824; Decks</a>' +
+    '<a href="decks.html" class="nav-link' + activeClass('decks.html') + '">&#9824; User Decks</a>' +
+    '<a href="changelog.html" class="nav-link' + activeClass('changelog.html') + '">&#128240; Changelog</a>' +
 
     '<hr class="nav-separator">' +
 

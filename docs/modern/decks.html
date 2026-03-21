@@ -31,9 +31,10 @@
 <a href="features.html">Features</a>
 <a href="howtoplay.html">How to Play</a>
 <a href="guide.html">Guide</a>
-<a href="changelog.html">Changelog</a>
+<a href="precon.html">Precons</a>
 <a href="community.html">Community</a>
-<a href="decks.html" class="active">Decks</a>
+<a href="decks.html" class="active">User Decks</a>
+<a href="changelog.html">Changelog</a>
 <a href="../decks.html" class="nav-retro">&#9876; Retro Edition</a>
 </div>
 </div>
@@ -42,9 +43,13 @@
 <div class="container">
 
 <div class="section fade-in" style="text-align:center">
-<h1 class="section-title" style="font-size:36px">Deck Gallery</h1>
+<h1 class="section-title" style="font-size:36px">User Deck Gallery</h1>
 <p class="section-subtitle">Browse and vote on community Adventure Mode decks</p>
-<a href="submit-deck.html" class="btn-modern" style="display:inline-block;margin-top:16px">Submit Your Deck</a>
+<p style="font-size:14px;color:var(--text-muted)">Looking for the game's built-in decks? <a href="precon.html">Browse all 113 pre-constructed decks</a></p>
+</div>
+
+<div style="text-align:center;margin-bottom:24px">
+<a href="submit-deck.html" class="btn btn-primary">Submit Your Deck</a>
 </div>
 
 <!-- Filters -->
@@ -65,7 +70,6 @@
 <option value="alpha">Alphabetical</option>
 </select>
 
-<button id="btn-apply-filters" class="btn-secondary">Apply</button>
 <button id="btn-clear-filters" class="btn-secondary">Clear</button>
 </div>
 
@@ -91,7 +95,7 @@ No decks found. Be the first to <a href="submit-deck.html">submit one</a>!
 
 <script type="module">
 import { fetchDecks, fetchTagRegistry, getVotedDecks, toggleVote, ensureAuth,
-         formatDate, buildColorCode
+         formatDate
 } from '../deck-gallery.js';
 
 var currentPage = 1;
@@ -120,6 +124,7 @@ var manaNames = { W:'White', U:'Blue', B:'Black', R:'Red', G:'Green' };
         selectedColors.push(c);
         btn.classList.add('active');
       }
+      resetAndLoad();
     });
     container.appendChild(btn);
   });
@@ -241,8 +246,7 @@ async function loadDecks() {
     lastDoc: lastDocs[currentPage - 1] || undefined,
     pageSize: 12
   };
-  var colorCode = buildColorCode(selectedColors);
-  if (colorCode) opts.colorCode = colorCode;
+  if (selectedColors.length > 0) opts.colors = selectedColors.slice();
 
   try {
     var result = await fetchDecks(opts);
@@ -288,9 +292,14 @@ async function loadDecks() {
   }
 }
 
-document.getElementById('btn-apply-filters').addEventListener('click', function() {
+function resetAndLoad() {
   currentPage = 1; lastDocs = [null]; loadDecks();
-});
+}
+
+document.getElementById('filter-tag').addEventListener('change', resetAndLoad);
+document.getElementById('filter-badge').addEventListener('change', resetAndLoad);
+document.getElementById('sort-by').addEventListener('change', resetAndLoad);
+
 document.getElementById('btn-clear-filters').addEventListener('click', function() {
   selectedColors = [];
   document.querySelectorAll('.color-btn').forEach(function(b) { b.classList.remove('active'); });
