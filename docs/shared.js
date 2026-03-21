@@ -28,14 +28,14 @@
   // === MOBILE NAV ===
   document.write(
     '<div class="mobile-nav">' +
-    '<a href="index.html">Home</a>' +
-    '<a href="features.html">Features</a>' +
-    '<a href="howtoplay.html">How to Play</a>' +
-    '<a href="guide.html">Guide</a>' +
-    '<a href="precon.html">Precons</a>' +
-    '<a href="community.html">Community</a>' +
-    '<a href="decks.html">User Decks</a>' +
-    '<a href="changelog.html">Changelog</a>' +
+    '<a href="index.html"><img src="gifs/nav/house.png" width="16" height="16" alt=""> Home</a>' +
+    '<a href="features.html"><img src="gifs/nav/star.png" width="16" height="16" alt=""> Features</a>' +
+    '<a href="howtoplay.html"><img src="gifs/nav/joystick.png" width="16" height="16" alt=""> How to Play</a>' +
+    '<a href="guide.html"><img src="gifs/nav/book_open.png" width="16" height="16" alt=""> Guide</a>' +
+    '<a href="precon.html"><img src="gifs/nav/page_white_stack.png" width="16" height="16" alt=""> Precons</a>' +
+    '<a href="community.html"><img src="gifs/nav/group.png" width="16" height="16" alt=""> Community</a>' +
+    '<a href="decks.html"><img src="gifs/nav/table.png" width="16" height="16" alt=""> User Decks</a>' +
+    '<a href="changelog.html"><img src="gifs/nav/script.png" width="16" height="16" alt=""> Changelog</a>' +
     '<a href="modern/' + page + '" class="mobile-modern-link">&#10022; Modern</a>' +
     '</div>'
   );
@@ -50,14 +50,14 @@
     '<div class="nav-title">~*~ Old Border Shandalar ~*~</div>' +
     '</center>' +
 
-    '<a href="index.html" class="nav-link' + activeClass('index.html') + '">&#9733; Home</a>' +
-    '<a href="features.html" class="nav-link' + activeClass('features.html') + '">&#9876; Features</a>' +
-    '<a href="howtoplay.html" class="nav-link' + activeClass('howtoplay.html') + '">&#9654; How to Play</a>' +
-    '<a href="guide.html" class="nav-link' + activeClass('guide.html') + '">&#128214; Guide</a>' +
-    '<a href="precon.html" class="nav-link' + activeClass('precon.html') + '">&#127183; Precons</a>' +
-    '<a href="community.html" class="nav-link' + activeClass('community.html') + '">&#128172; Community</a>' +
-    '<a href="decks.html" class="nav-link' + activeClass('decks.html') + '">&#9824; User Decks</a>' +
-    '<a href="changelog.html" class="nav-link' + activeClass('changelog.html') + '">&#128240; Changelog</a>' +
+    '<a href="index.html" class="nav-link' + activeClass('index.html') + '"><img src="gifs/nav/house.png" width="16" height="16" alt=""> Home</a>' +
+    '<a href="features.html" class="nav-link' + activeClass('features.html') + '"><img src="gifs/nav/star.png" width="16" height="16" alt=""> Features</a>' +
+    '<a href="howtoplay.html" class="nav-link' + activeClass('howtoplay.html') + '"><img src="gifs/nav/joystick.png" width="16" height="16" alt=""> How to Play</a>' +
+    '<a href="guide.html" class="nav-link' + activeClass('guide.html') + '"><img src="gifs/nav/book_open.png" width="16" height="16" alt=""> Guide</a>' +
+    '<a href="precon.html" class="nav-link' + activeClass('precon.html') + '"><img src="gifs/nav/page_white_stack.png" width="16" height="16" alt=""> Precons</a>' +
+    '<a href="community.html" class="nav-link' + activeClass('community.html') + '"><img src="gifs/nav/group.png" width="16" height="16" alt=""> Community</a>' +
+    '<a href="decks.html" class="nav-link' + activeClass('decks.html') + '"><img src="gifs/nav/table.png" width="16" height="16" alt=""> User Decks</a>' +
+    '<a href="changelog.html" class="nav-link' + activeClass('changelog.html') + '"><img src="gifs/nav/script.png" width="16" height="16" alt=""> Changelog</a>' +
 
     '<hr class="nav-separator">' +
 
