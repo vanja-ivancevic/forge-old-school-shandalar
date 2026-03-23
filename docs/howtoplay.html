@@ -22,7 +22,7 @@
 <b><img src="gifs/nav/joystick.png" width="16" height="16" alt=""> How to Play <img src="gifs/nav/joystick.png" width="16" height="16" alt=""></b>
 </font>
 <br>
-<font size="3" color="#AAAAAA">Get up and running in 4 easy steps!</font>
+<font size="3" color="#AAAAAA">Get up and running in 5 easy steps!</font>
 <br><br>
 
 <table width="90%" border="2" bordercolor="#336633" cellpadding="15" cellspacing="0" bgcolor="#0a1a0a" style="max-width:600px">
@@ -30,31 +30,79 @@
 
 <!-- Step 1 -->
 <span class="step-num">1.</span>
-<font size="4" color="#00FF00"><b>Download Forge</b></font>
+<font size="4" color="#00FF00"><b>Install Java</b></font>
 <br><br>
 <font size="3" color="#CCDDCC">
-Download the latest Forge snapshot from the official releases:
+Forge needs <font color="#FFFF00"><b>Java 17</b></font> or newer to run. You may already have it &mdash; to check, open a terminal/command prompt and type:
+<br>
+<font color="#88AAFF" face="Courier New, monospace" size="3">&nbsp;&nbsp;java -version</font>
 <br><br>
-&#9654; <a href="https://github.com/Card-Forge/forge/releases/tag/daily-snapshots" target="_blank"><b>github.com/Card-Forge/forge/releases</b></a>
+If the version shown is 17 or higher, you're good! If not (or if it says "not found"), download Java from one of these:
 <br><br>
-Forge requires <font color="#FFFF00">Java 17</font> or newer. Get the latest JDK from
-<a href="https://www.oracle.com/java/technologies/downloads/" target="_blank">oracle.com</a>.
+&#9654; <a href="https://adoptium.net/" target="_blank"><b>adoptium.net</b></a> (recommended &mdash; free, easy installer for Windows/Mac/Linux)
+<br>
+&#9654; <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank"><b>oracle.com</b></a> (official Oracle JDK)
+<br><br>
+<font color="#AAAAAA"><small>Pick the installer for your OS (Windows .msi, macOS .pkg, or Linux .deb/.rpm) and run it. Just click through the defaults.</small></font>
 </font>
 
 <br><br><hr><br>
 
 <!-- Step 2 -->
 <span class="step-num">2.</span>
-<font size="4" color="#00FF00"><b>Launch Adventure Mode</b></font>
+<font size="4" color="#00FF00"><b>Download Forge</b></font>
 <br><br>
 <font size="3" color="#CCDDCC">
-Open Forge and select <font color="#FFFFFF"><b>Adventure Mode</b></font>.
+Go to the Forge daily snapshots page on GitHub:
+<br><br>
+&#9654; <a href="https://github.com/Card-Forge/forge/releases/tag/daily-snapshots" target="_blank"><b>github.com/Card-Forge/forge/releases</b></a>
+<br><br>
+Scroll down to the <font color="#FFFFFF"><b>"Assets"</b></font> section (you may need to click it to expand). You'll see several files &mdash; here's which one to grab:
+<br><br>
+
+<table width="100%" border="1" bordercolor="#336633" cellpadding="8" cellspacing="0" bgcolor="#0a220a">
+<tr>
+<td><font color="#FFFF00"><b>Platform</b></font></td>
+<td><font color="#FFFF00"><b>Download this file</b></font></td>
+</tr>
+<tr>
+<td><font color="#CCDDCC">Windows / Mac / Linux</font></td>
+<td><font color="#00FF00" face="Courier New, monospace">forge-installer-...jar</font></td>
+</tr>
+<tr>
+<td><font color="#CCDDCC">Android</font></td>
+<td><font color="#00FF00" face="Courier New, monospace">forge-android-...apk</font></td>
+</tr>
+</table>
+
+<br>
+<font color="#FF6600"><b>&#9888;</b></font> Ignore the files called <font color="#AAAAAA">assets.zip</font>, <font color="#AAAAAA">build.txt</font>, <font color="#AAAAAA">version.txt</font>, and <font color="#AAAAAA">.tar.bz2</font> &mdash; you don't need those.
+<br><br>
+<font color="#AAAAAA"><small>The file name includes a date (e.g. <font face="Courier New, monospace">forge-installer-2.0.12-SNAPSHOT-03.22.jar</font>). That's normal &mdash; just grab the latest one.</small></font>
 </font>
 
 <br><br><hr><br>
 
 <!-- Step 3 -->
 <span class="step-num">3.</span>
+<font size="4" color="#00FF00"><b>Install &amp; Launch Forge</b></font>
+<br><br>
+<font size="3" color="#CCDDCC">
+<font color="#FFFFFF"><b>Windows:</b></font> Double-click the <font color="#00FF00">.jar</font> file. If Windows asks "How do you want to open this?", choose <font color="#FFFFFF"><b>Java(TM) Platform SE binary</b></font>. The Forge installer will open &mdash; pick a folder and click Install.
+<br><br>
+<font color="#FFFFFF"><b>Mac:</b></font> Double-click the <font color="#00FF00">.jar</font> file. If macOS blocks it ("unidentified developer"), go to <font color="#FFFFFF"><b>System Settings &gt; Privacy &amp; Security</b></font> and click <font color="#FFFFFF"><b>"Open Anyway"</b></font>. Alternatively, right-click the file and choose Open.
+<br><br>
+<font color="#FFFFFF"><b>Linux:</b></font> Open a terminal in the download folder and run:
+<br>
+<font color="#88AAFF" face="Courier New, monospace" size="3">&nbsp;&nbsp;java -jar forge-installer-*.jar</font>
+<br><br>
+After installing, launch Forge from the installed location and select <font color="#FFFFFF"><b>Adventure Mode</b></font>.
+</font>
+
+<br><br><hr><br>
+
+<!-- Step 4 -->
+<span class="step-num">4.</span>
 <font size="4" color="#00FF00"><b>Select Old Border Shandalar</b></font>
 <br><br>
 <font size="3" color="#CCDDCC">
@@ -77,8 +125,8 @@ Go to <font color="#FFFFFF"><b>Settings</b></font> and select <font color="#FFFF
 
 <br><hr><br>
 
-<!-- Step 4 -->
-<span class="step-num">4.</span>
+<!-- Step 5 -->
+<span class="step-num">5.</span>
 <font size="4" color="#00FF00"><b>Start a New Game</b></font>
 <br><br>
 <font size="3" color="#CCDDCC">
@@ -131,7 +179,7 @@ Delete the contents of this folder and let Forge re-download the correct images.
 <img src="gifs/fire_bar.gif" alt="~*~*~*~" class="firebar" width="100%" style="max-width:664px">
 <br><br>
 
-<font size="2" color="#666688">Last updated: February 20, 2026</font>
+<font size="2" color="#666688">Last updated: March 23, 2026</font>
 <br><br>
 <font size="2" color="#444466" face="Comic Sans MS, sans-serif">
 This mod was built with &lt;3 on the shoulders of giants (the Forge contributors) and by VigilantSera &amp; RemusLord

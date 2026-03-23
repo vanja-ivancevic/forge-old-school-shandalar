@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How to Play - Old Border Shandalar</title>
-<meta name="description" content="Get up and running with Old Border Shandalar in 4 easy steps. Download Forge, launch Adventure Mode, and start your journey.">
+<meta name="description" content="Get up and running with Old Border Shandalar in 5 easy steps. Download Forge, launch Adventure Mode, and start your journey.">
 <meta property="og:title" content="How to Play - Old Border Shandalar">
-<meta property="og:description" content="Get up and running with Old Border Shandalar in 4 easy steps.">
+<meta property="og:description" content="Get up and running with Old Border Shandalar in 5 easy steps.">
 <meta property="og:image" content="https://oldborder-shandalar.net/Title_image.jpg">
 <meta property="og:url" content="https://oldborder-shandalar.net/modern/howtoplay.html">
 <meta name="twitter:card" content="summary_large_image">
@@ -42,7 +42,7 @@
 
 <div class="section fade-in" style="text-align:center">
 <h1 class="section-title" style="font-size:36px">How to Play</h1>
-<p class="section-subtitle">Get up and running in 4 easy steps.</p>
+<p class="section-subtitle">Get up and running in 5 easy steps.</p>
 </div>
 
 <div class="card fade-in">
@@ -51,21 +51,46 @@
 <div class="step">
 <div class="step-num">1</div>
 <div class="step-content">
-<h3>Download Forge</h3>
-<p>Download the latest Forge snapshot from the <a href="https://github.com/Card-Forge/forge/releases/tag/daily-snapshots" target="_blank" rel="noopener">official releases page</a>. Forge requires Java 17 or newer. Get the latest JDK from <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noopener">oracle.com</a>.</p>
+<h3>Install Java</h3>
+<p>Forge needs <strong>Java 17</strong> or newer to run. You may already have it &mdash; to check, open a terminal or command prompt and type:</p>
+<p><code>java -version</code></p>
+<p>If the version shown is 17 or higher, you're good! If not (or if it says "not found"), download Java from one of these:</p>
+<ul>
+<li><a href="https://adoptium.net/" target="_blank" rel="noopener"><strong>adoptium.net</strong></a> &mdash; recommended, free, easy installer for Windows/Mac/Linux</li>
+<li><a href="https://www.oracle.com/java/technologies/downloads/" target="_blank" rel="noopener"><strong>oracle.com</strong></a> &mdash; official Oracle JDK</li>
+</ul>
+<p class="callout-note">Pick the installer for your OS (Windows .msi, macOS .pkg, or Linux .deb/.rpm) and run it. Just click through the defaults.</p>
 </div>
 </div>
 
 <div class="step">
 <div class="step-num">2</div>
 <div class="step-content">
-<h3>Launch Adventure Mode</h3>
-<p>Open Forge and select <strong>Adventure Mode</strong>.</p>
+<h3>Download Forge</h3>
+<p>Go to the <a href="https://github.com/Card-Forge/forge/releases/tag/daily-snapshots" target="_blank" rel="noopener">Forge daily snapshots page</a> on GitHub. Scroll down to the <strong>"Assets"</strong> section (you may need to click it to expand). You'll see several files &mdash; here's which one to grab:</p>
+<table class="download-table">
+<tr><th>Platform</th><th>Download this file</th></tr>
+<tr><td>Windows / Mac / Linux</td><td><code>forge-installer-...jar</code></td></tr>
+<tr><td>Android</td><td><code>forge-android-...apk</code></td></tr>
+</table>
+<p class="callout-note">Ignore the files called <code>assets.zip</code>, <code>build.txt</code>, <code>version.txt</code>, and <code>.tar.bz2</code> &mdash; you don't need those. The file name includes a date (e.g. <code>forge-installer-2.0.12-SNAPSHOT-03.22.jar</code>). That's normal &mdash; just grab the latest one.</p>
 </div>
 </div>
 
 <div class="step">
 <div class="step-num">3</div>
+<div class="step-content">
+<h3>Install &amp; Launch Forge</h3>
+<p><strong>Windows:</strong> Double-click the <code>.jar</code> file. If Windows asks "How do you want to open this?", choose <strong>Java(TM) Platform SE binary</strong>. The Forge installer will open &mdash; pick a folder and click Install.</p>
+<p><strong>Mac:</strong> Double-click the <code>.jar</code> file. If macOS blocks it ("unidentified developer"), go to <strong>System Settings &gt; Privacy &amp; Security</strong> and click <strong>"Open Anyway"</strong>. Alternatively, right-click the file and choose Open.</p>
+<p><strong>Linux:</strong> Open a terminal in the download folder and run:</p>
+<p><code>java -jar forge-installer-*.jar</code></p>
+<p>After installing, launch Forge from the installed location and select <strong>Adventure Mode</strong>.</p>
+</div>
+</div>
+
+<div class="step">
+<div class="step-num">4</div>
 <div class="step-content">
 <h3>Select Old Border Shandalar</h3>
 <p>Go to <strong>Settings</strong> and select <strong>"Shandalar Old Border"</strong> as your world.</p>
@@ -76,7 +101,7 @@
 </div>
 
 <div class="step">
-<div class="step-num">4</div>
+<div class="step-num">5</div>
 <div class="step-content">
 <h3>Start a New Game</h3>
 <p>Choose your color, pick a starter deck, and begin your adventure! We recommend starting a fresh game rather than continuing a vanilla save.</p>
@@ -108,7 +133,7 @@
 
 <div class="footer">
 <p>Created with love by VigilantSera &amp; RemusLord, on the shoulders of giants (the Forge contributors)</p>
-<p>Last updated: February 20, 2026</p>
+<p>Last updated: March 23, 2026</p>
 </div>
 
 </div>

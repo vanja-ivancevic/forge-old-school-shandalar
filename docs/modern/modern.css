@@ -639,6 +639,29 @@ h1, h2, h3, h4 {
 }
 
 
+/* ─── Download Table ─── */
+
+.download-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 14px;
+}
+.download-table th,
+.download-table td {
+  padding: 8px 12px;
+  text-align: left;
+  border: 1px solid var(--border);
+}
+.download-table th {
+  background: var(--surface-elevated);
+  color: var(--gold);
+  font-weight: 600;
+}
+.download-table td {
+  color: var(--text-muted);
+}
+
 /* ─── Tip/Warning Box ─── */
 
 .tip-box {
