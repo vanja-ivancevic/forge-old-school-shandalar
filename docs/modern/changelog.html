@@ -71,45 +71,31 @@
 <div class="changelog-section">
 <h4 class="new-content">New Content</h4>
 <ul class="changelog-list">
-<li><strong>Old-border token art overhaul</strong> &mdash; 55 new period-correct token renders hosted on the mod CDN. The engine now picks token art smarter: filtered by the adventure's allowed editions, era-matched (no more modern-frame Goblins from P03), and pinned per game so every Saproling, Squirrel, or Soldier on the table shares the same art</li>
-<li><strong>MicroProse Shandalar tokens</strong> &mdash; Sand Warrior and other MicroProse-era tokens added under their own edition code (PAST/Astral Cards), plus Magic Player Rewards 2002 and Duelist Magazine token art</li>
-<li><strong>Living Death-style reanimator deck</strong> added as a new Necromancer variant &mdash; expect graveyard recursion plays from him now</li>
-<li><strong>Landscape sketchbook drops</strong> added to all bosses, with a new sketchbook vendor at the Bazaar of Wonders</li>
-<li><strong>Snow-covered basic lands</strong> option added to the Add Basic Lands dialog (only available when the world includes Ice Age)</li>
-<li><strong>Include basic lands in ante</strong> &mdash; new toggle for whether basics are eligible to be wagered</li>
+<li><strong>Old-border token art overhaul</strong> &mdash; 55 new period-correct tokens made with Card Conjurer, hosted on the mod CDN. The engine now picks token art era-matched to the adventure's allowed editions, with per-game pinning so every Saproling, Squirrel, or Soldier on the table shares the same art instead of being a mismatched zoo. Browse the full set <a href="https://github.com/vanja-ivancevic/forge-old-school-shandalar/tree/master/docs/tokens" target="_blank" rel="noopener">here</a></li>
+<li><strong>Custom MicroProse Shandalar tokens</strong> (Sand Warrior etc.) added under their own edition code, plus Magic Player Rewards 2002 and custom Duelist Magazine token art</li>
+<li><strong>Landscape sketchbook rebalance</strong> &mdash; sketchbook drops are now spread across all bosses, with a new Sketchbook vendor at the Bazaar of Wonders</li>
+</ul>
+</div>
+
+<div class="changelog-section">
+<h4 class="balance">Quality-of-Life</h4>
+<ul class="changelog-list">
+<li>Snow-covered basic lands option added to the Add Basic Lands dialog (Ice Age worlds only)</li>
+<li>"Include basic lands in ante" toggle added &mdash; control whether basics are eligible to be wagered</li>
+<li>Reward and ante cards now show sell price and your owned count inline, so you can decide on the spot whether to keep or sell</li>
 </ul>
 </div>
 
 <div class="changelog-section">
 <h4 class="bug-fixes">Bug Fixes</h4>
 <ul class="changelog-list">
-<li>Fixed Cateran Overlord dungeon &mdash; the boss is now guaranteed to be present</li>
-<li>Moved Contract from Below to S tier in the loot table (was incorrectly C tier)</li>
-<li>Fixed snow-covered basic land distribution in Ice Age &mdash; all five colors now appear evenly</li>
-<li>Fixed ante ownership tracking and zone placement for cards exchanged via effects (Bronze Tablet, etc.)</li>
-<li>Fixed booster pack image fetching that was using a dead CDN URL; pack art now loads and refreshes correctly</li>
-<li>Fixed broken enemy waypoint references across 23 dungeon maps</li>
-<li>Map load failures now recover gracefully instead of crashing the adventure</li>
-<li>Fixed merfolkpool teleport case</li>
-<li>TLA added to starter set pool</li>
-</ul>
-</div>
-
-<div class="changelog-section">
-<h4 class="balance">Balance Changes</h4>
-<ul class="changelog-list">
-<li>Foil cards now cost 20% more in Adventure shops</li>
-<li>Reward and ante cards now display sell price and your owned count, so you can decide on the spot whether to keep or sell</li>
-<li>Removed Alpha, Beta, and Fourth Edition sketchbooks from the vendor (those land arts are reachable through other channels)</li>
-</ul>
-</div>
-
-<div class="changelog-section">
-<h4 class="engine">Forge Engine</h4>
-<ul class="changelog-list">
-<li>Booster generation now supports <code>|SET</code> pinning in the <code>name()</code> predicate, letting boosters reference specific edition printings</li>
-<li>Allow constructed mode to play against Adventure decks</li>
-<li>Mobile fixes: "Always No" stack-menu item no longer ends the turn, blocking dialog freeze fixed, auto-yield persistence restored across matches</li>
+<li>Cateran Overlord now always spawns in his dungeon (was sometimes missing)</li>
+<li>Contract from Below moved to S tier in the loot table where it belongs</li>
+<li>Snow-covered basic distribution in Ice Age now even across all 5 colors (was biased)</li>
+<li>Ante ownership tracking fixed for cards exchanged via effects (Bronze Tablet, Jeweled Bird, etc.)</li>
+<li>Booster pack art was using a dead CDN &mdash; fixed and refreshed</li>
+<li>23 dungeon maps had broken enemy waypoints &mdash; all repaired</li>
+<li>Map load failures now recover gracefully instead of crashing</li>
 </ul>
 </div>
 

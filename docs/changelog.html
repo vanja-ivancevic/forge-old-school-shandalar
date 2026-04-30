@@ -83,45 +83,31 @@ For the latest updates and to report bugs, visit the <a href="community.html">Co
 <font size="3" color="#00FF00"><b>&#9876; New Content</b></font>
 <br>
 <font size="3" color="#CCCCFF">
-<img src="gifs/bullet_gem.gif" width="16" height="16" alt="*"> <font color="#FFFF00">Old-border token art overhaul</font> &mdash; 55 new period-correct token renders hosted on the mod CDN. The engine now picks token art smarter: filtered by the adventure's allowed editions, era-matched (no more modern-frame Goblins from P03), and pinned per game so every Saproling, Squirrel, or Soldier on the table shares the same art<br>
-<img src="gifs/bullet_gem.gif" width="16" height="16" alt="*"> <font color="#FFFF00">MicroProse Shandalar tokens</font> &mdash; Sand Warrior and other MicroProse-era tokens added under their own edition code (PAST/Astral Cards), plus Magic Player Rewards 2002 and Duelist Magazine token art<br>
-<img src="gifs/bullet_gem.gif" width="16" height="16" alt="*"> <font color="#FFFF00">Living Death-style reanimator deck</font> added as a new Necromancer variant &mdash; expect graveyard recursion plays from him now<br>
-<img src="gifs/bullet_gem.gif" width="16" height="16" alt="*"> <font color="#FFFF00">Landscape sketchbook drops</font> added to all bosses, with a new sketchbook vendor at the Bazaar of Wonders<br>
-<img src="gifs/bullet_gem.gif" width="16" height="16" alt="*"> <font color="#FFFF00">Snow-covered basic lands</font> option added to the Add Basic Lands dialog (only available when the world includes Ice Age)<br>
-<img src="gifs/bullet_gem.gif" width="16" height="16" alt="*"> <font color="#FFFF00">Include basic lands in ante</font> &mdash; new toggle for whether basics are eligible to be wagered<br>
+<img src="gifs/bullet_gem.gif" width="16" height="16" alt="*"> <font color="#FFFF00">Old-border token art overhaul</font> &mdash; 55 new period-correct tokens made with Card Conjurer, hosted on the mod CDN. The engine now picks token art era-matched to the adventure's allowed editions, with per-game pinning so every Saproling, Squirrel, or Soldier on the table shares the same art instead of being a mismatched zoo. Browse the full set <a href="https://github.com/vanja-ivancevic/forge-old-school-shandalar/tree/master/docs/tokens" target="_blank">here</a><br>
+<img src="gifs/bullet_gem.gif" width="16" height="16" alt="*"> <font color="#FFFF00">Custom MicroProse Shandalar tokens</font> (Sand Warrior etc.) added under their own edition code, plus Magic Player Rewards 2002 and custom Duelist Magazine token art<br>
+<img src="gifs/bullet_gem.gif" width="16" height="16" alt="*"> <font color="#FFFF00">Landscape sketchbook rebalance</font> &mdash; sketchbook drops are now spread across all bosses, with a new Sketchbook vendor at the Bazaar of Wonders<br>
+</font>
+
+<br>
+<font size="3" color="#00CCFF"><b>&#9881; Quality-of-Life</b></font>
+<br>
+<font size="3" color="#CCCCFF">
+<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Snow-covered basic lands option added to the Add Basic Lands dialog (Ice Age worlds only)<br>
+<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> &quot;Include basic lands in ante&quot; toggle added &mdash; control whether basics are eligible to be wagered<br>
+<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Reward and ante cards now show sell price and your owned count inline, so you can decide on the spot whether to keep or sell<br>
 </font>
 
 <br>
 <font size="3" color="#FF6600"><b>&#128736; Bug Fixes</b></font>
 <br>
 <font size="3" color="#CCCCFF">
-<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Fixed Cateran Overlord dungeon &mdash; the boss is now guaranteed to be present<br>
-<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Moved Contract from Below to S tier in the loot table (was incorrectly C tier)<br>
-<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Fixed snow-covered basic land distribution in Ice Age &mdash; all five colors now appear evenly<br>
-<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Fixed ante ownership tracking and zone placement for cards exchanged via effects (Bronze Tablet, etc.)<br>
-<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Fixed booster pack image fetching that was using a dead CDN URL; pack art now loads and refreshes correctly<br>
-<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Fixed broken enemy waypoint references across 23 dungeon maps<br>
-<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Map load failures now recover gracefully instead of crashing the adventure<br>
-<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Fixed merfolkpool teleport case<br>
-<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> TLA added to starter set pool<br>
-</font>
-
-<br>
-<font size="3" color="#00CCFF"><b>&#9878; Balance Changes</b></font>
-<br>
-<font size="3" color="#CCCCFF">
-<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Foil cards now cost 20% more in Adventure shops<br>
-<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Reward and ante cards now display sell price and your owned count, so you can decide on the spot whether to keep or sell<br>
-<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Removed Alpha, Beta, and Fourth Edition sketchbooks from the vendor (those land arts are reachable through other channels)<br>
-</font>
-
-<br>
-<font size="3" color="#CC99FF"><b>&#9881; Forge Engine</b></font>
-<br>
-<font size="3" color="#CCCCFF">
-<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Booster generation now supports <font face="Courier New, monospace">|SET</font> pinning in the <font face="Courier New, monospace">name()</font> predicate, letting boosters reference specific edition printings<br>
-<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Allow constructed mode to play against Adventure decks<br>
-<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Mobile fixes: &quot;Always No&quot; stack-menu item no longer ends the turn, blocking dialog freeze fixed, auto-yield persistence restored across matches<br>
+<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Cateran Overlord now always spawns in his dungeon (was sometimes missing)<br>
+<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Contract from Below moved to S tier in the loot table where it belongs<br>
+<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Snow-covered basic distribution in Ice Age now even across all 5 colors (was biased)<br>
+<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Ante ownership tracking fixed for cards exchanged via effects (Bronze Tablet, Jeweled Bird, etc.)<br>
+<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Booster pack art was using a dead CDN &mdash; fixed and refreshed<br>
+<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> 23 dungeon maps had broken enemy waypoints &mdash; all repaired<br>
+<img src="gifs/bullet_sword.gif" width="16" height="16" alt="*"> Map load failures now recover gracefully instead of crashing<br>
 </font>
 
 </td></tr>
