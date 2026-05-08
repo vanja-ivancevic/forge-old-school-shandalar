@@ -424,6 +424,75 @@ export async function submitDeck(deckData) {
   return docRef.id;
 }
 
+/**
+ * Update an existing deck. Author-only (enforced by Firestore rules).
+ * Only the editable fields are written; authorUid, voteCount, status, createdAt are preserved.
+ */
+export async function updateDeck(deckId, deckData) {
+  await ensureAuth();
+
+  var cardCount = 0;
+  for (var i = 0; i < deckData.cards.length; i++) {
+    cardCount += deckData.cards[i].qty;
+  }
+
+  function mapCards(arr) {
+    return (arr || []).map(function(c) {
+      return { qty: c.qty, name: c.name, set: c.set || null, scryfallImg: c.scryfallImg || '', typeLine: c.typeLine || '' };
+    });
+  }
+
+  await updateDoc(doc(db, 'decks', deckId), {
+    title: deckData.title,
+    author: deckData.author,
+    description: deckData.description || '',
+    cards: mapCards(deckData.cards),
+    sideboard: mapCards(deckData.sideboard),
+    cardCount: cardCount,
+    colorIdentity: deckData.colorIdentity,
+    colorCode: deckData.colorCode,
+    tags: deckData.tags || [],
+    badges: deckData.badges || [],
+    updatedAt: serverTimestamp()
+  });
+}
+
+/**
+ * Delete a deck. Author-only (enforced by Firestore rules).
+ * Note: orphans the deck's comment subcollection and any votes for it,
+ * since rules don't permit clients to delete those. They become inaccessible.
+ */
+export async function deleteDeck(deckId) {
+  await ensureAuth();
+  await deleteDoc(doc(db, 'decks', deckId));
+}
+
+/**
+ * Render a deck back into pasteable Forge-clipboard text. Used to pre-fill
+ * the textarea on the edit page.
+ */
+export function deckToText(deck) {
+  var lines = [];
+  if (deck.title) {
+    lines.push('Deck: ' + deck.title);
+    lines.push('');
+  }
+  lines.push('Main:');
+  if (deck.cards) {
+    for (var i = 0; i < deck.cards.length; i++) {
+      lines.push(deck.cards[i].qty + ' ' + deck.cards[i].name);
+    }
+  }
+  if (deck.sideboard && deck.sideboard.length > 0) {
+    lines.push('');
+    lines.push('Sideboard:');
+    for (var j = 0; j < deck.sideboard.length; j++) {
+      lines.push(deck.sideboard[j].qty + ' ' + deck.sideboard[j].name);
+    }
+  }
+  return lines.join('\n');
+}
+
 // ============================================================
 // VOTING
 // ============================================================

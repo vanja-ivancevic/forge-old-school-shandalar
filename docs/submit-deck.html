@@ -159,16 +159,18 @@ Example:
 </table>
 
 <script type="module">
-import { parseDeck, validateAndEnrichCards, submitDeck, ensureAuth, escapeHtml,
-         renderColorPips, fetchTagRegistry, addToRegistry, createTooltip, setupCardHovers
+import { parseDeck, validateAndEnrichCards, submitDeck, updateDeck, fetchDeck,
+         deckToText, ensureAuth, escapeHtml,
+         renderColorPips, renderColorPipsDom, fetchTagRegistry, addToRegistry, createTooltip, setupCardHovers
 } from './deck-gallery.js';
 
 var parsedCards = null;
 var parsedSideboard = null;
 var enrichedData = null;
+var editingDeckId = new URLSearchParams(window.location.search).get('edit');
 
 // Load tag registry for checkboxes
-fetchTagRegistry().then(function(registry) {
+var registryReady = fetchTagRegistry().then(function(registry) {
   buildCheckboxes('tag-checkboxes', registry.archetypes, 'tag', 3);
   buildCheckboxes('badge-checkboxes', registry.badges, 'badge', 2);
 }).catch(function() {
@@ -452,20 +454,28 @@ document.getElementById('btn-submit').addEventListener('click', async function()
   var badges = [];
   document.querySelectorAll('#badge-checkboxes input:checked').forEach(function(cb) { badges.push(cb.value); });
 
-  setStatus('submit-status', 'Submitting deck...', '#FFFF00');
+  var deckPayload = {
+    title: title,
+    author: author,
+    description: document.getElementById('deck-description').value.trim(),
+    cards: parsedCards,
+    sideboard: parsedSideboard,
+    colorIdentity: enrichedData.colorIdentity,
+    colorCode: enrichedData.colorCode,
+    tags: tags,
+    badges: badges
+  };
+
+  setStatus('submit-status', editingDeckId ? 'Saving changes...' : 'Submitting deck...', '#FFFF00');
 
   try {
-    var deckId = await submitDeck({
-      title: title,
-      author: author,
-      description: document.getElementById('deck-description').value.trim(),
-      cards: parsedCards,
-      sideboard: parsedSideboard,
-      colorIdentity: enrichedData.colorIdentity,
-      colorCode: enrichedData.colorCode,
-      tags: tags,
-      badges: badges
-    });
+    var deckId;
+    if (editingDeckId) {
+      await updateDeck(editingDeckId, deckPayload);
+      deckId = editingDeckId;
+    } else {
+      deckId = await submitDeck(deckPayload);
+    }
 
     var statusDiv = document.getElementById('submit-status');
     while (statusDiv.firstChild) statusDiv.removeChild(statusDiv.firstChild);
@@ -474,7 +484,7 @@ document.getElementById('btn-submit').addEventListener('click', async function()
     successFont.setAttribute('color', '#00FF00');
     successFont.setAttribute('size', '3');
     var b = document.createElement('b');
-    b.textContent = '\u2714 Deck submitted!';
+    b.textContent = editingDeckId ? '\u2714 Changes saved!' : '\u2714 Deck submitted!';
     successFont.appendChild(b);
     statusDiv.appendChild(successFont);
     statusDiv.appendChild(document.createElement('br'));
@@ -493,9 +503,108 @@ document.getElementById('btn-submit').addEventListener('click', async function()
     document.getElementById('btn-submit').style.opacity = '0.5';
 
   } catch (e) {
-    setStatus('submit-status', 'Error submitting deck: ' + e.message, '#FF4444');
+    setStatus('submit-status', (editingDeckId ? 'Error saving: ' : 'Error submitting deck: ') + e.message, '#FF4444');
   }
 });
+
+// ============================================================
+// EDIT MODE: pre-fill form with an existing deck the user owns
+// ============================================================
+async function initEditMode() {
+  if (!editingDeckId) return;
+
+  document.title = '~*~ Old Border Shandalar ~*~ Edit Your Deck ~*~';
+  var submitBtn = document.getElementById('btn-submit');
+  if (submitBtn) submitBtn.textContent = '\u270E Save Changes';
+  var heading = document.querySelector('.section-header b');
+  if (heading) heading.textContent = '\u270E Edit Your Deck \u270E';
+
+  try {
+    var user = await ensureAuth();
+    var deck = await fetchDeck(editingDeckId);
+    if (!deck) {
+      setStatus('parse-errors', 'Deck not found. Redirecting...', '#FF4444');
+      setTimeout(function() { window.location.href = 'decks.html'; }, 1500);
+      return;
+    }
+    if (deck.authorUid !== user.uid) {
+      setStatus('parse-errors', 'You can only edit decks you posted from this browser. Redirecting...', '#FF4444');
+      setTimeout(function() {
+        window.location.href = 'deck.html?id=' + encodeURIComponent(editingDeckId);
+      }, 2000);
+      return;
+    }
+
+    document.getElementById('deck-input').value = deckToText(deck);
+    document.getElementById('deck-title').value = deck.title || '';
+    document.getElementById('deck-author').value = deck.author || '';
+    document.getElementById('deck-description').value = deck.description || '';
+
+    // Pre-load parsed data so user can submit metadata-only changes without re-parsing
+    parsedCards = (deck.cards || []).slice();
+    parsedSideboard = (deck.sideboard || []).slice();
+    enrichedData = {
+      validCards: parsedCards,
+      validSideboard: parsedSideboard,
+      invalidNames: [],
+      colorIdentity: deck.colorIdentity || [],
+      colorCode: deck.colorCode || ''
+    };
+
+    // Color pips (safe DOM)
+    var pipsEl = document.getElementById('color-pips');
+    while (pipsEl.firstChild) pipsEl.removeChild(pipsEl.firstChild);
+    renderColorPipsDom(enrichedData.colorIdentity, pipsEl);
+
+    var total = 0;
+    for (var i = 0; i < parsedCards.length; i++) total += parsedCards[i].qty;
+    var sbTotal = 0;
+    for (var s = 0; s < parsedSideboard.length; s++) sbTotal += parsedSideboard[s].qty;
+    document.getElementById('card-count').textContent = total + (sbTotal > 0 ? ' main + ' + sbTotal + ' sideboard' : '');
+
+    buildCardPreview(parsedCards);
+    if (parsedSideboard.length > 0) {
+      var sbHeader = document.createElement('div');
+      sbHeader.style.cssText = 'margin-top:12px;margin-bottom:4px';
+      var sbFont = document.createElement('font');
+      sbFont.setAttribute('size', '2');
+      sbFont.setAttribute('color', '#FFFF00');
+      var sbB = document.createElement('b');
+      sbB.textContent = 'Sideboard (' + sbTotal + ')';
+      sbFont.appendChild(sbB);
+      sbHeader.appendChild(sbFont);
+      document.getElementById('card-preview').appendChild(sbHeader);
+      buildCardPreview(parsedSideboard, true);
+    }
+    createTooltip();
+    setupCardHovers(document.getElementById('card-preview'));
+
+    // Wait for tag registry, then check matching boxes (and add custom ones)
+    await registryReady;
+    function applySelections(containerId, items, prefix, maxChecked) {
+      if (!items) return;
+      var container = document.getElementById(containerId);
+      items.forEach(function(item) {
+        var inputs = container.querySelectorAll('input');
+        var found = false;
+        for (var k = 0; k < inputs.length; k++) {
+          if (inputs[k].value === item) { inputs[k].checked = true; found = true; break; }
+        }
+        if (!found) addCheckbox(containerId, item, prefix, maxChecked, true);
+      });
+    }
+    applySelections('tag-checkboxes', deck.tags, 'tag', 3);
+    applySelections('badge-checkboxes', deck.badges, 'badge', 2);
+
+    document.getElementById('preview-section').style.display = 'block';
+    document.getElementById('preview-section').scrollIntoView({ behavior: 'smooth' });
+
+  } catch (e) {
+    setStatus('parse-errors', 'Could not load deck for editing: ' + e.message, '#FF4444');
+  }
+}
+
+initEditMode();
 </script>
 
 <script type="module" src="clippy.js"></script>

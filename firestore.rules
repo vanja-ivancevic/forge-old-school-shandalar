@@ -4,7 +4,9 @@ service cloud.firestore {
 
     // Decks: anyone can read published; authenticated users can create
     match /decks/{deckId} {
-      allow read: if resource.data.status == 'published';
+      // Allow reads for missing docs too, so deleted-deck links return a clean "not found"
+      // instead of a permission error.
+      allow read: if resource == null || resource.data.status == 'published';
 
       allow create: if request.auth != null
         && request.resource.data.authorUid == request.auth.uid
@@ -29,7 +31,9 @@ service cloud.firestore {
         && (request.resource.data.voteCount == resource.data.voteCount + 1
             || request.resource.data.voteCount == resource.data.voteCount - 1);
 
-      allow delete: if false;
+      // Author can delete their own deck
+      allow delete: if request.auth != null
+        && resource.data.authorUid == request.auth.uid;
 
       // Comments subcollection
       match /comments/{commentId} {

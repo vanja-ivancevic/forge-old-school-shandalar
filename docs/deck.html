@@ -41,8 +41,8 @@
 </table>
 
 <script type="module">
-import { fetchDeck, toggleVote, getVotedDecks, ensureAuth, downloadDeck,
-         renderColorPipsDom, renderTagDom, renderBadgeDom, formatDate,
+import { fetchDeck, toggleVote, getVotedDecks, ensureAuth, getUser, downloadDeck,
+         deleteDeck, renderColorPipsDom, renderTagDom, renderBadgeDom, formatDate,
          groupCardsByType, getNormalImgUrl, createTooltip, setupCardHovers,
          fetchComments, addComment
 } from './deck-gallery.js';
@@ -115,8 +115,10 @@ async function loadDeck() {
 
     // Vote button
     var isVoted = false;
+    var currentUid = null;
     try {
-      await ensureAuth();
+      var user = await ensureAuth();
+      currentUid = user && user.uid;
       var votedSet = await getVotedDecks([deckId]);
       isVoted = votedSet.has(deckId);
     } catch(e) { /* auth unavailable */ }
@@ -141,6 +143,40 @@ async function loadDeck() {
     dlBtn.textContent = '\u2B07 Download .dck';
     dlBtn.addEventListener('click', function() { downloadDeck(deck); });
     container.appendChild(dlBtn);
+
+    // Owner controls (Edit / Delete) \u2014 only shown when current user is the author
+    if (currentUid && deck.authorUid && currentUid === deck.authorUid) {
+      var editBtn = document.createElement('button');
+      editBtn.style.cssText = 'background:#220044;color:#FFFF00;border:2px outset #663399;padding:6px 20px;font-size:14px;cursor:pointer;font-family:"Comic Sans MS",sans-serif;margin-left:10px';
+      editBtn.textContent = '\u270E Edit';
+      editBtn.addEventListener('click', function() {
+        window.location.href = 'submit-deck.html?edit=' + encodeURIComponent(deckId);
+      });
+      container.appendChild(editBtn);
+
+      var delBtn = document.createElement('button');
+      delBtn.style.cssText = 'background:#330000;color:#FF6666;border:2px outset #663399;padding:6px 20px;font-size:14px;cursor:pointer;font-family:"Comic Sans MS",sans-serif;margin-left:10px';
+      delBtn.textContent = '\u2716 Delete';
+      delBtn.addEventListener('click', async function() {
+        if (!confirm('Delete this deck? This cannot be undone.')) return;
+        delBtn.disabled = true;
+        delBtn.textContent = 'Deleting...';
+        try {
+          await deleteDeck(deckId);
+          window.location.href = 'decks.html';
+        } catch(e) {
+          alert('Could not delete deck: ' + e.message);
+          delBtn.disabled = false;
+          delBtn.textContent = '\u2716 Delete';
+        }
+      });
+      container.appendChild(delBtn);
+
+      var ownerHint = document.createElement('div');
+      ownerHint.style.cssText = 'margin-top:6px;font-size:11px;color:#888888';
+      ownerHint.textContent = 'You posted this deck from this browser. Edits won\u2019t work from a different browser or device.';
+      container.appendChild(ownerHint);
+    }
     container.appendChild(document.createElement('br'));
 
     // Description

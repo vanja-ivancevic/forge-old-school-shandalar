@@ -138,17 +138,19 @@ Example:
 </div>
 
 <script type="module">
-import { parseDeck, validateAndEnrichCards, submitDeck, ensureAuth,
+import { parseDeck, validateAndEnrichCards, submitDeck, updateDeck, fetchDeck,
+         deckToText, ensureAuth,
          fetchTagRegistry, addToRegistry, createTooltip, setupCardHovers
 } from '../deck-gallery.js';
 
 var parsedCards = null;
 var parsedSideboard = null;
 var enrichedData = null;
+var editingDeckId = new URLSearchParams(window.location.search).get('edit');
 var manaNames = { W:'White', U:'Blue', B:'Black', R:'Red', G:'Green' };
 
 // Load tag registry
-fetchTagRegistry().then(function(registry) {
+var registryReady = fetchTagRegistry().then(function(registry) {
   buildCheckboxes('tag-checkboxes', registry.archetypes, 'tag', 3);
   buildCheckboxes('badge-checkboxes', registry.badges, 'badge', 2);
 }).catch(function() {
@@ -403,26 +405,34 @@ document.getElementById('btn-submit').addEventListener('click', async function()
   var badges = [];
   document.querySelectorAll('#badge-checkboxes input:checked').forEach(function(cb) { badges.push(cb.value); });
 
-  setStatus('submit-status', 'Submitting deck...', false);
+  var deckPayload = {
+    title: title,
+    author: author,
+    description: document.getElementById('deck-description').value.trim(),
+    cards: parsedCards,
+    sideboard: parsedSideboard,
+    colorIdentity: enrichedData.colorIdentity,
+    colorCode: enrichedData.colorCode,
+    tags: tags,
+    badges: badges
+  };
+
+  setStatus('submit-status', editingDeckId ? 'Saving changes...' : 'Submitting deck...', false);
 
   try {
-    var deckId = await submitDeck({
-      title: title,
-      author: author,
-      description: document.getElementById('deck-description').value.trim(),
-      cards: parsedCards,
-      sideboard: parsedSideboard,
-      colorIdentity: enrichedData.colorIdentity,
-      colorCode: enrichedData.colorCode,
-      tags: tags,
-      badges: badges
-    });
+    var deckId;
+    if (editingDeckId) {
+      await updateDeck(editingDeckId, deckPayload);
+      deckId = editingDeckId;
+    } else {
+      deckId = await submitDeck(deckPayload);
+    }
 
     var statusEl = document.getElementById('submit-status');
     clearEl(statusEl);
     var successP = document.createElement('p');
     successP.style.color = 'var(--green)';
-    successP.textContent = '\u2714 Deck submitted! ';
+    successP.textContent = (editingDeckId ? '\u2714 Changes saved! ' : '\u2714 Deck submitted! ');
     var viewLink = document.createElement('a');
     viewLink.href = 'deck.html?id=' + encodeURIComponent(deckId);
     viewLink.textContent = 'View your deck \u2192';
@@ -436,6 +446,155 @@ document.getElementById('btn-submit').addEventListener('click', async function()
     setStatus('submit-status', 'Error: ' + e.message, true);
   }
 });
+
+// ============================================================
+// EDIT MODE: pre-fill form with an existing deck the user owns
+// ============================================================
+function buildPreviewRow(card) {
+  var row = document.createElement('tr');
+  var qtyTd = document.createElement('td');
+  qtyTd.style.width = '40px';
+  qtyTd.textContent = card.qty;
+  row.appendChild(qtyTd);
+  var nameTd = document.createElement('td');
+  var nameLink = document.createElement('a');
+  nameLink.href = '#';
+  nameLink.textContent = card.name;
+  nameLink.onclick = function(e) { e.preventDefault(); };
+  if (card.scryfallImg && card.scryfallImg.match(/^https:\/\/cards\.scryfall\.io\//)) {
+    nameLink.setAttribute('data-img', card.scryfallImg);
+  }
+  nameTd.appendChild(nameLink);
+  row.appendChild(nameTd);
+  var typeTd = document.createElement('td');
+  typeTd.style.color = 'var(--text-muted)';
+  typeTd.textContent = card.typeLine || '';
+  row.appendChild(typeTd);
+  return row;
+}
+
+async function initEditMode() {
+  if (!editingDeckId) return;
+
+  document.title = 'Edit Deck - Old Border Shandalar';
+  var heading = document.querySelector('.section-title');
+  if (heading) heading.textContent = 'Edit Your Deck';
+  var subtitle = document.querySelector('.section-subtitle');
+  if (subtitle) subtitle.textContent = 'Update your deck list, name, tags, or description.';
+  var submitBtn = document.getElementById('btn-submit');
+  if (submitBtn) submitBtn.textContent = 'Save Changes';
+
+  try {
+    var user = await ensureAuth();
+    var deck = await fetchDeck(editingDeckId);
+    if (!deck) {
+      setStatus('parse-errors', 'Deck not found. Redirecting...', true);
+      setTimeout(function() { window.location.href = 'decks.html'; }, 1500);
+      return;
+    }
+    if (deck.authorUid !== user.uid) {
+      setStatus('parse-errors', 'You can only edit decks you posted from this browser. Redirecting...', true);
+      setTimeout(function() {
+        window.location.href = 'deck.html?id=' + encodeURIComponent(editingDeckId);
+      }, 2000);
+      return;
+    }
+
+    document.getElementById('deck-input').value = deckToText(deck);
+    document.getElementById('deck-title').value = deck.title || '';
+    document.getElementById('deck-author').value = deck.author || '';
+    document.getElementById('deck-description').value = deck.description || '';
+
+    parsedCards = (deck.cards || []).slice();
+    parsedSideboard = (deck.sideboard || []).slice();
+    enrichedData = {
+      validCards: parsedCards,
+      validSideboard: parsedSideboard,
+      invalidNames: [],
+      colorIdentity: deck.colorIdentity || [],
+      colorCode: deck.colorCode || ''
+    };
+
+    // Color pips
+    var pipsEl = document.getElementById('color-pips');
+    clearEl(pipsEl);
+    if (enrichedData.colorIdentity.length) {
+      enrichedData.colorIdentity.forEach(function(c) {
+        var pip = document.createElement('i');
+        pip.className = 'ms ms-' + c.toLowerCase() + ' ms-cost ms-shadow';
+        pip.title = manaNames[c] || c;
+        pip.style.cssText = 'font-size:18px;margin:0 2px';
+        pipsEl.appendChild(pip);
+      });
+    }
+
+    var total = 0;
+    parsedCards.forEach(function(c) { total += c.qty; });
+    var sbTotal = 0;
+    parsedSideboard.forEach(function(c) { sbTotal += c.qty; });
+    document.getElementById('card-count').textContent = total + ' cards' + (sbTotal > 0 ? ' + ' + sbTotal + ' sideboard' : '');
+
+    // Card preview
+    var preview = document.getElementById('card-preview');
+    clearEl(preview);
+    var table = document.createElement('table');
+    table.className = 'card-list-table';
+    var thead = document.createElement('thead');
+    var headRow = document.createElement('tr');
+    ['Qty', 'Card Name', 'Type'].forEach(function(t) {
+      var th = document.createElement('th');
+      th.textContent = t;
+      headRow.appendChild(th);
+    });
+    thead.appendChild(headRow);
+    table.appendChild(thead);
+    var tbody = document.createElement('tbody');
+    parsedCards.forEach(function(c) { tbody.appendChild(buildPreviewRow(c)); });
+    table.appendChild(tbody);
+    preview.appendChild(table);
+
+    if (parsedSideboard.length > 0) {
+      var sbH = document.createElement('h3');
+      sbH.style.cssText = 'font-size:14px;color:var(--gold);margin:12px 0 6px;font-family:var(--font-heading)';
+      sbH.textContent = 'Sideboard (' + sbTotal + ')';
+      preview.appendChild(sbH);
+      var sbTable = document.createElement('table');
+      sbTable.className = 'card-list-table';
+      var sbTbody = document.createElement('tbody');
+      parsedSideboard.forEach(function(c) { sbTbody.appendChild(buildPreviewRow(c)); });
+      sbTable.appendChild(sbTbody);
+      preview.appendChild(sbTable);
+    }
+
+    createTooltip();
+    setupCardHovers(preview);
+
+    // Wait for tag registry, then check matching boxes (and add custom ones)
+    await registryReady;
+    function applySelections(containerId, items, prefix, maxChecked) {
+      if (!items) return;
+      var container = document.getElementById(containerId);
+      items.forEach(function(item) {
+        var inputs = container.querySelectorAll('input');
+        var found = false;
+        for (var k = 0; k < inputs.length; k++) {
+          if (inputs[k].value === item) { inputs[k].checked = true; found = true; break; }
+        }
+        if (!found) addCheckbox(containerId, item, prefix, maxChecked, true);
+      });
+    }
+    applySelections('tag-checkboxes', deck.tags, 'tag', 3);
+    applySelections('badge-checkboxes', deck.badges, 'badge', 2);
+
+    document.getElementById('preview-section').style.display = 'block';
+    document.getElementById('preview-section').scrollIntoView({ behavior: 'smooth' });
+
+  } catch (e) {
+    setStatus('parse-errors', 'Could not load deck for editing: ' + e.message, true);
+  }
+}
+
+initEditMode();
 </script>
 
 <script>
