@@ -3,2994 +3,3521 @@
     "selection": "biome/forest/biome-dark-fantasy-v001.jpg",
     "source_sha256": "04d68647f90764a70d848c4bb5d0dfa40da071f3f3476f0af5fb20e0b4f78ff4",
     "destination": "forest/forest_11.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-dark-fantasy-v002.jpg",
     "source_sha256": "437c0612666827b40a7c73b2a8ef93ca29496d519c932c2781657fee38b9453d",
     "destination": "forest/forest_12.jpg",
-    "status": "copy"
-  },
-  {
-    "selection": "biome/forest/biome-dark-fantasy-v007.jpg",
-    "source_sha256": "971a8951092a13f8c4049c42dff5e5afe8d4d7eef9e8ef180f25bc80fd4b1119",
-    "destination": "forest/forest_13.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-dark-fantasy-v010.jpg",
     "source_sha256": "d7136a8522ee1646eaf0e29cb05a04fb479a2839ae9b09fca19d37e90a222a42",
     "destination": "forest/forest_14.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-initial-v007.jpg",
     "source_sha256": "be8e15eda74a534c6295dd7dc7877850c663f17e5dec6c49e6443590f78cc34e",
     "destination": "forest/forest_15.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-production-v001.jpg",
     "source_sha256": "9300d5962d7b8211fb4333b2d707f41f4a54780d505e7a1d8b8124e1cc97dc24",
     "destination": "forest/forest_16.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-production-v003.jpg",
     "source_sha256": "884e0afe513e4e991b8188f63e0d204114c4a909b434b7610d7de6c5edc42e48",
     "destination": "forest/forest_17.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-production-v004 copy.jpg",
     "source_sha256": "47c93b43fe08a1740db10281b62f688cf7d8f85765109b04de3c2b972e879918",
     "destination": "forest/forest_18.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-production-v004.jpg",
     "source_sha256": "0b8a201dea3e5d24443b6d684adefe299002c7db38f737469ca8e7d9c38c5f55",
     "destination": "forest/forest_19.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-production-v005.jpg",
     "source_sha256": "255417d4c0937e8a42cd88e8cbbd592749eefe16d7e54a4d6b6036b009751f5e",
     "destination": "forest/forest_20.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-production-v007.jpg",
     "source_sha256": "bb82caee6004511d8a938cc1a0b0cad9e811948320121f0080d3e55f0a1640ed",
     "destination": "forest/forest_21.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-production-v009 copy.jpg",
     "source_sha256": "a0676aa40d6feb270b714dd4080daea0e4a03f84574072943a8d4564543a6a7f",
     "destination": "forest/forest_22.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-production-v009.jpg",
     "source_sha256": "e4e4e41365e355210b933cd08dc506de239c765829d9434eb50de7b108787054",
     "destination": "forest/forest_23.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-production-v010.jpg",
     "source_sha256": "86c52aaa745aa56e3c39e58861af2fe09538c54d298c6c908cbd951a14e7650b",
     "destination": "forest/forest_24.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-production-v012.jpg",
     "source_sha256": "1899eeebca5bfef0a1aba82afb47bac1027482d19cfe54c3a65600088ad846e3",
     "destination": "forest/forest_25.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-variety-v002.jpg",
     "source_sha256": "84e142a538544466fcf179fd403eaade0822c40e7802d4312d5cf5c809d8ea97",
     "destination": "forest/forest_26.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-variety-v006.jpg",
     "source_sha256": "272c9593246548a0d49cb6b11b28cfcbbfedb527b3359fb29d62b45c5ce996ff",
     "destination": "forest/forest_27.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-variety-v008.jpg",
     "source_sha256": "4340a82401c57b043b993ba7dbd0a49f5a61f8f05113ad99ada51f2f9dcb3647",
     "destination": "forest/forest_28.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/biome-variety-v010.jpg",
     "source_sha256": "756a48c6f9d73a851e821747f6d75fd5e1ca4ed8888c4aade20b24da73547a5a",
     "destination": "forest/forest_29.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/diverse-v001.jpg",
     "source_sha256": "d654fe138b0def3dc849141abb84c321f8565cbf066278e571689060d520bb3a",
     "destination": "forest/forest_30.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/diverse-v002.jpg",
     "source_sha256": "d9bf154781b67e2d6ac0a8d82081c3414e8fd50ba1f4d620527113aa0d4c4e71",
     "destination": "forest/forest_31.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/diverse-v003.jpg",
     "source_sha256": "3df4f32cbfd74adbfb1d2ca0b0df7ac0af35abb3622519a58b71e182161bf894",
     "destination": "forest/forest_32.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/diverse-v004.jpg",
     "source_sha256": "4f8683291f35e45fdb58814e2fbf18cd466eadd5f4a516c7a2477deb7bb4ee99",
     "destination": "forest/forest_33.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/diverse-v005.jpg",
     "source_sha256": "b8a3cfba8b8bf758cbc6c3e2dfe2298123b2cb10415e29462d0e32b9db498552",
     "destination": "forest/forest_34.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/diverse-v006.jpg",
     "source_sha256": "7157fb3dc768f37cde1e1469e73d32c474823c6447ae437f868d4ae4b29ef323",
     "destination": "forest/forest_35.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/diverse-v007.jpg",
     "source_sha256": "0a60ac8ba6ff143dcc0a5f8744063d34a8f1ab2b654c78331178f42092fc70d7",
     "destination": "forest/forest_36.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/diverse-v008.jpg",
     "source_sha256": "26177402875d2a7ea2da67b4f01e2a887beed927db1581d98f62ca1ef734c13b",
     "destination": "forest/forest_37.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/forest/diverse-v009.jpg",
     "source_sha256": "8f6d2d2fa99eb80a2bf830075166f2e2e80edd797cf4ce26f61d5955693bf848",
     "destination": "forest/forest_38.jpg",
-    "status": "copy"
-  },
-  {
-    "selection": "biome/island/biome-dark-fantasy-v004.jpg",
-    "source_sha256": "e9bff92b5dd5d08256826022ffe8e71624dd9f6da04a3200b6a9b6c1e32ff217",
-    "destination": "island/island_10.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/biome-dark-fantasy-v005.jpg",
     "source_sha256": "5ede20cfa00e102d7b0e19856f542ec0210a4feb9239916ce69d393a91be3060",
     "destination": "island/island_11.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/biome-dark-fantasy-v009.jpg",
     "source_sha256": "672c8a8fd903987efbd19178792d7b21f7fe8fd9bac8f44dd6d036bc0e26a89c",
     "destination": "island/island_12.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/biome-production-v001.jpg",
     "source_sha256": "0c01be5617f4cbca6ab44e94cf16c8d2154ffbe97897d1881ec6dc4f7a550238",
     "destination": "island/island_13.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/biome-production-v002.jpg",
     "source_sha256": "f7ce434c709f6559f56cc488317e8ef3b7c996242a2ce6c7069f810f6f6de9db",
     "destination": "island/island_14.jpg",
-    "status": "copy"
-  },
-  {
-    "selection": "biome/island/biome-production-v003 copy.jpg",
-    "source_sha256": "47a2f564e8ba4bb39f036983fd78716d9e0d7cde3b3a793e35329c6ef6775e59",
-    "destination": "island/island_15.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/biome-production-v003.jpg",
     "source_sha256": "c98f1db55a504eb4f319b5e258f19ed45f9cb05ffa2a3471671673ebe250f35c",
     "destination": "island/island_16.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/biome-production-v005.jpg",
     "source_sha256": "44b72e29d71d7e76269bd487e36acf6462064c90ddabee847edcb291cffbae5f",
     "destination": "island/island_17.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/biome-production-v006.jpg",
     "source_sha256": "a3648fec7e0a8f63a64e57572e33d2c3dd42f1e9ebe29242b1296463d0da1b57",
     "destination": "island/island_18.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/biome-production-v007.jpg",
     "source_sha256": "49434cbe6bce8898bb74d5d07def49aa1af4ec8757c9a4b3043a67bf4cb8dac1",
     "destination": "island/island_19.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/biome-production-v008.jpg",
     "source_sha256": "2386ff796c296950cbfcae8be8dee258ca8b78bc63b35e6eed01d81fcd516748",
     "destination": "island/island_20.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/biome-variety-v009.jpg",
     "source_sha256": "7ecf51ac5907db33e8ce70379e3847a9f41e7f42e1831658928c6537acf9b1e2",
     "destination": "island/island_21.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/biome-variety-v010.jpg",
     "source_sha256": "e59e104929d17220c2a84583ed039362efc550b2fbd7a87ae739f25378e15555",
     "destination": "island/island_22.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
+  },
+  {
+    "selection": "biome/island/diverse-v001 copy.jpg",
+    "source_sha256": "fef2d56cd8aa3381221ce7bca1992b7102fdf2506505bd7428772301eb735dbb",
+    "destination": "island/island_32.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "biome/island/diverse-v001.jpg",
     "source_sha256": "51a6a3a2f6d75ecdf9819a8029de7b7262cc0bd7105e7197b1ebc3a4ef0b6278",
     "destination": "island/island_23.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/diverse-v003.jpg",
     "source_sha256": "31092b059013b4ff0ae682b08efc237a5722f44ea2fee0244348b1dffa82b45e",
     "destination": "island/island_24.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/diverse-v004.jpg",
     "source_sha256": "083ed23327d5eaa9fc150e0c7ddd5694a247457cdfe2589397c00c36af500359",
     "destination": "island/island_25.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/diverse-v005.jpg",
     "source_sha256": "c10edd92af53b6ed33fbde6b6e81192fdc4f3cb5f12ba957feacc86820bd22ab",
     "destination": "island/island_26.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/diverse-v006.jpg",
     "source_sha256": "656f36506658b785cd174cca58898f724ae13c3ff3ce87d67320283682c2ef36",
     "destination": "island/island_27.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/diverse-v007.jpg",
     "source_sha256": "52ca803304685c85574dc55515e9d27f97321e3d598d84dbb10c65ea08487e93",
     "destination": "island/island_28.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/diverse-v008.jpg",
     "source_sha256": "5b818137478274576c6971819d799dae30a0532cd796caae3e8972054a9c5722",
     "destination": "island/island_29.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/diverse-v009.jpg",
     "source_sha256": "bd521368e7aeebfc323dff33968aeddc39e3fe777e30af2423322d5a029e999b",
     "destination": "island/island_30.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/island/diverse-v010.jpg",
     "source_sha256": "2afd77fab1824cf58902fb5cc1ca5e050ed58d7f3cbb955fd80568fb6749caa9",
     "destination": "island/island_31.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-dark-fantasy-v001.jpg",
     "source_sha256": "22e3ebda7610dcfbc586c1093337eb4ecaa94376640608b992f419ea52ba0086",
     "destination": "mountain/mountain_10.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-dark-fantasy-v002.jpg",
     "source_sha256": "b6690e17ec2bc17d85664738d4581a043741069104b86cee28ef844ccd147475",
     "destination": "mountain/mountain_11.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-dark-fantasy-v005.jpg",
     "source_sha256": "1cdfbfcb5cd0f5cb997a8690abf8545d77ca4c13995a969c17db7b6d60cfc54a",
     "destination": "mountain/mountain_12.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-dark-fantasy-v006.jpg",
     "source_sha256": "f36b43865fa254ee99606ba5d774de844bc3413cd0f6f04ffd5e4e3049110eca",
     "destination": "mountain/mountain_13.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-dark-fantasy-v009.jpg",
     "source_sha256": "cc7a93bdb0c17139e3144283357730da9185f301dae5ba8fac870f130f1b2231",
     "destination": "mountain/mountain_14.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-initial-v002.jpg",
     "source_sha256": "4b0c6cd46ea83ee00e94f5cacd42c955e613eea11fc96f0f6dfc1fd790ce35fd",
     "destination": "mountain/mountain_15.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-initial-v009.jpg",
     "source_sha256": "e71458fd73dd241aa0a5ec3a1f3ad657691bc6b540d0c7c59a32f6d13a3b4817",
     "destination": "mountain/mountain_16.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-production-v003.jpg",
     "source_sha256": "75ca926e986474df4b2939020b7f25f090bfb7c2ef4d54b3839c6d47165ddf6b",
     "destination": "mountain/mountain_17.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-production-v004 copy.jpg",
     "source_sha256": "33bb5d8a6ce7c3f1cda86fd016543d7347eebe4c7d822c47e0d051253901f41b",
     "destination": "mountain/mountain_18.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-production-v004.jpg",
     "source_sha256": "5ccc2002658c24e4b37928b78a0f932ef99fe9e8269df8d67e069c46675bf907",
     "destination": "mountain/mountain_19.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-production-v007 copy.jpg",
     "source_sha256": "ecdd6967a8d6c06717e4be3ff078cbbad623285fd419cb1bacdbab3a80f9f2b3",
     "destination": "mountain/mountain_20.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-production-v007.jpg",
     "source_sha256": "ce5a5b4952b6a164c6841cf466565c69e2ba1f334f5290a5c594b645191eedad",
     "destination": "mountain/mountain_21.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-production-v008.jpg",
     "source_sha256": "3f29434613be0b0a037ea0a9b372b3259f6524ce120b91c9940ab1277ab50c65",
     "destination": "mountain/mountain_22.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-production-v009.jpg",
     "source_sha256": "1b0f21b3d7903a1ae3e21c8a1ffdad97d398db2db6c56162800f12ceaba563b7",
     "destination": "mountain/mountain_23.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-production-v010 copy.jpg",
     "source_sha256": "cb14b7d3a7d2ec3d19929411b1fcbca53a8d1bc0fe55670e2a93b600c914c5e8",
     "destination": "mountain/mountain_24.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-production-v010.jpg",
     "source_sha256": "1e1c2f68cba4e41ebfe8277bb349b4d4d1619a5c47b9e87841877d34b86a0a17",
     "destination": "mountain/mountain_25.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-variety-v001.jpg",
     "source_sha256": "2ad7030522eb020f9e592143e8505fd021a2b01f0ddc189f50b9b2a4c0941d55",
     "destination": "mountain/mountain_26.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-variety-v002.jpg",
     "source_sha256": "df2025372bd12675676efed646145fba6f64312071d0913fbf42746c0372702c",
     "destination": "mountain/mountain_27.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-variety-v005.jpg",
     "source_sha256": "15eaa9166f3b724a0849712da3c5d30eaab602c0125e218087935fe8de16d8ed",
     "destination": "mountain/mountain_28.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-variety-v006.jpg",
     "source_sha256": "df95bdb1428ffcd68ac626004a89cf46948f2d308a87c2d61c235aeb88ca356b",
     "destination": "mountain/mountain_29.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/biome-variety-v008.jpg",
     "source_sha256": "7e78a47ccf83fcab695d3b6f210e9c502f48e0b53caa7c6901f57ab140e498fd",
     "destination": "mountain/mountain_30.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/diverse-v001.jpg",
     "source_sha256": "b04c9091c2736bff90b5d7538b2d6e06b319b1e90cdee82ceb1ff79cbfea336f",
     "destination": "mountain/mountain_31.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/diverse-v002.jpg",
     "source_sha256": "f6d170b63d37917843d604ffe814347b9c482c7247d320240a52f54f9e81bf68",
     "destination": "mountain/mountain_32.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/diverse-v003.jpg",
     "source_sha256": "92cf4e59ec6bdd2521297d13e82852f6ad625a3b2959405abc7b85a9ca455e8e",
     "destination": "mountain/mountain_33.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/diverse-v004.jpg",
     "source_sha256": "29099866f8574e4897154ad719675d672d42d084969a66b8deaeab8e11fe8444",
     "destination": "mountain/mountain_34.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/diverse-v005.jpg",
     "source_sha256": "67c77b2466987ba4244887c622d777704d40e222eb85d74fe975e17b873128e2",
     "destination": "mountain/mountain_35.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/diverse-v006.jpg",
     "source_sha256": "282aec4826d3ff5acc475083fdbf7134ca97584120326192c46816d89361a1b1",
     "destination": "mountain/mountain_36.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/diverse-v007.jpg",
     "source_sha256": "d0599827ace8d269508f6db34700e4bdab7843a056f3f9d76f5cabe8436bdfd3",
     "destination": "mountain/mountain_37.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/diverse-v008.jpg",
     "source_sha256": "cad4f80793d5535f94e1f8161bf7ba85ad32993e991dc15c9d95b45b8416cd68",
     "destination": "mountain/mountain_38.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/diverse-v009.jpg",
     "source_sha256": "8820db704ccde85c32ba0a2a2af24b5b9a6bf786fca13afdb4775dca9e88f601",
     "destination": "mountain/mountain_39.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/mountain/diverse-v010.jpg",
     "source_sha256": "6eede95a7ea8fba3d6460d5b057eea35b3510ce399c76e8b42ffa0c1406608f6",
     "destination": "mountain/mountain_40.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "biome/plains/biome-dark-fantasy-v003.jpg",
-    "source_sha256": "c840bfbde8fd35cb5ec8ebe33caf80617aaf5b7cd10978cda71a05896e8ca6e2",
-    "destination": "plains/plains_13.jpg",
-    "status": "copy"
+    "selection": "biome/mountain/lore-v2-v001.jpg",
+    "source_sha256": "d93f3249540e5ab4876382ca0833df8725b75b38844243ed8080b23d35f21d49",
+    "destination": "mountain/mountain_41.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "biome/plains/biome-dark-fantasy-v004.jpg",
     "source_sha256": "7fbb477d7b7770699b8af0cc8d5a4e526483cbfda0288651dd565e0d3cc6f6c3",
     "destination": "plains/plains_14.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/biome-dark-fantasy-v008.jpg",
     "source_sha256": "4e8cd4ba03151c8277e32e4ef47447126b34ebbe0162c2342bebf1c893c523b9",
     "destination": "plains/plains_15.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/biome-production-v001 copy.jpg",
     "source_sha256": "55b01d0c16b9ba60a2520a9c07aada21e0033d972b9ad92ff661ab4a0ef54c02",
     "destination": "plains/plains_16.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/biome-production-v001.jpg",
     "source_sha256": "6671bd45e6d8bf19efeba2751614f758fc1aa01cef8b80b8c300ed7901707f7a",
     "destination": "plains/plains_17.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/biome-production-v002.jpg",
     "source_sha256": "74da23b21822b58e923587f9156e8ba2717b31532ebb3a795f8c238884b4cd97",
     "destination": "plains/plains_18.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/biome-production-v003.jpg",
     "source_sha256": "2e5c320592467ac1c7e0f09955ca16bd8e09fea4a72fe7ffeed8ddf006066673",
     "destination": "plains/plains_19.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/biome-production-v004.jpg",
     "source_sha256": "67e31d9e6111958a6fffd68edb0ca0809f6e43f1df56726f094ba99e40101a2c",
     "destination": "plains/plains_20.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/biome-production-v005.jpg",
     "source_sha256": "6c2d0248953f23cb08c7315eef0c1feae0b273769348020915b949dd5c4f92ff",
     "destination": "plains/plains_21.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/biome-production-v006.jpg",
     "source_sha256": "fead8e977a6094b240921d833075403eb10e0936fa23044ae82eb9aa5866a326",
     "destination": "plains/plains_22.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/biome-production-v007.jpg",
     "source_sha256": "653df99bbbdc2d068a30cd99a0bd87ac4817034fdddbd305aadd5aa1bad48678",
     "destination": "plains/plains_23.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/biome-production-v008.jpg",
     "source_sha256": "d556ab459d821edbabb1548b2a75f42899e37d2ecdde86fc588e041f339b8c8a",
     "destination": "plains/plains_24.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/biome-production-v009 copy.jpg",
     "source_sha256": "04f262d430372b989515eec19c95ab0e127677d8efc03e75e196dac2ba4b8d65",
     "destination": "plains/plains_25.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/biome-production-v009.jpg",
     "source_sha256": "f248eb1b8c6838964ea1418024ae4d83a765acc36a2bb7862edd42bc1df39abc",
     "destination": "plains/plains_26.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/biome-production-v010.jpg",
     "source_sha256": "200cd31c9b4316266158f56ae752dac4e761df09e203e046caac028568407acf",
     "destination": "plains/plains_27.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/diverse-v001.jpg",
     "source_sha256": "444caf35c74903b27e9b6dac6a17958df7c1dc8a7a674a643d3ba285d69be0f1",
     "destination": "plains/plains_28.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/diverse-v002.jpg",
     "source_sha256": "9d36f1ad595a577a224e63b937f66bda2ae6823efd4a4cec57ab1edba1893f2c",
     "destination": "plains/plains_29.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/diverse-v003.jpg",
     "source_sha256": "8457d0706d6107b72c167d456cb68a3b7b0f3b835a7165264a4a24ab8fddda93",
     "destination": "plains/plains_30.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/diverse-v004.jpg",
     "source_sha256": "213f615c1c5ebad9ee978a9d3fc1a85bb06adf5573cb05c26ffa4be717dc1be0",
     "destination": "plains/plains_31.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/diverse-v005.jpg",
     "source_sha256": "7b3c1bebecc877557b7fd921c31771cddd52afe3542e86c7645a9afbf920f344",
     "destination": "plains/plains_32.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/diverse-v006.jpg",
     "source_sha256": "c27fa769249129bac72b00af1e222f8f5bac6df43cc7e1521a814783fb4023a1",
     "destination": "plains/plains_33.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/diverse-v007.jpg",
     "source_sha256": "7a07c429575ffebcf0af5cca4ea3a83c9d629b211767580dc2da05ebdaff3359",
     "destination": "plains/plains_34.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/diverse-v008.jpg",
     "source_sha256": "9676454b630727c763d27ce9f68b1339dbbe48c6a91edcb89a67449d7b2100a3",
     "destination": "plains/plains_35.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/diverse-v009.jpg",
     "source_sha256": "e3c27b79d8243156251b96c89cb6a8341e3b062e4fcbb4fa7b355dbb9042a6b4",
     "destination": "plains/plains_36.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/plains/diverse-v010.jpg",
     "source_sha256": "b8d99e7a024f5b8c42a5b5efc078c6cb3ad68a21230d2f7aad12c3a0df637ef4",
     "destination": "plains/plains_37.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/biome-dark-fantasy-v001.jpg",
     "source_sha256": "559a531282247af9c474e1f75272d6580ba1527a2be20b3275c16f18b81cc88a",
     "destination": "swamp/swamp_12.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/biome-initial-v013.jpg",
     "source_sha256": "da6d1c412bc3a0eec72fbad19b1d2400e6a2f7c06a6e21bc2c668b97202a88cc",
     "destination": "swamp/swamp_13.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/biome-production-v002.jpg",
     "source_sha256": "411b054db201c57b484331942e1a5bfd9c7715415015f386e957fabc6efe6090",
     "destination": "swamp/swamp_14.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/biome-production-v003.jpg",
     "source_sha256": "8e47dab5455d2d5986e1aa15c88b9057cf36794201e070378b2a56db4597dea2",
     "destination": "swamp/swamp_15.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/biome-production-v004 copy 2.jpg",
     "source_sha256": "dc2a80e360ac19841254dc3633315258283a6a6bb4dc395fc5aff787df082b4d",
     "destination": "swamp/swamp_16.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/biome-production-v004 copy.jpg",
     "source_sha256": "28423753e3e936759030e4cb97e0c4fdc7da0fe19cda8727bebd6cef6599d9bb",
     "destination": "swamp/swamp_17.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/biome-production-v004.jpg",
     "source_sha256": "30d545994716b3d3a819c37eb613334c0912241f341a6742a3a1fd3c2a5c6327",
     "destination": "swamp/swamp_18.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/biome-production-v005.jpg",
     "source_sha256": "b82d09fe331014b4f4c3511441775c2ccae04d5159a95594f7aa3bd022783c21",
     "destination": "swamp/swamp_19.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/biome-production-v006.jpg",
     "source_sha256": "89ff66c06bfbe453739cebb31aff4ff91e4c916f9c931a1ed367f537a999b1a9",
     "destination": "swamp/swamp_20.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/biome-production-v008.jpg",
     "source_sha256": "3b3c372c136ec33b9277e7f97ef8abf2cfd0d6a42cffd67e88cca454c19a8cd8",
     "destination": "swamp/swamp_21.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/biome-production-v009.jpg",
     "source_sha256": "26846aa535438b0e68b8273db997a8372a5c3135f0b93e8480b13be3f15f4e1b",
     "destination": "swamp/swamp_22.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/biome-production-v010.jpg",
     "source_sha256": "fd44962e77117dd00efed030bb74ee783cb01c09e91ba6ba79f29db45640605e",
     "destination": "swamp/swamp_23.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/biome-variety-v001.jpg",
     "source_sha256": "1ad8e901f816dde8c8e7e575c2c63cb3a22c71b3dc9f62177dcf98ad18f631d8",
     "destination": "swamp/swamp_24.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/diverse-v001.jpg",
     "source_sha256": "e2c868585d02ec314150292eb8aeebefb0e40fac9034836eab6eb79f077c0709",
     "destination": "swamp/swamp_25.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/diverse-v002.jpg",
     "source_sha256": "b982ba7d96dff6dcc3a6575463ffab6566f83d836d21ed3ea272278d65bad3cf",
     "destination": "swamp/swamp_26.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/diverse-v003.jpg",
     "source_sha256": "10cf048b2bf5536aef04b20d955dc2d6dc00688189fb7d1fe00bb24e0238b677",
     "destination": "swamp/swamp_27.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/diverse-v004.jpg",
     "source_sha256": "d94daeb046f3c9c365223dfd6b4c1e6f661861a4a8d59adef47162dcec233659",
     "destination": "swamp/swamp_28.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/diverse-v005.jpg",
     "source_sha256": "0ca45001cfe2c858fc56f6145aeb24070fc296a81548665114974bb297eed344",
     "destination": "swamp/swamp_29.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/diverse-v006.jpg",
     "source_sha256": "66d5b0da9269bd459955749764545738406e75c8d31a53a759a99cbb6b9473e2",
     "destination": "swamp/swamp_30.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/diverse-v007.jpg",
     "source_sha256": "fa24c5712049d087f97331fe613956cb8b58e33e76fb4d1dd6827ba71245ca1a",
     "destination": "swamp/swamp_31.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/diverse-v008.jpg",
     "source_sha256": "733cffba91c9d65b9bc7df42bbe90512e8d6b19f3c96945db2d0f45a9fa66ecc",
     "destination": "swamp/swamp_32.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/diverse-v009.jpg",
     "source_sha256": "beefde60cf6ee5ca4323582ea221ca29aeaa792be874bf8b21e370aa76318ab7",
     "destination": "swamp/swamp_33.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/swamp/diverse-v010.jpg",
     "source_sha256": "8a06896951c80ae886d37d7c107f96c5fce7b377f2d5ce9c2bdd362de478ab9e",
     "destination": "swamp/swamp_34.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/biome-production-v001.jpg",
     "source_sha256": "3ee4e805e2f36fd78ce68e9c16f5c64928c75a6713b459fec568fe2bbfc0669d",
     "destination": "waste/waste_13.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/biome-production-v003.jpg",
     "source_sha256": "5cc151be2a06f0d682be457d5ed66e90cd77790faa0dfd93f4f55b43e9f03a41",
     "destination": "waste/waste_14.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/biome-production-v004 copy.jpg",
     "source_sha256": "7616a263309a952431a98c0f97991fdd388030d0da0981d5f62752f1383b4011",
     "destination": "waste/waste_15.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/biome-production-v004.jpg",
     "source_sha256": "cff249ff23266ce02b8e53c96e2fba47d1fa69181dce450ded8d00f9943aa246",
     "destination": "waste/waste_16.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/biome-production-v005 copy.jpg",
     "source_sha256": "3dc69ada6e672701e8cd38b1999fc1eead5a6dd8cff5ca933d391731dbc3d52e",
     "destination": "waste/waste_17.jpg",
-    "status": "copy"
-  },
-  {
-    "selection": "biome/waste/biome-production-v006 copy.jpg",
-    "source_sha256": "2a77300e876c20669f35e0f61f5a0e6cf938378783f19f83d28d5c110869daca",
-    "destination": "waste/waste_18.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/biome-production-v006.jpg",
     "source_sha256": "7de3d1e1a12bbbeff2117fe1cd61633503c2c54e15a77ed12cb0acf3ddabe9a4",
     "destination": "waste/waste_19.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/biome-production-v008.jpg",
     "source_sha256": "105c4710fb36c762b1980928753f03041e2e779f5c49121fd43dd55d9e79e143",
     "destination": "waste/waste_20.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/biome-production-v009.jpg",
     "source_sha256": "c85aedf7c6874ba6862421fec218450365e8c3febbd57b4faa8c90d219392cb3",
     "destination": "waste/waste_21.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/biome-production-v010.jpg",
     "source_sha256": "8f116308359b3d41367ec74d973e663e2c2647cb5ec239ea0e7d256a2a7ac9d4",
     "destination": "waste/waste_22.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/diverse-v001.jpg",
     "source_sha256": "eda3f9f32b07d54ff21dd803683603c25391f8cfe1ca1d49adc9a9cb0928af25",
     "destination": "waste/waste_23.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/diverse-v002.jpg",
     "source_sha256": "64068574fe6079b2f12ac1524abaeef73d27b122be9ea427aa23f905b092405e",
     "destination": "waste/waste_24.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/diverse-v003.jpg",
     "source_sha256": "ed1c59f62884c4700b6c9cc25ad4dc147666bf67cc5019e360b0c1a344bf5739",
     "destination": "waste/waste_25.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/diverse-v004.jpg",
     "source_sha256": "d4e0cba79902cb9e46315b6771db49ace8d9ab4bc7e389333ba25318c1dd57ff",
     "destination": "waste/waste_26.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/diverse-v005.jpg",
     "source_sha256": "56cae347ee15ceaf101424d50218b40a4b8b6829428e460c698e2dfb1f1e82c4",
     "destination": "waste/waste_27.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/diverse-v006.jpg",
     "source_sha256": "3e04e256ddac960f8c5efad5583161a4dc26c4315e201796cafb9e3aa7d96ac5",
     "destination": "waste/waste_28.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/diverse-v007.jpg",
     "source_sha256": "43b4ca8294b35ba8f24f52dfca7a39d518e831279a5568e2a69893f4d3203bf0",
     "destination": "waste/waste_29.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/diverse-v008.jpg",
     "source_sha256": "0c86e324b8b964edddd8c1402c1e3d71e774aaaf5c9bbbf116432c30a342bfeb",
     "destination": "waste/waste_30.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "biome/waste/diverse-v009.jpg",
     "source_sha256": "62c7a902ecd0b5f36c97680d19ad699c45aef83d03c3f700b320ad2b3a660c76",
     "destination": "waste/waste_31.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "biome/waste/diverse-v010.jpg",
-    "source_sha256": "e77e50e1ec83c5fb3145cf950d676f5daad55290728823bb2694eeaffed227b0",
-    "destination": "waste/waste_32.jpg",
-    "status": "copy"
-  },
-  {
-    "selection": "boss/akroma/previous-v002.jpg",
-    "source_sha256": "13d0530bd196ed71a668bd604971bb3abaf6c911168dce7146cf0bd6b250fbc7",
-    "destination": "enemy/akroma/akroma_01.jpg",
-    "status": "copy"
+    "selection": "boss/akroma/lore-v2-v002.jpg",
+    "source_sha256": "933ac1c1c66774a7ef289ff63e3e2ff377cd36ecec58f609211122a93cf41efe",
+    "destination": "enemy/akroma/akroma_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "boss/baron-von-gant/diverse-v005.jpg",
     "source_sha256": "a67559a46a3d507718541352256a976fb532a993176d42e05e09cecade183e0c",
     "destination": "enemy/baron-von-gant/baron_von_gant_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "boss/bazaar-keeper/diverse-v005.jpg",
-    "source_sha256": "40a86be8f8e90970b6d4fa3cba223ed96863033eb103f7d8c2a96aa25f99f573",
-    "destination": "enemy/bazaar-keeper/bazaar_keeper_01.jpg",
-    "status": "copy"
+    "selection": "boss/bazaar-keeper/lore-v2-v001.jpg",
+    "source_sha256": "9172a9a065579f7476bdc89036fdc1ebd72df0446648073ade64d2542ad09ecc",
+    "destination": "enemy/bazaar-keeper/bazaar_keeper_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "boss/gaea-the-worldsoul/diverse-v002.jpg",
     "source_sha256": "b713fdbd24b819a5175b39dec496632767b82105036853b6097d8869dd342144",
     "destination": "enemy/gaea-the-worldsoul/gaea_the_worldsoul_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "boss/jaya-ballard/diverse-v001.jpg",
     "source_sha256": "c9e5deb2172d6724f1c3e844e7650c2a86e72debba596c321320babb50548f61",
     "destination": "enemy/jaya-ballard/jaya_ballard_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "boss/karona-false-god/diverse-v003.jpg",
-    "source_sha256": "a4c1679c69c88fff78d754e9aa83a6de7c141b89c8bb2f134a89ca011b6a289a",
-    "destination": "enemy/karona/karona_01.jpg",
-    "status": "copy"
+    "selection": "boss/karona-false-god/lore-v2-v001.jpg",
+    "source_sha256": "7c54fd2a797c30db767aa95dd3c8631f98eed784878f15e71c15e6ac1c1eace4",
+    "destination": "enemy/karona/karona_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "boss/leviathan/previous-v001.jpg",
-    "source_sha256": "ef92d47fe246b5543c8a52f576b0651983ca7c79e105cb2e81fd98da1bbf0e25",
-    "destination": "enemy/lorthos/lorthos_01.jpg",
-    "status": "copy"
+    "selection": "boss/leviathan/lore-v2-v003.jpg",
+    "source_sha256": "8e36648e47f284f5bb8c396c2ae44713cf4357ec25c3171829419517600559c6",
+    "destination": "enemy/lorthos/lorthos_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "boss/lord-of-the-pit/diverse-v004.jpg",
     "source_sha256": "b4d5dde47789281d49c15fafc95f42229db328258b7055e062a33f1c80ea1048",
     "destination": "enemy/griselbrand/griselbrand_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "boss/queen-of-beasts/diverse-v003.jpg",
     "source_sha256": "322fcaf7dc61cb39299bb7c3fdce195544f668412af28f7af52eff79fd2017dc",
     "destination": "enemy/ghalta/ghalta_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "boss/rorix-bladewing/diverse-v001.jpg",
     "source_sha256": "07b72bc4cc1209003a9751fd57de8e47bb7ad51b048a3885859846226e0834a4",
     "destination": "enemy/lathliss/lathliss_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "boss/serra-the-benevolent/diverse-v002.jpg",
-    "source_sha256": "7bdf9ba3118d7756f970651b1ad62726ebb11cd2638a6689458613ba3e997f49",
-    "destination": "enemy/serra-the-benevolent/serra_the_benevolent_01.jpg",
-    "status": "copy"
+    "selection": "boss/serra-the-benevolent/lore-v2-v002.jpg",
+    "source_sha256": "1d34bd4878558350f7b8607d0d4d2a44bb5750bca58f41e81352cd201a40ad22",
+    "destination": "enemy/serra-the-benevolent/serra_the_benevolent_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "boss/urza-planeswalker/diverse-v005.jpg",
     "source_sha256": "2929be902fdc71434f4fe3c953d6cb17cc08c4200850a12c7b8589a53801d14f",
     "destination": "enemy/urza-planeswalker/urza_planeswalker_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "boss/yawgmoth/diverse-v004.jpg",
-    "source_sha256": "b4fa7fc2bac2c7fd43d43a3043cf1fdf3fadcb3d121a66cc07c435f342f6ce3f",
-    "destination": "enemy/yawgmoth/yawgmoth_01.jpg",
-    "status": "copy"
+    "selection": "boss/yawgmoth/lore-v2-v002.jpg",
+    "source_sha256": "ff9ad7ae0858cc374edc21a581d3f788e87127abc2aeeff5431512bef8790973",
+    "destination": "enemy/yawgmoth/yawgmoth_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/arcades-sabboth/diverse-v002.jpg",
-    "source_sha256": "fcb4a6eab3e9466419ace254fd6c71bffe3c0d27f9d5222de9d2bba989450be3",
-    "destination": "enemy/arcades-sabboth/arcades_sabboth_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/arcades-sabboth/lore-v2-v001.jpg",
+    "source_sha256": "cedeb52fb8589eacb07d94a68f65539aed666755c4aaed92f58bd00682e85185",
+    "destination": "enemy/arcades-sabboth/arcades_sabboth_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/arcanis-the-omnipotent/diverse-v003.jpg",
-    "source_sha256": "cf48f000f6464286858bcbf622c6a01a2382052b2568dffc46ab95ce9babb37c",
-    "destination": "enemy/jace/jace_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/arcanis-the-omnipotent/lore-v2-v001.jpg",
+    "source_sha256": "daa63970f0cc967e646b4322a0c8de58ece8242c991149682e78e8fdf03f5d1c",
+    "destination": "enemy/jace/jace_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/archangel-radiant/previous-v003.jpg",
-    "source_sha256": "18f60629a59bfe41bf04315ce6486b06d25b0d85cdc6b7a1713fadefbebf5ab6",
-    "destination": "enemy/archangel-radiant/archangel_radiant_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/archangel-radiant/lore-v2-v002.jpg",
+    "source_sha256": "fd6ed0d18d35a3dff2feac98b0939a69cc982ee5d174d85184514a24382e7248",
+    "destination": "enemy/archangel-radiant/archangel_radiant_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/arzakon-shandalar-s-doom/diverse-v001.jpg",
-    "source_sha256": "9d5a7126d724462ab2a9eeec02c9b667125054e7130c2289d9089dea558f5ced",
-    "destination": "enemy/arzakon-shandalars-doom/arzakon_shandalars_doom_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/arzakon-shandalar-s-doom/lore-v2-v003.jpg",
+    "source_sha256": "f490fc3445fe084c0d4186f4334ecf584fd228137d8c87a0fa0d8f0498ff8240",
+    "destination": "enemy/arzakon-shandalars-doom/arzakon_shandalars_doom_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/ashnod/diverse-v003.jpg",
     "source_sha256": "0bc88a3c100f5d9803a5d4e3b22e4c778c4a6b3b88439127b9e872df850afe1f",
     "destination": "enemy/ashnod/ashnod_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/baron-levilain/diverse-v002.jpg",
-    "source_sha256": "429664a7bbfa2a8642b4fd5c2c74f89483d0628115567b9dfe95bb017f0f1405",
-    "destination": "enemy/baron-levilain/baron_levilain_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/baron-levilain/lore-v2-v001.jpg",
+    "source_sha256": "7d905200b2d2aa4fa7cbcb63e4c990899e6096d90da80063ad6c6d19b158c44d",
+    "destination": "enemy/baron-levilain/baron_levilain_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/baron-sengir/previous-v001.jpg",
-    "source_sha256": "6e23da1823c58cb6d64945411685a7873dcbcb0d33fdfb52f51cc07f6593dbd1",
-    "destination": "enemy/sorin/sorin_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/baron-sengir/lore-v2-v003.jpg",
+    "source_sha256": "09a2c5fcfdc62435787be7af2d3a0241a85436902df6f84e83c250a8dba2e870",
+    "destination": "enemy/sorin/sorin_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/barrin/diverse-v001.jpg",
     "source_sha256": "1c6de7df8e208ac60f33af235407e89528886c7618348095f24d73a5a929f3a0",
     "destination": "enemy/barrin/barrin_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/cateran-overlord/diverse-v002.jpg",
-    "source_sha256": "9327c4c941067af1f190f2e23f49e2406b497a1b7ff0bb0f6068fe179139a7a7",
-    "destination": "enemy/cateran-overlord/cateran_overlord_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/cateran-overlord/lore-v2-v003.jpg",
+    "source_sha256": "8d3a7d379d58000de938d193a6db49491115b90f9e984d667cc87c5f10addfbe",
+    "destination": "enemy/cateran-overlord/cateran_overlord_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/chainer-dementia-master/previous-v001.jpg",
-    "source_sha256": "2b11f96f294dc53bb55990bc9d99fe0b86f38c0e758f0b786bd747a9cca6e051",
-    "destination": "enemy/chainer-dementia-master/chainer_dementia_master_01.jpg",
-    "status": "copy"
+    "source_sha256": "b90789a03b1ddfca7f701146eaeec26c8832832d7efbd21865451cb31fd5285e",
+    "destination": "enemy/chainer-dementia-master/chainer_dementia_master_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/chandler/diverse-v003.jpg",
-    "source_sha256": "9f8dd428a4eacb736abfd8cd6270cc966b2f53a1578c1d7a0bd679d85389b0ee",
-    "destination": "enemy/chandler/chandler_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/chandler/lore-v2-v003.jpg",
+    "source_sha256": "3f25084021c4512329cb62c80bb39227a2bcb25af7caf7a8312ae3ae51d34051",
+    "destination": "enemy/chandler/chandler_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/chromium/diverse-v003.jpg",
-    "source_sha256": "e6703f8a783372be9ad6454fdad213d8b5a5ae8b23fd3b2e1b6b306e3ef319cb",
-    "destination": "enemy/chromium/chromium_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/chromium/lore-v2-v002.jpg",
+    "source_sha256": "1bb2bfbacde5c36c42f8c378a504b281903b2c373497ada5df716135088beba7",
+    "destination": "enemy/chromium/chromium_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/colossus-of-sardia/diverse-v002.jpg",
-    "source_sha256": "a92f331e148e3eddcd2ec2f5328c6a8368e4db5cbc575cb6031d577e89af45a9",
-    "destination": "enemy/myr-superion/myr_superion_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/colossus-of-sardia/lore-v2-v002.jpg",
+    "source_sha256": "d3c824d53f66eb0df1ca19bcaebd0fd77aa6727a5b9a355b67b9c868af159ea5",
+    "destination": "enemy/myr-superion/myr_superion_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/copper-host-brutalizer/diverse-v002.jpg",
-    "source_sha256": "24e72dfe8f2ae58ddc4e87748d83e49b0e0f5abb92cd3946ae5a1657663ab703",
-    "destination": "enemy/copper-host-brutalizer/copper_host_brutalizer_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/copper-host-brutalizer/lore-v2-v002.jpg",
+    "source_sha256": "2226477a7116f8e9cbe39c034116e16c808c8ba47ad3e478c2546090019f63e0",
+    "destination": "enemy/copper-host-brutalizer/copper_host_brutalizer_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/crystalline-sliver/previous-v001.jpg",
-    "source_sha256": "7b499c0f85877b66f0f8efb57373e3013d678985a647a2ffe17aaebb4a005861",
-    "destination": "enemy/metallic-sliver/metallic_sliver_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/crystalline-sliver/lore-v2-v002.jpg",
+    "source_sha256": "0bb9b4213c1198f8fe0938b4f7ec4ac67218e3695e95fa2d2089b09becb38a48",
+    "destination": "enemy/metallic-sliver/metallic_sliver_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/dark-ages-preacher/diverse-v001.jpg",
-    "source_sha256": "f2be0abdcd0d3a6942fec04a11a8bed8aa52bfeec58cb0b7abba7712fa174807",
-    "destination": "enemy/dark-ages-preacher/dark_ages_preacher_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/dark-ages-preacher/lore-v2-v002.jpg",
+    "source_sha256": "76db1881638431fed27905209f05614d0146e1702a9fdcdabfe7e0c5b279a64f",
+    "destination": "enemy/dark-ages-preacher/dark_ages_preacher_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/dross-grimnarch/diverse-v003.jpg",
-    "source_sha256": "f0f4746f213eaf3e5880bb672f520f4dacbfd9defc46d4856ba02f5155a165ff",
-    "destination": "enemy/dross-grimnarch/dross_grimnarch_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/dross-grimnarch/lore-v2-v001.jpg",
+    "source_sha256": "ef58b6e02cedc3c9d67426f2fce0ee9a24e0a3c5029669c0af41d9406838d874",
+    "destination": "enemy/dross-grimnarch/dross_grimnarch_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/elf-queen-guay/diverse-v001.jpg",
     "source_sha256": "f5d4c32318a4490d05e4f73bb94e86a1e467ba16ddb0c45e7392ad14d63b9140",
     "destination": "enemy/elf-queen-guay/elf_queen_guay_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/empress-galina/previous-v001.jpg",
-    "source_sha256": "942a0368f71c4731203f5667afcb178e57cd0e8ee71d5456e7be8aa00f57829b",
-    "destination": "enemy/kiora/kiora_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/empress-galina/lore-v2-v001.jpg",
+    "source_sha256": "141611d22bb9fe5dd006821e0c74541550cf2f63de5dfec635ddcab158f0c2d8",
+    "destination": "enemy/kiora/kiora_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/eron-the-relentless/diverse-v003.jpg",
-    "source_sha256": "a5bdbbddcb0bddf75103331a100e50fc22bf532d3e1c12a8ade9c1925ebee27b",
-    "destination": "enemy/eron-the-relentless/eron_the_relentless_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/eron-the-relentless/lore-v2-v001.jpg",
+    "source_sha256": "230ca176111a5d33d39fb6c9b1c5129233e63945ed87988141b45c509313d5a4",
+    "destination": "enemy/eron-the-relentless/eron_the_relentless_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/furnace-tormentor/diverse-v003.jpg",
     "source_sha256": "f7ce2f1e4b2c9b3a9edd31e06cd96c45f3a90b703693d0ca220e8ed60be0dbd8",
     "destination": "enemy/furnace-tormentor/furnace_tormentor_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "miniboss/gargantuan-gorilla/diverse-v002.jpg",
     "source_sha256": "50c22c92fab0bc9aaa6cd6e6a2fb89d87c7d67db34aa079d14c6868a76b51ef5",
     "destination": "enemy/kogla/kogla_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "miniboss/gitaxian-scientist/previous-v002.jpg",
     "source_sha256": "3b0ed99b9265c462e6862b4ea557998ba663289460d6373694450fdeac0fdc87",
     "destination": "enemy/gitaxian-scientist/gitaxian_scientist_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/gix/previous-v002.jpg",
-    "source_sha256": "de92a13c24048c140fd1049f501387543c104e47c8c957ff12ba3881cf01a76d",
-    "destination": "enemy/gix/gix_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/gix/lore-v2-v002.jpg",
+    "source_sha256": "79e18477249c0991935431943ddfb933c311179f845f9a6ac4b7bae0d01016c0",
+    "destination": "enemy/gix/gix_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/goblin-king-phil/diverse-v003.jpg",
     "source_sha256": "ab26e764a4319d7a7f78807a1ffcf0a01fd2e6a081c4e04d2735403db9861614",
     "destination": "enemy/goblin-king-phil/goblin_king_phil_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "miniboss/hazduhr-the-abbot/diverse-v002.jpg",
     "source_sha256": "4b6c67876f2436335137065ecffbdeba41ff3913b102dcd50e121ce85c8f7442",
     "destination": "enemy/hazduhr-the-abbot/hazduhr_the_abbot_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/hibernation-sliver/previous-v001.jpg",
-    "source_sha256": "e2fe66815515eaf9ad63a9a7a614e5a8847b838dc6f7761aecf9dd24db36929f",
-    "destination": "enemy/recruiter-sliver/recruiter_sliver_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/hibernation-sliver/lore-v2-v001.jpg",
+    "source_sha256": "11c7c44419eb2e9a7447c9ce7d48801b78f3fb82835b31f9442904df765bdb31",
+    "destination": "enemy/recruiter-sliver/recruiter_sliver_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/hidden-wumpus/previous-v002.jpg",
-    "source_sha256": "7fbf9756e4f0a8692df088fe3d1fd0ee7515ef5f63ec68ef032d0ca27bb091f8",
-    "destination": "enemy/gorilla-chief/gorilla_chief_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/hidden-wumpus/lore-v2-v001.jpg",
+    "source_sha256": "5afe71d504c6a922304f09704b2db997c6c06da894b56aea4925966313df088b",
+    "destination": "enemy/gorilla-chief/gorilla_chief_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/homelands-chef/previous-v002.jpg",
-    "source_sha256": "58d61b176df812ab6818f559b4f62792822120fa36ba7f13df6168d992ce5da1",
-    "destination": "enemy/the-cheff/the_cheff_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/homelands-chef/lore-v2-v003.jpg",
+    "source_sha256": "9da497eb3e0bb186f15fec5820e46f26f7d54f6dd28e75c3c9ecdcd176cec38f",
+    "destination": "enemy/the-cheff/the_cheff_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/jeska-warrior-adept/diverse-v001.jpg",
-    "source_sha256": "66b1831840030e785f8e382268ba0a0543fdfd747b99e61db71d7a1362928aeb",
-    "destination": "enemy/jeska-warrior-adept/jeska_warrior_adept_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/jeska-warrior-adept/lore-v2-v001.jpg",
+    "source_sha256": "ed8d3a9dcb887cb76059c723519d066de3404745a91dcf32f90d1afb4e1e2b23",
+    "destination": "enemy/jeska-warrior-adept/jeska_warrior_adept_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/jolrael-empress-of-beasts/previous-v003.jpg",
-    "source_sha256": "6d83dbb0708361f890427cf6f70d173ca86a52cbf0c8ec6610dd5b29c3ee29c0",
-    "destination": "enemy/jolrael-empress-of-beasts/jolrael_empress_of_beasts_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/jolrael-empress-of-beasts/lore-v2-v003.jpg",
+    "source_sha256": "b8f0763ac5ced4c59e37e6c5598c8fb3da1eb954c8f0e316451114a8dcb853a4",
+    "destination": "enemy/jolrael-empress-of-beasts/jolrael_empress_of_beasts_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/joven/diverse-v003.jpg",
-    "source_sha256": "aeb6e64e8dee8cbf6a6b460e3e9bcf9c1324da2caa73ad824166f215172ad0b0",
-    "destination": "enemy/joven/joven_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/joven/lore-v2-v001.jpg",
+    "source_sha256": "1ae5f22b711eb0a2e86c8196d10936ea9ffbbf68eee639cb774ceef95b91053d",
+    "destination": "enemy/joven/joven_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/kamahl-fist-of-krosa/diverse-v001.jpg",
-    "source_sha256": "77de3fd2be15643ef384a2f82b2fc16679d905e79f376ad5570f90b24db3a81b",
-    "destination": "enemy/garruk/garruk_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/kamahl-fist-of-krosa/lore-v2-v003.jpg",
+    "source_sha256": "0acc148f08b39c39a7fc4f139398d3cf7d4e8e2320d362a2c5cec78a4c6e067f",
+    "destination": "enemy/garruk/garruk_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/karn/previous-v003.jpg",
     "source_sha256": "22a3992e88fbf0dece5b90b2f7ad54934ab9d8a112ba23fe66ac4a38d2e926f9",
     "destination": "enemy/karn/karn_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "miniboss/king-kane-ferguson/previous-v001.jpg",
     "source_sha256": "aee422abda0dc238335e204a722a14d5cfa84243b2e6d5bc218792cce0d42165",
     "destination": "enemy/king-kane-ferguson/king_kane_ferguson_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "miniboss/king-rohgahh/previous-v001.jpg",
     "source_sha256": "957fa03963396648b3bf23ce16cdfe3192245a49fd8f1f2c76447460223cc154",
     "destination": "enemy/king-rohgahh/king_rohgahh_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "miniboss/knight-of-shadow/diverse-v002.jpg",
     "source_sha256": "6214d3f652f5e39a9724254cb710307f91c9d21366a0ff83866b8ceff0fb6548",
     "destination": "enemy/unholy-knight/unholy_knight_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/latulla-keldon-overseer/diverse-v002.jpg",
-    "source_sha256": "3d5f5b8d5d3cfb8d843104b8bd291e80245104672985ce77bf5e13e50809360e",
-    "destination": "enemy/latulla-keldon-overseer/latulla_keldon_overseer_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/latulla-keldon-overseer/lore-v2-v001.jpg",
+    "source_sha256": "dec6ce274f856685daa14cb58ed1f8a4fe31c1f7231a649117b39d8d146b3136",
+    "destination": "enemy/latulla-keldon-overseer/latulla_keldon_overseer_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/lin-sivvi-defiant-hero/diverse-v001.jpg",
-    "source_sha256": "17bf551d59a593bb61473f14bf566c2f8b8204833ec064c59a6ed6c3fd20223b",
-    "destination": "enemy/nahiri/nahiri_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/lin-sivvi-defiant-hero/lore-v2-v001.jpg",
+    "source_sha256": "63d9a971698c51436001fc92c26f5fb292770a198a7a7f50e1e84cb320bf75c4",
+    "destination": "enemy/nahiri/nahiri_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/marton-stromgald/diverse-v001.jpg",
     "source_sha256": "a1440851770ea05385e15077ba81ca5f3776fa9e392b006c48de563ecdf821aa",
     "destination": "enemy/marton-stromgald/marton_stromgald_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "miniboss/mighty-djinn/previous-v002.jpg",
     "source_sha256": "b4b5dd54043f4889a8e7a18388b40e77dbb85c2a08beaff8318c76a7bf9dd11d",
     "destination": "enemy/mighty-djinn/mighty_djinn_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/mishra/previous-v003.jpg",
-    "source_sha256": "76e120d063ef1bfa15a61a21b858226c90e692535f592343e694fbadbf47946f",
-    "destination": "enemy/mishra/mishra_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/mishra/lore-v2-v003.jpg",
+    "source_sha256": "2cf1acd36de54272c4851c6d23b169490343d1a03ab57d8e15c1d22f9f354daf",
+    "destination": "enemy/mishra/mishra_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/multani/diverse-v001.jpg",
-    "source_sha256": "8809ed89b7733906f07c529361dd7f6a5c2a28b537cb8602e6542d28c600ceab",
-    "destination": "enemy/multani/multani_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/multani/lore-v2-v001.jpg",
+    "source_sha256": "bbc8b7733e88571203567c708c05c1bb789a1f42fca98238705c95fe4260272e",
+    "destination": "enemy/multani/multani_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/nicol-bolas/diverse-v003.jpg",
-    "source_sha256": "a8e34bab6448009346ab46e35c60e9563272a09036409131317dc67b03e3e982",
-    "destination": "enemy/nicol-bolas/nicol_bolas_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/nicol-bolas/lore-v2-v002.jpg",
+    "source_sha256": "68992596234737c71794d92bb02fdacaf41d416be24c7b12d4cbae734b92278c",
+    "destination": "enemy/nicol-bolas/nicol_bolas_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/orthodoxy-angel/previous-v003.jpg",
     "source_sha256": "28e1d6e72589e27dc6a4cae9e11037f0af9b264ffc72a0506a2fa44a118c8eca",
     "destination": "enemy/orthodoxy-angel/orthodoxy_angel_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "miniboss/palladia-mors/diverse-v003.jpg",
     "source_sha256": "0fb2baa3292b8a43f5ef5eab559b5e1ba050e238ded80eeb1532ab1f246680c3",
     "destination": "enemy/palladia-mors/palladia_mors_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "miniboss/pharaoh/diverse-v001.jpg",
     "source_sha256": "e6dc4ca18395f737f28d0052aaa0c928fabc92820d691c12c31e82e7e8339561",
     "destination": "enemy/pharaoh/pharaoh_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "miniboss/portal-master/diverse-v003.jpg",
     "source_sha256": "debba3cfeedd27978dd50f9ae6ce048d54d314aec71f7319ae959ab6c38e6eff",
     "destination": "enemy/zedruu/zedruu_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "miniboss/rayne-academy-chancellor/diverse-v003.jpg",
     "source_sha256": "decb67dce9aa79452e996f50c97acd52ff6dd8ac8b351150bf3fc662abb4c17f",
     "destination": "enemy/rayne-academy-chancellor/rayne_academy_chancellor_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/recaller-of-ancestry/diverse-v002.jpg",
-    "source_sha256": "f8a0e20b6afe23787a3df99b6a185a8df69dc97aaecedc5f73b7060d29a68f7c",
-    "destination": "enemy/recaller-of-ancestry/recaller_of_ancestry_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/recaller-of-ancestry/lore-v2-v003.jpg",
+    "source_sha256": "c3c4e50664697e6a3fa8b18d4cdf4bbdb66ff6af08ccb378b93d7ce8f7ed7438",
+    "destination": "enemy/recaller-of-ancestry/recaller_of_ancestry_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/reya-dawnbringer/previous-v001.jpg",
     "source_sha256": "769db163a13c0ed73a27229ca768aa7c885588560473543a9fcfb4ad838f59d8",
     "destination": "enemy/reya-dawnbringer/reya_dawnbringer_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "miniboss/rofellos/previous-v002.jpg",
     "source_sha256": "8d2ba7b3bb50e517bf82feb0ce4dd7679ec9f4449c9f942546afcd02b1b79c54",
     "destination": "enemy/rofellos/rofellos_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "miniboss/scarecrow-captain/previous-v003.jpg",
     "source_sha256": "ed8b6fd4795178c499058672fd83c6b82fe0e5ff616d1441124ff14ae21e4704",
     "destination": "enemy/scarecrow-captain/scarecrow_captain_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/selenia-dark-angel/diverse-v002.jpg",
-    "source_sha256": "431f221f77f08e667cb96bedd993f8887fdf745156a6977cfc73834bb4a963e9",
-    "destination": "enemy/selenia-dark-angel/selenia_dark_angel_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/selenia-dark-angel/lore-v2-v003.jpg",
+    "source_sha256": "3c1762bb972a09cfdc702b3599badc362cee344e0423432076eae248499b62b0",
+    "destination": "enemy/selenia-dark-angel/selenia_dark_angel_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/sliver-queen/diverse-v001.jpg",
-    "source_sha256": "4c9c4f7fbaebefba9cb618055730ddb8c86c1850583e9d3dee9c892ea5571096",
-    "destination": "enemy/sliver-queen/sliver_queen_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/sliver-queen/lore-v2-v002.jpg",
+    "source_sha256": "3400b9f09dd8713a9debe2b87ffa463d37046e027f6a507592a45a243a8b60b1",
+    "destination": "enemy/sliver-queen/sliver_queen_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/snow-wizard/diverse-v002.jpg",
     "source_sha256": "9296c055a32cb1c0ac5ef13c3b6831a2a0e38defaf33de503d653dd7ac4de1a5",
     "destination": "enemy/snow-wizard/snow_wizard_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/sorceress-queen-kaja/diverse-v002.jpg",
-    "source_sha256": "0697d0115589425e45c87f9350a8adac7b3cda268f0d63584ccb103f35379676",
-    "destination": "enemy/sorceress-queen-kaja/sorceress_queen_kaja_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/sorceress-queen-kaja/lore-v2-v002.jpg",
+    "source_sha256": "f20264180834a7032f9883e961aa81cae8a55e20b81f47be898dfe27712b732e",
+    "destination": "enemy/sorceress-queen-kaja/sorceress_queen_kaja_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/specter-king/diverse-v003.jpg",
     "source_sha256": "5b28eea7bb38ee9b7edee22c312aed68b7cfd8a05ac863ce8a2ad014bbda77db",
     "destination": "enemy/tibalt/tibalt_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/specter-s-horror/diverse-v003.jpg",
-    "source_sha256": "b3f12c7295d61843d99530a56656b6a51819dbeb8c55bae36701bf67663254e6",
-    "destination": "enemy/demon-of-tibalt/demon_of_tibalt_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/specter-s-horror/lore-v2-v003.jpg",
+    "source_sha256": "688e0ce8ed26d26b28df8c8a5d6ddadd34535dc1b9bd1e194d6a9940a11ee4d4",
+    "destination": "enemy/demon-of-tibalt/demon_of_tibalt_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/specter-s-torturer/previous-v002.jpg",
     "source_sha256": "eecffdf6948166cf8ada16256e500af37c0a27b6761f1b574396df9df972c618",
     "destination": "enemy/tibalts-torturer/tibalts_torturer_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "miniboss/specter-s-torturer/previous-v002.jpg",
     "source_sha256": "eecffdf6948166cf8ada16256e500af37c0a27b6761f1b574396df9df972c618",
     "destination": "enemy/torturer/torturer_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/spined-sliver/diverse-v003.jpg",
-    "source_sha256": "d0b999c38ea0667d4d83a8d88e230dd4ab2041b05e2b67695fb0500c5641eb3b",
-    "destination": "enemy/slivdrazi-experiment/slivdrazi_experiment_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/spined-sliver/lore-v2-v003.jpg",
+    "source_sha256": "2c338b3b508c40d8ac1a037612bb6e01d48a63026bffa37b138f214862f970ac",
+    "destination": "enemy/slivdrazi-experiment/slivdrazi_experiment_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/spined-sliver/diverse-v003.jpg",
-    "source_sha256": "d0b999c38ea0667d4d83a8d88e230dd4ab2041b05e2b67695fb0500c5641eb3b",
-    "destination": "enemy/slivdrazi-monstrosity/slivdrazi_monstrosity_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/spined-sliver/lore-v2-v003.jpg",
+    "source_sha256": "2c338b3b508c40d8ac1a037612bb6e01d48a63026bffa37b138f214862f970ac",
+    "destination": "enemy/slivdrazi-monstrosity/slivdrazi_monstrosity_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/squee-goblin-nabob/diverse-v001.jpg",
     "source_sha256": "482392639ef11d31735f1b0e68ef12696fb5268172ebf413a768e124228fa647",
     "destination": "enemy/slobad/slobad_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/swamp-queen-tojira/diverse-v003.jpg",
-    "source_sha256": "db0c58d17bb87d6f6f4d9ddc0f0a822f748a4bd014675d7c1836b97ad35b7cd5",
-    "destination": "enemy/swamp-queen-tojira/swamp_queen_tojira_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/swamp-queen-tojira/lore-v2-v003.jpg",
+    "source_sha256": "060c102fb125e642882b94bf6b7808943f7a98734c260917635d79f50a582a6e",
+    "destination": "enemy/swamp-queen-tojira/swamp_queen_tojira_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/tawnos/diverse-v002.jpg",
-    "source_sha256": "27143bac5f5f0076c8966ae46b2913391f934fe5ca5df8f556ca635fc96c0a0c",
-    "destination": "enemy/tawnos/tawnos_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/tawnos/lore-v2-v003.jpg",
+    "source_sha256": "397c21c8ec5880aeccc0ead1fd235b74f64ae918ccb6b65c485e477b078ff43e",
+    "destination": "enemy/tawnos/tawnos_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/teferi/diverse-v002.jpg",
     "source_sha256": "7963a27b676508215c5a4993e2e50b7d61f05d021740cb91770b01ff1a293a51",
     "destination": "enemy/teferi/teferi_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/thallid-lord/diverse-v003.jpg",
-    "source_sha256": "dfe924593c19db6993e1091df0ccb3e01ba6cd7a463b2a5cd302dfd8bceb595f",
-    "destination": "enemy/slimefoot/slimefoot_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/thallid-lord/lore-v2-v003.jpg",
+    "source_sha256": "e88fdb41a826df05f7aa7a98ee70dff4cd0d18caef33566d8239d24ece44393e",
+    "destination": "enemy/slimefoot/slimefoot_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/the-astral-visionary/previous-v003.jpg",
     "source_sha256": "408bc7df92ede54ff13ed88090ab29b1768e798cc7ee1592484618fe0bb13a27",
     "destination": "enemy/the-astral-visionary/the_astral_visionary_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "miniboss/the-dragon-lord/diverse-v001.jpg",
     "source_sha256": "84642adb435c80b1823e0cd6e9d46f9605f87c5c181d8678823e713839185b50",
     "destination": "enemy/the-dragon-lord/the_dragon_lord_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/the-grave-frog/previous-v003.jpg",
-    "source_sha256": "04113ee6d52d46abd554861bb10ce4ced0613caafda39bd313c7a54da2a9728f",
-    "destination": "enemy/grolnok/grolnok_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/the-grave-frog/lore-v2-v003.jpg",
+    "source_sha256": "6c8c69f58ac207d09efaed12ae82df9d504ec4b5f8ce24e876046a6845f6f39f",
+    "destination": "enemy/grolnok/grolnok_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/the-great-druid/previous-v001.jpg",
-    "source_sha256": "c5628eaf5a3efa33547d89ee768dbbb3535b5ad118eaf54646817b623e966c34",
-    "destination": "enemy/the-great-druid/the_great_druid_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/the-great-druid/lore-v2-v003.jpg",
+    "source_sha256": "f7b4afa870a94c6092cd09a2f628d3abab661c8b84c265e95afa467eafb0e4fd",
+    "destination": "enemy/the-great-druid/the_great_druid_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/the-hydra-of-shandalaar/previous-v001.jpg",
-    "source_sha256": "831d5b17e4fa7a7e83ad7d81fa2dad2c0e0f908429a35710289046c3577ba7aa",
-    "destination": "enemy/the-hydra-of-shandalaar/the_hydra_of_shandalaar_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/the-hydra-of-shandalaar/lore-v2-v003.jpg",
+    "source_sha256": "8a8679ee516779c7d203b6f5970974002becfed18e86a9238d00a64368cdaee7",
+    "destination": "enemy/the-hydra-of-shandalaar/the_hydra_of_shandalaar_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/the-lichlord-of-azar/previous-v002.jpg",
-    "source_sha256": "dd15275a8dec1f92d89bfa6d55a2315c9609f5e36a2c650eee7b7251fb6a3efb",
-    "destination": "enemy/the-lichlord-of-azar/the_lichlord_of_azar_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/the-lichlord-of-azar/lore-v2-v001.jpg",
+    "source_sha256": "1a2f949e63b03952075b63072f776707af623b7850b2df206986ed4edaecf40c",
+    "destination": "enemy/the-lichlord-of-azar/the_lichlord_of_azar_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/the-mother-slime/diverse-v002.jpg",
-    "source_sha256": "db23e54473604b3f3383cb08ed44000f1dc1895ec4577718457a03b11e394525",
-    "destination": "enemy/ooze-boss/ooze_boss_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/the-mother-slime/lore-v2-v003.jpg",
+    "source_sha256": "e3a6654233807fb8e15f6e04a5b6e5f90d104a0f88933f2b031578a0fa861c98",
+    "destination": "enemy/ooze-boss/ooze_boss_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/the-sainted-one/previous-v001.jpg",
-    "source_sha256": "54be3a9db0e8ae500eb9ef23e0e25b94d685f32f95c98c8d9f5b39efe9861287",
-    "destination": "enemy/the-sainted-one/the_sainted_one_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/the-sainted-one/lore-v2-v003.jpg",
+    "source_sha256": "ab0c34a3759e747d2a885b4bf39a9764b3da94dfac31f2e8673788e56443cd43",
+    "destination": "enemy/the-sainted-one/the_sainted_one_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/three-kingdoms-commander/previous-v001.jpg",
     "source_sha256": "154830f6f9b1fe0c997e933ca66fd33f5edcb444def0eb6f9bf7a1b8b9163674",
     "destination": "enemy/conjurer/conjurer_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/time-walker/diverse-v001.jpg",
-    "source_sha256": "cf25cf2362e14d924a199a5311d92997186994d5a41c06f22bf6a49884640d66",
-    "destination": "enemy/time-walker/time_walker_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/time-walker/lore-v2-v003.jpg",
+    "source_sha256": "f82e3a8944059ebf11c53ef5dd5454a8908935f16efb59b0e1b1e12579ec4e7c",
+    "destination": "enemy/time-walker/time_walker_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/tsabo-tavoc/diverse-v001.jpg",
-    "source_sha256": "de7cb2b7e63b3adcea0744fac5b0fc7a74697ff5602b8d093c8d76bfc6936660",
-    "destination": "enemy/tsabo-tavoc/tsabo_tavoc_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/tsabo-tavoc/lore-v2-v003.jpg",
+    "source_sha256": "9876988516f84dad524d029aeaed1bbc7c9a7f43d0c1b8d468dc1bfd29405c00",
+    "destination": "enemy/tsabo-tavoc/tsabo_tavoc_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/twister-of-time/previous-v003.jpg",
     "source_sha256": "91d20e807570dad2614a8629bb8ac0f828020fe1b14242a32369bb0853423dd1",
     "destination": "enemy/twister-of-time/twister_of_time_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/uncle-istvan/previous-v001.jpg",
-    "source_sha256": "ea551e01336b4fde5f1c9526db2badea785985157d141b1faa69341db1dc8e4c",
-    "destination": "enemy/uncle-istvan/uncle_istvan_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/uncle-istvan/lore-v2-v003.jpg",
+    "source_sha256": "b71c811dd5569a85919f0590bbe81c419dbf4b8d8b731b0fa82b843c57d7ea11",
+    "destination": "enemy/uncle-istvan/uncle_istvan_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/vaevictis-asmadi/diverse-v002.jpg",
-    "source_sha256": "b85c7d144be2102bf1a27784219950ebd999c41ff233bab857b72fcc332bbf0f",
-    "destination": "enemy/vaevictis-asmadi/vaevictis_asmadi_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/vaevictis-asmadi/lore-v2-v003.jpg",
+    "source_sha256": "5df9fa1d9ab6f93362fa466b93fb309ce27c9988ce6443fe6a6475a73d47686a",
+    "destination": "enemy/vaevictis-asmadi/vaevictis_asmadi_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "miniboss/valyx-the-tormentor/diverse-v001.jpg",
-    "source_sha256": "4546ebf760a532a087a38e974db4e6280c0f1f184ce9fc1aa125ba5c38fd1535",
-    "destination": "enemy/valyx-the-tormentor/valyx_the_tormentor_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/valyx-the-tormentor/lore-v2-v002.jpg",
+    "source_sha256": "d85ff6db81882b05a8eaa28f5fa22ed887f9255131742af6b880cb1e96c708a0",
+    "destination": "enemy/valyx-the-tormentor/valyx_the_tormentor_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/verdeloth-the-ancient/previous-v002.jpg",
     "source_sha256": "087c2518fe948ff41b461cd8eb8564fdf289310e7858352793ba28404203a882",
     "destination": "enemy/verdeloth-the-ancient/verdeloth_the_ancient_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "miniboss/werebear/previous-v003.jpg",
     "source_sha256": "18f31b4b253d8429649f0e6de4d0bc5783eff367e59b0faf02f58acc99ba5411",
     "destination": "enemy/werebear/werebear_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "miniboss/wounded-sliver/previous-v001.jpg",
-    "source_sha256": "50671e389f8f1928325a492f55edb5240095966ed073fa246f5cdf70f62117e9",
-    "destination": "enemy/wounded-sliver/wounded_sliver_01.jpg",
-    "status": "copy"
+    "selection": "miniboss/wounded-sliver/lore-v2-v002.jpg",
+    "source_sha256": "796d1048892a4a4292829d179590f72ba52269f0d6f683add1c50138a529b6cc",
+    "destination": "enemy/wounded-sliver/wounded_sliver_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "miniboss/xira/diverse-v003.jpg",
     "source_sha256": "4e3c5ff42f6cba0e8b3fe30461be38175be03849e48126627c56ad905056e440",
     "destination": "enemy/xira/xira_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/abandoned-factory/diverse-v001.jpg",
-    "source_sha256": "64a81f7fa70db1ff93f722a56a1343914d963981ecf63acaea4b6e69f594610c",
-    "destination": "poi/factory1/factory1_01.jpg",
-    "status": "copy"
+    "selection": "poi/abandoned-factory/lore-v2-v002.jpg",
+    "source_sha256": "a068bc988b1a5a4bdfbd32202780efefa595259949ae07baa4fc7d800ddaf96a",
+    "destination": "poi/factory1/factory1_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/aerie/diverse-v002.jpg",
-    "source_sha256": "ef483950cf6118472b3b1ade301458d22fd868dff60454a41dbcfbb0022e2e50",
-    "destination": "poi/aerie/aerie_01.jpg",
-    "status": "copy"
+    "selection": "poi/aerie/lore-v2-v002.jpg",
+    "source_sha256": "684f30517480e4fd35b7feaa6b264755d29d06a5c2ed3781195d9be0e424685e",
+    "destination": "poi/aerie/aerie_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/ancient-beast-crater/diverse-v002.jpg",
-    "source_sha256": "6e185592b533d02f8906ec80b6150639be793617c4b5bedbe9aad7ee9c0a2279",
-    "destination": "poi/grove2/grove2_01.jpg",
-    "status": "copy"
+    "selection": "poi/ancient-beast-crater/lore-v2-v001.jpg",
+    "source_sha256": "1220a079033eeceb134b19a9043dba8ba5d72a77fb1849de290554c3e88ae6a1",
+    "destination": "poi/grove2/grove2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/ancient-diamond-mine/diverse-v002.jpg",
-    "source_sha256": "2f962f82fd1df0c59981bff4893a1a7667045855f0310cca2f10b04268d90bb5",
-    "destination": "poi/ancientdiamondmine/ancientdiamondmine_01.jpg",
-    "status": "copy"
+    "selection": "poi/ancient-diamond-mine/lore-v2-v003.jpg",
+    "source_sha256": "19db11c4c3139484fd879f5c4a1c194b1b406a794bd34cfd75ba3a18f37ae6fa",
+    "destination": "poi/ancientdiamondmine/ancientdiamondmine_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/arcades-sabboth-s-lair/previous-v001.jpg",
-    "source_sha256": "edbffe93a59f26b427680b1b29895672445c73ef34a129ff57b5b924364c5e7c",
-    "destination": "poi/cavearcades/cavearcades_01.jpg",
-    "status": "copy"
+    "selection": "poi/arcades-sabboth-s-lair/lore-v2-v001.jpg",
+    "source_sha256": "37f9305d670aaa9d7417b00db56d6c964ff11f686dfe9e09b0e232a47b2eedb1",
+    "destination": "poi/cavearcades/cavearcades_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/arcanis-s-holdout/diverse-v003.jpg",
     "source_sha256": "db2e41d3b81cf672c6539f73c4698611338b8e987480a17671f5db5bb462bb8b",
     "destination": "poi/jacehold/jacehold_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
+  },
+  {
+    "selection": "poi/archaeological-dig/lore-v2-v002.jpg",
+    "source_sha256": "c6007b914061d8b9583f87346765797c619f9be5107275f397438acb34421d46",
+    "destination": "poi/quest-digsite/quest_digsite_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/archaeological-dig/previous-v001.jpg",
     "source_sha256": "348ca820af79209a0f7ae57b94f27526fb7a7d630111876df4cd53431d6ddb84",
     "destination": "poi/quest-digsite/quest_digsite_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/artificer-s-bazaar/previous-v003.jpg",
-    "source_sha256": "f2668998faaff6cf8c97443f7e72d7705fa99f135c53171ba561fa39b4da7b0a",
-    "destination": "poi/artificerbazaar/artificerbazaar_01.jpg",
-    "status": "copy"
+    "selection": "poi/artificer-s-bazaar/lore-v2-v002.jpg",
+    "source_sha256": "f0f6d6003ba3e05186831baa2dfebb993d55adccf918db7a41e480230d2849f9",
+    "destination": "poi/artificerbazaar/artificerbazaar_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/artificer-s-bazaar/previous-v003.jpg",
-    "source_sha256": "f2668998faaff6cf8c97443f7e72d7705fa99f135c53171ba561fa39b4da7b0a",
-    "destination": "poi/artificerbazaar2/artificerbazaar2_01.jpg",
-    "status": "copy"
+    "selection": "poi/artificer-s-bazaar/lore-v2-v002.jpg",
+    "source_sha256": "f0f6d6003ba3e05186831baa2dfebb993d55adccf918db7a41e480230d2849f9",
+    "destination": "poi/artificerbazaar2/artificerbazaar2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/artificer-s-bazaar/previous-v003.jpg",
-    "source_sha256": "f2668998faaff6cf8c97443f7e72d7705fa99f135c53171ba561fa39b4da7b0a",
-    "destination": "poi/artificerbazaar3/artificerbazaar3_01.jpg",
-    "status": "copy"
+    "selection": "poi/artificer-s-bazaar/lore-v2-v002.jpg",
+    "source_sha256": "f0f6d6003ba3e05186831baa2dfebb993d55adccf918db7a41e480230d2849f9",
+    "destination": "poi/artificerbazaar3/artificerbazaar3_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/arzakon-s-fortress/diverse-v003.jpg",
-    "source_sha256": "ac4ef5203d98ced29325362fb1f0e95ba6fd3600c7951013ca54c091952833cd",
-    "destination": "poi/fortmultilevel/fortmultilevel_01.jpg",
-    "status": "copy"
+    "selection": "poi/arzakon-s-fortress/lore-v2-v003.jpg",
+    "source_sha256": "00e8616c7e352ea47dfa791c27768db403794413354c382b3fef8f723b19c222",
+    "destination": "poi/fortmultilevel/fortmultilevel_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/autonomous-factory/diverse-v001.jpg",
     "source_sha256": "6c519beb47154d475e737696130ccb536f48e483e22d682d3ab4e9b609a09b68",
     "destination": "poi/factory/factory_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/baloth-nest/previous-v002.jpg",
-    "source_sha256": "31881ecd9ebfbab00578bd665537bfe0ecd56e051bcaca380cfd44de9371e9d2",
-    "destination": "poi/caveg6/caveg6_01.jpg",
-    "status": "copy"
+    "selection": "poi/baloth-nest/lore-v2-v001.jpg",
+    "source_sha256": "b82a1f2e3a7e6d39515f6587fd99ae2a48bcfa24a021e33a101a23a4fcb38255",
+    "destination": "poi/caveg6/caveg6_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/bamboo-grove/diverse-v002.jpg",
-    "source_sha256": "3d1e93e3e501779f0273f8238e8dcd668efaa9c0ba899eb54d2fcd0b278a3621",
-    "destination": "poi/grovebamboo/grovebamboo_01.jpg",
-    "status": "copy"
+    "selection": "poi/bamboo-grove/lore-v2-v002.jpg",
+    "source_sha256": "01d0e7ec646b7bfe5bc968f420bd399d83318d40a305d77fc7d4799afec2a07c",
+    "destination": "poi/grovebamboo/grovebamboo_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/bandit-camp/previous-v003.jpg",
     "source_sha256": "e7bd680cd038198058fac0700d0d6bb58faf35ff95031275875936427ab2a3b9",
     "destination": "poi/barbariancamp3/barbariancamp3_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/bandit-s-hideout/diverse-v001.jpg",
     "source_sha256": "58f4b8cb3b7663f93d6f914bf756481a8f8b8fe81cb016876341de23abb54705",
     "destination": "poi/caver9/caver9_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/bandit-s-secret-base/diverse-v001.jpg",
-    "source_sha256": "0ffa5fbb1219ba55d23482c7af9c776a180ef22f17046b24ddacb547f2c89b76",
-    "destination": "poi/cavec7/cavec7_01.jpg",
-    "status": "copy"
+    "selection": "poi/bandit-s-secret-base/lore-v2-v002.jpg",
+    "source_sha256": "d7f293d0f792d955a4f3028b4f63fec6dd5068f2e8d41eae9bc4b83fbe12d247",
+    "destination": "poi/cavec7/cavec7_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/barbarian-s-base/diverse-v001.jpg",
     "source_sha256": "06f25cac226ea8ebc25c25fe2dda181c94aa4a458b9442fb4d8cf551a901b250",
     "destination": "poi/cavere/cavere_01.jpg",
-    "status": "copy"
-  },
-  {
-    "selection": "poi/bazaar-of-wonders/diverse-v001.jpg",
-    "source_sha256": "b6a1543661d3b948d71cf1c5e33e1fa0647c555acb90012ad03ff4cc0a5a833c",
-    "destination": "poi/bazaar-of-wonders/bazaar_of_wonders_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/beastmaster-s-study/previous-v002.jpg",
     "source_sha256": "18e725f310c644377c8799079ac48a97348101d48fd0cfa2b4f4e28b0fbb16a0",
     "destination": "poi/fort9/fort9_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/black-castle/previous-v002.jpg",
     "source_sha256": "862c066527149f0b1d6fdbad34cbd7b0430469df11002d60aa0e88a9b3096561",
     "destination": "poi/black-castle/black_castle_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/black-dragon-mountain/previous-v003.jpg",
     "source_sha256": "01c34aef449629182953c795e2e376904bfebb2e95473e448f32fa213febe44d",
     "destination": "poi/evilgrove5/evilgrove5_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/black-tower/diverse-v003.jpg",
     "source_sha256": "fda0476afa8ffa446885ce3ac8248a91a468c2e1245c687d2a8eb2f443764868",
     "destination": "poi/magetowerc2/magetowerc2_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/black-tower/diverse-v003.jpg",
     "source_sha256": "fda0476afa8ffa446885ce3ac8248a91a468c2e1245c687d2a8eb2f443764868",
     "destination": "poi/magetoweru1/magetoweru1_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/blazing-peak/diverse-v003.jpg",
-    "source_sha256": "3172d3e8b6c78e49164699907137469ca6ceb94a336abe9a87b116c8e6be710f",
-    "destination": "poi/mountain-capital/mountain_capital_01.jpg",
-    "status": "copy"
+    "selection": "poi/black-tower/lore-v2-v001.jpg",
+    "source_sha256": "31ff729211acc358a1810f155ad2773da0644dab6c71c83ca31316480eba7d10",
+    "destination": "poi/magetowerc2/magetowerc2_02.jpg",
+    "status": "copy",
+    "managed": true
+  },
+  {
+    "selection": "poi/black-tower/lore-v2-v001.jpg",
+    "source_sha256": "31ff729211acc358a1810f155ad2773da0644dab6c71c83ca31316480eba7d10",
+    "destination": "poi/magetoweru1/magetoweru1_02.jpg",
+    "status": "copy",
+    "managed": true
+  },
+  {
+    "selection": "poi/black-tower/lore-v2-v003.jpg",
+    "source_sha256": "219649e63b3c5b3528c4f2a1f6af260f7f2699935cc15da5c45c8de6ab4a0bb0",
+    "destination": "poi/magetowerc2/magetowerc2_03.jpg",
+    "status": "copy",
+    "managed": true
+  },
+  {
+    "selection": "poi/black-tower/lore-v2-v003.jpg",
+    "source_sha256": "219649e63b3c5b3528c4f2a1f6af260f7f2699935cc15da5c45c8de6ab4a0bb0",
+    "destination": "poi/magetoweru1/magetoweru1_03.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/blue-castle/diverse-v003.jpg",
     "source_sha256": "69212c08390077b61d3d584dd43aa831dd6ba4ae8936d3530f5e09a74b73c74c",
     "destination": "poi/blue-castle/blue_castle_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
+  },
+  {
+    "selection": "poi/bonecursed-grave/lore-v2-v002.jpg",
+    "source_sha256": "978989e8717e6e7d0cf4379a7b9685579ebe8f6ecb4129d18563890aa64245c0",
+    "destination": "poi/caveb3/caveb3_02.jpg",
+    "status": "copy",
+    "managed": true
+  },
+  {
+    "selection": "poi/bonecursed-grave/lore-v2-v002.jpg",
+    "source_sha256": "978989e8717e6e7d0cf4379a7b9685579ebe8f6ecb4129d18563890aa64245c0",
+    "destination": "poi/cavec5/cavec5_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/bonecursed-grave/previous-v001.jpg",
     "source_sha256": "95226f47d7444d3dd19cceedb5b3a2b9a17c3775b7f622024641c291ee97b282",
     "destination": "poi/caveb3/caveb3_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/bonecursed-grave/previous-v001.jpg",
     "source_sha256": "95226f47d7444d3dd19cceedb5b3a2b9a17c3775b7f622024641c291ee97b282",
     "destination": "poi/cavec5/cavec5_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/burning-sands/previous-v001.jpg",
-    "source_sha256": "d42bf8bef354a13556a42f8f0995e51b3067b73e0a2514648a8e478bfae77b03",
-    "destination": "poi/lavaforge2/lavaforge2_01.jpg",
-    "status": "copy"
+    "selection": "poi/burning-sands/lore-v2-v001.jpg",
+    "source_sha256": "4d0c6b619d20761e6c8bca8cbb07f9ab94d0587312a9069446c34c05879dc10c",
+    "destination": "poi/lavaforge2/lavaforge2_02.jpg",
+    "status": "copy",
+    "managed": true
+  },
+  {
+    "selection": "poi/burning-sands/lore-v2-v002.jpg",
+    "source_sha256": "2d6d0da2df1006837236cf138461145bca9765be8e473e84f8d1927c27c5d848",
+    "destination": "poi/lavaforge2/lavaforge2_03.jpg",
+    "status": "copy",
+    "managed": true
+  },
+  {
+    "selection": "poi/burning-sands/lore-v2-v003.jpg",
+    "source_sha256": "aa540ae667a77e25f0078a1b93863006454d2367264d80293bc894cce3e84b53",
+    "destination": "poi/lavaforge2/lavaforge2_04.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/castle-sengir/previous-v002.jpg",
-    "source_sha256": "e7c2a47cfb4f765587b392b097ba41af86e1aa48fc90a4ca1a9d40df188fb827",
-    "destination": "poi/vampirecastle3/vampirecastle3_01.jpg",
-    "status": "copy"
+    "source_sha256": "89d753e6a8d14fb6afb2ce31a52b7d7fd3b9b990e77562080d217130343aeb8b",
+    "destination": "poi/vampirecastle3/vampirecastle3_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/cateran-castle/diverse-v001.jpg",
     "source_sha256": "e6a8b5d39bf7a6a1ebce6bda164686c264b9ec1d7b73fa0a03d308fc32574086",
     "destination": "poi/vampirecastle2/vampirecastle2_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
+  },
+  {
+    "selection": "poi/cateran-castle/lore-v2-v002.jpg",
+    "source_sha256": "11a3c3b72533c1963388fe592319a7046fd0a494dfdfb33a0a5caf097a6b9432",
+    "destination": "poi/vampirecastle2/vampirecastle2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/chainer-s-castle/diverse-v001.jpg",
     "source_sha256": "2b162d6400f6e3c47c82944cb6b06f0727e29de8e52e6ffdef66f8355af38bf5",
     "destination": "poi/vampirecastle1/vampirecastle1_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/chimera-lair/diverse-v003.jpg",
-    "source_sha256": "9d078d2a3889440b00b593b3cd5b3f83bfc5046a88e895985786224031b96af8",
-    "destination": "poi/catlairg2/catlairg2_01.jpg",
-    "status": "copy"
+    "selection": "poi/chimera-lair/lore-v2-v002.jpg",
+    "source_sha256": "936afcfae1947560c54455c8dec9915f2731fe0147011e8b7d2b50344dd1750f",
+    "destination": "poi/catlairg2/catlairg2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/chromium-s-lair/diverse-v002.jpg",
-    "source_sha256": "835f90d7cad12a10287058a1d7d1360332397fc795569ca069eaede739660d1a",
-    "destination": "poi/cavechromium/cavechromium_01.jpg",
-    "status": "copy"
+    "selection": "poi/chromium-s-lair/lore-v2-v001.jpg",
+    "source_sha256": "49650ea3c135797fc1699c81c72c3be19e34e661a966ec8d6c1392624c3462fa",
+    "destination": "poi/cavechromium/cavechromium_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/church-of-queen-kaja/diverse-v002.jpg",
-    "source_sha256": "f0fce8b191f8510b889a61353ea60c9aea0903704ee27aac5951a695cac1d87e",
-    "destination": "poi/monastery3/monastery3_01.jpg",
-    "status": "copy"
+    "selection": "poi/church-of-queen-kaja/lore-v2-v001.jpg",
+    "source_sha256": "35476b20761678422232ca4d5c0c1c91aff0857a0f57c656da510937c6b5de79",
+    "destination": "poi/monastery3/monastery3_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/cidryl-shard-mines/diverse-v001.jpg",
-    "source_sha256": "a9dd8d54866e4a8605381cc69d9dcec3abb138568629ada16521748eb977af9a",
-    "destination": "poi/quest-shardmines/quest_shardmines_01.jpg",
-    "status": "copy"
+    "selection": "poi/cidryl-shard-mines/lore-v2-v002.jpg",
+    "source_sha256": "ac61b1f24e0f3b89d8268c617cea5b4fe4ea98afabdd8f16505a14bc85443a91",
+    "destination": "poi/quest-shardmines/quest_shardmines_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/clockwork-manufactory/diverse-v002.jpg",
     "source_sha256": "0e60d23fc74a3d9cee7c79bc31bc1d16df29772ddfdd9b0db9c4bf8a7d748e38",
     "destination": "poi/fortblue3/fortblue3_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/copper-host-forest/previous-v003.jpg",
-    "source_sha256": "76e177c891935b351b9c1a3faab7a14a06e535ac3389aadf0f826689e3daf7c0",
-    "destination": "poi/copperhostforest/copperhostforest_01.jpg",
-    "status": "copy"
+    "selection": "poi/copper-host-forest/lore-v2-v003.jpg",
+    "source_sha256": "7dea5bfdaef210eacc7c155fbed7a741d7f325263235d6ac9bc90d675894f836",
+    "destination": "poi/copperhostforest/copperhostforest_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/court-of-empress-galina/diverse-v003.jpg",
     "source_sha256": "8b767dd914ea23e0d41e806ab1a89214203114c4115965ad35738d2ebe5046bc",
     "destination": "poi/kiora-island/kiora_island_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/cursed-forest/diverse-v002.jpg",
-    "source_sha256": "ff7a37066e94af72c9c052caf071e9d05f22358b0d36456026c8d4b181ed8354",
-    "destination": "poi/evilgrove3/evilgrove3_01.jpg",
-    "status": "copy"
+    "selection": "poi/court-of-empress-galina/lore-v2-v003.jpg",
+    "source_sha256": "b83a9567afe9fa6d97e1d289803880e17a1335279a3b01326599ac4c2d2ac49d",
+    "destination": "poi/kiora-island/kiora_island_02.jpg",
+    "status": "copy",
+    "managed": true
+  },
+  {
+    "selection": "poi/cursed-forest/lore-v2-v003.jpg",
+    "source_sha256": "98cb01882622617bc4d3c9f3e871035e4640e24391741f6cf864cad1d94d041c",
+    "destination": "poi/evilgrove3/evilgrove3_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/dark-ages-church/previous-v001.jpg",
     "source_sha256": "b7f24f4b9ee357f049c8affd705c907d31451856817e7487dff2d7f8ec4b52cb",
     "destination": "poi/monastery/monastery_01.jpg",
-    "status": "copy"
-  },
-  {
-    "selection": "poi/dead-man-s-rest/diverse-v003.jpg",
-    "source_sha256": "981bad1cd8979a14271fb5857a73af5204d74dccc3e67e2617718564f525fd4c",
-    "destination": "poi/swamp-capital/swamp_capital_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/deep-caverns/diverse-v003.jpg",
     "source_sha256": "167e703b19b2662c93dce0f9d9f2ce3caa925732f5f54d217f8265932dc32d58",
     "destination": "poi/caveba/caveba_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/deep-caverns/diverse-v003.jpg",
     "source_sha256": "167e703b19b2662c93dce0f9d9f2ce3caa925732f5f54d217f8265932dc32d58",
     "destination": "poi/cavecd/cavecd_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/deep-caverns/diverse-v003.jpg",
     "source_sha256": "167e703b19b2662c93dce0f9d9f2ce3caa925732f5f54d217f8265932dc32d58",
     "destination": "poi/cavegb/cavegb_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/deep-caverns/diverse-v003.jpg",
     "source_sha256": "167e703b19b2662c93dce0f9d9f2ce3caa925732f5f54d217f8265932dc32d58",
     "destination": "poi/caverj/caverj_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/demon-s-bargain/diverse-v001.jpg",
     "source_sha256": "28ef36a92b3d7de6a22e7c6b9685825b8993aaf0c58509c1c5edfdf4f3c90459",
     "destination": "poi/demonsbargain/demonsbargain_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/djinn-s-domain/previous-v003.jpg",
     "source_sha256": "db55d484b9f6a0317c6c7336548c02ed3d5ddf30b392c64b5a403c7e1749ee0e",
     "destination": "poi/caveu3/caveu3_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/djinn-s-palace/diverse-v002.jpg",
     "source_sha256": "b80d9040e2aab0879733597967c71c406a1fe3112466610931e714ef81238c97",
     "destination": "poi/djinnpalace/djinnpalace_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/djinn-s-palace/diverse-v002.jpg",
     "source_sha256": "b80d9040e2aab0879733597967c71c406a1fe3112466610931e714ef81238c97",
     "destination": "poi/djinnpalace1/djinnpalace1_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/djinn-s-tower/diverse-v003.jpg",
-    "source_sha256": "c4632583b41ebce347ff7580c4aeef275501c3d980b7843da427cb1c97a37297",
-    "destination": "poi/magetoweru/magetoweru_01.jpg",
-    "status": "copy"
+    "selection": "poi/djinn-s-tower/lore-v2-v001.jpg",
+    "source_sha256": "533ba485476869a384e721e9deae4d2c223457481fc6009bb3868e44eda65d72",
+    "destination": "poi/magetoweru/magetoweru_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/doppelganger-s-domain/diverse-v001.jpg",
     "source_sha256": "0c8793c5fde807ad29c3f5f38c1ae3e133d2133a2525e43836f089fab50d68da",
     "destination": "poi/magetowerx/magetowerx_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/draconic-lava-pools/previous-v001.jpg",
     "source_sha256": "049fed284e2d1e9c6e5aef80d23d5ab5f02cc629b4818cf8572249c15266af99",
     "destination": "poi/lavaforge-kobold/lavaforge_kobold_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/dragon-s-lair/diverse-v003.jpg",
-    "source_sha256": "299d80b8b73d39c8d2ae74c47c97d2621194eec909f7cd48d2c68e05fa249816",
-    "destination": "poi/dragonslairblack/dragonslairblack_01.jpg",
-    "status": "copy"
+    "selection": "poi/dragon-s-lair-black-dracur/lore-v2-v001.jpg",
+    "source_sha256": "fcf2871d05cb79e7d775ed6053af1412a8a23c450bfab97abfbaf9abc8f2e5a2",
+    "destination": "poi/dragonslairblack/dragonslairblack_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/dragon-s-lair/diverse-v003.jpg",
-    "source_sha256": "299d80b8b73d39c8d2ae74c47c97d2621194eec909f7cd48d2c68e05fa249816",
-    "destination": "poi/dragonslairblue/dragonslairblue_01.jpg",
-    "status": "copy"
+    "selection": "poi/dragon-s-lair-blue-whim/lore-v2-v003.jpg",
+    "source_sha256": "5ea05a1d1107db2a834a0ed4581b235596adfe4c5ec4bee7d272f184bc48f161",
+    "destination": "poi/dragonslairblue/dragonslairblue_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/dragon-s-lair/diverse-v003.jpg",
-    "source_sha256": "299d80b8b73d39c8d2ae74c47c97d2621194eec909f7cd48d2c68e05fa249816",
-    "destination": "poi/dragonslairgreen/dragonslairgreen_01.jpg",
-    "status": "copy"
+    "selection": "poi/dragon-s-lair-green-prismat/lore-v2-v001.jpg",
+    "source_sha256": "47dff7690ad747e22da105a35203c35a7831e42bd9d7745570aeb88b08aa8d2d",
+    "destination": "poi/dragonslairgreen/dragonslairgreen_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/dragon-s-lair/diverse-v003.jpg",
-    "source_sha256": "299d80b8b73d39c8d2ae74c47c97d2621194eec909f7cd48d2c68e05fa249816",
-    "destination": "poi/dragonslairred/dragonslairred_01.jpg",
-    "status": "copy"
+    "selection": "poi/dragon-s-lair-red-mandurang/lore-v2-v001.jpg",
+    "source_sha256": "f1691d71ff1fa69cd11267b11ce295b75be35f1f4b9f7653e7d3438e5e1fd65a",
+    "destination": "poi/dragonslairred/dragonslairred_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/dragon-s-lair/diverse-v003.jpg",
-    "source_sha256": "299d80b8b73d39c8d2ae74c47c97d2621194eec909f7cd48d2c68e05fa249816",
-    "destination": "poi/dragonslairwhite/dragonslairwhite_01.jpg",
-    "status": "copy"
+    "selection": "poi/dragon-s-lair-white-kiska-ra/lore-v2-v001.jpg",
+    "source_sha256": "efa7f8d8a63022674335e45ad34811e63fdb2b5134d7502a0baeffd78fd7d25b",
+    "destination": "poi/dragonslairwhite/dragonslairwhite_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/dream-halls/diverse-v002.jpg",
     "source_sha256": "290c2a2fa6d152434dfa4f8b6a6f362fbe431a6d5bf68d818ce7f3eb23ea7e8f",
     "destination": "poi/dream-halls/dream_halls_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/dross-outpost/diverse-v002.jpg",
     "source_sha256": "7ef53bbae0b3ae08218d57c7320d4c659048433a0d09b62c1733b0ac947c2432",
     "destination": "poi/drossoutpost/drossoutpost_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/druid-s-greenhouse/previous-v002.jpg",
-    "source_sha256": "67850e1aeee145bfe2766fba0982efe56c29355e0d4df2069fb1fc19d46b3632",
-    "destination": "poi/magetowerc5/magetowerc5_01.jpg",
-    "status": "copy"
+    "selection": "poi/druid-s-greenhouse/lore-v2-v002.jpg",
+    "source_sha256": "91c9852530851cfc724839af0d31b42a3a2645fc0739153a1822d84a6ea66330",
+    "destination": "poi/magetowerc5/magetowerc5_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/druid-s-greenhouse/previous-v002.jpg",
-    "source_sha256": "67850e1aeee145bfe2766fba0982efe56c29355e0d4df2069fb1fc19d46b3632",
-    "destination": "poi/magetowerg/magetowerg_01.jpg",
-    "status": "copy"
+    "selection": "poi/druid-s-greenhouse/lore-v2-v002.jpg",
+    "source_sha256": "91c9852530851cfc724839af0d31b42a3a2645fc0739153a1822d84a6ea66330",
+    "destination": "poi/magetowerg/magetowerg_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/dwarven-mines/previous-v002.jpg",
     "source_sha256": "def5c0d6c2260cf6d0f4b1063a2445e22317102e8d143f27f627c41536086e67",
     "destination": "poi/caverg/caverg_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/dwarven-mines/previous-v002.jpg",
     "source_sha256": "def5c0d6c2260cf6d0f4b1063a2445e22317102e8d143f27f627c41536086e67",
     "destination": "poi/cavew5/cavew5_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/elder-entity-s-cavern/diverse-v003.jpg",
-    "source_sha256": "0a122af00700bed46b602a8507f5085c0a58aee0018f572418d503860b74f9bf",
-    "destination": "poi/caveeldrazi/caveeldrazi_01.jpg",
-    "status": "copy"
+    "selection": "poi/elder-entity-s-cavern/lore-v2-v002.jpg",
+    "source_sha256": "b5372cf533a7f1cf5d9f0f29621ff7c051965891abc1ca59d944486bb35cc0bb",
+    "destination": "poi/caveeldrazi/caveeldrazi_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/flooded-cave/diverse-v001.jpg",
-    "source_sha256": "f0e72dba1b7f5061f61e70de033c3a50a026438612d187060c8e68e337e7efd1",
-    "destination": "poi/caveb5/caveb5_01.jpg",
-    "status": "copy"
+    "selection": "poi/flooded-cave/lore-v2-v002.jpg",
+    "source_sha256": "76691c744720c49085af7c3c901c654d2550684b697b507ef189b17bbb96b9e0",
+    "destination": "poi/caveb5/caveb5_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/flooded-cave/diverse-v001.jpg",
-    "source_sha256": "f0e72dba1b7f5061f61e70de033c3a50a026438612d187060c8e68e337e7efd1",
-    "destination": "poi/cavec8/cavec8_01.jpg",
-    "status": "copy"
+    "selection": "poi/flooded-cave/lore-v2-v002.jpg",
+    "source_sha256": "76691c744720c49085af7c3c901c654d2550684b697b507ef189b17bbb96b9e0",
+    "destination": "poi/cavec8/cavec8_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/flooded-cave/diverse-v001.jpg",
-    "source_sha256": "f0e72dba1b7f5061f61e70de033c3a50a026438612d187060c8e68e337e7efd1",
-    "destination": "poi/caveg5/caveg5_01.jpg",
-    "status": "copy"
+    "selection": "poi/flooded-cave/lore-v2-v002.jpg",
+    "source_sha256": "76691c744720c49085af7c3c901c654d2550684b697b507ef189b17bbb96b9e0",
+    "destination": "poi/caveg5/caveg5_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/flooded-cave/diverse-v001.jpg",
-    "source_sha256": "f0e72dba1b7f5061f61e70de033c3a50a026438612d187060c8e68e337e7efd1",
-    "destination": "poi/caveu1/caveu1_01.jpg",
-    "status": "copy"
+    "selection": "poi/flooded-cave/lore-v2-v002.jpg",
+    "source_sha256": "76691c744720c49085af7c3c901c654d2550684b697b507ef189b17bbb96b9e0",
+    "destination": "poi/caveu1/caveu1_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/forgotten-cave/previous-v001.jpg",
     "source_sha256": "8460e19f61a2d7d9a41b74d83a2dc5186840cd722d4907bdd8237c5c96bb728f",
     "destination": "poi/cavelarge1/cavelarge1_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/fort-of-the-sainted-one/previous-v002.jpg",
-    "source_sha256": "c0e769164270739a41018cd6efe57b697ba2fdaa2df93a0415e2c7a8f11de231",
-    "destination": "poi/castle1/castle1_01.jpg",
-    "status": "copy"
+    "selection": "poi/fort-of-the-sainted-one/lore-v2-v002.jpg",
+    "source_sha256": "c5d7e8a37f6da8a0c67f86e725b69892f19cbb5f50156d6b9c4c9d811f42b0c5",
+    "destination": "poi/castle1/castle1_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/frostbitten-cavern/previous-v003.jpg",
-    "source_sha256": "a44f3fc46a4875e3e1ebf30830d47608c1edabd6aaf808912922689e03cb1327",
-    "destination": "poi/quest-frostbittencavern/quest_frostbittencavern_01.jpg",
-    "status": "copy"
+    "selection": "poi/frostbitten-cavern/lore-v2-v003.jpg",
+    "source_sha256": "7674fd01dd48e4253c14b25ac063e2cd28ccbffbbb3bcc49774e8780779af926",
+    "destination": "poi/quest-frostbittencavern/quest_frostbittencavern_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/furnace-host-base/previous-v003.jpg",
-    "source_sha256": "cba66199993af2ea9ebd2457439426c3143f81b68cb01181bafe9188afd62b96",
-    "destination": "poi/furnacebase/furnacebase_01.jpg",
-    "status": "copy"
+    "selection": "poi/furnace-host-base/lore-v2-v002.jpg",
+    "source_sha256": "237058c14a0122cb5868211d39b3f7374998f9d514f009808f01a55695cbf8ef",
+    "destination": "poi/furnacebase/furnacebase_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/ghost-town/previous-v001.jpg",
-    "source_sha256": "030479547ebc51bac2038d0e1873fa91a42238433d9a4f3c5a68b8843674e4de",
-    "destination": "poi/quest-aportaltonowhere/quest_aportaltonowhere_01.jpg",
-    "status": "copy"
+    "selection": "poi/ghost-town/lore-v2-v003.jpg",
+    "source_sha256": "293b37e2e0443c88bf8935dc7b4d648c2c5fc87c472729a2aa9f712aab795ce6",
+    "destination": "poi/quest-aportaltonowhere/quest_aportaltonowhere_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/giant-s-grave/diverse-v001.jpg",
     "source_sha256": "ae2da59fb4474a6b5665d8c781532a48f846c409d0fd19758a6daacf796afa08",
     "destination": "poi/caveb4/caveb4_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/giant-s-grave/diverse-v001.jpg",
     "source_sha256": "ae2da59fb4474a6b5665d8c781532a48f846c409d0fd19758a6daacf796afa08",
     "destination": "poi/caver7/caver7_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/gitaxian-laboratory/previous-v001.jpg",
     "source_sha256": "0b67e2e920d2edf61ed93fa51e604eb416fd3da08319134de5e2cfb8485ef3f2",
     "destination": "poi/gitaxianlab/gitaxianlab_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/goblin-camp/diverse-v001.jpg",
-    "source_sha256": "01faacff0ec3ef893f31d7cf4134142996d22c487d0b4b793a78cbd3048e5e7d",
-    "destination": "poi/barbariancamp/barbariancamp_01.jpg",
-    "status": "copy"
+    "selection": "poi/goblin-camp/lore-v2-v001.jpg",
+    "source_sha256": "7ab555e90854a5cf9ab41e230000e25e30c8f1bf94eb59a6d1481d45f2ccd294",
+    "destination": "poi/barbariancamp/barbariancamp_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/goblin-cave/diverse-v001.jpg",
     "source_sha256": "bbb6a23d08ef1a42533a2be726c637965d64cb3b5c90a6a9d8ad653509e9d998",
     "destination": "poi/caverb/caverb_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/goblin-war-camp/previous-v001.jpg",
     "source_sha256": "40cb3cc11f4a824837e7aa9c22a4567f80ed7a2486d179c0795f708ad374e567",
     "destination": "poi/barbariancamp5/barbariancamp5_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/goblin-warrens/previous-v003.jpg",
     "source_sha256": "03e9e9601bf96ba4889d3b8a5f7f3b58142d5cb844868c45159a1a6188d88dfb",
     "destination": "poi/caveca/caveca_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/golem-maker-s-factory/diverse-v002.jpg",
     "source_sha256": "b78ea2c7728ca8b3e71d9577624337ad2c51465173b33b75d4514119e3a43926",
     "destination": "poi/factory2/factory2_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/grave-frog-bog/previous-v003.jpg",
     "source_sha256": "4d17b3d4efdc98881417c6336280e267dfca498ae0f6acbfe9f1f61d8756c65a",
     "destination": "poi/grolnoks-bog/grolnoks_bog_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/grave-of-the-lich-lord/diverse-v001.jpg",
-    "source_sha256": "4d7180ad389ec4e0bdc029c17d3678057d525b0d88c7d0fafb1ad2525cf3547a",
-    "destination": "poi/graveyard3/graveyard3_01.jpg",
-    "status": "copy"
+    "selection": "poi/grave-of-the-lich-lord/lore-v2-v003.jpg",
+    "source_sha256": "159a9f8064ebddacf74598ea706abf1dc2bdded8df1365135140e72fc3d14d83",
+    "destination": "poi/graveyard3/graveyard3_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/graveyard/previous-v002.jpg",
-    "source_sha256": "9643d245a53d87f183187e98c7e7e162b6792a1b8aa9b2bccb07d2aaaa38a995",
-    "destination": "poi/graveyard/graveyard_01.jpg",
-    "status": "copy"
+    "selection": "poi/graveyard/lore-v2-v002.jpg",
+    "source_sha256": "110b25e48665c804ae8b974cf2ed0fbe472c1f2253c795218aa256c635f09d81",
+    "destination": "poi/graveyard/graveyard_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/graveyard/previous-v002.jpg",
-    "source_sha256": "9643d245a53d87f183187e98c7e7e162b6792a1b8aa9b2bccb07d2aaaa38a995",
-    "destination": "poi/graveyard1/graveyard1_01.jpg",
-    "status": "copy"
+    "selection": "poi/graveyard/lore-v2-v002.jpg",
+    "source_sha256": "110b25e48665c804ae8b974cf2ed0fbe472c1f2253c795218aa256c635f09d81",
+    "destination": "poi/graveyard1/graveyard1_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/graveyard/previous-v002.jpg",
-    "source_sha256": "9643d245a53d87f183187e98c7e7e162b6792a1b8aa9b2bccb07d2aaaa38a995",
-    "destination": "poi/graveyard2/graveyard2_01.jpg",
-    "status": "copy"
+    "selection": "poi/graveyard/lore-v2-v002.jpg",
+    "source_sha256": "110b25e48665c804ae8b974cf2ed0fbe472c1f2253c795218aa256c635f09d81",
+    "destination": "poi/graveyard2/graveyard2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/graveyard/previous-v002.jpg",
-    "source_sha256": "9643d245a53d87f183187e98c7e7e162b6792a1b8aa9b2bccb07d2aaaa38a995",
-    "destination": "poi/graveyard4/graveyard4_01.jpg",
-    "status": "copy"
+    "selection": "poi/graveyard/lore-v2-v002.jpg",
+    "source_sha256": "110b25e48665c804ae8b974cf2ed0fbe472c1f2253c795218aa256c635f09d81",
+    "destination": "poi/graveyard4/graveyard4_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/great-druid-s-grove/diverse-v001.jpg",
-    "source_sha256": "a6918cd26d6011ff605ccbbaf0fa397890aed7c2fd948141770cd4ea1fad67ce",
-    "destination": "poi/grove8/grove8_01.jpg",
-    "status": "copy"
-  },
-  {
-    "selection": "poi/great-lighthouse/diverse-v002.jpg",
-    "source_sha256": "1d3fca21150b415bb0f4105bf8c04e74b928fad6ee340dae82f5919d7cd79262",
-    "destination": "poi/island-capital/island_capital_01.jpg",
-    "status": "copy"
+    "selection": "poi/great-druid-s-grove/lore-v2-v001.jpg",
+    "source_sha256": "94a2b66c31af9b804ee0511af8b4578151789c48744d8c4c755e0cd9bfdf0c6f",
+    "destination": "poi/grove8/grove8_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/green-castle/previous-v001.jpg",
     "source_sha256": "8a39e4472c83b23581cfd3603341acc6e2920a2086ae9be1ab484a740d9edb6d",
     "destination": "poi/green-castle/green_castle_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/griffin-s-mesa/diverse-v001.jpg",
-    "source_sha256": "c6c807b6aac571649f69b2404b1fd32a15434a2aaf56e0d14dc52610becb1b3c",
-    "destination": "poi/nestw/nestw_01.jpg",
-    "status": "copy"
+    "selection": "poi/griffin-s-mesa/lore-v2-v003.jpg",
+    "source_sha256": "4535f56a7f5066427b558c93550eacdcb9f3bc81b7f2b082a1156b01a0f111a8",
+    "destination": "poi/nestw/nestw_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/grove-of-queen-guay/diverse-v002.jpg",
-    "source_sha256": "cd68e44dfd631107cd41e1406249febcb2b13e2ccf29d2f1633e6a9b4de28f15",
-    "destination": "poi/grove4/grove4_01.jpg",
-    "status": "copy"
+    "selection": "poi/grove-of-queen-guay/lore-v2-v002.jpg",
+    "source_sha256": "953d339888becd1464e8cfe54b2af9581049ef8b9d53760f744d7623ef8c0cf9",
+    "destination": "poi/grove4/grove4_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/grove-of-the-dark-titan/previous-v003.jpg",
-    "source_sha256": "80d0d0b35874dd220c652ec9b0b4897ca4ad72751915db54896258dd0deaba57",
-    "destination": "poi/evilgrove2/evilgrove2_01.jpg",
-    "status": "copy"
+    "selection": "poi/grove-of-the-dark-titan/lore-v2-v002.jpg",
+    "source_sha256": "875cd7a8fb2e318ccb72cddc6e542b97c8154d41b7859d195b84ce69dec8c7e1",
+    "destination": "poi/evilgrove2/evilgrove2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/grove-of-the-faerie-dragon/diverse-v001.jpg",
-    "source_sha256": "a19119393c3b6c1548304d17c4746240a3334cd57e861f51acba79f8b7e8000d",
-    "destination": "poi/grovefaeriedragon/grovefaeriedragon_01.jpg",
-    "status": "copy"
+    "selection": "poi/grove-of-the-faerie-dragon/lore-v2-v002.jpg",
+    "source_sha256": "d41090b425a4104a97f85af06082fff4e6c1d613d884a4054a85bc5f9a79fb26",
+    "destination": "poi/grovefaeriedragon/grovefaeriedragon_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/grove-of-the-green-dragon/diverse-v002.jpg",
     "source_sha256": "e4ef503f3468901ecda63986dea13da756295fde4195920398668699660e4a1c",
     "destination": "poi/grovegreendragon/grovegreendragon_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/halls-of-time/previous-v002.jpg",
     "source_sha256": "3fcd955bd600d6ff802fb07bbb6d0a7807d046fb6ad47bbb02741cdf7194b709",
     "destination": "poi/crawlspace/crawlspace_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/hellhole/diverse-v001.jpg",
-    "source_sha256": "7416d184181ddb4e77f5fac12ab5d3fa2dcad015219af73183b419e775e6dcc9",
-    "destination": "poi/caveb2/caveb2_01.jpg",
-    "status": "copy"
+    "selection": "poi/hellhole/lore-v2-v003.jpg",
+    "source_sha256": "98795e7e1b58f6c97169c8a051039e297421ebc76c7d841e31a337801094cf3a",
+    "destination": "poi/caveb2/caveb2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/hellhole/diverse-v001.jpg",
-    "source_sha256": "7416d184181ddb4e77f5fac12ab5d3fa2dcad015219af73183b419e775e6dcc9",
-    "destination": "poi/cavec2/cavec2_01.jpg",
-    "status": "copy"
+    "selection": "poi/hellhole/lore-v2-v003.jpg",
+    "source_sha256": "98795e7e1b58f6c97169c8a051039e297421ebc76c7d841e31a337801094cf3a",
+    "destination": "poi/cavec2/cavec2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/hellhole/diverse-v001.jpg",
-    "source_sha256": "7416d184181ddb4e77f5fac12ab5d3fa2dcad015219af73183b419e775e6dcc9",
-    "destination": "poi/caveg2/caveg2_01.jpg",
-    "status": "copy"
+    "selection": "poi/hellhole/lore-v2-v003.jpg",
+    "source_sha256": "98795e7e1b58f6c97169c8a051039e297421ebc76c7d841e31a337801094cf3a",
+    "destination": "poi/caveg2/caveg2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/hellhole/diverse-v001.jpg",
-    "source_sha256": "7416d184181ddb4e77f5fac12ab5d3fa2dcad015219af73183b419e775e6dcc9",
-    "destination": "poi/caver3/caver3_01.jpg",
-    "status": "copy"
+    "selection": "poi/hellhole/lore-v2-v003.jpg",
+    "source_sha256": "98795e7e1b58f6c97169c8a051039e297421ebc76c7d841e31a337801094cf3a",
+    "destination": "poi/caver3/caver3_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/hibernation-den/diverse-v002.jpg",
-    "source_sha256": "98e0b8cf05cf98ff208574a66625b8a29122b59ad26d4d7f3314fb1813c861bb",
-    "destination": "poi/cavec3/cavec3_01.jpg",
-    "status": "copy"
+    "selection": "poi/hibernation-den/lore-v2-v002.jpg",
+    "source_sha256": "17916bbee3d95144d09f56308875a4ea17a77a4f21212b3798251fa2a7be9600",
+    "destination": "poi/cavec3/cavec3_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/hibernation-den/diverse-v002.jpg",
-    "source_sha256": "98e0b8cf05cf98ff208574a66625b8a29122b59ad26d4d7f3314fb1813c861bb",
-    "destination": "poi/caveg3/caveg3_01.jpg",
-    "status": "copy"
+    "selection": "poi/hibernation-den/lore-v2-v002.jpg",
+    "source_sha256": "17916bbee3d95144d09f56308875a4ea17a77a4f21212b3798251fa2a7be9600",
+    "destination": "poi/caveg3/caveg3_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/hibernation-den/diverse-v002.jpg",
-    "source_sha256": "98e0b8cf05cf98ff208574a66625b8a29122b59ad26d4d7f3314fb1813c861bb",
-    "destination": "poi/caver5/caver5_01.jpg",
-    "status": "copy"
+    "selection": "poi/hibernation-den/lore-v2-v002.jpg",
+    "source_sha256": "17916bbee3d95144d09f56308875a4ea17a77a4f21212b3798251fa2a7be9600",
+    "destination": "poi/caver5/caver5_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/hibernation-den/diverse-v002.jpg",
-    "source_sha256": "98e0b8cf05cf98ff208574a66625b8a29122b59ad26d4d7f3314fb1813c861bb",
-    "destination": "poi/cavew2/cavew2_01.jpg",
-    "status": "copy"
+    "selection": "poi/hibernation-den/lore-v2-v002.jpg",
+    "source_sha256": "17916bbee3d95144d09f56308875a4ea17a77a4f21212b3798251fa2a7be9600",
+    "destination": "poi/cavew2/cavew2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/hidden-treasure-room/diverse-v001.jpg",
     "source_sha256": "8b46130ccc37fc7642cbf7b188d3dbf62636ea123f1a46d9124b123ff7b14390",
     "destination": "poi/demontower/demontower_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/high-priest-s-church/diverse-v003.jpg",
-    "source_sha256": "14d79a69e5c000b3a0a2beb27fe93d8eaebf36bca9f19ce1ee08038871be8faf",
-    "destination": "poi/magetower7church/magetower7church_01.jpg",
-    "status": "copy"
+    "selection": "poi/high-priest-s-church/lore-v2-v003.jpg",
+    "source_sha256": "221cc0e04e9dee0590dc017a8298d4e59749797c685d025f82ab6407ffa457d1",
+    "destination": "poi/magetower7church/magetower7church_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/homarid-island/diverse-v001.jpg",
-    "source_sha256": "fef2d56cd8aa3381221ce7bca1992b7102fdf2506505bd7428772301eb735dbb",
-    "destination": "poi/merfolkpool5/merfolkpool5_01.jpg",
-    "status": "copy"
+    "selection": "poi/homarid-island/lore-v2-v001.jpg",
+    "source_sha256": "a2f110f50910a626bf955c8d4add61014c00b0acb5d8ad6c424928db41ea0132",
+    "destination": "poi/merfolkpool5/merfolkpool5_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/illusionist-s-edifice/previous-v002.jpg",
-    "source_sha256": "979bc4f2230050c06ddedf90f94763f2402a18474cf6af99292dd42aa693b79f",
-    "destination": "poi/magetowerc8/magetowerc8_01.jpg",
-    "status": "copy"
+    "selection": "poi/illusionist-s-edifice/lore-v2-v002.jpg",
+    "source_sha256": "654f69d6a9247866f3d8f2a8d12d7494ef392743958e481c5af86ba677dd7cf7",
+    "destination": "poi/magetowerc8/magetowerc8_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/illusionist-s-edifice/previous-v002.jpg",
-    "source_sha256": "979bc4f2230050c06ddedf90f94763f2402a18474cf6af99292dd42aa693b79f",
-    "destination": "poi/magetoweru7/magetoweru7_01.jpg",
-    "status": "copy"
+    "selection": "poi/illusionist-s-edifice/lore-v2-v002.jpg",
+    "source_sha256": "654f69d6a9247866f3d8f2a8d12d7494ef392743958e481c5af86ba677dd7cf7",
+    "destination": "poi/magetoweru7/magetoweru7_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/infernal-tower/diverse-v001.jpg",
-    "source_sha256": "7cb5097fbaff819c23bae4cd6c069ed7f167352fc4039c62b78a1abd0d477b4f",
-    "destination": "poi/magetowerc6/magetowerc6_01.jpg",
-    "status": "copy"
+    "selection": "poi/infernal-tower/lore-v2-v003.jpg",
+    "source_sha256": "8c14e26782eb0bb5f707d758209ba74e80e01d66e420a5d59e6722a2309dd15f",
+    "destination": "poi/magetowerc6/magetowerc6_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/infernal-tower/diverse-v001.jpg",
-    "source_sha256": "7cb5097fbaff819c23bae4cd6c069ed7f167352fc4039c62b78a1abd0d477b4f",
-    "destination": "poi/magetoweru5/magetoweru5_01.jpg",
-    "status": "copy"
+    "selection": "poi/infernal-tower/lore-v2-v003.jpg",
+    "source_sha256": "8c14e26782eb0bb5f707d758209ba74e80e01d66e420a5d59e6722a2309dd15f",
+    "destination": "poi/magetoweru5/magetoweru5_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/joven-and-chandler-s-cave/previous-v002.jpg",
-    "source_sha256": "f119ec27779a90b3cf8094b153ebaf080850aaa2a92ef591c30aecbe97cf0777",
-    "destination": "poi/quest-banditcave/quest_banditcave_01.jpg",
-    "status": "copy"
+    "selection": "poi/joven-and-chandler-s-cave/lore-v2-v002.jpg",
+    "source_sha256": "a08e23b9df0f5d8c05b8c2266666f8cbd5997a197a7daab1858af4c824fefee4",
+    "destination": "poi/quest-banditcave/quest_banditcave_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/kamahl-s-forest/previous-v002.jpg",
-    "source_sha256": "b6b5882a0a7e74e9fb524e38c98e6a891f9160796fdb14315cd6ad876134d08e",
-    "destination": "poi/garruk-forest/garruk_forest_01.jpg",
-    "status": "copy"
+    "selection": "poi/kamahl-s-forest/lore-v2-v002.jpg",
+    "source_sha256": "d18208479d329dcff3bd42eb53e252af2c749b8cad1c4a0c26af5bb71dfc5f9b",
+    "destination": "poi/garruk-forest/garruk_forest_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/kavu-lair/previous-v002.jpg",
-    "source_sha256": "5a6f4554eeeb68baa123b1bd8d9fc12fcc1cabedbe6cdc6e556310f7b784bd05",
-    "destination": "poi/caverc/caverc_01.jpg",
-    "status": "copy"
+    "selection": "poi/kavu-lair/lore-v2-v003.jpg",
+    "source_sha256": "e2277cea8c63efa10febbf8d8db3003296c93398a5b0989b948e5dc5b94c6e36",
+    "destination": "poi/caverc/caverc_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/kavu-lair/previous-v002.jpg",
-    "source_sha256": "5a6f4554eeeb68baa123b1bd8d9fc12fcc1cabedbe6cdc6e556310f7b784bd05",
-    "destination": "poi/kavu-lair/kavu_lair_01.jpg",
-    "status": "copy"
+    "selection": "poi/kavu-lair/lore-v2-v003.jpg",
+    "source_sha256": "e2277cea8c63efa10febbf8d8db3003296c93398a5b0989b948e5dc5b94c6e36",
+    "destination": "poi/kavu-lair/kavu_lair_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/king-kane-s-war-camp/previous-v003.jpg",
-    "source_sha256": "af98490da653c4869757eac9da762583e01bf3aa14632717def9acdcbab95c79",
-    "destination": "poi/korencampment/korencampment_01.jpg",
-    "status": "copy"
+    "selection": "poi/king-kane-s-war-camp/lore-v2-v003.jpg",
+    "source_sha256": "47d04b34407e6626f685a4c8deab6e68eb62e7a25f013b8909774d0d84abd3e9",
+    "destination": "poi/korencampment/korencampment_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/king-phil-s-court/diverse-v001.jpg",
-    "source_sha256": "910c64ef727e412af695bfc0e76d51fea047d8ae7d797e4cb331e4307e225721",
-    "destination": "poi/barbariancamp4/barbariancamp4_01.jpg",
-    "status": "copy"
+    "selection": "poi/king-phil-s-court/lore-v2-v001.jpg",
+    "source_sha256": "2cfc2d6e13d74a5ec35d300c65766e388eddff3f0a43285ed340950116987eb4",
+    "destination": "poi/barbariancamp4/barbariancamp4_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/kobold-camp/diverse-v003.jpg",
     "source_sha256": "7ad94e3e104233173bfc96b2c368e8194f5f46064350f4029cbc22b8495eac19",
     "destination": "poi/barbariancamp1/barbariancamp1_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/kobold-cave/previous-v003.jpg",
-    "source_sha256": "9d748edc4670c6c6474d3ed1de057ba1bcb75bad2898d5c47c26596b8919e9cf",
-    "destination": "poi/cavekobold/cavekobold_01.jpg",
-    "status": "copy"
+    "selection": "poi/kobold-cave/lore-v2-v002.jpg",
+    "source_sha256": "6c7611ed821db2bd9eb108bfc653482edb9ad5da5add3f97cb5fe43e571763a7",
+    "destination": "poi/cavekobold/cavekobold_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/lab-of-horrors/diverse-v003.jpg",
-    "source_sha256": "89f923dc7d5a2e8cf41faa7b8ea8be476e6420a6dd28c0a6f75f7e3b01abf680",
-    "destination": "poi/magetowerce/magetowerce_01.jpg",
-    "status": "copy"
+    "selection": "poi/lab-of-horrors/lore-v2-v003.jpg",
+    "source_sha256": "634289b6256c5d6b8014833fb0a270c9138c3dfe0b6b1516142841237ed343d8",
+    "destination": "poi/magetowerce/magetowerce_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/lab-of-horrors/diverse-v003.jpg",
-    "source_sha256": "89f923dc7d5a2e8cf41faa7b8ea8be476e6420a6dd28c0a6f75f7e3b01abf680",
-    "destination": "poi/magetowerud/magetowerud_01.jpg",
-    "status": "copy"
+    "selection": "poi/lab-of-horrors/lore-v2-v003.jpg",
+    "source_sha256": "634289b6256c5d6b8014833fb0a270c9138c3dfe0b6b1516142841237ed343d8",
+    "destination": "poi/magetowerud/magetowerud_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/leonin-camp/diverse-v001.jpg",
-    "source_sha256": "d907fd41e6977aec63642a5e66b08527c6a477b966bbadbd2b9c785ecb18ef35",
-    "destination": "poi/catlairg/catlairg_01.jpg",
-    "status": "copy"
+    "selection": "poi/leonin-camp/lore-v2-v001.jpg",
+    "source_sha256": "4c522a49dedc71597f876b0819bc2cca7ccc59552e4dada6a3abda2b31ebe719",
+    "destination": "poi/catlairg/catlairg_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/leonin-camp/diverse-v001.jpg",
-    "source_sha256": "d907fd41e6977aec63642a5e66b08527c6a477b966bbadbd2b9c785ecb18ef35",
-    "destination": "poi/catlairw1/catlairw1_01.jpg",
-    "status": "copy"
+    "selection": "poi/leonin-camp/lore-v2-v001.jpg",
+    "source_sha256": "4c522a49dedc71597f876b0819bc2cca7ccc59552e4dada6a3abda2b31ebe719",
+    "destination": "poi/catlairw1/catlairw1_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/leonin-sphinx/diverse-v001.jpg",
-    "source_sha256": "36d94390210068aad89f43ced0356c39450fa9ac09512d590619550c9318e758",
-    "destination": "poi/catlairw2/catlairw2_01.jpg",
-    "status": "copy"
+    "selection": "poi/leonin-sphinx/lore-v2-v002.jpg",
+    "source_sha256": "000bd26890f61b6fca701b769e3be09704be9524d13e0379864beb5f22769fb1",
+    "destination": "poi/catlairw2/catlairw2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/levilain-s-farm/diverse-v001.jpg",
     "source_sha256": "5ac8e2cea8c587d5fd361f3a31cfd82bfb68a4be157061dd998fcf28d0ab59be",
     "destination": "poi/castle3/castle3_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/lich-s-tower/previous-v001.jpg",
-    "source_sha256": "7c397dc6d00d6af7298a4ad21b95d8fcc04b38e1c9cac186475ab59ee3720241",
-    "destination": "poi/lichs-mirror/lichs_mirror_04.jpg",
-    "status": "copy"
+    "selection": "poi/lich-s-tower/lore-v2-v001.jpg",
+    "source_sha256": "d6998196d2800674b4c9edb68d112f107c8cc4ea00d031f54f87c92fe1e060d1",
+    "destination": "poi/lichs-mirror/lichs_mirror_05.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/lion-s-den/previous-v002.jpg",
-    "source_sha256": "fb53f768b647d1d6d3f0975c1a091dbe158ed18b920e60aa13886d4544c19571",
-    "destination": "poi/catlairw/catlairw_01.jpg",
-    "status": "copy"
+    "selection": "poi/lion-s-den/lore-v2-v002.jpg",
+    "source_sha256": "348bb6bf3620d99bdaa8be7277b9a5c5eec7c9246ba586e6bd2965c4639c0f1e",
+    "destination": "poi/catlairw/catlairw_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/logging-camp/diverse-v003.jpg",
-    "source_sha256": "236f1264de4219ea3648afd8982147f4d9101cd1d90054cac5c8656900f8f584",
-    "destination": "poi/fort7/fort7_01.jpg",
-    "status": "copy"
+    "selection": "poi/logging-camp/lore-v2-v001.jpg",
+    "source_sha256": "2b710c9f7ac5bec287ee467b8699afc89877cc950284615ea60ae52d58356586",
+    "destination": "poi/fort7/fort7_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/mages-fort/diverse-v002.jpg",
-    "source_sha256": "e7c25e03a8d997e83be3e4943d1c85a2388c6e2b9faa81d1e947c28f166267ae",
-    "destination": "poi/fort2/fort2_01.jpg",
-    "status": "copy"
+    "selection": "poi/mages-fort/lore-v2-v002.jpg",
+    "source_sha256": "3efd23f902a63813a739efd59f53ba545bd8faac007b3788f75885576166e58f",
+    "destination": "poi/fort2/fort2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/malicious-artificer-s-grove/diverse-v001.jpg",
     "source_sha256": "a7627acf42d6088da8c6643d68fd89b6de6c91b4332b13972659580dde1d2b57",
     "destination": "poi/evilgrove1/evilgrove1_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/massive-beasts-s-den/diverse-v001.jpg",
-    "source_sha256": "b1ab7f06a001ad34dd8f09014eb0858b46b3eabef2b807d854af4f0670454f8c",
-    "destination": "poi/cavecerodon/cavecerodon_01.jpg",
-    "status": "copy"
+    "selection": "poi/massive-beasts-s-den/lore-v2-v002.jpg",
+    "source_sha256": "30e2cf19ea60ec63e3d0261c3162910f88aefb7ad15cd14a3cba0b7214b3aa67",
+    "destination": "poi/cavecerodon/cavecerodon_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/massive-factory/diverse-v003.jpg",
-    "source_sha256": "0738126a18a4378d150f00a86a374bd7a38fa9c80276d7ab0d5a0045920353ee",
-    "destination": "poi/factory3/factory3_01.jpg",
-    "status": "copy"
+    "selection": "poi/massive-factory/lore-v2-v002.jpg",
+    "source_sha256": "5bca72fe548e8a7b787b6d33f271df279153ecc5c3e6625162500ec66a6ed619",
+    "destination": "poi/factory3/factory3_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/maze/previous-v001.jpg",
-    "source_sha256": "8c6c293927dafa794283c84257c1ca6e43acccc2e4d777410ea09041544d182b",
-    "destination": "poi/maze/maze_01.jpg",
-    "status": "copy"
+    "selection": "poi/maze/lore-v2-v003.jpg",
+    "source_sha256": "5606f4f62d5135f60f8320f2a2cf90bacba98390228d1b1f1413e2af5a6e2755",
+    "destination": "poi/maze/maze_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/maze/previous-v001.jpg",
-    "source_sha256": "8c6c293927dafa794283c84257c1ca6e43acccc2e4d777410ea09041544d182b",
-    "destination": "poi/maze1/maze1_01.jpg",
-    "status": "copy"
+    "selection": "poi/maze/lore-v2-v003.jpg",
+    "source_sha256": "5606f4f62d5135f60f8320f2a2cf90bacba98390228d1b1f1413e2af5a6e2755",
+    "destination": "poi/maze1/maze1_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/maze/previous-v001.jpg",
-    "source_sha256": "8c6c293927dafa794283c84257c1ca6e43acccc2e4d777410ea09041544d182b",
-    "destination": "poi/maze2/maze2_01.jpg",
-    "status": "copy"
+    "selection": "poi/maze/lore-v2-v003.jpg",
+    "source_sha256": "5606f4f62d5135f60f8320f2a2cf90bacba98390228d1b1f1413e2af5a6e2755",
+    "destination": "poi/maze2/maze2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/maze/previous-v001.jpg",
-    "source_sha256": "8c6c293927dafa794283c84257c1ca6e43acccc2e4d777410ea09041544d182b",
-    "destination": "poi/maze3/maze3_01.jpg",
-    "status": "copy"
+    "selection": "poi/maze/lore-v2-v003.jpg",
+    "source_sha256": "5606f4f62d5135f60f8320f2a2cf90bacba98390228d1b1f1413e2af5a6e2755",
+    "destination": "poi/maze3/maze3_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/mercenary-barracks/previous-v001.jpg",
     "source_sha256": "f49594d0e6ca4a6cd2e372b1b5f0d8c945bb4a2525a3c371b359005f824bcaa6",
     "destination": "poi/fort3/fort3_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/merfolk-pool/diverse-v001.jpg",
     "source_sha256": "e11e213206e326375153b30317b6295a9ce9527efa77fcd1440ea50db20edeb9",
     "destination": "poi/merfolkpool/merfolkpool_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/merfolk-pool/diverse-v001.jpg",
     "source_sha256": "e11e213206e326375153b30317b6295a9ce9527efa77fcd1440ea50db20edeb9",
     "destination": "poi/merfolkpool1/merfolkpool1_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/merfolk-pool/diverse-v001.jpg",
     "source_sha256": "e11e213206e326375153b30317b6295a9ce9527efa77fcd1440ea50db20edeb9",
     "destination": "poi/merfolkpool2/merfolkpool2_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/merfolk-pool/diverse-v001.jpg",
     "source_sha256": "e11e213206e326375153b30317b6295a9ce9527efa77fcd1440ea50db20edeb9",
     "destination": "poi/merfolkpool3/merfolkpool3_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/merfolk-pool/diverse-v001.jpg",
     "source_sha256": "e11e213206e326375153b30317b6295a9ce9527efa77fcd1440ea50db20edeb9",
     "destination": "poi/merfolkpool4/merfolkpool4_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
+  },
+  {
+    "selection": "poi/merfolk-pool/lore-v2-v002.jpg",
+    "source_sha256": "88b2590aea72275672b114d737d041cd6f9b52af8fbf161e4d69d20eca6af29a",
+    "destination": "poi/merfolkpool/merfolkpool_02.jpg",
+    "status": "copy",
+    "managed": true
+  },
+  {
+    "selection": "poi/merfolk-pool/lore-v2-v002.jpg",
+    "source_sha256": "88b2590aea72275672b114d737d041cd6f9b52af8fbf161e4d69d20eca6af29a",
+    "destination": "poi/merfolkpool1/merfolkpool1_02.jpg",
+    "status": "copy",
+    "managed": true
+  },
+  {
+    "selection": "poi/merfolk-pool/lore-v2-v002.jpg",
+    "source_sha256": "88b2590aea72275672b114d737d041cd6f9b52af8fbf161e4d69d20eca6af29a",
+    "destination": "poi/merfolkpool2/merfolkpool2_02.jpg",
+    "status": "copy",
+    "managed": true
+  },
+  {
+    "selection": "poi/merfolk-pool/lore-v2-v002.jpg",
+    "source_sha256": "88b2590aea72275672b114d737d041cd6f9b52af8fbf161e4d69d20eca6af29a",
+    "destination": "poi/merfolkpool3/merfolkpool3_02.jpg",
+    "status": "copy",
+    "managed": true
+  },
+  {
+    "selection": "poi/merfolk-pool/lore-v2-v002.jpg",
+    "source_sha256": "88b2590aea72275672b114d737d041cd6f9b52af8fbf161e4d69d20eca6af29a",
+    "destination": "poi/merfolkpool4/merfolkpool4_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/mind-slaver-s-fort/diverse-v003.jpg",
     "source_sha256": "8cf3d7c84efc10adbc311000c5cb9829a898297a0b289dac9a68324daa4062b5",
     "destination": "poi/fort5/fort5_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/minotaur-tunnels/previous-v003.jpg",
     "source_sha256": "40777b8162b6861ed3c065bd83727d4d673ff5ed3efce6763868824a320bff50",
     "destination": "poi/caver6/caver6_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/monastery/diverse-v002.jpg",
-    "source_sha256": "282d8ae16e56205b3a18d2566e3dc6499a3fa6a64e9453a0612e053969828d7c",
-    "destination": "poi/monastery1/monastery1_01.jpg",
-    "status": "copy"
+    "selection": "poi/monastery/lore-v2-v002.jpg",
+    "source_sha256": "d327e403018f5494c8acbe33cd81deee708d0e6acf2be7d74d1153af392dd650",
+    "destination": "poi/monastery1/monastery1_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/monastery/diverse-v002.jpg",
-    "source_sha256": "282d8ae16e56205b3a18d2566e3dc6499a3fa6a64e9453a0612e053969828d7c",
-    "destination": "poi/monastery2/monastery2_01.jpg",
-    "status": "copy"
+    "selection": "poi/monastery/lore-v2-v002.jpg",
+    "source_sha256": "d327e403018f5494c8acbe33cd81deee708d0e6acf2be7d74d1153af392dd650",
+    "destination": "poi/monastery2/monastery2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/monastery/diverse-v002.jpg",
-    "source_sha256": "282d8ae16e56205b3a18d2566e3dc6499a3fa6a64e9453a0612e053969828d7c",
-    "destination": "poi/monastery4/monastery4_01.jpg",
-    "status": "copy"
+    "selection": "poi/monastery/lore-v2-v002.jpg",
+    "source_sha256": "d327e403018f5494c8acbe33cd81deee708d0e6acf2be7d74d1153af392dd650",
+    "destination": "poi/monastery4/monastery4_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/mysterious-city/diverse-v003.jpg",
     "source_sha256": "59f07121d4fd52dabed7c688a4f61d8f48baa8c7ba13e8c631e5e7d1e517cb53",
     "destination": "poi/zedruu-city/zedruu_city_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/naktamun/previous-v001.jpg",
-    "source_sha256": "019ba5b6eaba670d26d467673239e8ded7bcf22597232ea28feabf916e1df3a0",
-    "destination": "poi/naktamun/naktamun_01.jpg",
-    "status": "copy"
+    "selection": "poi/necromancer-s-study/lore-v2-v003.jpg",
+    "source_sha256": "496a3ac9d2379aeb1d339c0d6d7dacdebb8ca85940e8c449ce5e57bfeb5d6c7e",
+    "destination": "poi/fort6/fort6_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/necromancer-s-study/previous-v001.jpg",
-    "source_sha256": "4ccc67234b32259f738ffda74ccbba281bc89f90e4fc14b4757f0cc375ba4904",
-    "destination": "poi/fort6/fort6_01.jpg",
-    "status": "copy"
-  },
-  {
-    "selection": "poi/neverglades-national-park/previous-v002.jpg",
-    "source_sha256": "326e9417efc7a4e31bda25616315778cd59c43bec47003ad37141975af30a1e5",
-    "destination": "poi/evilgrove4/evilgrove4_01.jpg",
-    "status": "copy"
-  },
-  {
-    "selection": "poi/new-avalon/previous-v003.jpg",
-    "source_sha256": "e28c201a88db3269b453dddd9950f6e2cddae543edf90f1f87535b2ca8ab1939",
-    "destination": "poi/plains-capital/plains_capital_01.jpg",
-    "status": "copy"
+    "selection": "poi/neverglades-national-park/lore-v2-v003.jpg",
+    "source_sha256": "776913e7d85fb3e2e3c52a3aebd05c4258ae1889f492262534902e57931dd73f",
+    "destination": "poi/evilgrove4/evilgrove4_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/nicol-bolas-s-lair/diverse-v002.jpg",
     "source_sha256": "11d8e4e467ad390b3c3d056e148a3b6369dcf45b02c3a510094c5f1fb0d52edd",
     "destination": "poi/cavenicolbolas/cavenicolbolas_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/oasis/diverse-v002.jpg",
-    "source_sha256": "163bc589cbb9bb4729fa9a20eb41d039997c61befb1db06d334e5944d24dae06",
-    "destination": "poi/oasis/oasis_01.jpg",
-    "status": "copy"
+    "selection": "poi/oasis/lore-v2-v002.jpg",
+    "source_sha256": "d992dc9dc1063f2a8d935f84a13c8c221e378047a74e42ca523ea79b9679a48f",
+    "destination": "poi/oasis/oasis_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/orc-camp/previous-v003.jpg",
     "source_sha256": "8f0949d3785273f57ec454529a5eb8e61fec6b2c800df51d821ca0c1af53d0af",
     "destination": "poi/barbariancamp2/barbariancamp2_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/orc-cave/diverse-v002.jpg",
-    "source_sha256": "05a9747ac357cdf12f97fc046207d7d28fadf930e9e9bd959ad2e55fec46bc2e",
-    "destination": "poi/caver4/caver4_01.jpg",
-    "status": "copy"
+    "selection": "poi/orc-cave/lore-v2-v001.jpg",
+    "source_sha256": "0b81308315cc77cb0aa92c34243045e3891418702dd73de4fe46d3e7202d111e",
+    "destination": "poi/caver4/caver4_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/orthodoxy-basilica/diverse-v003.jpg",
-    "source_sha256": "8581c9e4246ac214a3f42146eaaf9f090d5249fcf249c0881585e94b2c9805bf",
-    "destination": "poi/orthodoxybasilica/orthodoxybasilica_01.jpg",
-    "status": "copy"
+    "selection": "poi/orthodoxy-basilica/lore-v2-v001.jpg",
+    "source_sha256": "58b7be6e04faa1d454d8cc7a1f3572cf5c78674244e7a3cc839838d10d36a735",
+    "destination": "poi/orthodoxybasilica/orthodoxybasilica_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/overgrown-ruins/diverse-v003.jpg",
-    "source_sha256": "72b3ca0f760c1da69189c9b19d6abfb2eadbbdd7e2c505158717788dfb1c019e",
-    "destination": "poi/grove5/grove5_01.jpg",
-    "status": "copy"
+    "selection": "poi/overgrown-ruins/lore-v2-v002.jpg",
+    "source_sha256": "84247bb8167a706140213021e2721f7b59e532ad8ac5ceb13856a495b8d337e3",
+    "destination": "poi/grove5/grove5_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/palace-of-the-visionary/diverse-v001.jpg",
-    "source_sha256": "3bc2b20378137e0f4c26c6a7e2f33931ed6632be674d1b39ffd41730c5c8d35f",
-    "destination": "poi/fortblue4/fortblue4_01.jpg",
-    "status": "copy"
+    "selection": "poi/palace-of-the-visionary/lore-v2-v002.jpg",
+    "source_sha256": "960a8e4015362a862143d76932d7db757f3ade65108d9e809d4d27da71bce1c6",
+    "destination": "poi/fortblue4/fortblue4_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/palladia-mors-s-lair/diverse-v003.jpg",
     "source_sha256": "d673eda7f768e6998e857538aa81a9ff53c596dc377b090ec39b0824fca711e9",
     "destination": "poi/cavepalladiamors/cavepalladiamors_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/pharaoh-s-domain/diverse-v001.jpg",
-    "source_sha256": "a8f1725e636d75648e71c2ed264e1287f6ad09d6b9cb878a596fc9e802808018",
-    "destination": "poi/castle2/castle2_01.jpg",
-    "status": "copy"
+    "selection": "poi/pharaoh-s-domain/lore-v2-v002.jpg",
+    "source_sha256": "fdb7bea7e3165335545066ee3de0ebc1f5cfe14da60069bea97a1ecb693f975d",
+    "destination": "poi/castle2/castle2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/pirate-fort/diverse-v003.jpg",
-    "source_sha256": "785b7f65cce256bbd207b73e504effe2d00e33e24807760c851e3631dd381df4",
-    "destination": "poi/fortblue1/fortblue1_01.jpg",
-    "status": "copy"
+    "selection": "poi/pirate-fort/lore-v2-v001.jpg",
+    "source_sha256": "5b52973d8e173a821b399ebb887ce2007dffa8da62f229de0ad361403f054683",
+    "destination": "poi/fortblue1/fortblue1_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/primal-jungle/diverse-v003.jpg",
-    "source_sha256": "1e8f1cfae6d310162b9b4229fb0a2106977af6ec815dfda4cc3fcb870b220e00",
-    "destination": "poi/quest-primaljungle/quest_primaljungle_01.jpg",
-    "status": "copy"
+    "selection": "poi/primal-jungle/lore-v2-v001.jpg",
+    "source_sha256": "72f2c8a5c7a882c96740cf07b73a163f78f0cd83fe627dff7bd6a91fa8ce7f72",
+    "destination": "poi/quest-primaljungle/quest_primaljungle_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/putrid-fort/diverse-v001.jpg",
-    "source_sha256": "0c369c7d199045c2c8bec569b8170572e1950471aeb59d4ee327deffb11f9a45",
-    "destination": "poi/fort4/fort4_01.jpg",
-    "status": "copy"
+    "selection": "poi/putrid-fort/lore-v2-v001.jpg",
+    "source_sha256": "6d1ea1b1e77989235264afd331a41de0498ef45cdaeb9844ffe91360988755b5",
+    "destination": "poi/fort4/fort4_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/rat-s-nest/diverse-v002.jpg",
-    "source_sha256": "d3b658d407d14fe8c35920e3e94ace8af4842b2c9e9ddbe580ed033bbd9c243b",
-    "destination": "poi/caverat/caverat_01.jpg",
-    "status": "copy"
+    "selection": "poi/rat-s-nest/lore-v2-v002.jpg",
+    "source_sha256": "db0b7ae13e5ee10b976e72c5163efc4148e9daa2e38bd3d84e30a40af6588ec6",
+    "destination": "poi/caverat/caverat_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/rebel-encampment/diverse-v003.jpg",
-    "source_sha256": "290cb2786cd439f596034469178a69802a60a4e9cfa31698b781266dd0ff2335",
-    "destination": "poi/nahiri-encampment/nahiri_encampment_01.jpg",
-    "status": "copy"
+    "selection": "poi/rebel-encampment/lore-v2-v001.jpg",
+    "source_sha256": "93f3ba49ef24ab332785f0a942601978617c487a819e7c8bb8b5cf6cd30b630c",
+    "destination": "poi/nahiri-encampment/nahiri_encampment_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/red-castle/diverse-v002.jpg",
     "source_sha256": "4abd66bbb4bc65b00441f19dd7871db66c04a1f02c7c40235a547cf6c4b4f20d",
     "destination": "poi/red-castle/red_castle_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/red-tower/diverse-v002.jpg",
-    "source_sha256": "e74b5237858cf87e51b349727357499b026a21583a824cf16cab117a850399ae",
-    "destination": "poi/magetowerc/magetowerc_01.jpg",
-    "status": "copy"
+    "selection": "poi/red-tower/lore-v2-v003.jpg",
+    "source_sha256": "90798a27d8b321e076e85c77757b705617aa9958784c9a304c19695bc62e954c",
+    "destination": "poi/magetowerc/magetowerc_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/red-tower/diverse-v002.jpg",
-    "source_sha256": "e74b5237858cf87e51b349727357499b026a21583a824cf16cab117a850399ae",
-    "destination": "poi/magetoweru2/magetoweru2_01.jpg",
-    "status": "copy"
+    "selection": "poi/red-tower/lore-v2-v003.jpg",
+    "source_sha256": "90798a27d8b321e076e85c77757b705617aa9958784c9a304c19695bc62e954c",
+    "destination": "poi/magetoweru2/magetoweru2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/red-wizard-s-tower/diverse-v002.jpg",
-    "source_sha256": "aba70f0ed6d05093b24c5597f183bea8e38b111761e0782da54e90dac6fbd1b6",
-    "destination": "poi/magetowerc3/magetowerc3_01.jpg",
-    "status": "copy"
+    "selection": "poi/red-wizard-s-tower/lore-v2-v002.jpg",
+    "source_sha256": "84a83d16666ab2ab789ec75114ad5abeee43d756825a0d66110a0f66b3f1bb7e",
+    "destination": "poi/magetowerc3/magetowerc3_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/reptile-s-den/diverse-v001.jpg",
-    "source_sha256": "c374a428d52d7162c17953c4739c93010240226bc97043317702ff825cb347bc",
-    "destination": "poi/cavereptile/cavereptile_01.jpg",
-    "status": "copy"
+    "selection": "poi/reptile-s-den/lore-v2-v002.jpg",
+    "source_sha256": "8e2d4295cf5d2957b3dee19741dabc514a6bac94e185d0bc824de47081a292dc",
+    "destination": "poi/cavereptile/cavereptile_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/river-crossing/diverse-v003.jpg",
-    "source_sha256": "a297c26adbdf03c6de4555dbbda8bf1a9598b6a5d821a96412e67048e297e26e",
-    "destination": "poi/fortblue2/fortblue2_01.jpg",
-    "status": "copy"
+    "selection": "poi/river-crossing/lore-v2-v002.jpg",
+    "source_sha256": "3ce0145da8a3715b4205ae9a53c0f9e11997fcf2b0d4a8ab44a9348d11960c21",
+    "destination": "poi/fortblue2/fortblue2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/satyr-grove/diverse-v003.jpg",
-    "source_sha256": "92aa4fd13e420f3a7dac6f88495fcd5345ae9510036b62dd7b02ea71da533bf1",
-    "destination": "poi/fort8/fort8_01.jpg",
-    "status": "copy"
+    "selection": "poi/satyr-grove/lore-v2-v001.jpg",
+    "source_sha256": "79bb77c81866b7cce17c2d9f46fa49ddf8ab6ea172c8a0e6541e8338ed6f15f9",
+    "destination": "poi/fort8/fort8_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/scarecrow-farm/diverse-v003.jpg",
-    "source_sha256": "2c55ac4d00d4e28d767ea1162b7537aefda8674ecab782e4d04ae46601d46bc2",
-    "destination": "poi/scarecrow-farm/scarecrow_farm_01.jpg",
-    "status": "copy"
+    "selection": "poi/scarecrow-farm/lore-v2-v002.jpg",
+    "source_sha256": "38fd39308a5346ae6abbfd86657b753be53b6df8c9eb4bf53812fb35e5505aca",
+    "destination": "poi/scarecrow-farm/scarecrow_farm_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/sea-temple/diverse-v002.jpg",
-    "source_sha256": "188ba7c3ec232a43c56ff4aa87e4a8fbf17fc7ba514718c367fac422061fbf98",
-    "destination": "poi/fortblue5/fortblue5_01.jpg",
-    "status": "copy"
+    "selection": "poi/sea-temple/lore-v2-v003.jpg",
+    "source_sha256": "aebc2e86350c8fbb707341f7034f594464dc774a0185b0ebd2e9472557d7fdd8",
+    "destination": "poi/fortblue5/fortblue5_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/seaside-nest/diverse-v002.jpg",
-    "source_sha256": "b2c757fb4343b5159a81212aa1fab9f5d50b30362eebce2ce1c91a630a82a5ff",
-    "destination": "poi/nestu/nestu_01.jpg",
-    "status": "copy"
+    "selection": "poi/seaside-nest/lore-v2-v001.jpg",
+    "source_sha256": "bff69ada3602d37d21226dd1194c376b78f58d3300559320ce0bbef1370eae2d",
+    "destination": "poi/nestu/nestu_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/secluded-elven-encampment/diverse-v001.jpg",
-    "source_sha256": "824e6a6200e720ff5a772adbec8f12d8b8fe099529634ca3b14430d539d0ed83",
-    "destination": "poi/elftown/elftown_01.jpg",
-    "status": "copy"
+    "selection": "poi/secluded-elven-encampment/lore-v2-v001.jpg",
+    "source_sha256": "5e1d3c44f96f285a033dcfcaa890b2c94cc6db9544a32c7f1c4b09338518ef1d",
+    "destination": "poi/elftown/elftown_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/secluded-encampment/diverse-v002.jpg",
-    "source_sha256": "a4912a30ecdda97a8bef796093ca095b909906e23ab5d39790e59b79e1f138f9",
-    "destination": "poi/spawn/spawn_01.jpg",
-    "status": "copy"
+    "selection": "poi/seemingly-unguarded-cave/lore-v2-v001.jpg",
+    "source_sha256": "9b7ac84d3176a005984cfae55a7f5d3ff3d40b772735b9900af1859b9cc30d95",
+    "destination": "poi/cavec4/cavec4_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/seemingly-unguarded-cave/diverse-v001.jpg",
-    "source_sha256": "f60f16e42a2ddad2328b8d716fcc4dc08f030da7a8d3448991a54bdb05887b88",
-    "destination": "poi/cavec4/cavec4_01.jpg",
-    "status": "copy"
+    "selection": "poi/shade-s-lair/lore-v2-v002.jpg",
+    "source_sha256": "ce26b83d9a0582a99145749bf1765950681aa8f34c88317afa0347a75a39b3c7",
+    "destination": "poi/evilgrove6/evilgrove6_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/shade-s-lair/diverse-v001.jpg",
-    "source_sha256": "0d32ba4501dc92eea9c336b2a6cd1dc1e723e0bc4327303043fd8816ff1ac64d",
-    "destination": "poi/evilgrove6/evilgrove6_01.jpg",
-    "status": "copy"
+    "selection": "poi/shallowgrave/lore-v2-v001.jpg",
+    "source_sha256": "bdd35b8a4997b387cd349b89fea78c2c152927788391c11b0822166ade70c948",
+    "destination": "poi/zombie-town/zombie_town_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/shallowgrave/diverse-v001.jpg",
-    "source_sha256": "f0c6456902ede1eb8b4388202d30179ba5773958d8ee3e8011e1517cf435267b",
-    "destination": "poi/zombie-town/zombie_town_01.jpg",
-    "status": "copy"
-  },
-  {
-    "selection": "poi/simian-s-city/diverse-v003.jpg",
-    "source_sha256": "3d77c2a6c0ef30e73411f4c998f0ff850fcff830c09469b0252746f5bfc334f5",
-    "destination": "poi/grove3/grove3_01.jpg",
-    "status": "copy"
+    "selection": "poi/simian-s-city/lore-v2-v002.jpg",
+    "source_sha256": "637cb62799b8f2856ddd3e41117771f27c2003428944490b299fd8f824da9dac",
+    "destination": "poi/grove3/grove3_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/skull-cave/diverse-v002.jpg",
     "source_sha256": "6f472f88d3009217f0af7e4e1ac3a95957e16bf42754cfb01bde861219ded79a",
     "destination": "poi/skullcaveb/skullcaveb_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/skull-cave/diverse-v002.jpg",
     "source_sha256": "6f472f88d3009217f0af7e4e1ac3a95957e16bf42754cfb01bde861219ded79a",
     "destination": "poi/skullcaveb1/skullcaveb1_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/skull-cave/diverse-v002.jpg",
     "source_sha256": "6f472f88d3009217f0af7e4e1ac3a95957e16bf42754cfb01bde861219ded79a",
     "destination": "poi/skullcaveb2/skullcaveb2_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/skull-cave/diverse-v002.jpg",
     "source_sha256": "6f472f88d3009217f0af7e4e1ac3a95957e16bf42754cfb01bde861219ded79a",
     "destination": "poi/skullcaver/skullcaver_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/skull-cave/diverse-v002.jpg",
     "source_sha256": "6f472f88d3009217f0af7e4e1ac3a95957e16bf42754cfb01bde861219ded79a",
     "destination": "poi/skullcaver1/skullcaver1_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/skull-cave/diverse-v002.jpg",
     "source_sha256": "6f472f88d3009217f0af7e4e1ac3a95957e16bf42754cfb01bde861219ded79a",
     "destination": "poi/skullcaver2/skullcaver2_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/slimy-sewers/diverse-v001.jpg",
-    "source_sha256": "b165f525a046896ec6a7f6cbce4f0fd79a08d9912af46d4a5ce45b5c3f00fe8e",
-    "destination": "poi/slime-cave/slime_cave_01.jpg",
-    "status": "copy"
+    "selection": "poi/slimy-sewers/lore-v2-v001.jpg",
+    "source_sha256": "97c63a2ae5de7e55aa438c3a2c22fa1e3f7f9fc1caf7abf7c3a5aac9884d11d9",
+    "destination": "poi/slime-cave/slime_cave_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/snake-cave/diverse-v002.jpg",
-    "source_sha256": "d446b190d7bf6a06613fca679dc9c892815ada95f4cea3d026a4decb50ffd7b6",
-    "destination": "poi/caveb/caveb_01.jpg",
-    "status": "copy"
+    "selection": "poi/snake-cave/lore-v2-v002.jpg",
+    "source_sha256": "6e9058cad2eec63c6212a69bd91f51ec1249d676edf1eeb23ce09485e04dd5ae",
+    "destination": "poi/caveb/caveb_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/snake-cave/diverse-v002.jpg",
-    "source_sha256": "d446b190d7bf6a06613fca679dc9c892815ada95f4cea3d026a4decb50ffd7b6",
-    "destination": "poi/cavec/cavec_01.jpg",
-    "status": "copy"
+    "selection": "poi/snake-cave/lore-v2-v002.jpg",
+    "source_sha256": "6e9058cad2eec63c6212a69bd91f51ec1249d676edf1eeb23ce09485e04dd5ae",
+    "destination": "poi/cavec/cavec_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/snake-cave/diverse-v002.jpg",
-    "source_sha256": "d446b190d7bf6a06613fca679dc9c892815ada95f4cea3d026a4decb50ffd7b6",
-    "destination": "poi/caveg/caveg_01.jpg",
-    "status": "copy"
+    "selection": "poi/snake-cave/lore-v2-v002.jpg",
+    "source_sha256": "6e9058cad2eec63c6212a69bd91f51ec1249d676edf1eeb23ce09485e04dd5ae",
+    "destination": "poi/caveg/caveg_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/snake-cave/diverse-v002.jpg",
-    "source_sha256": "d446b190d7bf6a06613fca679dc9c892815ada95f4cea3d026a4decb50ffd7b6",
-    "destination": "poi/caver/caver_01.jpg",
-    "status": "copy"
+    "selection": "poi/snake-cave/lore-v2-v002.jpg",
+    "source_sha256": "6e9058cad2eec63c6212a69bd91f51ec1249d676edf1eeb23ce09485e04dd5ae",
+    "destination": "poi/caver/caver_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/snake-cave/diverse-v002.jpg",
-    "source_sha256": "d446b190d7bf6a06613fca679dc9c892815ada95f4cea3d026a4decb50ffd7b6",
-    "destination": "poi/cavew/cavew_01.jpg",
-    "status": "copy"
+    "selection": "poi/snake-cave/lore-v2-v002.jpg",
+    "source_sha256": "6e9058cad2eec63c6212a69bd91f51ec1249d676edf1eeb23ce09485e04dd5ae",
+    "destination": "poi/cavew/cavew_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/snow-abbey/diverse-v001.jpg",
-    "source_sha256": "a7ae70c141e62be1160abc7544611c51828a11e47c89ab815f118f3f4daf058b",
-    "destination": "poi/snowabbey/snowabbey_01.jpg",
-    "status": "copy"
+    "selection": "poi/snow-abbey/lore-v2-v002.jpg",
+    "source_sha256": "24b77dbe447d2e72413cb1dd509163b9fc2390e990bbcc834ad033c90a70a659",
+    "destination": "poi/snowabbey/snowabbey_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/snow-abbey/diverse-v001.jpg",
-    "source_sha256": "a7ae70c141e62be1160abc7544611c51828a11e47c89ab815f118f3f4daf058b",
-    "destination": "poi/snowabbey1/snowabbey1_01.jpg",
-    "status": "copy"
+    "selection": "poi/snow-abbey/lore-v2-v002.jpg",
+    "source_sha256": "24b77dbe447d2e72413cb1dd509163b9fc2390e990bbcc834ad033c90a70a659",
+    "destination": "poi/snowabbey1/snowabbey1_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/snow-abbey/diverse-v001.jpg",
-    "source_sha256": "a7ae70c141e62be1160abc7544611c51828a11e47c89ab815f118f3f4daf058b",
-    "destination": "poi/snowabbey2/snowabbey2_01.jpg",
-    "status": "copy"
+    "selection": "poi/snow-abbey/lore-v2-v002.jpg",
+    "source_sha256": "24b77dbe447d2e72413cb1dd509163b9fc2390e990bbcc834ad033c90a70a659",
+    "destination": "poi/snowabbey2/snowabbey2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/specter-s-fortress/diverse-v003.jpg",
-    "source_sha256": "00fe4c0d2cbc05bb8841ced1788cacd9469b6661611794f13365233c72e15471",
-    "destination": "poi/tibalts-fortress/tibalts_fortress_01.jpg",
-    "status": "copy"
+    "selection": "poi/specter-s-fortress/lore-v2-v003.jpg",
+    "source_sha256": "0c53768b99e5a75eb963ddf7384100626e1840d31a43cbf77769b85adb49b7ce",
+    "destination": "poi/tibalts-fortress/tibalts_fortress_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/sphinx-s-sanctum/diverse-v002.jpg",
-    "source_sha256": "fce15caf7450ec321ad2eae6d97619018e9a6890fe146f5e6a706599d185edfb",
-    "destination": "poi/riddleslair/riddleslair_01.jpg",
-    "status": "copy"
+    "selection": "poi/sphinx-s-sanctum/lore-v2-v002.jpg",
+    "source_sha256": "766d9f94e6c516d6b4296d8a0503a2e66c9219aa9362bdd18734e76d7e55ebfa",
+    "destination": "poi/riddleslair/riddleslair_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/squee-s-factory/diverse-v002.jpg",
-    "source_sha256": "2974edc43cfb9b2b187207dd5d560a906f3f4939b6425a5818f237a3748f04b2",
-    "destination": "poi/slobads-factory/slobads_factory_04.jpg",
-    "status": "copy"
+    "selection": "poi/squee-s-factory/lore-v2-v002.jpg",
+    "source_sha256": "3f655032e0d567f482435631055114c5663dc5f46792eb21213e1c99fcda3a8d",
+    "destination": "poi/slobads-factory/slobads_factory_05.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/sulfuric-springs/diverse-v001.jpg",
-    "source_sha256": "753a0b69b83e071208e0a64007293792baaeea57453dab88ac12f20460406bc3",
-    "destination": "poi/lavaforge1/lavaforge1_01.jpg",
-    "status": "copy"
+    "selection": "poi/sulfuric-springs/lore-v2-v001.jpg",
+    "source_sha256": "fce2d3cc54a8925fc49518f5ac18f9014a86946ef3ca6334c42bea7db839d13d",
+    "destination": "poi/lavaforge1/lavaforge1_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/swamp-queen-s-castle/diverse-v001.jpg",
     "source_sha256": "b27924dec26c40100347a84d4c3ad913c6563cdedf3d52d8b12066ea1adc9e73",
     "destination": "poi/vampirecastle/vampirecastle_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/teferi-s-hideout/diverse-v003.jpg",
-    "source_sha256": "8bcaae97fe98af8c1b1a22add745d8a621b911441356b14c72e6a4765b75296b",
-    "destination": "poi/teferi-hideout/teferi_hideout_01.jpg",
-    "status": "copy"
+    "selection": "poi/teferi-s-hideout/lore-v2-v002.jpg",
+    "source_sha256": "81fc430a100295e169c76839edf7d2adc08813982a26ed5545fd9cda8e8ec5b0",
+    "destination": "poi/teferi-hideout/teferi_hideout_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/temple-of-the-dragon-lord/diverse-v003.jpg",
     "source_sha256": "f675ccfa6fa2d0dd03916e42753183a860b6c367f178511b0dd17f84d4a36838",
     "destination": "poi/grove6/grove6_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/temple-of-the-false-god/diverse-v003.jpg",
-    "source_sha256": "5946fd8ba2b1d55a304745c882c4fe3b2782fa3318ed1de814d5916501f5fea3",
-    "destination": "poi/karonatemple/karonatemple_01.jpg",
-    "status": "copy"
+    "selection": "poi/temple-of-the-false-god/lore-v2-v003.jpg",
+    "source_sha256": "cf02a036be2388d565c0383174a363579dd98871c474fe4f67f87d37817b19bd",
+    "destination": "poi/karonatemple/karonatemple_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/thallid-grove/diverse-v002.jpg",
-    "source_sha256": "821d4ad8d4b00da23913e736392d62cf2bdec97a44fb2faafebc77e6c6f93f25",
-    "destination": "poi/thallid-grove/thallid_grove_01.jpg",
-    "status": "copy"
+    "selection": "poi/thallid-grove/lore-v2-v003.jpg",
+    "source_sha256": "95e673b63b68246c8e193e382310aede0123668a0a640469a784000c6e5b09d1",
+    "destination": "poi/thallid-grove/thallid_grove_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/the-honey-cove/diverse-v003.jpg",
-    "source_sha256": "93180eb21d9fc800c6c3c583e832b990795443546f1cdb2133736f472595c0c3",
-    "destination": "poi/grove/grove_01.jpg",
-    "status": "copy"
+    "selection": "poi/the-honey-cove/lore-v2-v003.jpg",
+    "source_sha256": "5293d1cb70d2bf683aaf2c328c392dada10f9242cc2e64fe610c665511c74ca0",
+    "destination": "poi/grove/grove_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/the-lake-of-the-hydra/diverse-v001.jpg",
-    "source_sha256": "176d8a369b04ca514ca686be54be4f9c2d4b7763e8c621b986561ec846003235",
-    "destination": "poi/grove7/grove7_01.jpg",
-    "status": "copy"
+    "selection": "poi/the-lake-of-the-hydra/lore-v2-v001.jpg",
+    "source_sha256": "2736cd7de6807c96881578ec6da605fae02d82eace7f14fca57ba3b078eb0462",
+    "destination": "poi/grove7/grove7_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/the-library-of-varsil/diverse-v001.jpg",
-    "source_sha256": "3d2ddf5236276e3f8208e1ea751ff63766f1a531e6194a9b1cf10e52e6a12fb9",
-    "destination": "poi/quest-libraryofvarsil/quest_libraryofvarsil_01.jpg",
-    "status": "copy"
+    "selection": "poi/the-library-of-varsil/lore-v2-v002.jpg",
+    "source_sha256": "fb79b45b713fa7a536fcf8dd1698cc552490530c6041d4abc244b958d506e365",
+    "destination": "poi/quest-libraryofvarsil/quest_libraryofvarsil_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/the-skep/diverse-v003.jpg",
-    "source_sha256": "421c5c50f6234915f4cb111856b655a68373f88d360b995ff4e5d323a3267d8d",
-    "destination": "poi/skep/skep_01.jpg",
-    "status": "copy"
+    "selection": "poi/the-skep/lore-v2-v001.jpg",
+    "source_sha256": "3593aa4c93e3d91c87ccc8cb3d5eef0826bcd787c1b4ee955db65ccf62ac30ca",
+    "destination": "poi/skep/skep_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/tidepool-cavern/diverse-v003.jpg",
-    "source_sha256": "a85a26df38aac01b0ced5a56d64a48b16ccc0b3561fa5bc30e1e627a2ee5eae9",
-    "destination": "poi/caveamphin/caveamphin_01.jpg",
-    "status": "copy"
+    "selection": "poi/tidepool-cavern/lore-v2-v003.jpg",
+    "source_sha256": "c6f4715b729b9a635cf642d3c0839dc14841411c4f7d1ce6477c0f3ece66b43c",
+    "destination": "poi/caveamphin/caveamphin_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/tiger-forest/diverse-v003.jpg",
     "source_sha256": "b84739ac733f0fb9d0c05b2b1ff19c81b99782d326e3c41b9ad422e0fb11072a",
     "destination": "poi/catlairg1/catlairg1_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/treasure-cave/diverse-v003.jpg",
-    "source_sha256": "89f3c050081ee71c50dbe46fc8f9ec3f35ac62e2aa3ff48549d56934e2233d1b",
-    "destination": "poi/caveb1/caveb1_01.jpg",
-    "status": "copy"
+    "selection": "poi/treasure-cave/lore-v2-v001.jpg",
+    "source_sha256": "6eefb652c462891d328e8d23faafc34cb798a6e36253f11512556434836cecc7",
+    "destination": "poi/caveb1/caveb1_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/treasure-cave/diverse-v003.jpg",
-    "source_sha256": "89f3c050081ee71c50dbe46fc8f9ec3f35ac62e2aa3ff48549d56934e2233d1b",
-    "destination": "poi/caveb8/caveb8_01.jpg",
-    "status": "copy"
+    "selection": "poi/treasure-cave/lore-v2-v001.jpg",
+    "source_sha256": "6eefb652c462891d328e8d23faafc34cb798a6e36253f11512556434836cecc7",
+    "destination": "poi/caveb8/caveb8_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/treasure-cave/diverse-v003.jpg",
-    "source_sha256": "89f3c050081ee71c50dbe46fc8f9ec3f35ac62e2aa3ff48549d56934e2233d1b",
-    "destination": "poi/cavec1/cavec1_01.jpg",
-    "status": "copy"
+    "selection": "poi/treasure-cave/lore-v2-v001.jpg",
+    "source_sha256": "6eefb652c462891d328e8d23faafc34cb798a6e36253f11512556434836cecc7",
+    "destination": "poi/cavec1/cavec1_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/treasure-cave/diverse-v003.jpg",
-    "source_sha256": "89f3c050081ee71c50dbe46fc8f9ec3f35ac62e2aa3ff48549d56934e2233d1b",
-    "destination": "poi/cavecb/cavecb_01.jpg",
-    "status": "copy"
+    "selection": "poi/treasure-cave/lore-v2-v001.jpg",
+    "source_sha256": "6eefb652c462891d328e8d23faafc34cb798a6e36253f11512556434836cecc7",
+    "destination": "poi/cavecb/cavecb_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/treasure-cave/diverse-v003.jpg",
-    "source_sha256": "89f3c050081ee71c50dbe46fc8f9ec3f35ac62e2aa3ff48549d56934e2233d1b",
-    "destination": "poi/cavece/cavece_01.jpg",
-    "status": "copy"
+    "selection": "poi/treasure-cave/lore-v2-v001.jpg",
+    "source_sha256": "6eefb652c462891d328e8d23faafc34cb798a6e36253f11512556434836cecc7",
+    "destination": "poi/cavece/cavece_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/treasure-cave/diverse-v003.jpg",
-    "source_sha256": "89f3c050081ee71c50dbe46fc8f9ec3f35ac62e2aa3ff48549d56934e2233d1b",
-    "destination": "poi/caveg1/caveg1_01.jpg",
-    "status": "copy"
+    "selection": "poi/treasure-cave/lore-v2-v001.jpg",
+    "source_sha256": "6eefb652c462891d328e8d23faafc34cb798a6e36253f11512556434836cecc7",
+    "destination": "poi/caveg1/caveg1_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/treasure-cave/diverse-v003.jpg",
-    "source_sha256": "89f3c050081ee71c50dbe46fc8f9ec3f35ac62e2aa3ff48549d56934e2233d1b",
-    "destination": "poi/caveg9/caveg9_01.jpg",
-    "status": "copy"
+    "selection": "poi/treasure-cave/lore-v2-v001.jpg",
+    "source_sha256": "6eefb652c462891d328e8d23faafc34cb798a6e36253f11512556434836cecc7",
+    "destination": "poi/caveg9/caveg9_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/treasure-cave/diverse-v003.jpg",
-    "source_sha256": "89f3c050081ee71c50dbe46fc8f9ec3f35ac62e2aa3ff48549d56934e2233d1b",
-    "destination": "poi/caver2/caver2_01.jpg",
-    "status": "copy"
+    "selection": "poi/treasure-cave/lore-v2-v001.jpg",
+    "source_sha256": "6eefb652c462891d328e8d23faafc34cb798a6e36253f11512556434836cecc7",
+    "destination": "poi/caver2/caver2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/treasure-cave/diverse-v003.jpg",
-    "source_sha256": "89f3c050081ee71c50dbe46fc8f9ec3f35ac62e2aa3ff48549d56934e2233d1b",
-    "destination": "poi/caverh/caverh_01.jpg",
-    "status": "copy"
+    "selection": "poi/treasure-cave/lore-v2-v001.jpg",
+    "source_sha256": "6eefb652c462891d328e8d23faafc34cb798a6e36253f11512556434836cecc7",
+    "destination": "poi/caverh/caverh_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/treasure-cave/diverse-v003.jpg",
-    "source_sha256": "89f3c050081ee71c50dbe46fc8f9ec3f35ac62e2aa3ff48549d56934e2233d1b",
-    "destination": "poi/caveu/caveu_01.jpg",
-    "status": "copy"
+    "selection": "poi/treasure-cave/lore-v2-v001.jpg",
+    "source_sha256": "6eefb652c462891d328e8d23faafc34cb798a6e36253f11512556434836cecc7",
+    "destination": "poi/caveu/caveu_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/treasure-cave/diverse-v003.jpg",
-    "source_sha256": "89f3c050081ee71c50dbe46fc8f9ec3f35ac62e2aa3ff48549d56934e2233d1b",
-    "destination": "poi/caveu4/caveu4_01.jpg",
-    "status": "copy"
+    "selection": "poi/treasure-cave/lore-v2-v001.jpg",
+    "source_sha256": "6eefb652c462891d328e8d23faafc34cb798a6e36253f11512556434836cecc7",
+    "destination": "poi/caveu4/caveu4_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/treasure-cave/diverse-v003.jpg",
-    "source_sha256": "89f3c050081ee71c50dbe46fc8f9ec3f35ac62e2aa3ff48549d56934e2233d1b",
-    "destination": "poi/cavew1/cavew1_01.jpg",
-    "status": "copy"
+    "selection": "poi/treasure-cave/lore-v2-v001.jpg",
+    "source_sha256": "6eefb652c462891d328e8d23faafc34cb798a6e36253f11512556434836cecc7",
+    "destination": "poi/cavew1/cavew1_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/treasure-cave/diverse-v003.jpg",
-    "source_sha256": "89f3c050081ee71c50dbe46fc8f9ec3f35ac62e2aa3ff48549d56934e2233d1b",
-    "destination": "poi/cavew4/cavew4_01.jpg",
-    "status": "copy"
+    "selection": "poi/treasure-cave/lore-v2-v001.jpg",
+    "source_sha256": "6eefb652c462891d328e8d23faafc34cb798a6e36253f11512556434836cecc7",
+    "destination": "poi/cavew4/cavew4_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/treasure-cave/diverse-v003.jpg",
-    "source_sha256": "89f3c050081ee71c50dbe46fc8f9ec3f35ac62e2aa3ff48549d56934e2233d1b",
-    "destination": "poi/cavew6/cavew6_01.jpg",
-    "status": "copy"
+    "selection": "poi/treasure-cave/lore-v2-v001.jpg",
+    "source_sha256": "6eefb652c462891d328e8d23faafc34cb798a6e36253f11512556434836cecc7",
+    "destination": "poi/cavew6/cavew6_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/troll-s-lair/diverse-v003.jpg",
     "source_sha256": "28e12b92b160ae4962c203c78b0de19fbcf123cb0b31c1db392180d57732b279",
     "destination": "poi/cavetroll/cavetroll_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/tundra-fort/diverse-v003.jpg",
-    "source_sha256": "9a86fc709bb5ba1eb8c5b58a6e172bb577123e186bd66bf25264b0591a6188e6",
-    "destination": "poi/fort1/fort1_01.jpg",
-    "status": "copy"
+    "selection": "poi/tundra-fort/lore-v2-v001.jpg",
+    "source_sha256": "fc8ebb54145d69a3b44d7254a1d0b1d6e224faab2d8aef8f1de40e585417af2b",
+    "destination": "poi/fort1/fort1_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/unbroken-bough/diverse-v002.jpg",
-    "source_sha256": "0c194b688988d8d12511b0e58bb4d024e76f6af6c4d55f78d96d180a4c19e9d2",
-    "destination": "poi/forest-capital/forest_capital_01.jpg",
-    "status": "copy"
+    "selection": "poi/undead-grove/lore-v2-v003.jpg",
+    "source_sha256": "ad2e30eef2d619742e0cdcb487c0bce2462291754527fba2a2c7267ce956eecf",
+    "destination": "poi/evilgrove/evilgrove_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/undead-grove/diverse-v002.jpg",
-    "source_sha256": "c73f1fda80c484fb9d04a27a6156e55164d564a77701136d59ad3f86ff04c7bd",
-    "destination": "poi/evilgrove/evilgrove_01.jpg",
-    "status": "copy"
+    "selection": "poi/unhallowed-abbey/lore-v2-v002.jpg",
+    "source_sha256": "6b368a5efadbcce492c85b5a16dc9d1e9903e4073025bab53a30ad6c52f4793f",
+    "destination": "poi/unhallowedabbey/unhallowedabbey_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/unhallowed-abbey/diverse-v002.jpg",
-    "source_sha256": "157387eb7946fb65d41f4be380977e797d626bcbb2ed4b23f79289b677db5169",
-    "destination": "poi/unhallowedabbey/unhallowedabbey_01.jpg",
-    "status": "copy"
+    "selection": "poi/vaevictis-asmadi-s-lair/lore-v2-v003.jpg",
+    "source_sha256": "99c69164ce57e03ee19542fd264673ee2e65fc1c02da71ae8680427c2f2d8afd",
+    "destination": "poi/cavevaevictis/cavevaevictis_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/vaevictis-asmadi-s-lair/diverse-v001.jpg",
-    "source_sha256": "9188e7c8a2fd69d45e6fc40d6e6871d7bff88df9740a265258b292f8e01cec93",
-    "destination": "poi/cavevaevictis/cavevaevictis_01.jpg",
-    "status": "copy"
-  },
-  {
-    "selection": "poi/von-gant-s-fortress/diverse-v001.jpg",
-    "source_sha256": "39b11239a3d6df140a077e50f1a8761e9eb11de2ade5d1a9b4901c152e1757f2",
-    "destination": "poi/castle/castle_01.jpg",
-    "status": "copy"
+    "selection": "poi/von-gant-s-fortress/lore-v2-v001.jpg",
+    "source_sha256": "e15af1b2ac02fb0f41281f79e35f7d5cc6c93094a3de49abae45df4263e9df49",
+    "destination": "poi/castle/castle_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/web-draped-parlor/diverse-v002.jpg",
     "source_sha256": "8ff5c6938d741a415fbb9a16d642aefe8f3ff79c77bdda104900c4a6967e0f0b",
     "destination": "poi/cavec6/cavec6_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/web-draped-parlor/diverse-v002.jpg",
     "source_sha256": "8ff5c6938d741a415fbb9a16d642aefe8f3ff79c77bdda104900c4a6967e0f0b",
     "destination": "poi/caveg4/caveg4_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
     "selection": "poi/web-draped-parlor/diverse-v002.jpg",
     "source_sha256": "8ff5c6938d741a415fbb9a16d642aefe8f3ff79c77bdda104900c4a6967e0f0b",
     "destination": "poi/caver8/caver8_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/wererat-s-hideout/diverse-v003.jpg",
-    "source_sha256": "1be3787f7ebe4df129d587b43b1d421e7c1a0cad4556093c759bd56fef761afd",
-    "destination": "poi/magetowerrats/magetowerrats_01.jpg",
-    "status": "copy"
+    "selection": "poi/wererat-s-hideout/lore-v2-v001.jpg",
+    "source_sha256": "9cc68dd19035b6318c40240b74f9f791fff14aab00adf8595353948a1507809d",
+    "destination": "poi/magetowerrats/magetowerrats_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/white-castle/diverse-v002.jpg",
     "source_sha256": "d4c2b94b430733dd97bc24683945e91f533140a87c82913e2c2b877619fef511",
     "destination": "poi/white-castle/white_castle_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/white-tower/diverse-v002.jpg",
-    "source_sha256": "a48a652f2bdb785c2aaafd2ca95cacb75e06c56fc15f920e54f8e50c1e69105e",
-    "destination": "poi/magetowerc4/magetowerc4_01.jpg",
-    "status": "copy"
+    "selection": "poi/white-tower/lore-v2-v003.jpg",
+    "source_sha256": "7c7b13c62bf373cfd375c9e9803f9dd28402245d71df22262937f013f17bb508",
+    "destination": "poi/magetowerc4/magetowerc4_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/white-tower/diverse-v002.jpg",
-    "source_sha256": "a48a652f2bdb785c2aaafd2ca95cacb75e06c56fc15f920e54f8e50c1e69105e",
-    "destination": "poi/magetoweru3/magetoweru3_01.jpg",
-    "status": "copy"
+    "selection": "poi/white-tower/lore-v2-v003.jpg",
+    "source_sha256": "7c7b13c62bf373cfd375c9e9803f9dd28402245d71df22262937f013f17bb508",
+    "destination": "poi/magetoweru3/magetoweru3_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/wizard-s-hideout/diverse-v002.jpg",
-    "source_sha256": "c8e255d3fb7f1c495d6ff503048cd3d3ccaadd2e626560b8367c37610808def1",
-    "destination": "poi/caveb6/caveb6_01.jpg",
-    "status": "copy"
+    "selection": "poi/wizard-s-hideout/lore-v2-v003.jpg",
+    "source_sha256": "b7e5ac43b7adb4fc27f08e718cd1a2637df0b3a6fd9403f4aa031bc99105b5ec",
+    "destination": "poi/caveb6/caveb6_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/wizard-s-hideout/diverse-v002.jpg",
-    "source_sha256": "c8e255d3fb7f1c495d6ff503048cd3d3ccaadd2e626560b8367c37610808def1",
-    "destination": "poi/cavec9/cavec9_01.jpg",
-    "status": "copy"
+    "selection": "poi/wizard-s-hideout/lore-v2-v003.jpg",
+    "source_sha256": "b7e5ac43b7adb4fc27f08e718cd1a2637df0b3a6fd9403f4aa031bc99105b5ec",
+    "destination": "poi/cavec9/cavec9_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/wizard-s-hideout/diverse-v002.jpg",
-    "source_sha256": "c8e255d3fb7f1c495d6ff503048cd3d3ccaadd2e626560b8367c37610808def1",
-    "destination": "poi/cavera/cavera_01.jpg",
-    "status": "copy"
+    "selection": "poi/wizard-s-hideout/lore-v2-v003.jpg",
+    "source_sha256": "b7e5ac43b7adb4fc27f08e718cd1a2637df0b3a6fd9403f4aa031bc99105b5ec",
+    "destination": "poi/cavera/cavera_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/wizard-s-hideout/diverse-v002.jpg",
-    "source_sha256": "c8e255d3fb7f1c495d6ff503048cd3d3ccaadd2e626560b8367c37610808def1",
-    "destination": "poi/caveu2/caveu2_01.jpg",
-    "status": "copy"
+    "selection": "poi/wizard-s-hideout/lore-v2-v003.jpg",
+    "source_sha256": "b7e5ac43b7adb4fc27f08e718cd1a2637df0b3a6fd9403f4aa031bc99105b5ec",
+    "destination": "poi/caveu2/caveu2_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/wizard-s-hideout/diverse-v002.jpg",
-    "source_sha256": "c8e255d3fb7f1c495d6ff503048cd3d3ccaadd2e626560b8367c37610808def1",
-    "destination": "poi/cavew3/cavew3_01.jpg",
-    "status": "copy"
+    "selection": "poi/wizard-s-hideout/lore-v2-v003.jpg",
+    "source_sha256": "b7e5ac43b7adb4fc27f08e718cd1a2637df0b3a6fd9403f4aa031bc99105b5ec",
+    "destination": "poi/cavew3/cavew3_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/wolf-pack-s-den/diverse-v003.jpg",
-    "source_sha256": "71feeeac6d5d4e159f51fd6e9bbc01f550e0f492d07b398738b8128a775973a2",
-    "destination": "poi/grove1/grove1_01.jpg",
-    "status": "copy"
+    "selection": "poi/wolf-pack-s-den/lore-v2-v002.jpg",
+    "source_sha256": "22a8f97736e33fa3b584669d35ba66fdeeb1b9344e90effcc56d200134f298e6",
+    "destination": "poi/grove1/grove1_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
-    "selection": "poi/wurm-pond/diverse-v002.jpg",
-    "source_sha256": "dfab9cc402062964bb6cfb5d31e21ae584ef910a392f6e97538dabf32d408805",
-    "destination": "poi/wurmpond/wurmpond_01.jpg",
-    "status": "copy"
+    "selection": "poi/wurm-pond/lore-v2-v001.jpg",
+    "source_sha256": "18cacd95ac06a43bc4777270b1114066ba7b99bf4a965e4d7da1a5d1b681e9ab",
+    "destination": "poi/wurmpond/wurmpond_02.jpg",
+    "status": "copy",
+    "managed": true
   },
   {
     "selection": "poi/xira-s-hive/diverse-v002.jpg",
     "source_sha256": "db4e10009757e780828c7066a7a7ff1bd35ce4aff31c5c18ec0a567de254724a",
     "destination": "poi/xiras-hive/xiras_hive_01.jpg",
-    "status": "copy"
+    "status": "already-hosted",
+    "managed": true
   },
   {
-    "selection": "poi/zombie-cave/diverse-v001.jpg",
-    "source_sha256": "6f61a1279ea79c7f7d862c7742ff695628168078ef4ae480d7212c3a73c1f254",
-    "destination": "poi/cavezombie/cavezombie_01.jpg",
-    "status": "copy"
+    "selection": "poi/zombie-cave/lore-v2-v002.jpg",
+    "source_sha256": "d16ea92208a5f4d49117dd9810c0fb319ead405f0fbef04e44fae9fe5ed1b9ee",
+    "destination": "poi/cavezombie/cavezombie_02.jpg",
+    "status": "copy",
+    "managed": true
   }
 ]
